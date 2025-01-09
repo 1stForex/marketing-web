@@ -10,7 +10,7 @@ export default function NewsLetter() {
         justifyContent: "space-between",
         width: "100%",
 
-        "@media (max-width: 768px)": {
+        "@media (max-width: 900px)": {
           flexDirection: "column",
           gap: "1rem",
         },

@@ -10,7 +10,7 @@ export default function Footer() {
         background: "#F9FAFB",
         padding: "80px 112px",
 
-        "@media (max-width: 876px)": {
+        "@media (max-width: 992px)": {
           padding: "40px",
         },
 
