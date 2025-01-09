@@ -1,17 +1,22 @@
-import facebookSvg from "../../assets/icons/facebook.svg";
-import linkedinSvg from "../../assets/icons/linkedin.svg";
-import twitterSvg from "../../assets/icons/twitter.svg";
-import instagramSvg from "../../assets/icons/instagram.svg";
+"use client";
+
+import facebookSvg from "../../assets/icons/facebook-color.svg";
+import linkedinSvg from "../../assets/icons/linkedin-color.svg";
+import twitterSvg from "../../assets/icons/twitter-color.svg";
+import instagramSvg from "../../assets/icons/instagram-color.svg";
 import { Box } from "@mui/material";
 import Image from "next/image";
+import { CSSProperties } from "react";
 
-interface SocialMediaLinksProps {
+interface SocialLinksProps {
   nav?: boolean;
+  justifyContent?: CSSProperties["justifyContent"];
 }
 
-export default function SocialMediaLinks({
+export default function SocialLinks({
   nav = false,
-}: SocialMediaLinksProps) {
+  justifyContent,
+}: SocialLinksProps) {
   const socialMedia = [
     {
       name: "facebook",
@@ -39,9 +44,8 @@ export default function SocialMediaLinks({
     <Box
       sx={{
         display: "flex",
-        gap: "16px",
-        justifyContent: nav ? "center" : "flex-start",
-        flexWrap: "wrap",
+        gap: "8px",
+        justifyContent: nav ? "center" : justifyContent,
       }}
     >
       {socialMedia.map((social, index) => (
@@ -52,10 +56,9 @@ export default function SocialMediaLinks({
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            width: "50px",
-            height: "50px",
+            width: "40px",
+            height: "40px",
             borderRadius: "50%",
-            backgroundColor: "#fff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -66,12 +69,7 @@ export default function SocialMediaLinks({
             },
           }}
         >
-          <Image
-            src={social.icon}
-            alt={`${social.name} icon`}
-            width={24}
-            height={24}
-          />
+          <Image src={social.icon} alt={`${social.name} icon`} />
         </Box>
       ))}
     </Box>
