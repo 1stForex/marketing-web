@@ -35,7 +35,7 @@ const FAQSection = () => {
             letterSpacing: "-1.92px",
           }}
         >
-          FAQ's
+          FAQ&#39;s
         </Typography>
       </Box>
 
@@ -83,7 +83,7 @@ const FAQSection = () => {
         </Box>
       </Box>
 
-      <CustomButton>Read more FAQ's</CustomButton>
+      <CustomButton>Read more FAQ&#39;s</CustomButton>
     </Box>
   );
 };

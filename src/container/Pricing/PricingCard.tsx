@@ -105,6 +105,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
       >
         {features?.map((feature, index) => (
           <Box
+            key={index}
             sx={{
               color: textColor,
               display: "flex",
