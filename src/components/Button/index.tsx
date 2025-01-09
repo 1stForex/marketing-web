@@ -4,7 +4,7 @@ import React from "react";
 import { Button, styled, Box } from "@mui/material";
 
 export interface ButtonProps {
-  variant?: "red" | "white" | "transparent";
+  variant?: "red" | "white" | "transparent" | "topic";
   padding?: string;
   fontSize?: string;
   fontWeight?: string;
@@ -20,7 +20,7 @@ export interface ButtonProps {
 }
 
 const StyledButton = styled(Button)<{
-  varianttype: "red" | "white" | "transparent";
+  varianttype: "red" | "white" | "transparent" | "topic";
   fontWeight: string;
 }>(({ theme, varianttype, fontWeight }) => ({
   textTransform: "none",
@@ -65,6 +65,19 @@ const StyledButton = styled(Button)<{
         "&:disabled": {
           backgroundColor: "rgba(255, 255, 255, 0.05)",
           color: theme.palette.action.disabled,
+        },
+      }
+    : varianttype === "topic"
+    ? {
+        backgroundColor: "#FFF",
+        color: "#333",
+        border: "1px solid var(--Grey-900, #333)",
+        "&:hover": {
+          backgroundColor: "#D0D5DD",
+        },
+        "&:disabled": {
+          backgroundColor: "#F7F1C3",
+          color: "#333",
         },
       }
     : {
