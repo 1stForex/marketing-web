@@ -25,7 +25,6 @@ const StyledButton = styled(Button)<{
 }>(({ theme, varianttype, fontWeight }) => ({
   textTransform: "none",
   fontWeight: fontWeight,
-
   display: "flex",
   alignItems: "center",
   gap: "10px",
@@ -46,8 +45,9 @@ const StyledButton = styled(Button)<{
     ? {
         backgroundColor: "#FFF",
         color: "#333",
+        border: "1px solid #D0D5DD",
         "&:hover": {
-          backgroundColor: "#FFD75F",
+          backgroundColor: "#D0D5DD",
         },
         "&:disabled": {
           backgroundColor: "#F7F1C3",

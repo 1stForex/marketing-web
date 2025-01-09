@@ -30,3 +30,8 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.link {
+  display: flex;
+  gap: 10px;
+}

@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import CustomInputField from "@/src/components/CustomInputField";
-import Search from "@/src/assets/icons/search.svg";
+import SearchGrey from "@/src/assets/icons/search-grey.svg";
 import Topics from "./Topics";
 import FAQQuestion from "@/src/components/FAQQuestion";
 import { allQuestions } from "../../const/allQuestions";
@@ -10,7 +10,7 @@ const AllFAQs = () => {
     <Box sx={{ display: "flex", flexDirection: "column", gap: "40px" }}>
       <CustomInputField
         placeholder="What do you need help with?"
-        icon={Search}
+        icon={SearchGrey}
       />
 
       <Topics />
