@@ -1,4 +1,3 @@
-// "use client";
 import { Box, Container, Typography } from "@mui/material";
 import HeroSection from "./HeroSection";
 import Overview from "./Overview";
