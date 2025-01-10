@@ -1,11 +1,8 @@
 import { ButtonGroup } from "@mui/material";
+import { NavProps } from "@/src/types/Nav.interface";
 import BtnGroup from "./BtnGroup";
 
-interface GroupButtonProps {
-  nav?: boolean;
-}
-
-export default function GroupButton({ nav = false }: GroupButtonProps) {
+export default function GroupButton({ nav = false }: NavProps) {
   const color = nav ? "#FFF" : "#333";
   return (
     <ButtonGroup>

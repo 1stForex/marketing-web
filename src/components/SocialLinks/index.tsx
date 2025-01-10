@@ -6,17 +6,9 @@ import twitterSvg from "../../assets/icons/twitter-color.svg";
 import instagramSvg from "../../assets/icons/instagram-color.svg";
 import { Box } from "@mui/material";
 import Image from "next/image";
-import { CSSProperties } from "react";
+import { SocialLinksProps } from "@/src/types/SocialLink.interface";
 
-interface SocialLinksProps {
-  nav?: boolean;
-  justifyContent?: CSSProperties["justifyContent"];
-}
-
-export default function SocialLinks({
-  nav = false,
-  justifyContent,
-}: SocialLinksProps) {
+export default function SocialLinks({ justifyContent }: SocialLinksProps) {
   const socialMedia = [
     {
       name: "facebook",
@@ -45,7 +37,7 @@ export default function SocialLinks({
       sx={{
         display: "flex",
         gap: "8px",
-        justifyContent: nav ? "center" : justifyContent,
+        justifyContent: justifyContent,
       }}
     >
       {socialMedia.map((social, index) => (

@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Divider } from "@mui/material";
 import NewsLetter from "./NewsLetter";
 import FooterLinks from "./FooterLinks";
@@ -15,7 +17,7 @@ export default function Footer() {
         },
 
         "@media (max-width: 768px)": {
-          padding: "20px 15px",
+          padding: "40px 20px",
         },
       }}
     >
@@ -25,26 +27,33 @@ export default function Footer() {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          minWidth: "80%",
-          maxWidth: "1214px",
+          Width: "100%",
         }}
       >
         <NewsLetter />
         <Divider
           sx={{
             width: "100%",
-            borderColor: "rgba(0, 0, 0, 0.12)",
+            borderColor: "#F0F2F5",
             borderWidth: "1px",
             marginY: 2,
+
+            "@media (max-width: 768px)": {
+              marginY: "24px",
+            },
           }}
         />
         <FooterLinks />
         <Divider
           sx={{
             width: "100%",
-            borderColor: "rgba(0, 0, 0, 0.12)",
+            borderColor: "#F0F2F5",
             borderWidth: "1px",
             marginY: 2,
+
+            "@media (max-width: 768px)": {
+              marginY: "24px",
+            },
           }}
         />
         <CompanyInfo />

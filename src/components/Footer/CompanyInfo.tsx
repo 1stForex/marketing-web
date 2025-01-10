@@ -1,8 +1,11 @@
-import { Box } from "@mui/material";
+"use client";
+
+import { Box, Divider, useMediaQuery } from "@mui/material";
 import Copyright from "./Copyright";
 import DownloadLinks from "./DownloadLinks";
 
 export default function CompanyInfo() {
+  const isMobile = useMediaQuery("(max-width: 680px)");
   return (
     <Box
       sx={{
@@ -14,11 +17,20 @@ export default function CompanyInfo() {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column-reverse",
-          gap: "1rem",
         },
       }}
     >
       <Copyright />
+      {isMobile && (
+        <Divider
+          sx={{
+            width: "100%",
+            borderColor: "#F0F2F5",
+            borderWidth: "1px",
+            marginY: "24px",
+          }}
+        />
+      )}
       <DownloadLinks />
     </Box>
   );
