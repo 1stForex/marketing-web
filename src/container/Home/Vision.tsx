@@ -27,12 +27,12 @@ const Vision = () => {
           maxWidth: "802px",
         }}
       >
-        "To empower a global community of traders by blending two decades of
-        expertise with cutting edge AI technology, delivering unparalleled forex
-        education, state-of-the-art signals, and innovative trading solutions
-        that inspire financial growth and confidence. At 1st Forex, we are
-        shaping the future of trading by building a connected, adaptive, and
-        results-driven community.”
+        &quot;To empower a global community of traders by blending two decades
+        of expertise with cutting edge AI technology, delivering unparalleled
+        forex education, state-of-the-art signals, and innovative trading
+        solutions that inspire financial growth and confidence. At 1st Forex, we
+        are shaping the future of trading by building a connected, adaptive, and
+        results-driven community.&quot;
       </Typography>
     </Box>
   );

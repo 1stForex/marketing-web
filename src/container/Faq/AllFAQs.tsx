@@ -26,7 +26,7 @@ const AllFAQs = () => {
             mb: "60px",
           }}
         >
-          All FAQ's
+          All FAQ&#39;s
         </Typography>
 
         <Box

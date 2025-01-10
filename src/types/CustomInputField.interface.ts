@@ -5,4 +5,7 @@ export interface CustomInputFieldProps {
   width?: string;
   type?: string;
   padding?: string;
+  helperText?: string;
+  multiline?: boolean;
+  rows?: number;
 }
