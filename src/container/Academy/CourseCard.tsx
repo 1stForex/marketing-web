@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import ForexLogo from "@/src/assets/images/forex-logo.png";
+import ForexLogo from "@/src/assets/icons/forex.svg";
 import React from "react";
 import RatingStars from "@/src/components/RatingStars";
 import { CourseCardProps } from "@/src/types/CourseCard.interface";
