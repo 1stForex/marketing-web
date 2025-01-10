@@ -1,10 +1,6 @@
 import { Button } from "@mui/material";
+import { BtnGroupProp } from "@/src/types/BtnGroup.interface";
 import Link from "next/link";
-
-interface BtnGroupProp {
-  loc: "left" | "right";
-  color: string;
-}
 
 export default function BtnGroup({ loc, color }: BtnGroupProp) {
   const commonStyles = {
@@ -16,7 +12,6 @@ export default function BtnGroup({ loc, color }: BtnGroupProp) {
     fontStyle: "normal",
     fontWeight: 600,
     lineHeight: "20.3px",
-    fontFamily: "inherit",
     textTransform: "none",
     color,
   };

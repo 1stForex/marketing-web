@@ -27,7 +27,13 @@ export default function Copyright() {
           },
         }}
       >
-        <Image src={forexLogo} alt="Forex Logo" loading="lazy" />
+        <Image
+          src={forexLogo}
+          alt="Forex Logo"
+          loading="lazy"
+          width={122}
+          height={24}
+        />
         <Typography
           sx={{
             ...commonStyle,

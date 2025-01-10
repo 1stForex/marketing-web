@@ -9,6 +9,7 @@ export default function NewsLetter() {
         alignItems: "center",
         justifyContent: "space-between",
         width: "100%",
+        gap: "4px",
 
         "@media (max-width: 900px)": {
           flexDirection: "column",
@@ -26,9 +27,8 @@ export default function NewsLetter() {
             fontWeight: "700",
             lineHeight: "28.8px",
             letterSpacing: "-0.48px",
-            fontFamily: "inherit",
 
-            "@media (max-width: 768px)": {
+            "@media (max-width: 900px)": {
               textAlign: "center",
             },
           }}
@@ -43,9 +43,8 @@ export default function NewsLetter() {
             fontStyle: "normal",
             fontWeight: "400",
             lineHeight: "23.3px",
-            fontFamily: "inherit",
 
-            "@media (max-width: 768px)": {
+            "@media (max-width: 900px)": {
               textAlign: "center",
               width: "auto",
             },
@@ -61,7 +60,7 @@ export default function NewsLetter() {
           alignItems: "center",
           width: "486px",
 
-          "@media (max-width: 768px)": {
+          "@media (max-width: 900px)": {
             width: "100%",
           },
         }}
