@@ -10,6 +10,9 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
   width = "100%",
   type = "text",
   padding = "16px",
+  helperText,
+  multiline = false,
+  rows = 3,
 }) => {
   return (
     <Box sx={{ width: width }}>
@@ -31,6 +34,8 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
         variant="outlined"
         placeholder={placeholder}
         type={type}
+        multiline={multiline}
+        rows={multiline ? rows : undefined}
         InputProps={{
           endAdornment: icon && (
             <InputAdornment position="end">
@@ -41,7 +46,6 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
         sx={{
           ".MuiOutlinedInput-root": {
             padding: padding,
-            background: "#fff",
             borderColor: "var(--Grey-300, #D0D5DD)",
             borderRadius: "6px",
             "&:hover .MuiOutlinedInput-notchedOutline": {
@@ -56,12 +60,28 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
             height: "unset",
             lineHeight: "inherit",
           },
-          "input::placeholder": {
+          "input::placeholder, textarea::placeholder": {
             fontSize: "14px",
             color: " var(--Grey-400, #98A2B3)",
           },
+          "textarea.MuiOutlinedInput-input": {
+            resize: "none",
+          },
         }}
       />
+      {helperText && (
+        <Typography
+          sx={{
+            color: "var(--Grey-500, #667185)",
+            fontSize: "14px",
+            fontWeight: 400,
+            lineHeight: "145%",
+            mt: "8px",
+          }}
+        >
+          {helperText}
+        </Typography>
+      )}
     </Box>
   );
 };

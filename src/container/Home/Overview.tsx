@@ -47,7 +47,7 @@ const Overview = () => {
           {" "}
           elevate{" "}
         </span>
-        your trading experience."
+        your trading experience.
       </Typography>
     </Box>
   );
