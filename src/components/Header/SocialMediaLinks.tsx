@@ -1,46 +1,14 @@
-import facebookSvg from "../../assets/icons/facebook.svg";
-import linkedinSvg from "../../assets/icons/linkedin.svg";
-import twitterSvg from "../../assets/icons/twitter.svg";
-import instagramSvg from "../../assets/icons/instagram.svg";
 import { Box } from "@mui/material";
+import { socialMedia } from "@/src/const/allNavSocialMedia";
 import Image from "next/image";
 
-interface SocialMediaLinksProps {
-  nav?: boolean;
-}
-
-export default function SocialMediaLinks({
-  nav = false,
-}: SocialMediaLinksProps) {
-  const socialMedia = [
-    {
-      name: "facebook",
-      icon: facebookSvg,
-      href: "#",
-    },
-    {
-      name: "linkedin",
-      icon: linkedinSvg,
-      href: "#",
-    },
-    {
-      name: "instagram",
-      icon: instagramSvg,
-      href: "#",
-    },
-    {
-      name: "twitter",
-      icon: twitterSvg,
-      href: "#",
-    },
-  ];
-
+export default function SocialMediaLinks() {
   return (
     <Box
       sx={{
         display: "flex",
         gap: "16px",
-        justifyContent: nav ? "center" : "flex-start",
+        padding: "0 15px",
         flexWrap: "wrap",
       }}
     >
@@ -52,8 +20,8 @@ export default function SocialMediaLinks({
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            width: "50px",
-            height: "50px",
+            width: "40px",
+            height: "40px",
             borderRadius: "50%",
             backgroundColor: "#fff",
             display: "flex",
@@ -66,12 +34,7 @@ export default function SocialMediaLinks({
             },
           }}
         >
-          <Image
-            src={social.icon}
-            alt={`${social.name} icon`}
-            width={24}
-            height={24}
-          />
+          <Image src={social.icon} alt={`${social.name} icon`} />
         </Box>
       ))}
     </Box>

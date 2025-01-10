@@ -1,24 +1,24 @@
+"use client";
+
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import DropDown from "./DropDown";
+import { NavProps } from "@/src/types/Nav.interface";
+import { links } from "@/src/const/allNavLinks";
+import { additionalLinks } from "@/src/const/allAdditionalNavLinks";
+import { useEffect, useState } from "react";
 
-interface NavLinksProps {
-  nav?: boolean;
-}
+export default function NavLinks({ nav = false }: NavProps) {
+  const [currentPath, setCurrentPath] = useState("");
 
-export default function NavLinks({ nav = false }: NavLinksProps) {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentPath(window.location.pathname);
+    }
+  }, []);
+
   const color = nav ? "#FFF" : "#333";
-
-  const links = [
-    { label: "Home", href: "#" },
-    { label: "Community", href: "#" },
-    { label: "Pricing", href: "#" },
-  ];
-
-  const additionalLinks = [
-    { label: "About Us", href: "#" },
-    { label: "Contact Us", href: "#" },
-  ];
+  const isActive = (href: string) => currentPath === href;
 
   return (
     <Box
@@ -35,7 +35,7 @@ export default function NavLinks({ nav = false }: NavLinksProps) {
       }}
     >
       {links.map((link) => (
-        <Link key={link.label} href={link.href} className="link">
+        <Link key={link.label} href={link.href} className="link" passHref>
           <Typography
             sx={{
               textAlign: "center",
@@ -43,8 +43,8 @@ export default function NavLinks({ nav = false }: NavLinksProps) {
               fontStyle: "normal",
               fontWeight: "600",
               lineHeight: "23.2px",
-              color,
-              fontFamily: "inherit",
+              color: isActive(link.href) ? "#F30" : color,
+              textDecoration: isActive(link.href) ? "underline" : "none",
             }}
           >
             {link.label}
@@ -64,8 +64,8 @@ export default function NavLinks({ nav = false }: NavLinksProps) {
                 fontStyle: "normal",
                 fontWeight: "600",
                 lineHeight: "23.2px",
-                color,
-                fontFamily: "inherit",
+                color: isActive(link.href) ? "#F30" : color,
+                textDecoration: isActive(link.href) ? "underline" : "none",
               }}
             >
               {link.label}

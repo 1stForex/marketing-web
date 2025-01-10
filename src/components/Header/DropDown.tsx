@@ -6,6 +6,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Typography } from "@mui/material";
 import Link from "next/link";
+import { menuItems } from "@/src/const/allMenuItem";
 
 export default function DropDown() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -16,12 +17,6 @@ export default function DropDown() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-  const menuItems = [
-    { label: "Company", href: null, isBold: true },
-    { label: "About Us", href: "#" },
-    { label: "Contact Us", href: "#" },
-  ];
 
   return (
     <div>
@@ -42,7 +37,6 @@ export default function DropDown() {
           fontWeight: "600",
           lineHeight: "23.2px",
           color: "#333",
-          fontFamily: "inherit",
 
           "&:hover": {
             backgroundColor: "transparent",
@@ -89,7 +83,6 @@ export default function DropDown() {
                     fontStyle: "normal",
                     fontWeight: item.isBold ? "600" : "400",
                     lineHeight: "20.3px",
-                    fontFamily: "inherit",
                   }}
                 >
                   {item.label}
@@ -103,7 +96,6 @@ export default function DropDown() {
                   fontStyle: "normal",
                   fontWeight: item.isBold ? "600" : "400",
                   lineHeight: "20.3px",
-                  fontFamily: "inherit",
                 }}
               >
                 {item.label}

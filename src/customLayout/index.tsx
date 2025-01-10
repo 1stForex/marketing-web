@@ -1,6 +1,8 @@
 "use client";
 import { ThemeProvider } from "@emotion/react";
 import theme from "../theme";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function CustomLayout({
   children,
@@ -10,7 +12,11 @@ export default function CustomLayout({
   return (
     <ThemeProvider theme={theme}>
       <html lang="en">
-        <body>{children}</body>
+        <body>
+          <Header />
+          {children}
+          <Footer />
+        </body>
       </html>
     </ThemeProvider>
   );

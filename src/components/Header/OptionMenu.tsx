@@ -83,19 +83,25 @@ export default function OptionMenu() {
               Login
             </CustomButton>
           </Box>
-          {!isVerySmallScreen ? (
-            <CustomButton variant="red">
-              <Image src={userSvg} alt="User Icon" />
-              Register
-            </CustomButton>
-          ) : (
-            <Box>
-              <CustomButton variant="red" padding="5px 8px" fontSize="10px">
-                <Image src={userSvg} alt="User Icon" width={12} height={12} />
-                Register
-              </CustomButton>
-            </Box>
-          )}
+          <CustomButton
+            variant="red"
+            padding={
+              isVerySmallScreen
+                ? "5px 8px"
+                : isSmallScreen
+                ? "8px 16px"
+                : "16px 24px"
+            }
+            fontSize={isVerySmallScreen ? "10px" : "16px"}
+          >
+            <Image
+              src={userSvg}
+              alt="User Icon"
+              width={isVerySmallScreen ? 10 : 24}
+              height={isVerySmallScreen ? 10 : 24}
+            />
+            Register
+          </CustomButton>
         </Box>
       </Box>
       {isSmallScreen && (

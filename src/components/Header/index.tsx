@@ -15,6 +15,7 @@ export default function Header() {
         justifyContent: "center",
         alignItems: "center",
         padding: "0 40px",
+        marginBottom: "30px",
 
         "@media (max-width: 1400px)": {
           padding: "0 20px",
@@ -40,7 +41,13 @@ export default function Header() {
             alignSelf: "stretch",
           }}
         >
-          <Image src={forexLogo} alt="Forex Logo" loading="lazy" />
+          <Image
+            src={forexLogo}
+            alt="Forex Logo"
+            loading="lazy"
+            width={122}
+            height={24}
+          />
           <Box
             sx={{
               "@media (max-width: 1350px)": {

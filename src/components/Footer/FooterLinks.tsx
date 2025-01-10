@@ -3,84 +3,10 @@
 import { Box, Typography } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { linksList } from "@/src/const/allFooterLinks";
 import Link from "next/link";
 
 export default function FooterLinks() {
-  const linksList = [
-    {
-      label: "Product",
-      links: [
-        {
-          label: "Editor",
-          href: "#",
-        },
-        {
-          label: "Runtimes",
-          href: "#",
-        },
-        {
-          label: "Rendered",
-          href: "#",
-        },
-        {
-          label: "Changelog",
-          href: "#",
-        },
-      ],
-    },
-    {
-      label: "Community",
-      links: [
-        {
-          label: "Rayna Club",
-          href: "#",
-        },
-        {
-          label: "Discord",
-          href: "#",
-        },
-        {
-          label: "Get Support",
-          href: "#",
-        },
-      ],
-    },
-    {
-      label: "Learn",
-      links: [
-        {
-          label: "Documentation",
-          href: "#",
-        },
-        {
-          label: "Blog",
-          href: "#",
-        },
-        {
-          label: "Features",
-          href: "#",
-        },
-      ],
-    },
-    {
-      label: "Use Cases",
-      links: [
-        {
-          label: "Game Design",
-          href: "#",
-        },
-        {
-          label: "Product Design",
-          href: "#",
-        },
-        {
-          label: "Pro",
-          href: "#",
-        },
-      ],
-    },
-  ];
-
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down(510));
 
@@ -115,7 +41,6 @@ export default function FooterLinks() {
                 color: "#98A2B3",
                 fontWeight: 400,
                 marginBottom: "12px",
-                fontFamily: "inherit",
               }}
             >
               {section.label}
