@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 
 export default function NavLinks({ nav = false }: NavProps) {
   const [currentPath, setCurrentPath] = useState("");
+  const [dropdownUsed, setDropdownUsed] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -19,6 +20,20 @@ export default function NavLinks({ nav = false }: NavProps) {
 
   const color = nav ? "#FFF" : "#333";
   const isActive = (href: string) => currentPath === href;
+
+  const handleLinkClick = (href: string, fromDropdown: boolean = false) => {
+    setCurrentPath(href);
+    if (fromDropdown) {
+      setDropdownUsed(true);
+    }
+  };
+
+  useEffect(() => {
+    if (dropdownUsed) {
+      setCurrentPath("");
+      setDropdownUsed(false);
+    }
+  }, [dropdownUsed]);
 
   return (
     <Box
@@ -46,6 +61,7 @@ export default function NavLinks({ nav = false }: NavProps) {
               color: isActive(link.href) ? "#F30" : color,
               textDecoration: isActive(link.href) ? "underline" : "none",
             }}
+            onClick={() => handleLinkClick(link.href)}
           >
             {link.label}
           </Typography>
@@ -53,7 +69,7 @@ export default function NavLinks({ nav = false }: NavProps) {
       ))}
 
       {!nav ? (
-        <DropDown />
+        <DropDown onLinkClick={(href: string) => handleLinkClick(href, true)} />
       ) : (
         additionalLinks.map((link) => (
           <Link key={link.label} href={link.href} className="link">
@@ -67,6 +83,7 @@ export default function NavLinks({ nav = false }: NavProps) {
                 color: isActive(link.href) ? "#F30" : color,
                 textDecoration: isActive(link.href) ? "underline" : "none",
               }}
+              onClick={() => handleLinkClick(link.href)}
             >
               {link.label}
             </Typography>
