@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 
 export default function NavLinks({ nav = false }: NavProps) {
   const [currentPath, setCurrentPath] = useState("");
-  const [dropdownUsed, setDropdownUsed] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -22,18 +21,8 @@ export default function NavLinks({ nav = false }: NavProps) {
   const isActive = (href: string) => currentPath === href;
 
   const handleLinkClick = (href: string, fromDropdown: boolean = false) => {
-    setCurrentPath(href);
-    if (fromDropdown) {
-      setDropdownUsed(true);
-    }
+    setCurrentPath(fromDropdown ? "" : href);
   };
-
-  useEffect(() => {
-    if (dropdownUsed) {
-      setCurrentPath("");
-      setDropdownUsed(false);
-    }
-  }, [dropdownUsed]);
 
   return (
     <Box
