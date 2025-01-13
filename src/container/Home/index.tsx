@@ -2,11 +2,12 @@ import { Box, Container, Typography } from "@mui/material";
 import HeroSection from "./HeroSection";
 import Overview from "./Overview";
 import Stocks from "./Stocks";
-import KeyOfferings from "./KeyOfferings";
 import Vision from "./Vision";
 import FAQSection from "../../components/FAQSection";
 import Banner from "@/src/components/Banner";
 import OurStory from "./OurStory";
+import Carousel from "@/src/components/Carousel";
+import { homeKeyOfferingsCardData } from "@/src/const/homeKeyOfferingsCardData";
 
 const Home = () => {
   return (
@@ -30,7 +31,29 @@ const Home = () => {
           <HeroSection />
           <Overview />
           <Stocks />
-          <KeyOfferings />
+          <Carousel
+            badgeTitle="Offers"
+            cards={homeKeyOfferingsCardData}
+            isCarousel={false}
+          >
+            <Typography
+              sx={{
+                mb: "32px",
+                color: "var(--Grey-900, #333)",
+                textAlign: "center",
+
+                fontSize: "48px",
+                fontWeight: 700,
+                lineHeight: "100%",
+                letterSpacing: "-1.92px",
+              }}
+            >
+              Key{" "}
+              <span style={{ color: "var(--primary-400-base, #F30)" }}>
+                Offerings
+              </span>
+            </Typography>
+          </Carousel>
         </Box>
       </Container>
       <Box
