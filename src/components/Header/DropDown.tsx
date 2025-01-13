@@ -6,9 +6,12 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Typography } from "@mui/material";
 import Link from "next/link";
+import Image from "next/image";
 import { menuItems } from "@/src/const/allMenuItem";
+import { DropDownProps } from "@/src/types/DropDown.interface";
+import ChevronDown from "@/src/assets/icons/chevron-down.svg";
 
-export default function DropDown() {
+export default function DropDown({ onLinkClick }: DropDownProps) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -32,11 +35,8 @@ export default function DropDown() {
           minWidth: 0,
           textTransform: "none",
           textAlign: "center",
-          fontSize: "16px",
-          fontStyle: "normal",
-          fontWeight: "600",
-          lineHeight: "23.2px",
-          color: "#333",
+          display: "flex",
+          gap: "8px",
 
           "&:hover": {
             backgroundColor: "transparent",
@@ -44,7 +44,18 @@ export default function DropDown() {
           },
         }}
       >
-        Company
+        <Typography
+          sx={{
+            fontSize: "16px",
+            fontStyle: "normal",
+            fontWeight: "600",
+            lineHeight: "23.2px",
+            color: "#333",
+          }}
+        >
+          Company
+        </Typography>
+        <Image src={ChevronDown} alt="Chevron Down Icon" />
       </Button>
       <Menu
         id="demo-positioned-menu"
@@ -60,11 +71,17 @@ export default function DropDown() {
           vertical: "top",
           horizontal: "left",
         }}
+        disableScrollLock
       >
         {menuItems.map((item, index) => (
           <MenuItem
             key={index}
-            onClick={handleClose}
+            onClick={() => {
+              handleClose();
+              if (item.href) {
+                onLinkClick(item.href);
+              }
+            }}
             sx={{
               display: "flex",
               padding: "8px 16px",
