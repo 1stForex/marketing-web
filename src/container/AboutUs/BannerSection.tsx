@@ -23,11 +23,10 @@ export default function BannerSection() {
             fontWeight: 700,
             lineHeight: "100%",
             letterSpacing: "-1.92px",
+            maxWidth: "535px",
           }}
         >
-          More Than a Business
-          <br />
-          —A Community
+          More Than a Business —A Community
         </Typography>
       </Banner>
     </Box>

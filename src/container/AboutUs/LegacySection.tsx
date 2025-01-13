@@ -10,11 +10,11 @@ export default function LegacySection() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 2000,
+    speed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     vertical: true,
     verticalSwiping: true,
     cssEase: "linear",
