@@ -264,11 +264,7 @@ export default function TemporaryDrawer({
       >
         <Image src={menuSvg} alt="Menu Icon" />
       </Button>
-      <Drawer
-        anchor="right" // Set the drawer to open from the right
-        open={open}
-        onClose={toggleDrawer(false)}
-      >
+      <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
     </div>
