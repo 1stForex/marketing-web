@@ -3,8 +3,14 @@ import Badge from "@/src/components/Badge";
 import { Box, Typography } from "@mui/material";
 import FAQQuestion from "../FAQQuestion";
 import CustomButton from "@/src/components/Button";
+import { useRouter } from "next/navigation";
 
 const FAQSection = () => {
+  const router = useRouter();
+
+  const handleReadFAQNavigation = () => {
+    router.push("/faq");
+  };
   return (
     <Box
       sx={{
@@ -83,7 +89,9 @@ const FAQSection = () => {
         </Box>
       </Box>
 
-      <CustomButton>Read more FAQ&#39;s</CustomButton>
+      <CustomButton onClick={handleReadFAQNavigation}>
+        Read more FAQ&#39;s
+      </CustomButton>
     </Box>
   );
 };
