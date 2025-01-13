@@ -37,13 +37,13 @@ export default function GroupButton({
           1st Forex AI Signal
         </Button>
       </Link>
-      <Link href="#" passHref>
+      <Link href="/academy" passHref>
         <Button
           sx={{
-            ...btnStyles(isActive("#")),
+            ...btnStyles(isActive("/academy")),
             borderRadius: "0 32px 32px 0",
           }}
-          onClick={() => onLinkClick("#")}
+          onClick={() => onLinkClick("/academy")}
         >
           1st Forex Academy
         </Button>
