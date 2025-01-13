@@ -20,8 +20,12 @@ import Link from "next/link";
 import appleStore from "../../assets/images/apple-store.png";
 import googlePlay from "../../assets/images/google-play.png";
 import SocialMediaLinks from "./SocialMediaLinks";
+import { NavProps } from "@/src/types/Nav.interface";
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer({
+  currentPath,
+  onLinkClick,
+}: NavProps) {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -101,7 +105,11 @@ export default function TemporaryDrawer() {
               }}
             >
               <Box>
-                <GroupButton nav={true} />
+                <GroupButton
+                  currentPath={currentPath}
+                  onLinkClick={onLinkClick}
+                  nav={true}
+                />
               </Box>
             </ListItem>
           </List>
@@ -109,7 +117,11 @@ export default function TemporaryDrawer() {
         <Box>
           <List>
             <ListItem>
-              <NavLinks nav={true} />
+              <NavLinks
+                currentPath={currentPath}
+                onLinkClick={onLinkClick}
+                nav={true}
+              />
             </ListItem>
           </List>
         </Box>

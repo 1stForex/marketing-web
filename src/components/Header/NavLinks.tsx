@@ -1,28 +1,17 @@
-"use client";
-
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import DropDown from "./DropDown";
-import { NavProps } from "@/src/types/Nav.interface";
 import { links } from "@/src/const/allNavLinks";
 import { additionalLinks } from "@/src/const/allAdditionalNavLinks";
-import { useEffect, useState } from "react";
+import { NavProps } from "@/src/types/Nav.interface";
 
-export default function NavLinks({ nav = false }: NavProps) {
-  const [currentPath, setCurrentPath] = useState("");
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentPath(window.location.pathname);
-    }
-  }, []);
-
+export default function NavLinks({
+  currentPath,
+  onLinkClick,
+  nav = false,
+}: NavProps) {
   const color = nav ? "#FFF" : "#333";
   const isActive = (href: string) => currentPath === href;
-
-  const handleLinkClick = (href: string, fromDropdown: boolean = false) => {
-    setCurrentPath(fromDropdown ? "" : href);
-  };
 
   return (
     <Box
@@ -50,7 +39,7 @@ export default function NavLinks({ nav = false }: NavProps) {
               color: isActive(link.href) ? "#F30" : color,
               textDecoration: isActive(link.href) ? "underline" : "none",
             }}
-            onClick={() => handleLinkClick(link.href)}
+            onClick={() => onLinkClick(link.href)}
           >
             {link.label}
           </Typography>
@@ -58,7 +47,7 @@ export default function NavLinks({ nav = false }: NavProps) {
       ))}
 
       {!nav ? (
-        <DropDown onLinkClick={(href: string) => handleLinkClick(href, true)} />
+        <DropDown onLinkClick={(href: string) => onLinkClick(href)} />
       ) : (
         additionalLinks.map((link) => (
           <Link key={link.label} href={link.href} className="link">
@@ -72,7 +61,7 @@ export default function NavLinks({ nav = false }: NavProps) {
                 color: isActive(link.href) ? "#F30" : color,
                 textDecoration: isActive(link.href) ? "underline" : "none",
               }}
-              onClick={() => handleLinkClick(link.href)}
+              onClick={() => onLinkClick(link.href)}
             >
               {link.label}
             </Typography>

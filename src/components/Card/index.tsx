@@ -3,10 +3,18 @@ import { CardProps } from "@/src/types/Card.interface";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
-const Card: React.FC<CardProps> = ({ title, image, description }) => {
+const Card: React.FC<CardProps> = ({
+  title,
+  image,
+  description,
+  isCarousel = false,
+}) => {
   return (
     <Box
       sx={{
+        maxWidth: "363px",
+        minHeight: "408px",
+        mr: isCarousel ? "20px" : "",
         width: "100%",
         borderRadius: "32px",
         background: "var(--Shade-White, #FFF)",
