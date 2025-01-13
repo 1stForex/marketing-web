@@ -4,8 +4,28 @@ import Image from "next/image";
 import NavLinks from "./NavLinks";
 import GroupButton from "./GroupButton";
 import OptionMenu from "./OptionMenu";
+import { useState, useEffect } from "react";
 
 export default function Header() {
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPath(window.location.pathname);
+    };
+
+    setCurrentPath(window.location.pathname);
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []);
+
+  const handleLinkClick = (href: string, fromDropdown: boolean = false) => {
+    setCurrentPath(fromDropdown ? "" : href);
+  };
+
   return (
     <Box
       sx={{
@@ -55,7 +75,10 @@ export default function Header() {
               },
             }}
           >
-            <GroupButton />
+            <GroupButton
+              currentPath={currentPath}
+              onLinkClick={handleLinkClick}
+            />
           </Box>
           <Box
             sx={{
@@ -64,9 +87,9 @@ export default function Header() {
               },
             }}
           >
-            <NavLinks />
+            <NavLinks currentPath={currentPath} onLinkClick={handleLinkClick} />
           </Box>
-          <OptionMenu />
+          <OptionMenu currentPath={currentPath} onLinkClick={handleLinkClick} />
         </Box>
       </Box>
     </Box>

@@ -8,8 +8,9 @@ import userSvg from "../../assets/icons/user.svg";
 import CustomButton from "../Button";
 import Image from "next/image";
 import TemporaryDrawer from "./Menu";
+import { NavProps } from "@/src/types/Nav.interface";
 
-export default function OptionMenu() {
+export default function OptionMenu({ currentPath, onLinkClick }: NavProps) {
   const isSmallScreen = useMediaQuery("(max-width: 1350px)");
   const isVerySmallScreen = useMediaQuery("(max-width: 768px)");
 
@@ -106,7 +107,10 @@ export default function OptionMenu() {
       </Box>
       {isSmallScreen && (
         <Box sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}>
-          <TemporaryDrawer />
+          <TemporaryDrawer
+            currentPath={currentPath}
+            onLinkClick={onLinkClick}
+          />
         </Box>
       )}
     </Box>
