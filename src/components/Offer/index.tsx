@@ -22,7 +22,7 @@ export default function Offer({
     fontWeight: "400",
     lineHeight: "28.8px",
     letterSpacing: "-0.48px",
-    width: descriptionWidth ? `${descriptionWidth}px` : "549px",
+    maxWidth: descriptionWidth ? `${descriptionWidth}px` : "549px",
   };
 
   return (
@@ -61,7 +61,7 @@ export default function Offer({
               fontWeight: "700",
               lineHeight: "48px",
               letterSpacing: "-1.92px",
-              width: "535px",
+              maxWidth: "535px",
             }}
           >
             {title} <span style={{ color: "#F30" }}>{specialTitle}</span>
