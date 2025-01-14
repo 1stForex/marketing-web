@@ -74,6 +74,9 @@ export default function NewsLetter() {
             flex: 1,
             "& .MuiOutlinedInput-root": {
               borderRadius: "32px",
+              "&:hover .MuiOutlinedInput-notchedOutline": {
+                borderColor: "var(--Primary-100, #FF9980)",
+              },
             },
             "& .MuiInputLabel-root": {
               fontSize: "14px",
