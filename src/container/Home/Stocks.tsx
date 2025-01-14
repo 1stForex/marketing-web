@@ -15,8 +15,7 @@ const Stocks = () => {
         src={StocksImg}
         alt="stocks"
         fill
-        objectFit="cover"
-        style={{ width: "100%" }}
+        style={{ width: "100%", objectFit: "cover" }}
       />
     </Box>
   );

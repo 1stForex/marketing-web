@@ -182,8 +182,11 @@ const OurStory = () => {
                       letterSpacing: "-0.48px",
                       mt: "50px",
                       mb: "20px",
-
+                      "@media (max-width: 768px)": {
+                        mt: "30px",
+                      },
                       "@media (max-width: 576px)": {
+                        mt: "20px",
                         fontSize: "20px",
                       },
                     }}
@@ -199,8 +202,13 @@ const OurStory = () => {
                         lineHeight: "120%",
                         letterSpacing: "-0.4px",
                         marginBottom: "15px",
-                        "@media (max-width: 576px)": {
+                        "@media (max-width: 992px)": {
                           fontSize: "16px",
+                        },
+                        "@media (max-width: 576px)": {
+                          fontSize: "14px",
+                          lineHeight: "145%",
+                          letterSpacing: "0",
                         },
                       }}
                     >
@@ -213,6 +221,21 @@ const OurStory = () => {
                       flexDirection: "column",
                       gap: "24px",
                       mb: "100px",
+
+                      "@media (max-width: 992px)": {
+                        gap: "20px",
+                        mb: "80px",
+                      },
+
+                      "@media (max-width: 768px)": {
+                        gap: "18px",
+                        mb: "60px",
+                      },
+
+                      "@media (max-width: 576px)": {
+                        gap: "16px",
+                        mb: "40px",
+                      },
                     }}
                   >
                     {item.points.length > 0 && (
@@ -228,9 +251,14 @@ const OurStory = () => {
                             fontWeight: 400,
                             lineHeight: "120%",
                             letterSpacing: "-0.4px",
+                            "@media (max-width: 992px)": {
+                              fontSize: "16px",
+                            },
 
                             "@media (max-width: 576px)": {
-                              fontSize: "16px",
+                              fontSize: "14px",
+                              lineHeight: "145%",
+                              letterSpacing: "0",
                             },
 
                             "&::marker": {
