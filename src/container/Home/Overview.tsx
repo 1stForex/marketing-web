@@ -10,6 +10,13 @@ const Overview = () => {
         display: "flex",
         alignItems: "flex-start",
         gap: "130px",
+        "@media (max-width: 768px)": {
+          flexDirection: "column",
+          gap: "24px",
+        },
+        "@media (max-width: 576px)": {
+          gap: "16px",
+        },
       }}
     >
       <Box
@@ -29,6 +36,13 @@ const Overview = () => {
           lineHeight: "120%",
           letterSpacing: "-0.64px",
           color: "var(--Grey-600, #475367)",
+          "@media (max-width: 768px)": {
+            fontSize: "24px",
+          },
+          "@media (max-width: 576px)": {
+            fontSize: "16px",
+            lineHeight: "145%",
+          },
         }}
       >
         For over twenty years, 1st Forex has helped traders worldwide develop

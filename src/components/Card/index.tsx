@@ -12,9 +12,11 @@ const Card: React.FC<CardProps> = ({
   return (
     <Box
       sx={{
-        maxWidth: "363px",
-        minHeight: "408px",
-        mr: isCarousel ? "20px" : "",
+        ...(isCarousel && {
+          maxWidth: "363px",
+          minHeight: "408px",
+          mr: "20px",
+        }),
         width: "100%",
         borderRadius: "32px",
         background: "var(--Shade-White, #FFF)",
@@ -25,6 +27,15 @@ const Card: React.FC<CardProps> = ({
         justifyContent: "center",
         gap: "16px",
         padding: "18px 22px 34px",
+        "@media (max-width: 576px)": {
+          alignItems: "start",
+          gap: "12px",
+          padding: "18px",
+          ...(isCarousel && {
+            maxWidth: "315px",
+            minHeight: "200px",
+          }),
+        },
       }}
     >
       <Box
@@ -34,6 +45,10 @@ const Card: React.FC<CardProps> = ({
           alignItems: "center",
           justifyContent: "center",
           gap: "32px",
+          "@media (max-width: 576px)": {
+            flexDirection: "row",
+            gap: "8px",
+          },
         }}
       >
         <Box
@@ -45,6 +60,15 @@ const Card: React.FC<CardProps> = ({
             justifyContent: "center",
             background: "var(--Grey-75, #F7F9FC)",
             borderRadius: "50%",
+            "@media (max-width: 768px)": {
+              width: "90px",
+              height: "90px",
+            },
+            "@media (max-width: 576px)": {
+              maxWidth: "60px",
+              width: "100%",
+              height: "60px",
+            },
           }}
         >
           <Image
@@ -65,6 +89,10 @@ const Card: React.FC<CardProps> = ({
             fontWeight: 700,
             lineHeight: "120%",
             letterSpacing: "-0.48px",
+            "@media (max-width: 576px)": {
+              fontSize: "20px",
+              textAlign: "start",
+            },
           }}
         >
           {title}
@@ -79,6 +107,10 @@ const Card: React.FC<CardProps> = ({
           fontSize: "18px",
           fontWeight: 400,
           lineHeight: "145%",
+          "@media (max-width: 576px)": {
+            fontSize: "14px",
+            textAlign: "start",
+          },
         }}
       >
         {description}

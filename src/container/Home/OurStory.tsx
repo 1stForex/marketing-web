@@ -24,9 +24,25 @@ const OurStory = () => {
         background: "var(--Grey-50, #F9FAFB)",
         boxShadow:
           "0px 5px 13px -5px rgba(16, 25, 40, 0.05), 0px 2px 4px -1px rgba(16, 25, 40, 0.02)",
+        "@media (max-width: 992px)": {
+          padding: "32px",
+        },
+        "@media (max-width: 576px)": {
+          padding: "32px 16px",
+        },
       }}
     >
-      <Box sx={{ mb: "24px" }}>
+      <Box
+        sx={{
+          mb: "24px",
+          "@media (max-width: 768px)": {
+            mb: "20px",
+          },
+          "@media (max-width: 576px)": {
+            mb: "16px",
+          },
+        }}
+      >
         <Badge title="Our Story" />
       </Box>
 
@@ -40,6 +56,14 @@ const OurStory = () => {
           fontWeight: 700,
           lineHeight: "100%",
           letterSpacing: "-1.92px",
+          "@media (max-width: 768px)": {
+            fontSize: "40px",
+            mb: "24px",
+          },
+          "@media (max-width: 576px)": {
+            fontSize: "32px",
+            mb: "16px",
+          },
         }}
       >
         About <span style={{ color: "var(--primary-400-base, #F30)" }}>Us</span>
@@ -50,14 +74,21 @@ const OurStory = () => {
           display: "flex",
           justifyContent: "space-between",
           width: "100%",
+          gap: "24px",
+          "@media (max-width: 992px)": {
+            flexDirection: "column-reverse",
+            alignItems: "center",
+          },
         }}
       >
         <Box
           sx={{
             position: "relative",
-            maxWidth: "627px",
-            height: "408px",
+            width: "65%",
             overflow: "hidden",
+            "@media (max-width: 992px)": {
+              width: "100%",
+            },
           }}
         >
           <Box
@@ -66,6 +97,12 @@ const OurStory = () => {
               overflowY: "auto",
               position: "relative",
               paddingLeft: "48px",
+              "@media (max-width: 992px)": {
+                paddingLeft: "32px",
+              },
+              "@media (max-width: 576px)": {
+                paddingLeft: "16px",
+              },
               "&::-webkit-scrollbar": {
                 width: "8px",
                 background: "transparent",
@@ -94,6 +131,9 @@ const OurStory = () => {
                 letterSpacing: "-0.48px",
                 mb: "16px",
                 mt: "117px",
+                "@media (max-width: 576px)": {
+                  fontSize: "20px",
+                },
               }}
             >
               How We Started?
@@ -116,6 +156,14 @@ const OurStory = () => {
                     fontWeight: 400,
                     lineHeight: "120%",
                     letterSpacing: "-0.4px",
+                    "@media (max-width: 992px)": {
+                      fontSize: "16px",
+                    },
+                    "@media (max-width: 576px)": {
+                      fontSize: "14px",
+                      lineHeight: "145%",
+                      letterSpacing: "0",
+                    },
                   }}
                 >
                   {paragraph}
@@ -141,8 +189,14 @@ const OurStory = () => {
         <Box
           sx={{
             position: "relative",
-            width: "408px",
+            width: "35%",
             aspectRatio: "1",
+            "@media (max-width: 992px)": {
+              width: "50%",
+            },
+            "@media (max-width: 576px)": {
+              width: "100%",
+            },
           }}
         >
           <Image

@@ -25,6 +25,9 @@ export default function OptionCard({
               height: "200px",
               width: "100%",
               maxWidth: "533px",
+              "@media (max-width: 992px)": {
+                gap: "8px",
+              },
             }
           : {
               flexBasis: "45%",
@@ -37,7 +40,6 @@ export default function OptionCard({
           display: "flex",
           padding: "10px",
           alignItems: "center",
-          gap: "10px",
           borderRadius: "8px",
           background: "#F30",
         }}
@@ -49,10 +51,11 @@ export default function OptionCard({
           display: "flex",
           flexDirection: "column",
           gap: "14px",
-
-          "@media (max-width: 992px)": {
-            gap: "2px",
-          },
+          ...(fixedSize && {
+            "@media (max-width: 992px)": {
+              gap: "7px",
+            },
+          }),
         }}
       >
         <Typography

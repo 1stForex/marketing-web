@@ -21,36 +21,28 @@ export default function LegacySection() {
     verticalSwiping: !isSmallScreen,
     cssEase: "linear",
     pauseOnHover: false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 993,
         settings: {
-          dots: false,
           slidesToShow: 2,
           vertical: false,
           verticalSwiping: false,
-          arrows: false,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          dots: false,
           slidesToShow: 1,
-          vertical: false,
-          verticalSwiping: false,
           centerMode: true,
-          arrows: false,
         },
       },
       {
         breakpoint: 576,
         settings: {
-          dots: false,
           slidesToShow: 1,
-          vertical: false,
-          verticalSwiping: false,
-          arrows: false,
+          centerMode: false,
         },
       },
     ],

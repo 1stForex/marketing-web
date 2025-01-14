@@ -16,6 +16,13 @@ const Home = () => {
         display: "flex",
         flexDirection: "column",
         gap: "80px",
+        overflowX: "hidden",
+        "@media (max-width: 768px)": {
+          gap: "60px",
+        },
+        "@media (max-width: 576px)": {
+          gap: "40px",
+        },
       }}
     >
       <Container maxWidth="xl">
@@ -26,6 +33,12 @@ const Home = () => {
             display: "flex",
             flexDirection: "column",
             gap: "80px",
+            "@media (max-width: 768px)": {
+              gap: "60px",
+            },
+            "@media (max-width: 576px)": {
+              gap: "40px",
+            },
           }}
         >
           <HeroSection />
@@ -38,7 +51,6 @@ const Home = () => {
           >
             <Typography
               sx={{
-                mb: "32px",
                 color: "var(--Grey-900, #333)",
                 textAlign: "center",
 
@@ -46,6 +58,14 @@ const Home = () => {
                 fontWeight: 700,
                 lineHeight: "100%",
                 letterSpacing: "-1.92px",
+                "@media (max-width: 768px)": {
+                  fontSize: "40px",
+                  letterSpacing: "-1.28px",
+                },
+                "@media (max-width: 576px)": {
+                  fontSize: "32px",
+                  letterSpacing: "-0.64px",
+                },
               }}
             >
               Key{" "}
@@ -75,6 +95,12 @@ const Home = () => {
             display: "flex",
             flexDirection: "column",
             gap: "80px",
+            "@media (max-width: 768px)": {
+              gap: "60px",
+            },
+            "@media (max-width: 576px)": {
+              gap: "40px",
+            },
           }}
         >
           <OurStory />
@@ -103,6 +129,14 @@ const Home = () => {
               fontWeight: 700,
               lineHeight: "100%",
               letterSpacing: "-1.92px",
+              "@media (max-width: 768px)": {
+                fontSize: "40px",
+                letterSpacing: "-1.28px",
+              },
+              "@media (max-width: 576px)": {
+                fontSize: "32px",
+                letterSpacing: "-0.64px",
+              },
             }}
           >
             Welcome to{" "}
