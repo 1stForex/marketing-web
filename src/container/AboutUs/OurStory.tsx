@@ -269,8 +269,12 @@ const OurStory = () => {
         <Box
           sx={{
             position: "relative",
-            width: "408px",
+            maxWidth: "408px",
+            width: "100%",
             aspectRatio: "1",
+            "@media (max-width: 768px)": {
+              maxWidth: "350px",
+            },
           }}
         >
           <Image
@@ -278,7 +282,7 @@ const OurStory = () => {
             alt="Bull"
             fill
             style={{
-              objectFit: "cover",
+              objectFit: "contain",
               objectPosition: "center",
             }}
           />

@@ -100,7 +100,7 @@ export default function MissionSection() {
               position: "relative",
               maxWidth: "966px",
               width: "100%",
-              aspectRatio: 7 / 3,
+              aspectRatio: "998 / 417",
             }}
           >
             <Image
