@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <Hero
       badgeTitle="About Us"
-      bgImagePath="AboutUsBg.jpg"
+      bgImagePath="HomeHeroBg.jpg"
       title="Welcome to 1st Forex: Where"
     >
       <Typography

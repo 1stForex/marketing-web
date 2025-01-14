@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import Bull from "@/src/assets/images/Bull.png";
+import About from "@/src/assets/images/about-us.jpg";
 import Logo from "@/src/assets/icons/logo.svg";
 
 export default function AboutSection() {
@@ -126,7 +126,7 @@ export default function AboutSection() {
             },
           }}
         >
-          <Image src={Bull} alt="Image" width={416} height={416} />
+          <Image src={About} alt="Image" width={416} height={416} />
         </Box>
       </Box>
     </Box>
