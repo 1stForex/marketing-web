@@ -124,10 +124,6 @@ export default function LegacySection() {
             lineHeight: "120%",
             letterSpacing: "-0.4px",
 
-            "@media (max-width: 992px)": {
-              textAlign: "center",
-            },
-
             "@media (max-width: 768px)": {
               fontSize: "20px",
             },
