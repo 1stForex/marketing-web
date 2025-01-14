@@ -1,5 +1,6 @@
-import { Box, TextField, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import CustomButton from "../Button";
+import CustomInputField from "../CustomInputField";
 
 export default function NewsLetter() {
   return (
@@ -58,34 +59,14 @@ export default function NewsLetter() {
           display: "flex",
           gap: "8px",
           alignItems: "center",
-          width: "486px",
+          maxWidth: "486px",
 
           "@media (max-width: 900px)": {
             width: "100%",
           },
         }}
       >
-        <TextField
-          id="email-input"
-          placeholder="Email Address"
-          type="email"
-          autoComplete="current-email"
-          sx={{
-            flex: 1,
-            "& .MuiOutlinedInput-root": {
-              borderRadius: "32px",
-              "&:hover .MuiOutlinedInput-notchedOutline": {
-                borderColor: "var(--Primary-100, #FF9980)",
-              },
-              "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                borderColor: "var(--Primary-200, #F75)",
-              },
-            },
-            "& .MuiInputLabel-root": {
-              fontSize: "14px",
-            },
-          }}
-        />
+        <CustomInputField placeholder="Email Address" borderRadius="32" />
         <CustomButton variant="red">Subscribe</CustomButton>
       </Box>
     </Box>
