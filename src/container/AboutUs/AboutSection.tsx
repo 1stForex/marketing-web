@@ -11,6 +11,10 @@ export default function AboutSection() {
     fontWeight: "400",
     lineHeight: "120%",
     letterSpacing: "-0.4px",
+
+    "@media (max-width: 576px)": {
+      fontSize: "16px",
+    },
   };
 
   return (
@@ -41,6 +45,14 @@ export default function AboutSection() {
             fontWeight: "700",
             lineHeight: "100%",
             letterSpacing: "-1.92px",
+
+            "@media (max-width: 768px)": {
+              fontSize: "38px",
+            },
+
+            "@media (max-width: 576px)": {
+              fontSize: "28px",
+            },
           }}
         >
           About Us
@@ -107,7 +119,13 @@ export default function AboutSection() {
             offerings remain cutting-edge and unparalleled in the industry.
           </Typography>
         </Box>
-        <Box>
+        <Box
+          sx={{
+            "@media (max-width: 992px)": {
+              display: "none",
+            },
+          }}
+        >
           <Image src={Investment} alt="Image" />
         </Box>
       </Box>

@@ -11,7 +11,8 @@ import { menuItems } from "@/src/const/allMenuItem";
 import { DropDownProps } from "@/src/types/DropDown.interface";
 import ChevronDown from "@/src/assets/icons/chevron-down.svg";
 
-export default function DropDown({ onLinkClick }: DropDownProps) {
+export default function DropDown({ currentPath, onLinkClick }: DropDownProps) {
+  const isHighlighted = ["/about-us", "/contact-us"].includes(currentPath);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -50,7 +51,8 @@ export default function DropDown({ onLinkClick }: DropDownProps) {
             fontStyle: "normal",
             fontWeight: "600",
             lineHeight: "23.2px",
-            color: "#333",
+            color: isHighlighted ? "#F30" : "#333",
+            textDecoration: isHighlighted ? "underline" : "none",
           }}
         >
           Company

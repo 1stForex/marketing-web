@@ -24,6 +24,14 @@ export default function BannerSection() {
             lineHeight: "100%",
             letterSpacing: "-1.92px",
             maxWidth: "535px",
+
+            "@media (max-width: 768px)": {
+              fontSize: "38px",
+            },
+
+            "@media (max-width: 576px)": {
+              fontSize: "28px",
+            },
           }}
         >
           More Than a Business —A Community

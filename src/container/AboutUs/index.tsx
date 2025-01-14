@@ -13,6 +13,15 @@ export default function AboutUs() {
         display: "flex",
         flexDirection: "column",
         gap: "80px",
+        overflowX: "hidden",
+
+        "@media (max-width: 768px)": {
+          gap: "60px",
+        },
+
+        "@media (max-width: 576px)": {
+          gap: "40px",
+        },
       }}
     >
       <Container maxWidth="xl">

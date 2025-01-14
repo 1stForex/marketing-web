@@ -47,7 +47,10 @@ export default function NavLinks({
       ))}
 
       {!nav ? (
-        <DropDown onLinkClick={(href: string) => onLinkClick(href)} />
+        <DropDown
+          currentPath={currentPath}
+          onLinkClick={(href: string) => onLinkClick(href)}
+        />
       ) : (
         additionalLinks.map((link) => (
           <Link key={link.label} href={link.href} className="link">

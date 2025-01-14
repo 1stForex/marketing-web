@@ -84,17 +84,7 @@ export default function OptionMenu({ currentPath, onLinkClick }: NavProps) {
               Login
             </CustomButton>
           </Box>
-          <CustomButton
-            variant="red"
-            padding={
-              isVerySmallScreen
-                ? "5px 8px"
-                : isSmallScreen
-                ? "8px 16px"
-                : "16px 24px"
-            }
-            fontSize={isVerySmallScreen ? "10px" : "16px"}
-          >
+          <CustomButton variant="red">
             <Image
               src={userSvg}
               alt="User Icon"

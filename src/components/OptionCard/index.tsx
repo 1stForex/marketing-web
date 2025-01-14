@@ -6,6 +6,7 @@ export default function OptionCard({
   icon,
   title,
   description,
+  fixedSize = false,
 }: OptionCardProp) {
   return (
     <Box
@@ -15,12 +16,20 @@ export default function OptionCard({
         flexDirection: "column",
         gap: "16px",
         padding: "24px",
-        flexBasis: "45%",
-        flexGrow: 1,
         background: "#FFF",
         borderRadius: "16px",
         boxShadow:
           "0px 5px 13px -5px rgba(16, 25, 40, 0.05), 0px 2px 4px -1px rgba(16, 25, 40, 0.02);",
+        ...(fixedSize
+          ? {
+              height: "200px",
+              width: "100%",
+              maxWidth: "533px",
+            }
+          : {
+              flexBasis: "45%",
+              flexGrow: 1,
+            }),
       }}
     >
       <Box
@@ -40,6 +49,10 @@ export default function OptionCard({
           display: "flex",
           flexDirection: "column",
           gap: "14px",
+
+          "@media (max-width: 992px)": {
+            gap: "2px",
+          },
         }}
       >
         <Typography
