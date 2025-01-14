@@ -27,6 +27,10 @@ const StatsCard: React.FC<StatsCardProps> = ({ name, value, description }) => {
         minWidth: "231px",
         gap: "8px",
         mr: "17px",
+        "@media (max-width: 576px)": {
+          mr: "12px",
+          minWidth: "196px",
+        },
       }}
     >
       <Box
@@ -39,13 +43,19 @@ const StatsCard: React.FC<StatsCardProps> = ({ name, value, description }) => {
           height: "40px",
           backgroundColor: isPositive ? "#40B869" : "#FF3B30",
           color: "#FFF",
+          "@media (max-width: 576px)": {
+            width: "32px",
+            height: "32px",
+          },
         }}
       >
         <Image
           src={icon}
           alt={isPositive ? "Positive" : "Negative"}
-          width={20}
-          height={20}
+          style={{
+            width: "50%",
+            height: "auto",
+          }}
         />
       </Box>
 
@@ -54,6 +64,9 @@ const StatsCard: React.FC<StatsCardProps> = ({ name, value, description }) => {
           display: "flex",
           flexDirection: "column",
           gap: "8px",
+          "@media (max-width: 576px)": {
+            gap: "2px",
+          },
         }}
       >
         <Typography
@@ -62,6 +75,10 @@ const StatsCard: React.FC<StatsCardProps> = ({ name, value, description }) => {
             fontWeight: 600,
             lineHeight: "120%",
             letterSpacing: "-0.4px",
+            "@media (max-width: 576px)": {
+              fontSize: "12px",
+              letterSpacing: "-0.24px",
+            },
           }}
         >
           {name}

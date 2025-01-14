@@ -19,17 +19,43 @@ const HeroSection = () => {
   return (
     <Box
       sx={{
+        position: "relative",
         color: "#FFF",
-        py: "95px",
+        py: "96px",
         borderRadius: "32px",
         background:
-          "linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('/HomeHeroBg.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%)",
         boxShadow:
           "0px 12px 16px -4px rgba(0, 0, 0, 0.10), 0px 4px 6px -2px rgba(0, 0, 0, 0.06)",
+
+        "@media (max-width: 992px)": {
+          py: "64px",
+        },
+        "@media (max-width: 576px)": {
+          py: "32px",
+        },
+        overflow: "hidden",
       }}
     >
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: -1,
+        }}
+      >
+        <source src="/HeroBgVideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       <Box
         sx={{
           display: "flex",
@@ -37,7 +63,16 @@ const HeroSection = () => {
           alignItems: "center",
           justifyContent: "center",
           gap: "24px",
-          mb: "65px",
+          mb: "64px",
+          px: "16px",
+          "@media (max-width: 992px)": {
+            gap: "20px",
+            mb: "44px",
+          },
+          "@media (max-width: 576px)": {
+            gap: "16px",
+            mb: "24px",
+          },
         }}
       >
         <Box
@@ -58,6 +93,14 @@ const HeroSection = () => {
             letterSpacing: "-1.92px",
             maxWidth: "464px",
             textAlign: "center",
+            "@media (max-width: 992px)": {
+              fontSize: "38px",
+            },
+            "@media (max-width: 576px)": {
+              fontSize: "28px",
+              letterSpacing: "-0.56px",
+              lineHeight: "120%",
+            },
           }}
         >
           Empowering Your Trading Journey
@@ -72,6 +115,14 @@ const HeroSection = () => {
             lineHeight: "120%",
             letterSpacing: "-0.48px",
             maxWidth: "650px",
+            "@media (max-width: 992px)": {
+              fontSize: "20px",
+            },
+            "@media (max-width: 576px)": {
+              fontSize: "14px",
+              lineHeight: "145%",
+              letterSpacing: "0",
+            },
           }}
         >
           Gain the confidence, knowledge, and support you need to thrive in the
