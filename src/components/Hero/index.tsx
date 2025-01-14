@@ -25,6 +25,12 @@ const Hero: React.FC<HeroProps> = ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        "@media (max-width: 768px)": {
+          minHeight: "400px",
+        },
+        "@media (max-width: 576px)": {
+          minHeight: "377px",
+        },
       }}
     >
       <Box
@@ -34,6 +40,13 @@ const Hero: React.FC<HeroProps> = ({
           alignItems: "center",
           justifyContent: "center",
           gap: "24px",
+          padding: "16px",
+          "@media (max-width: 768px)": {
+            gap: "20px",
+          },
+          "@media (max-width: 576px)": {
+            gap: "16px",
+          },
         }}
       >
         {badgeTitle && <Badge title={badgeTitle} />}
@@ -48,6 +61,14 @@ const Hero: React.FC<HeroProps> = ({
               lineHeight: "100%",
               letterSpacing: "-1.92px",
               maxWidth: "734px",
+              "@media (max-width: 768px)": {
+                fontSize: "40px",
+                letterSpacing: "-1.28px",
+              },
+              "@media (max-width: 576px)": {
+                fontSize: "32px",
+                letterSpacing: "-0.64px",
+              },
             }}
           >
             {title}
@@ -64,6 +85,13 @@ const Hero: React.FC<HeroProps> = ({
               lineHeight: "120%",
               letterSpacing: "-0.48px",
               maxWidth: "842px",
+              "@media (max-width: 768px)": {
+                fontSize: "20px",
+              },
+              "@media (max-width: 576px)": {
+                fontSize: "16px",
+                letterSpacing: "-0.32px",
+              },
             }}
           >
             {description}
