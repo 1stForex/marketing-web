@@ -19,6 +19,9 @@ const FAQSection = () => {
         alignItems: "center",
         justifyContent: "center",
         gap: "48px",
+        "@media (max-width: 576px)": {
+          gap: "32px",
+        },
       }}
     >
       <Box
@@ -26,6 +29,12 @@ const FAQSection = () => {
           display: "flex",
           flexDirection: "column",
           gap: "24px",
+          "@media (max-width: 992px)": {
+            gap: "20px",
+          },
+          "@media (max-width: 576px)": {
+            gap: "16px",
+          },
         }}
       >
         <Badge title="Knowledge Base" />
@@ -39,6 +48,15 @@ const FAQSection = () => {
             fontWeight: 700,
             lineHeight: "100%",
             letterSpacing: "-1.92px",
+            "@media (max-width: 768px)": {
+              fontSize: "40px",
+              letterSpacing: "-1.28px",
+            },
+            "@media (max-width: 576px)": {
+              fontSize: "32px",
+              lineHeight: "120%",
+              letterSpacing: "-0.64px",
+            },
           }}
         >
           FAQ&#39;s
@@ -50,6 +68,9 @@ const FAQSection = () => {
           display: "flex",
           flexDirection: "column",
           gap: "24px",
+          "@media (max-width: 768px)": {
+            gap: "16px",
+          },
         }}
       >
         <Box
@@ -58,6 +79,10 @@ const FAQSection = () => {
             alignItems: "flex-start",
             gap: "32px",
             width: "100%",
+            "@media (max-width: 768px)": {
+              flexDirection: "column",
+              gap: "16px",
+            },
           }}
         >
           <FAQQuestion
@@ -76,6 +101,10 @@ const FAQSection = () => {
             alignItems: "flex-start",
             gap: "32px",
             width: "100%",
+            "@media (max-width: 768px)": {
+              flexDirection: "column",
+              gap: "16px",
+            },
           }}
         >
           <FAQQuestion

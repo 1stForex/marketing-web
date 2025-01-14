@@ -36,6 +36,9 @@ const Carousel: React.FC<CarouselProp> = ({
         background: "var(--Grey-50, #F9FAFB)",
         boxShadow:
           "0px 5px 13px -5px rgba(16, 25, 40, 0.05), 0px 2px 4px -1px rgba(16, 25, 40, 0.02)",
+        "@media (max-width: 576px)": {
+          py: "32px",
+        },
       }}
     >
       <Box
@@ -47,7 +50,7 @@ const Carousel: React.FC<CarouselProp> = ({
           alignItems: headerLeft ? "flex-start" : "center",
         }}
       >
-        <Box sx={{ mb: "21px" }}>
+        <Box sx={{ mb: "24px" }}>
           <Badge title={badgeTitle} />
         </Box>
 
@@ -77,8 +80,17 @@ const Carousel: React.FC<CarouselProp> = ({
         <Box
           sx={{
             display: "flex",
-            alignItems: "center",
             gap: "20px",
+            px: "8px",
+            "@media (max-width: 992px)": {
+              flexDirection: "column",
+            },
+            "@media (max-width: 768px)": {
+              gap: "16px",
+            },
+            "@media (max-width: 576px)": {
+              gap: "12px",
+            },
           }}
         >
           {cards.map((card, index) => (

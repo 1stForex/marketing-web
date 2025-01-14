@@ -39,6 +39,10 @@ const Badge: React.FC<BadgeProps> = ({ title, variant = "red" }) => {
           fontSize: "16px",
           fontWeight: 600,
           lineHeight: "145%",
+          "@media (max-width: 576px)": {
+            fontSize: "12px",
+            lineHeight: "120%",
+          },
         }}
       >
         {title}

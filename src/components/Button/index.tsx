@@ -5,8 +5,6 @@ import { Button, styled, Box } from "@mui/material";
 
 export interface ButtonProps {
   variant?: "red" | "white" | "transparent" | "topic" | "black";
-  padding?: string;
-  fontSize?: string;
   fontWeight?: string;
   gap?: string;
   onClick?: () => void;
@@ -22,13 +20,17 @@ export interface ButtonProps {
 const StyledButton = styled(Button)<{
   varianttype: "red" | "white" | "transparent" | "topic" | "black";
   fontWeight: string;
-}>(({ theme, varianttype, fontWeight }) => ({
+  padding?: string;
+  fontSize?: string;
+}>(({ theme, varianttype, fontWeight, padding, fontSize }) => ({
   textTransform: "none",
   fontWeight: fontWeight,
   display: "flex",
   alignItems: "center",
   gap: "10px",
   lineHeight: "1.2",
+  padding: padding || "16px 24px",
+  fontSize: fontSize || "16px",
   ...(varianttype === "red"
     ? {
         backgroundColor: "#F30",
@@ -103,14 +105,16 @@ const StyledButton = styled(Button)<{
           border: `1px solid ${theme.palette.action.disabledBackground}`,
         },
       }),
+  "@media (max-width: 576px)": {
+    padding: "8px 16px",
+    fontSize: "14px",
+  },
 }));
 
 const CustomButton: React.FC<ButtonProps> = ({
   variant = "red",
   onClick,
   gap = "8px",
-  padding = "16px 24px",
-  fontSize = "16px",
   disabled = false,
   children,
   width = "auto",
@@ -121,7 +125,7 @@ const CustomButton: React.FC<ButtonProps> = ({
   type = "button",
 }) => (
   <StyledButton
-    style={{ width, height, padding, fontSize, borderRadius }}
+    style={{ width, height, borderRadius }}
     onClick={onClick}
     varianttype={variant}
     disabled={disabled}
