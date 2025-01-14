@@ -27,7 +27,7 @@ export default function AdvertiseCard({
           padding: "64px 63px",
           borderRadius: "32px",
           background: "#F9FAFB",
-          boxShadow: "0px 10px 18px -2px rgba(16, 25, 40, 0.17)",
+          boxShadow: "0px -10px 18px -2px rgba(16, 25, 40, 0.17)",
           position: "relative",
           top: `calc(${index * 48}px)`,
           scale,
