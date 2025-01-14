@@ -31,11 +31,27 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           alignItems: "center",
           justifyContent: "center",
           borderRadius: "20px",
-          padding: "10px",
+          width: "40px",
+          height: "40px",
           backgroundColor: "#FF3B30",
+          "@media (max-width: 768px)": {
+            width: "35px",
+            height: "35px",
+          },
+          "@media (max-width: 576px)": {
+            width: "30px",
+            height: "30px",
+          },
         }}
       >
-        <Image src={icon} alt="icon" width={20} height={20} />
+        <Image
+          src={icon}
+          alt="icon"
+          style={{
+            width: "50%",
+            height: "50%",
+          }}
+        />
       </Box>
 
       <Box
@@ -52,6 +68,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             fontWeight: 700,
             lineHeight: "120%",
             letterSpacing: "-0.32px",
+            "@media (max-width: 768px)": {
+              fontSize: "14px",
+            },
+            "@media (max-width: 576px)": {
+              fontSize: "12px",
+            },
           }}
         >
           {title}
@@ -63,6 +85,9 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             fontSize: "12px",
             fontWeight: 400,
             lineHeight: "145%",
+            "@media (max-width: 768px)": {
+              fontSize: "10px",
+            },
           }}
         >
           {description}
