@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import Investment from "@/src/assets/icons/investment.svg";
+import About from "@/src/assets/images/about-us.jpg";
 import Logo from "@/src/assets/icons/logo.svg";
 
 export default function AboutSection() {
@@ -11,6 +11,10 @@ export default function AboutSection() {
     fontWeight: "400",
     lineHeight: "120%",
     letterSpacing: "-0.4px",
+
+    "@media (max-width: 576px)": {
+      fontSize: "16px",
+    },
   };
 
   return (
@@ -41,6 +45,14 @@ export default function AboutSection() {
             fontWeight: "700",
             lineHeight: "100%",
             letterSpacing: "-1.92px",
+
+            "@media (max-width: 768px)": {
+              fontSize: "38px",
+            },
+
+            "@media (max-width: 576px)": {
+              fontSize: "28px",
+            },
           }}
         >
           About Us
@@ -107,8 +119,14 @@ export default function AboutSection() {
             offerings remain cutting-edge and unparalleled in the industry.
           </Typography>
         </Box>
-        <Box>
-          <Image src={Investment} alt="Image" />
+        <Box
+          sx={{
+            "@media (max-width: 992px)": {
+              display: "none",
+            },
+          }}
+        >
+          <Image src={About} alt="Image" width={416} height={416} />
         </Box>
       </Box>
     </Box>

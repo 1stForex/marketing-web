@@ -8,4 +8,5 @@ export interface CustomInputFieldProps {
   helperText?: string;
   multiline?: boolean;
   rows?: number;
+  borderRadius?: string;
 }

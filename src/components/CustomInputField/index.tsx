@@ -13,6 +13,7 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
   helperText,
   multiline = false,
   rows = 3,
+  borderRadius = "6",
 }) => {
   return (
     <Box sx={{ width: width }}>
@@ -47,7 +48,7 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
           ".MuiOutlinedInput-root": {
             padding: padding,
             borderColor: "var(--Grey-300, #D0D5DD)",
-            borderRadius: "6px",
+            borderRadius: `${borderRadius}px`,
             "&:hover .MuiOutlinedInput-notchedOutline": {
               borderColor: "var(--Primary-100, #FF9980)",
             },

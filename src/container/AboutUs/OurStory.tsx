@@ -45,6 +45,19 @@ const OurStory = () => {
         background: "var(--Grey-50, #F9FAFB)",
         boxShadow:
           "0px 5px 13px -5px rgba(16, 25, 40, 0.05), 0px 2px 4px -1px rgba(16, 25, 40, 0.02)",
+
+        "@media (max-width: 992px)": {
+          justifyContent: "center",
+          alignItems: "center",
+        },
+
+        "@media (max-width:768px)": {
+          padding: "38px 0",
+        },
+
+        "@media (max-width:576px)": {
+          padding: "28px 0",
+        },
       }}
     >
       <Box sx={{ mb: "24px" }}>
@@ -58,9 +71,17 @@ const OurStory = () => {
           textAlign: "center",
 
           fontSize: "48px",
-          fontWeight: 700,
+          fontWeight: "700",
           lineHeight: "100%",
           letterSpacing: "-1.92px",
+
+          "@media (max-width: 768px)": {
+            fontSize: "38px",
+          },
+
+          "@media (max-width: 576px)": {
+            fontSize: "28px",
+          },
         }}
       >
         A Legacy of Excellence
@@ -74,6 +95,18 @@ const OurStory = () => {
           fontWeight: "400",
           lineHeight: "120%",
           letterSpacing: "-0.48px",
+
+          "@media (max-width: 992px)": {
+            textAlign: "center",
+          },
+
+          "@media (max-width: 768px)": {
+            fontSize: "20px",
+          },
+
+          "@media (max-width: 576px)": {
+            fontSize: "16px",
+          },
         }}
       >
         For more than two decades, 1st Forex Trading Academy has been synonymous
@@ -88,6 +121,13 @@ const OurStory = () => {
           display: "flex",
           justifyContent: "space-between",
           width: "100%",
+
+          "@media (max-width: 992px)": {
+            flexDirection: "column-reverse",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "21px",
+          },
         }}
       >
         <Box
@@ -120,6 +160,14 @@ const OurStory = () => {
               "& > *": {
                 direction: "ltr",
               },
+
+              "@media (max-width: 768px)": {
+                paddingLeft: "38px",
+              },
+
+              "@media (max-width: 576px)": {
+                paddingLeft: "28px",
+              },
             }}
           >
             {paragraphs.map((item, index) => {
@@ -134,6 +182,10 @@ const OurStory = () => {
                       letterSpacing: "-0.48px",
                       mt: "50px",
                       mb: "20px",
+
+                      "@media (max-width: 576px)": {
+                        fontSize: "20px",
+                      },
                     }}
                   >
                     {item.label}
@@ -147,6 +199,9 @@ const OurStory = () => {
                         lineHeight: "120%",
                         letterSpacing: "-0.4px",
                         marginBottom: "15px",
+                        "@media (max-width: 576px)": {
+                          fontSize: "16px",
+                        },
                       }}
                     >
                       {item.description}
@@ -173,6 +228,11 @@ const OurStory = () => {
                             fontWeight: 400,
                             lineHeight: "120%",
                             letterSpacing: "-0.4px",
+
+                            "@media (max-width: 576px)": {
+                              fontSize: "16px",
+                            },
+
                             "&::marker": {
                               fontSize: "16px",
                             },
@@ -209,16 +269,22 @@ const OurStory = () => {
         <Box
           sx={{
             position: "relative",
-            width: "408px",
+            maxWidth: "408px",
+            width: "100%",
             aspectRatio: "1",
+            "@media (max-width: 768px)": {
+              maxWidth: "350px",
+            },
           }}
         >
           <Image
             src={Bull}
             alt="Bull"
             fill
-            objectFit="cover"
-            objectPosition="center"
+            style={{
+              objectFit: "contain",
+              objectPosition: "center",
+            }}
           />
         </Box>
       </Box>

@@ -203,8 +203,10 @@ const OurStory = () => {
             src={Bull}
             alt="Bull"
             fill
-            objectFit="contain"
-            objectPosition="center"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
           />
         </Box>
       </Box>
