@@ -60,7 +60,7 @@ const StyledButton = styled(Button)<{
     ? {
         backgroundColor: "transparent",
         color: "#FFF",
-        border: "1.5px solid #FFF",
+        boxShadow: "inset 0 0 0 1px #FFF",
         "&:hover": {
           backgroundColor: "rgba(255, 255, 255, 0.1)",
         },

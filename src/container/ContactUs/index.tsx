@@ -15,6 +15,15 @@ const ContactUs = () => {
           flexDirection: "column",
           gap: "60px",
           mb: "120px",
+          overflowX: "hidden",
+          "@media (max-width: 768px)": {
+            gap: "50px",
+            mb: "80px",
+          },
+          "@media (max-width: 576px)": {
+            gap: "40px",
+            mb: "40px",
+          },
         }}
       >
         <Hero
