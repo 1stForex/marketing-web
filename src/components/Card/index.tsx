@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({
       sx={{
         ...(isCarousel && {
           maxWidth: "363px",
-          minHeight: "408px",
+          height: "408px",
           mr: "20px",
         }),
         width: "100%",
@@ -33,7 +33,7 @@ const Card: React.FC<CardProps> = ({
           padding: "18px",
           ...(isCarousel && {
             maxWidth: "315px",
-            minHeight: "200px",
+            height: "170px",
           }),
         },
       }}

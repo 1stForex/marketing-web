@@ -18,6 +18,20 @@ const PricingPlanSection = () => {
         background: "var(--Grey-50, #F9FAFB)",
         boxShadow:
           "0px 5px 13px -5px rgba(16, 25, 40, 0.05), 0px 2px 4px -1px rgba(16, 25, 40, 0.02)",
+        "@media (max-width: 1000px)": {
+          padding: "40px",
+        },
+        "@media (max-width: 920px)": {
+          padding: "32px",
+        },
+        "@media (max-width: 768px)": {
+          flexDirection: "column",
+          gap: "24px",
+        },
+        "@media (max-width: 576px)": {
+          padding: "24px",
+          gap: "16px",
+        },
       }}
     >
       <PricingCard

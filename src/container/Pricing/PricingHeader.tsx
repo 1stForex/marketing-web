@@ -11,6 +11,12 @@ const PricingHeader = () => {
         alignItems: "center",
         justifyContent: "center",
         gap: "24px",
+        "@media (max-width: 768px)": {
+          gap: "20px",
+        },
+        "@media (max-width: 576px)": {
+          gap: "16px",
+        },
       }}
     >
       <Badge title="Pricing" />
@@ -23,6 +29,14 @@ const PricingHeader = () => {
           fontWeight: 700,
           lineHeight: "100%",
           letterSpacing: "-1.92px",
+          "@media (max-width: 768px)": {
+            fontSize: "40px",
+            letterSpacing: "-1.28px",
+          },
+          "@media (max-width: 576px)": {
+            fontSize: "32px",
+            letterSpacing: "-0.64px",
+          },
         }}
       >
         Pick the price{" "}
@@ -39,6 +53,13 @@ const PricingHeader = () => {
           fontWeight: 400,
           lineHeight: "120%",
           letterSpacing: "-0.48px",
+          "@media (max-width: 768px)": {
+            fontSize: "20px",
+          },
+          "@media (max-width: 576px)": {
+            fontSize: "16px",
+            letterSpacing: "-0.32px",
+          },
         }}
       >
         Join millions of other customers on this platform

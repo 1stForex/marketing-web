@@ -21,6 +21,7 @@ const Carousel: React.FC<CarouselProp> = ({
     slidesToShow: 1,
     slidesToScroll: 1,
     variableWidth: true,
+    adaptiveHeight: true,
     arrows: false,
   };
 
@@ -47,10 +48,24 @@ const Carousel: React.FC<CarouselProp> = ({
           pl: headerLeft ? "65px" : "",
           display: "flex",
           flexDirection: "column",
+          gap: "24px",
           alignItems: headerLeft ? "flex-start" : "center",
+          "@media (max-width: 992px)": {
+            pl: headerLeft ? "48px" : "",
+          },
+          "@media (max-width: 768px)": {
+            pl: headerLeft ? "36px" : "",
+            gap: "20px",
+            mb: "24px",
+          },
+          "@media (max-width: 576px)": {
+            pl: headerLeft ? "24px" : "",
+            gap: "16px",
+            mb: "20px",
+          },
         }}
       >
-        <Box sx={{ mb: "24px" }}>
+        <Box>
           <Badge title={badgeTitle} />
         </Box>
 

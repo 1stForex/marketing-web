@@ -20,11 +20,25 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         gap: "8px",
         borderRadius: "40px",
         border: "1px solid rgba(255, 255, 255, 0.10)",
-        background: "rgba(255, 255, 255, 0.11)",
-        backdropFilter: "blur(8.1px)",
+        position: "relative",
+        overflow: "hidden",
         padding: "8px",
       }}
     >
+      <Box
+        sx={{
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: "rgba(255, 255, 255, 0.11)",
+          backdropFilter: "blur(8.1px)",
+          zIndex: 0,
+        }}
+      />
+
       <Box
         sx={{
           display: "flex",
@@ -34,6 +48,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           width: "40px",
           height: "40px",
           backgroundColor: "#FF3B30",
+          zIndex: 1,
           "@media (max-width: 768px)": {
             width: "35px",
             height: "35px",
@@ -59,6 +74,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           display: "flex",
           flexDirection: "column",
           gap: "2px",
+          zIndex: 1,
         }}
       >
         <Typography
