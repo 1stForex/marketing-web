@@ -15,7 +15,7 @@ import NavLinks from "./NavLinks";
 import CustomButton from "../Button";
 import userSvg from "../../assets/icons/user.svg";
 import loginSvg from "../../assets/icons/login-color.svg";
-import { ListItemText, Typography, useMediaQuery } from "@mui/material";
+import { ListItemText, Typography } from "@mui/material";
 import Link from "next/link";
 import appleStore from "../../assets/images/apple-store.png";
 import googlePlay from "../../assets/images/google-play.png";
@@ -26,7 +26,6 @@ export default function TemporaryDrawer({
   currentPath,
   onLinkClick,
 }: NavProps) {
-  const isVerySmallScreen = useMediaQuery("(max-width: 576px)");
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -142,13 +141,20 @@ export default function TemporaryDrawer({
               }}
             >
               <ListItemButton>
-                <CustomButton variant="red" width="100%">
-                  <Image
-                    src={userSvg}
-                    alt="User Icon"
-                    width={isVerySmallScreen ? 14 : 16}
-                    height={isVerySmallScreen ? 14 : 16}
-                  />
+                <CustomButton
+                  variant="red"
+                  width="100%"
+                  icon={
+                    <Image
+                      src={userSvg}
+                      alt="User Icon"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                      }}
+                    />
+                  }
+                >
                   Register
                 </CustomButton>
               </ListItemButton>
@@ -159,13 +165,20 @@ export default function TemporaryDrawer({
               }}
             >
               <ListItemButton>
-                <CustomButton variant="transparent" width="100%">
-                  <Image
-                    src={loginSvg}
-                    alt="Logout Icon"
-                    width={isVerySmallScreen ? 14 : 16}
-                    height={isVerySmallScreen ? 14 : 16}
-                  />
+                <CustomButton
+                  variant="transparent"
+                  width="100%"
+                  icon={
+                    <Image
+                      src={loginSvg}
+                      alt="Logout Icon"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                      }}
+                    />
+                  }
+                >
                   Login
                 </CustomButton>
               </ListItemButton>

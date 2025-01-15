@@ -9,6 +9,7 @@ export default function BannerSection() {
         boxShadow: "0px 10px 18px -2px rgba(16, 25, 40, 0.07)",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        overflowX: "hidden",
         mt: "-200px",
         "@media (max-width: 768px)": {
           mt: "-200px",

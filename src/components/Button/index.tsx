@@ -133,7 +133,22 @@ const CustomButton: React.FC<ButtonProps> = ({
     type={type}
   >
     {icon && (
-      <Box sx={{ display: "flex", alignItems: "center", gap }}>{icon}</Box>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          gap,
+          height: "16px",
+          width: "16px",
+
+          "@media (max-width: 576px)": {
+            height: "14px",
+            width: "14px",
+          },
+        }}
+      >
+        {icon}
+      </Box>
     )}
     {children}
   </StyledButton>

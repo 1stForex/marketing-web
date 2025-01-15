@@ -46,6 +46,7 @@ export default function Offer({
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
+        overflowX: "hidden",
 
         "@media (max-width: 992px)": {
           padding: "60px 30px",

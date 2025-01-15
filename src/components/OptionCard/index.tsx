@@ -75,8 +75,8 @@ export default function OptionCard({
             src={icon}
             alt="Option card Icon"
             style={{
-              width: "50%",
-              height: "50%",
+              width: "auto",
+              height: "auto",
             }}
           />
         </Box>

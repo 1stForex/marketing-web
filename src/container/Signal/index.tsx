@@ -31,6 +31,7 @@ export default function Signal() {
             display: "flex",
             flexDirection: "column",
             gap: "60px",
+            overflowX: "hidden",
           }}
         >
           <HeroSection />
