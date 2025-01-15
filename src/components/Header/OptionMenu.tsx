@@ -12,7 +12,6 @@ import { NavProps } from "@/src/types/Nav.interface";
 
 export default function OptionMenu({ currentPath, onLinkClick }: NavProps) {
   const isSmallScreen = useMediaQuery("(max-width: 1350px)");
-  const isVerySmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
     <Box
@@ -79,18 +78,35 @@ export default function OptionMenu({ currentPath, onLinkClick }: NavProps) {
               },
             }}
           >
-            <CustomButton variant="white">
-              <Image src={loginSvg} alt="Logout Icon" />
+            <CustomButton
+              variant="white"
+              icon={
+                <Image
+                  src={loginSvg}
+                  alt="Logout Icon"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                  }}
+                />
+              }
+            >
               Login
             </CustomButton>
           </Box>
-          <CustomButton variant="red">
-            <Image
-              src={userSvg}
-              alt="User Icon"
-              width={isVerySmallScreen ? 10 : 24}
-              height={isVerySmallScreen ? 10 : 24}
-            />
+          <CustomButton
+            variant="red"
+            icon={
+              <Image
+                src={userSvg}
+                alt="User Icon"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
+            }
+          >
             Register
           </CustomButton>
         </Box>

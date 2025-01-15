@@ -64,6 +64,7 @@ export default function TemporaryDrawer({
           <List
             sx={{
               display: "flex",
+              gap: "1rem",
             }}
           >
             <ListItem
@@ -74,10 +75,15 @@ export default function TemporaryDrawer({
             >
               <ListItemButton
                 sx={{
-                  padding: "5px",
+                  padding: "0",
                 }}
               >
-                <Image src={searchSvg} alt="Search Icon" />
+                <Image
+                  src={searchSvg}
+                  alt="Search Icon"
+                  width={20}
+                  height={20}
+                />
               </ListItemButton>
             </ListItem>
             <ListItem
@@ -89,7 +95,7 @@ export default function TemporaryDrawer({
               <ListItemButton
                 onClick={toggleDrawer(false)}
                 sx={{
-                  padding: "5px",
+                  padding: "0",
                 }}
               >
                 <Image src={crossSvg} alt="Cross Icon" />
@@ -135,8 +141,20 @@ export default function TemporaryDrawer({
               }}
             >
               <ListItemButton>
-                <CustomButton variant="red" width="100%">
-                  <Image src={userSvg} alt="User Icon" />
+                <CustomButton
+                  variant="red"
+                  width="100%"
+                  icon={
+                    <Image
+                      src={userSvg}
+                      alt="User Icon"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                      }}
+                    />
+                  }
+                >
                   Register
                 </CustomButton>
               </ListItemButton>
@@ -147,8 +165,20 @@ export default function TemporaryDrawer({
               }}
             >
               <ListItemButton>
-                <CustomButton variant="transparent" width="100%">
-                  <Image src={loginSvg} alt="Logout Icon" />
+                <CustomButton
+                  variant="transparent"
+                  width="100%"
+                  icon={
+                    <Image
+                      src={loginSvg}
+                      alt="Logout Icon"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                      }}
+                    />
+                  }
+                >
                   Login
                 </CustomButton>
               </ListItemButton>
@@ -243,6 +273,7 @@ export default function TemporaryDrawer({
           variant="middle"
           sx={{
             borderColor: "#F0F2F5",
+            my: "8px",
           }}
         />
         <Box>

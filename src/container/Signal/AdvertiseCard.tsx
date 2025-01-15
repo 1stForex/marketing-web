@@ -18,13 +18,12 @@ export default function AdvertiseCard({
       sx={{
         position: "sticky",
         top: "80px",
-        minHeight: "700px",
+        minHeight: "900px",
       }}
     >
       <motion.div
         className="advertise-card"
         style={{
-          padding: "64px 63px",
           borderRadius: "32px",
           background: "#F9FAFB",
           boxShadow: "0px -10px 18px -2px rgba(16, 25, 40, 0.17)",
@@ -38,6 +37,23 @@ export default function AdvertiseCard({
             display: "flex",
             flexDirection: "column",
             gap: "32px",
+            padding: "64px 63px",
+
+            "@media (max-width: 992px)": {
+              padding: "44px 43px",
+            },
+
+            "@media (max-width: 768px)": {
+              padding: "24px 23px",
+            },
+
+            "@media (max-width: 576px)": {
+              padding: "14px 23px",
+            },
+
+            "@media (max-width: 780px)": {
+              gap: "21px",
+            },
           }}
         >
           <Box>
@@ -50,6 +66,16 @@ export default function AdvertiseCard({
                 lineHeight: "33.6px",
                 letterSpacing: "-0.56px",
                 width: "300px",
+
+                "@media (max-width: 780px)": {
+                  fontSize: "24px",
+                  width: "auto",
+                },
+
+                "@media (max-width: 576px)": {
+                  fontSize: "20px",
+                  width: "auto",
+                },
               }}
             >
               {title} <span style={{ color: "#F30" }}>{specialText}</span>
@@ -61,6 +87,11 @@ export default function AdvertiseCard({
               flexWrap: "wrap",
               gap: "24px",
               justifyContent: "center",
+
+              "@media (max-width: 768px)": {
+                flexDirection: "column",
+                gap: "14px",
+              },
             }}
           >
             {cardInfo.map((item, index) => (

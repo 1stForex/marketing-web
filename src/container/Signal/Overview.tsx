@@ -10,6 +10,13 @@ export default function Overview() {
         display: "flex",
         alignItems: "flex-start",
         gap: "130px",
+        "@media (max-width: 768px)": {
+          flexDirection: "column",
+          gap: "24px",
+        },
+        "@media (max-width: 576px)": {
+          gap: "16px",
+        },
       }}
     >
       <Box
@@ -29,6 +36,14 @@ export default function Overview() {
           lineHeight: "120%",
           letterSpacing: "-0.48px",
           color: "#333",
+
+          "@media (max-width: 768px)": {
+            fontSize: "20px",
+          },
+          "@media (max-width: 576px)": {
+            fontSize: "16px",
+            lineHeight: "145%",
+          },
         }}
       >
         1st Forex AI Signal merges{" "}

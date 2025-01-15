@@ -3,20 +3,16 @@ import { Typography } from "@mui/material";
 
 export default function HeroSection() {
   return (
-    <Hero
-      badgeTitle="About Us"
-      bgImagePath="HomeHeroBg.jpg"
-      title="Welcome to 1st Forex: Where"
-    >
+    <Hero badgeTitle="About Us" bgImagePath="HomeHeroBg.jpg">
       <Typography
         sx={{
-          color: "#F30",
           fontSize: "48px",
           fontStyle: "normal",
           fontWeight: "700",
           lineHeight: "100%",
           letterSpacing: "-1.92px",
           textAlign: "center",
+          maxWidth: "734px",
 
           "@media (max-width: 768px)": {
             fontSize: "38px",
@@ -27,7 +23,8 @@ export default function HeroSection() {
           },
         }}
       >
-        Tradition Meets Innovation
+        Welcome to 1st Forex: Where{" "}
+        <span style={{ color: "#F30" }}>Tradition Meets Innovation</span>
       </Typography>
     </Hero>
   );

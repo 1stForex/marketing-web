@@ -23,6 +23,18 @@ export default function Offer({
     lineHeight: "28.8px",
     letterSpacing: "-0.48px",
     maxWidth: descriptionWidth ? `${descriptionWidth}px` : "549px",
+
+    "@media (max-width: 992)": {
+      maxWidth: "100%",
+    },
+
+    "@media (max-width: 768px)": {
+      fontSize: "20px",
+    },
+
+    "@media (max-width: 576px)": {
+      fontSize: "16px",
+    },
   };
 
   return (
@@ -34,6 +46,15 @@ export default function Offer({
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
+        overflowX: "hidden",
+
+        "@media (max-width: 992px)": {
+          padding: "60px 30px",
+        },
+
+        "@media (max-width: 576px)": {
+          padding: "30px 15px",
+        },
       }}
     >
       <Box
@@ -42,6 +63,19 @@ export default function Offer({
           flexDirection: "column",
           gap: "28px",
           marginBottom: "3.5rem",
+
+          "@media (max-width: 992px)": {
+            marginBottom: "0",
+            gap: "24px",
+          },
+
+          "@media (max-width: 768px)": {
+            gap: "20px",
+          },
+
+          "@media (max-width: 576px)": {
+            gap: "16px",
+          },
         }}
       >
         <Box
@@ -50,6 +84,14 @@ export default function Offer({
             flexDirection: "column",
             gap: "21px",
             alignItems: "flex-start",
+
+            "@media (max-width: 768px)": {
+              gap: "17px",
+            },
+
+            "@media (max-width: 576px)": {
+              gap: "13px",
+            },
           }}
         >
           {badgeTitle && <Badge title={badgeTitle} />}
@@ -62,6 +104,18 @@ export default function Offer({
               lineHeight: "48px",
               letterSpacing: "-1.92px",
               maxWidth: "535px",
+
+              "@media (max-width: 992px)": {
+                maxWidth: "100%",
+              },
+
+              "@media (max-width: 768px)": {
+                fontSize: "38px",
+              },
+
+              "@media (max-width: 576px)": {
+                fontSize: "28px",
+              },
             }}
           >
             {title} <span style={{ color: "#F30" }}>{specialTitle}</span>
@@ -73,6 +127,14 @@ export default function Offer({
               display: "flex",
               flexDirection: "column",
               gap: "20px",
+
+              "@media (max-width: 768px)": {
+                gap: "16px",
+              },
+
+              "@media (max-width: 576px)": {
+                gap: "12px",
+              },
             }),
           }}
         >
@@ -93,15 +155,33 @@ export default function Offer({
             </Typography>
           )}
         </Box>
-        <Box>
-          {buttonText && (
+        {buttonText && (
+          <Box>
             <CustomButton variant="red" onClick={onClick}>
               {buttonText}
             </CustomButton>
-          )}
-        </Box>
+          </Box>
+        )}
       </Box>
-      <Image src={phoneImg} alt="Phone Image" />
+      <Box
+        sx={{
+          position: "relative",
+          maxWidth: "418px",
+          width: "100%",
+          aspectRatio: "418 / 505",
+
+          "@media (max-width: 992px)": {
+            display: "none",
+          },
+        }}
+      >
+        <Image
+          src={phoneImg}
+          alt="Phone Image"
+          fill
+          style={{ objectFit: "contain", objectPosition: "bottom" }}
+        />
+      </Box>
     </Box>
   );
 }

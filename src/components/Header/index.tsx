@@ -1,6 +1,8 @@
+"use client";
 import { Box } from "@mui/material";
 import forexLogo from "../../assets/images/forex-logo.png";
 import Image from "next/image";
+import Link from "next/link";
 import NavLinks from "./NavLinks";
 import GroupButton from "./GroupButton";
 import OptionMenu from "./OptionMenu";
@@ -41,6 +43,13 @@ export default function Header() {
         "@media (max-width: 1400px)": {
           padding: "0 20px",
         },
+
+        "@media (max-width: 768px)": {
+          marginBottom: "15px",
+        },
+        "@media (max-width: 576px)": {
+          marginBottom: "0px",
+        },
       }}
     >
       <Box
@@ -62,13 +71,16 @@ export default function Header() {
             alignSelf: "stretch",
           }}
         >
-          <Image
-            src={forexLogo}
-            alt="Forex Logo"
-            loading="lazy"
-            width={122}
-            height={24}
-          />
+          <Link href="/home">
+            <Image
+              src={forexLogo}
+              alt="Forex Logo"
+              loading="lazy"
+              onClick={() => handleLinkClick("/home")}
+              width={122}
+              height={24}
+            />
+          </Link>
           <Box
             sx={{
               "@media (max-width: 1350px)": {

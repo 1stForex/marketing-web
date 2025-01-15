@@ -13,6 +13,14 @@ export default function KeyOfferings() {
             fontWeight: 700,
             lineHeight: "100%",
             letterSpacing: "-1.92px",
+
+            "@media (max-width: 768px)": {
+              fontSize: "38px",
+            },
+
+            "@media (max-width: 576px)": {
+              fontSize: "28px",
+            },
           }}
         >
           Key{" "}
