@@ -25,6 +25,9 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
             fontWeight: 500,
             color: "#475367",
             lineHeight: "145%",
+            "@media (max-width: 576px)": {
+              fontSize: "12px",
+            },
           }}
         >
           {label}
@@ -68,6 +71,14 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
           "textarea.MuiOutlinedInput-input": {
             resize: "none",
           },
+          "@media (max-width: 576px)": {
+            ".MuiOutlinedInput-root": {
+              padding: "8px 16px",
+            },
+            "input::placeholder, textarea::placeholder": {
+              fontSize: "12px",
+            },
+          },
         }}
       />
       {helperText && (
@@ -78,6 +89,9 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
             fontWeight: 400,
             lineHeight: "145%",
             mt: "8px",
+            "@media (max-width: 576px)": {
+              fontSize: "12px",
+            },
           }}
         >
           {helperText}

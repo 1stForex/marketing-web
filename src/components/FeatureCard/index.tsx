@@ -14,7 +14,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   return (
     <Box
       sx={{
-        minWidth: "300px",
+        minWidth: "290px",
         display: "flex",
         alignItems: "center",
         gap: "8px",

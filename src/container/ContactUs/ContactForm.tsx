@@ -10,6 +10,12 @@ const ContactForm = () => {
           display: "flex",
           flexDirection: "column",
           gap: "22px",
+          "@media (max-width: 768px)": {
+            gap: "18px",
+          },
+          "@media (max-width: 576px)": {
+            gap: "16px",
+          },
         }}
       >
         <Box
@@ -17,6 +23,9 @@ const ContactForm = () => {
             display: "flex",
             alignItems: "center",
             gap: "18px",
+            "@media (max-width: 576px)": {
+              gap: "16px",
+            },
           }}
         >
           <CustomInputField placeholder="John" label="First Name*" />
