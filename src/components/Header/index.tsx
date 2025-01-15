@@ -36,6 +36,7 @@ export default function Header() {
         alignItems: "center",
         padding: "0 40px",
         marginBottom: "30px",
+        overflowX: "hidden",
 
         "@media (max-width: 1400px)": {
           padding: "0 20px",

@@ -18,6 +18,12 @@ const Topics = () => {
         alignItems: "center",
         gap: "16px",
         flexWrap: "wrap",
+        "@media (max-width: 768px)": {
+          gap: "12px",
+        },
+        "@media (max-width: 576px)": {
+          gap: "8px",
+        },
       }}
     >
       {allTopics.map((topic, index) => (

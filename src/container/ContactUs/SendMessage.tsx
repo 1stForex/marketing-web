@@ -10,6 +10,13 @@ const SendMessage = () => {
         flexDirection: "column",
         gap: "24px",
         alignItems: "flex-start",
+        "@media (max-width: 768px)": {
+          flexDirection: "column",
+          gap: "20px",
+        },
+        "@media (max-width: 576px)": {
+          gap: "16px",
+        },
       }}
     >
       <Badge title="Contact" />
@@ -22,6 +29,14 @@ const SendMessage = () => {
           lineHeight: "100%",
           letterSpacing: "-1.92px",
           maxWidth: "381px",
+          "@media (max-width: 768px)": {
+            fontSize: "40px",
+            letterSpacing: "-1.28px",
+          },
+          "@media (max-width: 576px)": {
+            fontSize: "32px",
+            letterSpacing: "-0.64px",
+          },
         }}
       >
         Send Us A{" "}
@@ -36,6 +51,12 @@ const SendMessage = () => {
           lineHeight: "120%",
           letterSpacing: "-0.36px",
           maxWidth: "421px",
+          "@media (max-width: 768px)": {
+            fontSize: "16px",
+          },
+          "@media (max-width: 576px)": {
+            fontSize: "14px",
+          },
         }}
       >
         You may also leave your contact information here, and a 1st Forex
