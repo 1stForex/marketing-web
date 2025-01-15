@@ -45,8 +45,10 @@ const Card: React.FC<CardProps> = ({
           alignItems: "center",
           justifyContent: "center",
           gap: "32px",
+          width: "100%",
           "@media (max-width: 576px)": {
             flexDirection: "row",
+            justifyContent: "start",
             gap: "8px",
           },
         }}

@@ -14,11 +14,11 @@ const ContactUs = () => {
           display: "flex",
           flexDirection: "column",
           gap: "60px",
-          mb: "120px",
+          mb: "60px",
           overflowX: "hidden",
           "@media (max-width: 768px)": {
             gap: "50px",
-            mb: "80px",
+            mb: "50px",
           },
           "@media (max-width: 576px)": {
             gap: "40px",
