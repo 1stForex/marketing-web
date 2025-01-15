@@ -18,6 +18,19 @@ const UniqueApproach = () => {
         background: "var(--Grey-50, #F9FAFB)",
         boxShadow:
           "0px 5px 13px -5px rgba(16, 25, 40, 0.05), 0px 2px 4px -1px rgba(16, 25, 40, 0.02)",
+
+        "@media (max-width: 992px)": {
+          justifyContent: "center",
+          gap: "0px",
+        },
+
+        "@media (max-width: 768px)": {
+          padding: "40px",
+        },
+
+        "@media (max-width: 576px)": {
+          padding: "20px",
+        },
       }}
     >
       <Box
@@ -39,6 +52,19 @@ const UniqueApproach = () => {
             lineHeight: "100%",
             letterSpacing: "-1.92px",
             maxWidth: "464px",
+
+            "@media (max-width: 992px)": {
+              maxWidth: "100%",
+            },
+
+            "@media (max-width: 768px)": {
+              fontSize: "40px",
+              letterSpacing: "-1.28px",
+            },
+            "@media (max-width: 576px)": {
+              fontSize: "32px",
+              letterSpacing: "-0.64px",
+            },
           }}
         >
           Our Unique Approach
@@ -57,6 +83,16 @@ const UniqueApproach = () => {
               lineHeight: "120%",
               letterSpacing: "-0.4px",
               mb: "32px",
+
+              "@media (max-width: 768px)": {
+                fontSize: "18px",
+                mb: "28px",
+              },
+
+              "@media (max-width: 576px)": {
+                fontSize: "16px",
+                mb: "24px",
+              },
             }}
           >
             What sets us apart is our ability to blend tradition with
@@ -72,6 +108,14 @@ const UniqueApproach = () => {
               fontWeight: 400,
               lineHeight: "120%",
               letterSpacing: "-0.4px",
+
+              "@media (max-width: 768px)": {
+                fontSize: "18px",
+              },
+
+              "@media (max-width: 576px)": {
+                fontSize: "16px",
+              },
             }}
           >
             From AI forex signals to automated trading bots, our tools
@@ -86,6 +130,10 @@ const UniqueApproach = () => {
           position: "relative",
           width: "408px",
           aspectRatio: "1",
+
+          "@media (max-width: 992px)": {
+            display: "none",
+          },
         }}
       >
         <Image

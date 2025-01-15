@@ -32,6 +32,10 @@ export default function Signal() {
             flexDirection: "column",
             gap: "60px",
             overflowX: "hidden",
+
+            "@media (max-width: 768px)": {
+              gap: "40px",
+            },
           }}
         >
           <HeroSection />
@@ -54,6 +58,15 @@ export default function Signal() {
             flexDirection: "column",
             gap: "60px",
             mb: "80px",
+
+            "@media (max-width: 768px)": {
+              gap: "40px",
+              mb: "60px",
+            },
+
+            "@media (max-width: 576px)": {
+              mb: "40px",
+            },
           }}
         >
           <OptionSection />

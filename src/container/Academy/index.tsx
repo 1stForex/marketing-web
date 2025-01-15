@@ -26,6 +26,7 @@ const Academy = () => {
             display: "flex",
             flexDirection: "column",
             gap: "60px",
+            overflowX: "hidden",
           }}
         >
           <Hero
@@ -51,6 +52,7 @@ const Academy = () => {
             display: "flex",
             flexDirection: "column",
             gap: "60px",
+            overflowX: "hidden",
           }}
         >
           <Carousel
@@ -66,6 +68,15 @@ const Academy = () => {
                 fontWeight: 700,
                 lineHeight: "100%",
                 letterSpacing: "-1.92px",
+
+                "@media (max-width: 768px)": {
+                  fontSize: "40px",
+                  letterSpacing: "-1.28px",
+                },
+                "@media (max-width: 576px)": {
+                  fontSize: "32px",
+                  letterSpacing: "-0.64px",
+                },
               }}
             >
               Why{" "}

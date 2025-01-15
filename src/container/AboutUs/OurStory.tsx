@@ -52,11 +52,11 @@ const OurStory = () => {
         },
 
         "@media (max-width:768px)": {
-          padding: "38px 0",
+          padding: "32px",
         },
 
         "@media (max-width:576px)": {
-          padding: "28px 0",
+          padding: "32px 16px",
         },
       }}
     >
@@ -76,11 +76,12 @@ const OurStory = () => {
           letterSpacing: "-1.92px",
 
           "@media (max-width: 768px)": {
-            fontSize: "38px",
+            fontSize: "40px",
+            letterSpacing: "-1.28px",
           },
-
           "@media (max-width: 576px)": {
-            fontSize: "28px",
+            fontSize: "32px",
+            letterSpacing: "-0.64px",
           },
         }}
       >
@@ -126,7 +127,7 @@ const OurStory = () => {
             flexDirection: "column-reverse",
             justifyContent: "center",
             alignItems: "center",
-            gap: "21px",
+            gap: "24px",
           },
         }}
       >
@@ -136,6 +137,10 @@ const OurStory = () => {
             maxWidth: "627px",
             height: "408px",
             overflow: "hidden",
+
+            "@media (max-width: 992px)": {
+              maxWidth: "100%",
+            },
           }}
         >
           <Box
@@ -144,6 +149,12 @@ const OurStory = () => {
               overflowY: "auto",
               position: "relative",
               paddingLeft: "48px",
+              "@media (max-width: 992px)": {
+                paddingLeft: "32px",
+              },
+              "@media (max-width: 576px)": {
+                paddingLeft: "16px",
+              },
               "&::-webkit-scrollbar": {
                 width: "8px",
                 background: "transparent",
@@ -160,19 +171,17 @@ const OurStory = () => {
               "& > *": {
                 direction: "ltr",
               },
-
-              "@media (max-width: 768px)": {
-                paddingLeft: "38px",
-              },
-
-              "@media (max-width: 576px)": {
-                paddingLeft: "28px",
-              },
             }}
           >
             {paragraphs.map((item, index) => {
               return (
-                <Box key={index}>
+                <Box
+                  key={index}
+                  sx={{
+                    mt: "117px",
+                    mb: "117px",
+                  }}
+                >
                   <Typography
                     sx={{
                       color: "var(--Grey-900, #333)",
@@ -180,15 +189,6 @@ const OurStory = () => {
                       fontWeight: 700,
                       lineHeight: "120%",
                       letterSpacing: "-0.48px",
-                      mt: "50px",
-                      mb: "20px",
-                      "@media (max-width: 768px)": {
-                        mt: "30px",
-                      },
-                      "@media (max-width: 576px)": {
-                        mt: "20px",
-                        fontSize: "20px",
-                      },
                     }}
                   >
                     {item.label}
@@ -207,8 +207,6 @@ const OurStory = () => {
                         },
                         "@media (max-width: 576px)": {
                           fontSize: "14px",
-                          lineHeight: "145%",
-                          letterSpacing: "0",
                         },
                       }}
                     >
@@ -219,23 +217,6 @@ const OurStory = () => {
                     sx={{
                       display: "flex",
                       flexDirection: "column",
-                      gap: "24px",
-                      mb: "100px",
-
-                      "@media (max-width: 992px)": {
-                        gap: "20px",
-                        mb: "80px",
-                      },
-
-                      "@media (max-width: 768px)": {
-                        gap: "18px",
-                        mb: "60px",
-                      },
-
-                      "@media (max-width: 576px)": {
-                        gap: "16px",
-                        mb: "40px",
-                      },
                     }}
                   >
                     {item.points.length > 0 && (
@@ -257,8 +238,6 @@ const OurStory = () => {
 
                             "@media (max-width: 576px)": {
                               fontSize: "14px",
-                              lineHeight: "145%",
-                              letterSpacing: "0",
                             },
 
                             "&::marker": {
@@ -279,7 +258,6 @@ const OurStory = () => {
               );
             })}
           </Box>
-
           <Box
             sx={{
               position: "absolute",
@@ -297,11 +275,13 @@ const OurStory = () => {
         <Box
           sx={{
             position: "relative",
-            maxWidth: "408px",
-            width: "100%",
+            width: "35%",
             aspectRatio: "1",
-            "@media (max-width: 768px)": {
-              maxWidth: "350px",
+            "@media (max-width: 992px)": {
+              width: "50%",
+            },
+            "@media (max-width: 576px)": {
+              width: "100%",
             },
           }}
         >
@@ -310,7 +290,7 @@ const OurStory = () => {
             alt="Bull"
             fill
             style={{
-              objectFit: "contain",
+              objectFit: "cover",
               objectPosition: "center",
             }}
           />

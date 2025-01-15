@@ -37,11 +37,9 @@ export default function NotFound() {
             fontWeight: "900",
             lineHeight: "100%",
             letterSpacing: "-2.24px",
-
             "@media (max-width: 768px)": {
               fontSize: "52px",
             },
-
             "@media (max-width: 576px)": {
               fontSize: "48px",
             },

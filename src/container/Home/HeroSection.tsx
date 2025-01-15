@@ -93,13 +93,13 @@ const HeroSection = () => {
             letterSpacing: "-1.92px",
             maxWidth: "464px",
             textAlign: "center",
-            "@media (max-width: 992px)": {
-              fontSize: "38px",
+            "@media (max-width: 768px)": {
+              fontSize: "40px",
+              letterSpacing: "-1.28px",
             },
             "@media (max-width: 576px)": {
-              fontSize: "28px",
-              letterSpacing: "-0.56px",
-              lineHeight: "120%",
+              fontSize: "32px",
+              letterSpacing: "-0.64px",
             },
           }}
         >

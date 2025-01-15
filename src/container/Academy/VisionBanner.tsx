@@ -23,6 +23,15 @@ const VisionBanner = () => {
             fontWeight: 700,
             lineHeight: "100%",
             letterSpacing: "-1.92px",
+
+            "@media (max-width: 768px)": {
+              fontSize: "40px",
+              letterSpacing: "-1.28px",
+            },
+            "@media (max-width: 576px)": {
+              fontSize: "32px",
+              letterSpacing: "-0.64px",
+            },
           }}
         >
           Our Vision

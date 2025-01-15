@@ -31,6 +31,7 @@ const StyledButton = styled(Button)<{
   lineHeight: "1.2",
   padding: padding || "16px 24px",
   fontSize: fontSize || "16px",
+  textWrap: "nowrap",
   ...(varianttype === "red"
     ? {
         backgroundColor: "#F30",

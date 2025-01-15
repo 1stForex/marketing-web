@@ -4,6 +4,22 @@ import Laptop from "@/src/assets/images/laptop.png";
 import Image from "next/image";
 
 const AboutUs = () => {
+  const typographyStyle = {
+    color: "#000",
+    fontSize: "20px",
+    fontStyle: "normal",
+    fontWeight: "400",
+    lineHeight: "120%",
+    letterSpacing: "-0.4px",
+
+    "@media (max-width: 768px)": {
+      fontSize: "18px",
+    },
+
+    "@media (max-width: 576px)": {
+      fontSize: "16px",
+    },
+  };
   return (
     <Box
       sx={{
@@ -15,6 +31,18 @@ const AboutUs = () => {
         background: "var(--Grey-50, #F9FAFB)",
         boxShadow:
           "-5px 5px 13px -5px rgba(16, 25, 40, 0.05), 0px 2px 4px -1px rgba(16, 25, 40, 0.02)",
+
+        "@media (max-width: 992px)": {
+          padding: "40px",
+        },
+
+        "@media (max-width: 768px)": {
+          padding: "30px",
+        },
+
+        "@media (max-width: 576px)": {
+          padding: "20px",
+        },
       }}
     >
       <Box
@@ -23,6 +51,10 @@ const AboutUs = () => {
           display: "flex",
           flexDirection: "column",
           gap: "20px",
+
+          "@media (max-width: 992px)": {
+            width: "auto",
+          },
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -36,6 +68,15 @@ const AboutUs = () => {
             fontWeight: 700,
             lineHeight: "100%",
             letterSpacing: "-1.92px",
+
+            "@media (max-width: 768px)": {
+              fontSize: "40px",
+              letterSpacing: "-1.28px",
+            },
+            "@media (max-width: 576px)": {
+              fontSize: "32px",
+              letterSpacing: "-0.64px",
+            },
           }}
         >
           About Us
@@ -43,11 +84,7 @@ const AboutUs = () => {
 
         <Typography
           sx={{
-            color: "var(--Shade-Black, #000)",
-            fontSize: "20px",
-            fontWeight: 400,
-            lineHeight: "120%",
-            letterSpacing: "-0.4px",
+            ...typographyStyle,
           }}
         >
           At 1st Forex{" "}
@@ -62,11 +99,7 @@ const AboutUs = () => {
 
         <Typography
           sx={{
-            color: "var(--Shade-Black, #000)",
-            fontSize: "20px",
-            fontWeight: 400,
-            lineHeight: "120%",
-            letterSpacing: "-0.4px",
+            ...typographyStyle,
           }}
         >
           At 1st Forex Trading Academy, we combine nearly two decades of
@@ -87,11 +120,7 @@ const AboutUs = () => {
 
         <Typography
           sx={{
-            color: "var(--Shade-Black, #000)",
-            fontSize: "20px",
-            fontWeight: 400,
-            lineHeight: "120%",
-            letterSpacing: "-0.4px",
+            ...typographyStyle,
           }}
         >
           We don’t just see ourselves as an academy—we’re a{" "}
@@ -104,7 +133,16 @@ const AboutUs = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ width: "40%", aspectRatio: "1", position: "relative" }}>
+      <Box
+        sx={{
+          width: "40%",
+          aspectRatio: "1",
+          position: "relative",
+          "@media (max-width: 992px)": {
+            display: "none",
+          },
+        }}
+      >
         <Image src={Laptop} alt="laptop" fill />
       </Box>
     </Box>
