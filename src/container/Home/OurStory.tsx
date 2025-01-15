@@ -130,7 +130,7 @@ const OurStory = () => {
                 lineHeight: "120%",
                 letterSpacing: "-0.48px",
                 mb: "16px",
-                mt: "117px",
+                mt: "65px",
                 "@media (max-width: 576px)": {
                   fontSize: "20px",
                 },

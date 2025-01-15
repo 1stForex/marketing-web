@@ -32,6 +32,7 @@ const SendMessage = () => {
           "@media (max-width: 768px)": {
             fontSize: "40px",
             letterSpacing: "-1.28px",
+            maxWidth: "none",
           },
           "@media (max-width: 576px)": {
             fontSize: "32px",
@@ -53,6 +54,7 @@ const SendMessage = () => {
           maxWidth: "421px",
           "@media (max-width: 768px)": {
             fontSize: "16px",
+            maxWidth: "none",
           },
           "@media (max-width: 576px)": {
             fontSize: "14px",
