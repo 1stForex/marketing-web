@@ -11,6 +11,7 @@ export default function Footer() {
       sx={{
         background: "#F9FAFB",
         padding: "80px 112px",
+        overflowX: "hidden",
 
         "@media (max-width: 992px)": {
           padding: "40px",
