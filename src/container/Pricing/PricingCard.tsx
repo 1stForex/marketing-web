@@ -41,6 +41,11 @@ const PricingCard: React.FC<PricingCardProps> = ({
         borderRadius: "24px",
         background: background,
         boxShadow: boxShadow,
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        "&:hover": {
+          transform: "scale(1.02)",
+          boxShadow: "0px -1px 28.3px 0px rgba(255, 51, 0, 0.30)",
+        },
       }}
     >
       <Box
@@ -50,6 +55,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
           alignItems: "flex-start",
           padding: "32px 32px 24px 32px",
           gap: "16px",
+          "@media (max-width: 920px)": {
+            padding: "24px 16px 16px 16px",
+          },
         }}
       >
         <Badge title={badgeProps.title} variant={badgeProps.variant} />
@@ -69,6 +77,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
               fontWeight: 700,
               lineHeight: "120%",
               letterSpacing: "-1.6px",
+              "@media (max-width: 768px)": {
+                fontSize: "36px",
+              },
+              "@media (max-width: 576px)": {
+                fontSize: "32px",
+              },
             }}
           >
             ${price}
@@ -101,6 +115,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
           display: "flex",
           flexDirection: "column",
           gap: "16px",
+          "@media (max-width: 920px)": {
+            padding: "24px 16px",
+          },
         }}
       >
         {features?.map((feature, index) => (
@@ -121,6 +138,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
                 fontStyle: "normal",
                 fontWeight: 400,
                 lineHeight: "112.5%",
+                "@media (max-width: 768px)": {
+                  fontSize: "14px",
+                },
+                "@media (max-width: 567px)": {
+                  fontSize: "12px",
+                },
               }}
             >
               {feature}
