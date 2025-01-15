@@ -173,90 +173,111 @@ const OurStory = () => {
               },
             }}
           >
-            {paragraphs.map((item, index) => {
-              return (
-                <Box
-                  key={index}
-                  sx={{
-                    mt: "117px",
-                    mb: "117px",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      color: "var(--Grey-900, #333)",
-                      fontSize: "24px",
-                      fontWeight: 700,
-                      lineHeight: "120%",
-                      letterSpacing: "-0.48px",
-                    }}
-                  >
-                    {item.label}
-                  </Typography>
-                  {item.description && (
+            <Box
+              sx={{
+                my: "65px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "40px",
+
+                "@media (max-width: 768px)": {
+                  gap: "30px",
+                },
+
+                "@media (max-width: 576px)": {
+                  gap: "30px",
+                },
+              }}
+            >
+              {paragraphs.map((item, index) => {
+                return (
+                  <Box key={index}>
                     <Typography
                       sx={{
-                        color: "var(--Shade-Black, #000)",
-                        fontSize: "20px",
-                        fontWeight: 400,
+                        color: "var(--Grey-900, #333)",
+                        fontSize: "24px",
+                        fontWeight: 700,
                         lineHeight: "120%",
-                        letterSpacing: "-0.4px",
-                        marginBottom: "15px",
-                        "@media (max-width: 992px)": {
-                          fontSize: "16px",
-                        },
+                        letterSpacing: "-0.48px",
+                        mb: "16px",
+
                         "@media (max-width: 576px)": {
-                          fontSize: "14px",
+                          fontSize: "20px",
                         },
                       }}
                     >
-                      {item.description}
+                      {item.label}
                     </Typography>
-                  )}
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                    }}
-                  >
-                    {item.points.length > 0 && (
-                      <Box
-                        component="ul"
+                    {item.description && (
+                      <Typography
                         sx={{
-                          listStyleType: "disc",
-                          paddingLeft: "40px",
-                          "& li": {
-                            marginBottom: "24px",
-                            color: "var(--Shade-Black, #000)",
-                            fontSize: "20px",
-                            fontWeight: 400,
-                            lineHeight: "120%",
-                            letterSpacing: "-0.4px",
-                            "@media (max-width: 992px)": {
-                              fontSize: "16px",
-                            },
-
-                            "@media (max-width: 576px)": {
-                              fontSize: "14px",
-                            },
-
-                            "&::marker": {
-                              fontSize: "16px",
-                            },
+                          color: "var(--Shade-Black, #000)",
+                          fontSize: "20px",
+                          fontWeight: 400,
+                          lineHeight: "120%",
+                          letterSpacing: "-0.4px",
+                          marginBottom: "15px",
+                          "@media (max-width: 992px)": {
+                            fontSize: "16px",
+                          },
+                          "@media (max-width: 576px)": {
+                            fontSize: "14px",
                           },
                         }}
                       >
-                        {item.points.map((paragraph, index) => (
-                          <Box component="li" key={index}>
-                            {paragraph}
-                          </Box>
-                        ))}
-                      </Box>
+                        {item.description}
+                      </Typography>
                     )}
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      {item.points.length > 0 && (
+                        <Box
+                          component="ul"
+                          sx={{
+                            listStyleType: "disc",
+                            paddingLeft: "40px",
+                            "@media (max-width: 768px)": {
+                              paddingLeft: "30px",
+                            },
+
+                            "@media (max-width: 576px)": {
+                              paddingLeft: "20px",
+                            },
+                            "& li": {
+                              marginBottom: "24px",
+                              color: "var(--Shade-Black, #000)",
+                              fontSize: "20px",
+                              fontWeight: 400,
+                              lineHeight: "120%",
+                              letterSpacing: "-0.4px",
+                              "@media (max-width: 992px)": {
+                                fontSize: "16px",
+                              },
+                              "@media (max-width: 576px)": {
+                                fontSize: "14px",
+                              },
+                              "&::marker": {
+                                fontSize: "16px",
+                              },
+                            },
+                          }}
+                        >
+                          {item.points.map((paragraph, index) => (
+                            <Box component="li" key={index}>
+                              {paragraph}
+                            </Box>
+                          ))}
+                        </Box>
+                      )}
+                    </Box>
                   </Box>
-                </Box>
-              );
-            })}
+                );
+              })}
+            </Box>
           </Box>
           <Box
             sx={{
