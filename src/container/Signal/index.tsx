@@ -13,6 +13,14 @@ export default function Signal() {
         display: "flex",
         flexDirection: "column",
         gap: "80px",
+
+        "@media (max-width: 768px)": {
+          gap: "60px",
+        },
+
+        "@media (max-width: 576px)": {
+          gap: "40px",
+        },
       }}
     >
       <Container maxWidth="xl">

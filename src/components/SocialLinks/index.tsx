@@ -38,6 +38,9 @@ export default function SocialLinks({ justifyContent }: SocialLinksProps) {
         display: "flex",
         gap: "8px",
         justifyContent: justifyContent,
+        "@media (max-width: 768px)": {
+          gap: "6px",
+        },
       }}
     >
       {socialMedia.map((social, index) => (
@@ -59,9 +62,21 @@ export default function SocialLinks({ justifyContent }: SocialLinksProps) {
             "&:hover": {
               transform: "scale(1.1)",
             },
+
+            "@media (max-width: 768px)": {
+              width: "35px",
+              height: "35px",
+            },
           }}
         >
-          <Image src={social.icon} alt={`${social.name} icon`} />
+          <Image
+            src={social.icon}
+            alt={`${social.name} icon`}
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          />
         </Box>
       ))}
     </Box>

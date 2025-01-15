@@ -15,7 +15,7 @@ import NavLinks from "./NavLinks";
 import CustomButton from "../Button";
 import userSvg from "../../assets/icons/user.svg";
 import loginSvg from "../../assets/icons/login-color.svg";
-import { ListItemText, Typography } from "@mui/material";
+import { ListItemText, Typography, useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import appleStore from "../../assets/images/apple-store.png";
 import googlePlay from "../../assets/images/google-play.png";
@@ -26,6 +26,7 @@ export default function TemporaryDrawer({
   currentPath,
   onLinkClick,
 }: NavProps) {
+  const isVerySmallScreen = useMediaQuery("(max-width: 576px)");
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -64,6 +65,7 @@ export default function TemporaryDrawer({
           <List
             sx={{
               display: "flex",
+              gap: "1rem",
             }}
           >
             <ListItem
@@ -74,10 +76,15 @@ export default function TemporaryDrawer({
             >
               <ListItemButton
                 sx={{
-                  padding: "5px",
+                  padding: "0",
                 }}
               >
-                <Image src={searchSvg} alt="Search Icon" />
+                <Image
+                  src={searchSvg}
+                  alt="Search Icon"
+                  width={20}
+                  height={20}
+                />
               </ListItemButton>
             </ListItem>
             <ListItem
@@ -89,7 +96,7 @@ export default function TemporaryDrawer({
               <ListItemButton
                 onClick={toggleDrawer(false)}
                 sx={{
-                  padding: "5px",
+                  padding: "0",
                 }}
               >
                 <Image src={crossSvg} alt="Cross Icon" />
@@ -136,7 +143,12 @@ export default function TemporaryDrawer({
             >
               <ListItemButton>
                 <CustomButton variant="red" width="100%">
-                  <Image src={userSvg} alt="User Icon" />
+                  <Image
+                    src={userSvg}
+                    alt="User Icon"
+                    width={isVerySmallScreen ? 14 : 16}
+                    height={isVerySmallScreen ? 14 : 16}
+                  />
                   Register
                 </CustomButton>
               </ListItemButton>
@@ -148,7 +160,12 @@ export default function TemporaryDrawer({
             >
               <ListItemButton>
                 <CustomButton variant="transparent" width="100%">
-                  <Image src={loginSvg} alt="Logout Icon" />
+                  <Image
+                    src={loginSvg}
+                    alt="Logout Icon"
+                    width={isVerySmallScreen ? 14 : 16}
+                    height={isVerySmallScreen ? 14 : 16}
+                  />
                   Login
                 </CustomButton>
               </ListItemButton>
@@ -243,6 +260,7 @@ export default function TemporaryDrawer({
           variant="middle"
           sx={{
             borderColor: "#F0F2F5",
+            my: "8px",
           }}
         />
         <Box>

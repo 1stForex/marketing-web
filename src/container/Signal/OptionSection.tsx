@@ -17,11 +17,6 @@ export default function OptionSection() {
 
   const cardData = [
     {
-      title: "App-Based Signals with",
-      specialText: "AI Assistance",
-      cardInfo: allAIAssistance,
-    },
-    {
       title: "Fully Automated",
       specialText: "Trading Bot",
       cardInfo: allTradingBot,
@@ -30,6 +25,11 @@ export default function OptionSection() {
       title: "Personal Trader",
       specialText: "Mentorship",
       cardInfo: allMentorship,
+    },
+    {
+      title: "App-Based Signals with",
+      specialText: "AI Assistance",
+      cardInfo: allAIAssistance,
     },
   ];
 
@@ -54,6 +54,14 @@ export default function OptionSection() {
             fontWeight: 700,
             lineHeight: "100%",
             letterSpacing: "-1.92px",
+
+            "@media (max-width: 768px)": {
+              fontSize: "38px",
+            },
+
+            "@media (max-width: 576px)": {
+              fontSize: "28px",
+            },
           }}
         >
           Your{" "}
