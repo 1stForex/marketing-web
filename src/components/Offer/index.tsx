@@ -21,7 +21,7 @@ export default function Offer({
     fontSize: "24px",
     fontStyle: "normal",
     fontWeight: "400",
-    lineHeight: "28.8px",
+    lineHeight: "120%",
     letterSpacing: "-0.48px",
     maxWidth: descriptionWidth ? `${descriptionWidth}px` : "549px",
 
@@ -112,10 +112,12 @@ export default function Offer({
 
               "@media (max-width: 768px)": {
                 fontSize: "40px",
+                lineHeight: "32px",
                 letterSpacing: "-1.28px",
               },
               "@media (max-width: 576px)": {
                 fontSize: "32px",
+                lineHeight: "28px",
                 letterSpacing: "-0.64px",
               },
             }}

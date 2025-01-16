@@ -18,6 +18,10 @@ export default function NotFound() {
           gap: "60px",
           mb: "80px",
 
+          "@media (max-width: 1240px)": {
+            maxWidth: "775px",
+          },
+
           "@media (max-width: 768px)": {
             gap: "50px",
             mb: "60px",

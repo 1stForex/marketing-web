@@ -21,8 +21,17 @@ export default function BannerSection() {
         "@media (max-width: 477px)": {
           mt: "-100px",
         },
+        "@media (max-width: 451px)": {
+          mt: "-50px",
+        },
         "@media (max-width: 422px)": {
           mt: "-10px",
+        },
+        "@media (max-width: 390px)": {
+          mt: "0px",
+        },
+        "@media (max-width: 375px)": {
+          mt: "-100px",
         },
       }}
     >
@@ -32,11 +41,9 @@ export default function BannerSection() {
             color: "#FFF",
             textAlign: "center",
             fontSize: "24px",
-            fontStyle: "normal",
             fontWeight: 600,
-            lineHeight: "28.8px",
+            lineHeight: "120%",
             letterSpacing: "-0.48px",
-
             "@media (max-width: 768px)": {
               fontSize: "20px",
             },
