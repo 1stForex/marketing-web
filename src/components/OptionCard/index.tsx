@@ -5,7 +5,8 @@ import { OptionCardProp } from "@/src/types/OptionCard.interface";
 export default function OptionCard({
   icon,
   title,
-  description,
+  description = "",
+  points = [],
   fixedSize = false,
 }: OptionCardProp) {
   return (
@@ -105,37 +106,73 @@ export default function OptionCard({
           {title}
         </Typography>
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Typography
+      {description && (
+        <Box
           sx={{
-            color: "#1D2739",
-            fontSize: "16px",
-            fontStyle: "normal",
-            fontWeight: "400",
-            lineHeight: "19.2px",
-            letterSpacing: "-0.32px",
-
-            ...(fixedSize && {
-              "@media (max-width: 992px)": {
-                fontSize: "14px",
-              },
-            }),
-
-            ...(!fixedSize && {
-              "@media (max-width: 768px)": {
-                fontSize: "14px",
-              },
-            }),
+            display: "flex",
+            flexDirection: "column",
           }}
         >
-          {description}
-        </Typography>
-      </Box>
+          <Typography
+            sx={{
+              color: "#1D2739",
+              fontSize: "16px",
+              fontStyle: "normal",
+              fontWeight: "400",
+              lineHeight: "19.2px",
+              letterSpacing: "-0.32px",
+
+              ...(fixedSize && {
+                "@media (max-width: 992px)": {
+                  fontSize: "14px",
+                },
+              }),
+
+              ...(!fixedSize && {
+                "@media (max-width: 768px)": {
+                  fontSize: "14px",
+                },
+              }),
+            }}
+          >
+            {description}
+          </Typography>
+        </Box>
+      )}
+      {points.length > 0 && (
+        <Box
+          component={"ul"}
+          sx={{
+            paddingLeft: "20px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "12px",
+          }}
+        >
+          {points.map((item, index) => (
+            <Typography
+              component={"li"}
+              key={index}
+              sx={{
+                color: "#1D2739",
+                fontSize: "16px",
+                fontStyle: "normal",
+                fontWeight: "400",
+                lineHeight: "120%",
+                letterSpacing: "-0.32px",
+
+                ...(!fixedSize && {
+                  "@media (max-width: 768px)": {
+                    fontSize: "14px",
+                  },
+                }),
+              }}
+            >
+              {item}
+            </Typography>
+          ))}
+        </Box>
+      )}
     </Box>
   );
 }

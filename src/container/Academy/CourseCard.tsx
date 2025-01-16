@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import ForexLogo from "@/src/assets/icons/forex.svg";
 import React from "react";
 import RatingStars from "@/src/components/RatingStars";
 import { CourseCardProps } from "@/src/types/CourseCard.interface";
@@ -11,6 +10,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
   description,
   rating,
   reviews,
+  image,
 }) => {
   return (
     <Box
@@ -36,7 +36,11 @@ const CourseCard: React.FC<CourseCardProps> = ({
           justifyContent: "center",
         }}
       >
-        <Image src={ForexLogo} alt="logo" />
+        <Image
+          src={image}
+          alt="logo"
+          style={{ width: "100%", height: "100%" }}
+        />
       </Box>
 
       <Box>

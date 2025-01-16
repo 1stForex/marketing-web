@@ -2,6 +2,8 @@ import { Box, Typography } from "@mui/material";
 import Badge from "@/src/components/Badge";
 import CourseCard from "./CourseCard";
 import CustomButton from "@/src/components/Button";
+import FreeCourse from "@/src/assets/images/basic.png";
+import AdvanceCourse from "@/src/assets/images/advance.png";
 
 const Courses = () => {
   return (
@@ -66,6 +68,7 @@ const Courses = () => {
           description="Perfect for beginners looking to get started with forex trading"
           rating={5}
           reviews={91}
+          image={FreeCourse}
         />
         <CourseCard
           title="Complete Forex Course"
@@ -73,6 +76,7 @@ const Courses = () => {
           description="For just $39.99, gain access to our full course, including the exclusive Breakout System, quizzes, and interactive modules."
           rating={5}
           reviews={91}
+          image={AdvanceCourse}
         />
       </Box>
 

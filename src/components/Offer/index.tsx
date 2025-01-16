@@ -171,7 +171,7 @@ export default function Offer({
           width: "100%",
           aspectRatio: "418 / 505",
 
-          "@media (max-width: 992px)": {
+          "@media (max-width: 1200px)": {
             display: "none",
           },
         }}
