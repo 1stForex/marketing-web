@@ -58,10 +58,12 @@ const OurStory = () => {
           letterSpacing: "-1.92px",
           "@media (max-width: 768px)": {
             fontSize: "40px",
+            letterSpacing: "-1.28px",
             mb: "24px",
           },
           "@media (max-width: 576px)": {
             fontSize: "32px",
+            letterSpacing: "-0.64px",
             mb: "16px",
           },
         }}

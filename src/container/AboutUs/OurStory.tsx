@@ -3,37 +3,9 @@ import Badge from "@/src/components/Badge";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Bull from "@/src/assets/images/Bull.png";
+import { paragraphs } from "@/src/const/aboutUsStory";
 
 const OurStory = () => {
-  const paragraphs = [
-    {
-      label: "Comprehensive Education",
-      points: [
-        "From online courses to in-person seminars, our curriculum caters to traders of all levels.",
-        "Beginners build a strong foundation with essential concepts, while advanced traders gain access to professional strategies like our copyrighted Breakout System, meticulously backtested for success.",
-        "With over 1,000 happy students, our academy remains one of the top-rated in the world.",
-      ],
-    },
-    {
-      label: "State-of-the-Art Technology",
-      points: [
-        "We lead the industry with innovative tools powered by AI technology, including automated bots and AI-driven signals.",
-        "Our mobile app and user-friendly website provide seamless access to these tools, ensuring traders can make informed and profitable decisions.",
-      ],
-    },
-    {
-      label: "Our Team: Expertise Meets Passion",
-      description:
-        "Behind 1st Forex is a dynamic and diverse team of forex veterans, successful young traders, and AI specialists. This unique blend of experience and innovation allows us to stay ahead of market trends and deliver unmatched value to our community.",
-      points: [
-        "Forex Veterans: Decades of trading expertise provide the foundation for our education and strategies.",
-        "Young Innovators: Fresh perspectives and modern trading techniques keep us at the cutting edge.",
-        "AI Specialists: Advanced algorithms and data-driven insights enhance our trading tools, making them smarter and more effective.",
-        "Top-Tier Support Team: Our experienced and dedicated professionals work tirelessly to ensure a seamless experience for every trader in our community.",
-      ],
-    },
-  ];
-
   return (
     <Box
       sx={{
@@ -52,11 +24,11 @@ const OurStory = () => {
         },
 
         "@media (max-width:768px)": {
-          padding: "38px 0",
+          padding: "32px",
         },
 
         "@media (max-width:576px)": {
-          padding: "28px 0",
+          padding: "32px 16px",
         },
       }}
     >
@@ -76,11 +48,12 @@ const OurStory = () => {
           letterSpacing: "-1.92px",
 
           "@media (max-width: 768px)": {
-            fontSize: "38px",
+            fontSize: "40px",
+            letterSpacing: "-1.28px",
           },
-
           "@media (max-width: 576px)": {
-            fontSize: "28px",
+            fontSize: "32px",
+            letterSpacing: "-0.64px",
           },
         }}
       >
@@ -126,7 +99,7 @@ const OurStory = () => {
             flexDirection: "column-reverse",
             justifyContent: "center",
             alignItems: "center",
-            gap: "21px",
+            gap: "24px",
           },
         }}
       >
@@ -136,6 +109,10 @@ const OurStory = () => {
             maxWidth: "627px",
             height: "408px",
             overflow: "hidden",
+
+            "@media (max-width: 992px)": {
+              maxWidth: "100%",
+            },
           }}
         >
           <Box
@@ -144,6 +121,12 @@ const OurStory = () => {
               overflowY: "auto",
               position: "relative",
               paddingLeft: "48px",
+              "@media (max-width: 992px)": {
+                paddingLeft: "32px",
+              },
+              "@media (max-width: 576px)": {
+                paddingLeft: "16px",
+              },
               "&::-webkit-scrollbar": {
                 width: "8px",
                 background: "transparent",
@@ -160,126 +143,114 @@ const OurStory = () => {
               "& > *": {
                 direction: "ltr",
               },
-
-              "@media (max-width: 768px)": {
-                paddingLeft: "38px",
-              },
-
-              "@media (max-width: 576px)": {
-                paddingLeft: "28px",
-              },
             }}
           >
-            {paragraphs.map((item, index) => {
-              return (
-                <Box key={index}>
-                  <Typography
-                    sx={{
-                      color: "var(--Grey-900, #333)",
-                      fontSize: "24px",
-                      fontWeight: 700,
-                      lineHeight: "120%",
-                      letterSpacing: "-0.48px",
-                      mt: "50px",
-                      mb: "20px",
-                      "@media (max-width: 768px)": {
-                        mt: "30px",
-                      },
-                      "@media (max-width: 576px)": {
-                        mt: "20px",
-                        fontSize: "20px",
-                      },
-                    }}
-                  >
-                    {item.label}
-                  </Typography>
-                  {item.description && (
+            <Box
+              sx={{
+                my: "65px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "40px",
+
+                "@media (max-width: 768px)": {
+                  gap: "30px",
+                },
+
+                "@media (max-width: 576px)": {
+                  gap: "30px",
+                },
+              }}
+            >
+              {paragraphs.map((item, index) => {
+                return (
+                  <Box key={index}>
                     <Typography
                       sx={{
-                        color: "var(--Shade-Black, #000)",
-                        fontSize: "20px",
-                        fontWeight: 400,
+                        color: "var(--Grey-900, #333)",
+                        fontSize: "24px",
+                        fontWeight: 700,
                         lineHeight: "120%",
-                        letterSpacing: "-0.4px",
-                        marginBottom: "15px",
-                        "@media (max-width: 992px)": {
-                          fontSize: "16px",
-                        },
+                        letterSpacing: "-0.48px",
+                        mb: "16px",
+
                         "@media (max-width: 576px)": {
-                          fontSize: "14px",
-                          lineHeight: "145%",
-                          letterSpacing: "0",
+                          fontSize: "20px",
                         },
                       }}
                     >
-                      {item.description}
+                      {item.label}
                     </Typography>
-                  )}
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "24px",
-                      mb: "100px",
-
-                      "@media (max-width: 992px)": {
-                        gap: "20px",
-                        mb: "80px",
-                      },
-
-                      "@media (max-width: 768px)": {
-                        gap: "18px",
-                        mb: "60px",
-                      },
-
-                      "@media (max-width: 576px)": {
-                        gap: "16px",
-                        mb: "40px",
-                      },
-                    }}
-                  >
-                    {item.points.length > 0 && (
-                      <Box
-                        component="ul"
+                    {item.description && (
+                      <Typography
                         sx={{
-                          listStyleType: "disc",
-                          paddingLeft: "40px",
-                          "& li": {
-                            marginBottom: "24px",
-                            color: "var(--Shade-Black, #000)",
-                            fontSize: "20px",
-                            fontWeight: 400,
-                            lineHeight: "120%",
-                            letterSpacing: "-0.4px",
-                            "@media (max-width: 992px)": {
-                              fontSize: "16px",
-                            },
-
-                            "@media (max-width: 576px)": {
-                              fontSize: "14px",
-                              lineHeight: "145%",
-                              letterSpacing: "0",
-                            },
-
-                            "&::marker": {
-                              fontSize: "16px",
-                            },
+                          color: "var(--Shade-Black, #000)",
+                          fontSize: "20px",
+                          fontWeight: 400,
+                          lineHeight: "120%",
+                          letterSpacing: "-0.4px",
+                          marginBottom: "15px",
+                          "@media (max-width: 992px)": {
+                            fontSize: "16px",
+                          },
+                          "@media (max-width: 576px)": {
+                            fontSize: "14px",
                           },
                         }}
                       >
-                        {item.points.map((paragraph, index) => (
-                          <Box component="li" key={index}>
-                            {paragraph}
-                          </Box>
-                        ))}
-                      </Box>
+                        {item.description}
+                      </Typography>
                     )}
-                  </Box>
-                </Box>
-              );
-            })}
-          </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      {item.points.length > 0 && (
+                        <Box
+                          component="ul"
+                          sx={{
+                            listStyleType: "disc",
+                            paddingLeft: "40px",
+                            "@media (max-width: 768px)": {
+                              paddingLeft: "30px",
+                            },
 
+                            "@media (max-width: 576px)": {
+                              paddingLeft: "20px",
+                            },
+                            "& li": {
+                              marginBottom: "24px",
+                              color: "var(--Shade-Black, #000)",
+                              fontSize: "20px",
+                              fontWeight: 400,
+                              lineHeight: "120%",
+                              letterSpacing: "-0.4px",
+                              "@media (max-width: 992px)": {
+                                fontSize: "16px",
+                              },
+                              "@media (max-width: 576px)": {
+                                fontSize: "14px",
+                              },
+                              "&::marker": {
+                                fontSize: "16px",
+                              },
+                            },
+                          }}
+                        >
+                          {item.points.map((paragraph, index) => (
+                            <Box component="li" key={index}>
+                              {paragraph}
+                            </Box>
+                          ))}
+                        </Box>
+                      )}
+                    </Box>
+                  </Box>
+                );
+              })}
+            </Box>
+          </Box>
           <Box
             sx={{
               position: "absolute",
@@ -297,11 +268,13 @@ const OurStory = () => {
         <Box
           sx={{
             position: "relative",
-            maxWidth: "408px",
-            width: "100%",
+            width: "35%",
             aspectRatio: "1",
-            "@media (max-width: 768px)": {
-              maxWidth: "350px",
+            "@media (max-width: 992px)": {
+              width: "50%",
+            },
+            "@media (max-width: 576px)": {
+              width: "100%",
             },
           }}
         >
@@ -310,7 +283,7 @@ const OurStory = () => {
             alt="Bull"
             fill
             style={{
-              objectFit: "contain",
+              objectFit: "cover",
               objectPosition: "center",
             }}
           />

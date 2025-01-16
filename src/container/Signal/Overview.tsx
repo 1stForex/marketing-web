@@ -42,7 +42,7 @@ export default function Overview() {
           },
           "@media (max-width: 576px)": {
             fontSize: "16px",
-            lineHeight: "145%",
+            letterSpacing: "-0.32px",
           },
         }}
       >

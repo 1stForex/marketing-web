@@ -26,11 +26,12 @@ export default function BannerSection() {
             maxWidth: "535px",
 
             "@media (max-width: 768px)": {
-              fontSize: "38px",
+              fontSize: "40px",
+              letterSpacing: "-1.28px",
             },
-
             "@media (max-width: 576px)": {
-              fontSize: "28px",
+              fontSize: "32px",
+              letterSpacing: "-0.64px",
             },
           }}
         >

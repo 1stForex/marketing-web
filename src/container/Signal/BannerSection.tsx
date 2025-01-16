@@ -39,13 +39,10 @@ export default function BannerSection() {
 
             "@media (max-width: 768px)": {
               fontSize: "20px",
-              lineHeight: "145%",
-              letterSpacing: "-0.20px",
             },
-
             "@media (max-width: 576px)": {
               fontSize: "16px",
-              lineHeight: "135%",
+              letterSpacing: "-0.32px",
             },
           }}
         >

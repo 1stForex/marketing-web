@@ -91,8 +91,12 @@ const Card: React.FC<CardProps> = ({
             fontWeight: 700,
             lineHeight: "120%",
             letterSpacing: "-0.48px",
-            "@media (max-width: 576px)": {
+            "@media (max-width: 768px)": {
               fontSize: "20px",
+            },
+            "@media (max-width: 576px)": {
+              fontSize: "16px",
+              letterSpacing: "-0.32px",
               textAlign: "start",
             },
           }}

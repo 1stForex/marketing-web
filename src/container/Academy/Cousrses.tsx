@@ -2,6 +2,8 @@ import { Box, Typography } from "@mui/material";
 import Badge from "@/src/components/Badge";
 import CourseCard from "./CourseCard";
 import CustomButton from "@/src/components/Button";
+import FreeCourse from "@/src/assets/images/basic.png";
+import AdvanceCourse from "@/src/assets/images/advance.png";
 
 const Courses = () => {
   return (
@@ -24,6 +26,17 @@ const Courses = () => {
           letterSpacing: "-1.92px",
           mt: "21px",
           mb: "56px",
+
+          "@media (max-width: 768px)": {
+            fontSize: "40px",
+            letterSpacing: "-1.28px",
+            mb: "48px",
+          },
+          "@media (max-width: 576px)": {
+            fontSize: "32px",
+            letterSpacing: "-0.64px",
+            mb: "40px",
+          },
         }}
       >
         Our{" "}
@@ -35,6 +48,18 @@ const Courses = () => {
           display: "flex",
           gap: "24px",
           mb: "64px",
+          "@media (max-width: 992px)": {
+            flexDirection: "column",
+            mb: "56px",
+          },
+
+          "@media (max-width: 768px)": {
+            mb: "48px",
+          },
+
+          "@media (max-width: 576px)": {
+            mb: "40px",
+          },
         }}
       >
         <CourseCard
@@ -43,6 +68,7 @@ const Courses = () => {
           description="Perfect for beginners looking to get started with forex trading"
           rating={5}
           reviews={91}
+          image={FreeCourse}
         />
         <CourseCard
           title="Complete Forex Course"
@@ -50,6 +76,7 @@ const Courses = () => {
           description="For just $39.99, gain access to our full course, including the exclusive Breakout System, quizzes, and interactive modules."
           rating={5}
           reviews={91}
+          image={AdvanceCourse}
         />
       </Box>
 
@@ -62,7 +89,13 @@ const Courses = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          gap: "15px",
+          gap: "16px",
+
+          "@media (max-width: 576px)": {
+            padding: "12px 20px",
+            flexDirection: "column",
+            gap: "8px",
+          },
         }}
       >
         <Typography
@@ -73,13 +106,23 @@ const Courses = () => {
             lineHeight: "120%",
             letterSpacing: "-0.4px",
             maxWidth: "880px",
+
+            "@media (max-width: 768px)": {
+              fontSize: "18px ",
+            },
+
+            "@media (max-width: 576px)": {
+              fontSize: "16px ",
+            },
           }}
         >
           🎁 Refer 3 friends to the free course, and receive the complete course
           absolutely free!
         </Typography>
 
-        <CustomButton variant="black">Sign Up</CustomButton>
+        <Box flexShrink={0}>
+          <CustomButton variant="black">Sign Up</CustomButton>
+        </Box>
       </Box>
     </Box>
   );

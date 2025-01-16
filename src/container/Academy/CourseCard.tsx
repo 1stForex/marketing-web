@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import ForexLogo from "@/src/assets/icons/forex.svg";
 import React from "react";
 import RatingStars from "@/src/components/RatingStars";
 import { CourseCardProps } from "@/src/types/CourseCard.interface";
@@ -11,6 +10,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
   description,
   rating,
   reviews,
+  image,
 }) => {
   return (
     <Box
@@ -19,6 +19,10 @@ const CourseCard: React.FC<CourseCardProps> = ({
         flexDirection: "column",
         gap: "16px",
         width: "387px",
+
+        "@media (max-width: 430px)": {
+          width: "auto",
+        },
       }}
     >
       <Box
@@ -32,7 +36,11 @@ const CourseCard: React.FC<CourseCardProps> = ({
           justifyContent: "center",
         }}
       >
-        <Image src={ForexLogo} alt="logo" />
+        <Image
+          src={image}
+          alt="logo"
+          style={{ width: "100%", height: "100%" }}
+        />
       </Box>
 
       <Box>
@@ -50,6 +58,14 @@ const CourseCard: React.FC<CourseCardProps> = ({
               fontSize: "24px",
               fontWeight: 700,
               lineHeight: "145%",
+
+              "@media (max-width: 768px)": {
+                fontSize: "20px",
+              },
+              "@media (max-width: 576px)": {
+                fontSize: "16px",
+                letterSpacing: "-0.32px",
+              },
             }}
           >
             {title}
@@ -62,6 +78,9 @@ const CourseCard: React.FC<CourseCardProps> = ({
               lineHeight: "145%",
               display: "flex",
               alignItems: "flex-start",
+              "@media (max-width: 576px)": {
+                fontSize: "16px",
+              },
             }}
           >
             <span style={{ fontSize: "11px", fontWeight: 700 }}>$</span>
