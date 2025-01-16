@@ -41,9 +41,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
         borderRadius: "24px",
         background: background,
         boxShadow: boxShadow,
-        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        transition: " box-shadow 0.3s ease",
         "&:hover": {
-          transform: "scale(1.02)",
           boxShadow: "0px -1px 28.3px 0px rgba(255, 51, 0, 0.30)",
         },
       }}
