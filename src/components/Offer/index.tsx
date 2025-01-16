@@ -14,6 +14,7 @@ export default function Offer({
   subDescription,
   buttonText,
   onClick,
+  points = [],
 }: OfferProps) {
   const typographyStyles = {
     color: "#FFF",
@@ -122,40 +123,82 @@ export default function Offer({
             {title} <span style={{ color: "#F30" }}>{specialTitle}</span>
           </Typography>
         </Box>
-        <Box
-          sx={{
-            ...(subDescription && {
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-
-              "@media (max-width: 768px)": {
-                gap: "16px",
-              },
-
-              "@media (max-width: 576px)": {
-                gap: "12px",
-              },
-            }),
-          }}
-        >
-          <Typography
+        {description && (
+          <Box
             sx={{
-              ...typographyStyles,
+              ...(subDescription && {
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+
+                "@media (max-width: 768px)": {
+                  gap: "16px",
+                },
+
+                "@media (max-width: 576px)": {
+                  gap: "12px",
+                },
+              }),
             }}
           >
-            {description}
-          </Typography>
-          {subDescription && (
             <Typography
               sx={{
                 ...typographyStyles,
               }}
             >
-              {subDescription}
+              {description}
             </Typography>
-          )}
-        </Box>
+            {subDescription && (
+              <Typography
+                sx={{
+                  ...typographyStyles,
+                }}
+              >
+                {subDescription}
+              </Typography>
+            )}
+          </Box>
+        )}
+        {points.length > 0 && (
+          <Box
+            component={"ol"}
+            sx={{
+              maxWidth: "549px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "16px",
+              paddingLeft: "20px",
+
+              "@media (max-width: 1200px)": {
+                maxWidth: "auto",
+              },
+            }}
+          >
+            {points?.map((item, index) => (
+              <Typography
+                key={index}
+                component={"li"}
+                sx={{
+                  color: "#FFF",
+                  fontSize: "24px",
+                  fontStyle: "normal",
+                  fontWeight: "400",
+                  lineHeight: "120%",
+                  letterSpacing: "-0.48px",
+                  "@media (max-width: 768px)": {
+                    fontSize: "20px",
+                  },
+                  "@media (max-width: 576px)": {
+                    fontSize: "16px",
+                    letterSpacing: "-0.32px",
+                  },
+                }}
+              >
+                {item}
+              </Typography>
+            ))}
+          </Box>
+        )}
         {buttonText && (
           <Box>
             <CustomButton variant="red" onClick={onClick}>

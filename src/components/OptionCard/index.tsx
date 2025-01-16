@@ -38,6 +38,10 @@ export default function OptionCard({
           "@media (max-width: 768px)": {
             gap: "10px",
           },
+
+          "@media (max-width: 375px)": {
+            padding: "14px",
+          },
         }),
       }}
     >
@@ -57,6 +61,7 @@ export default function OptionCard({
             "@media (max-width: 768px)": {
               flexDirection: "row",
               alignItems: "center",
+              gap: "8px",
             },
           }),
         }}
@@ -70,6 +75,10 @@ export default function OptionCard({
             background: "#F30",
             height: "44px",
             width: "44px",
+
+            "@media (max-width: 376px)": {
+              minWidth: "44px",
+            },
           }}
         >
           <Image

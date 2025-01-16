@@ -2,7 +2,7 @@
 import { Box, Typography } from "@mui/material";
 import Logo from "@/src/assets/icons/logo.svg";
 import Image from "next/image";
-import CustomButton from "../Button";
+import CustomButton from "@/src/components/Button";
 
 const CommunityBanner = () => {
   return (
