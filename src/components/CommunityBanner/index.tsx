@@ -89,9 +89,9 @@ const CommunityBanner = () => {
             },
           }}
         >
-          Whether you're here to learn, share, or grow, the 1st Forex Community
-          is the perfect place to connect with like-minded individuals and take
-          your trading to the next level.
+          Whether you&apos;re here to learn, share, or grow, the 1st Forex
+          Community is the perfect place to connect with like-minded individuals
+          and take your trading to the next level.
         </Typography>
 
         <CustomButton>Join Us Now</CustomButton>
