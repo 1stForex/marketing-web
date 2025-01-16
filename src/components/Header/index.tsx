@@ -24,8 +24,8 @@ export default function Header() {
     };
   }, []);
 
-  const handleLinkClick = (href: string, fromDropdown: boolean = false) => {
-    setCurrentPath(fromDropdown ? "" : href);
+  const handleLinkClick = (href: string) => {
+    setCurrentPath(href);
   };
 
   return (
