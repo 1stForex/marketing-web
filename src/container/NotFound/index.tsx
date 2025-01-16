@@ -10,7 +10,7 @@ export default function NotFound() {
     <Container maxWidth="xl">
       <Box
         sx={{
-          maxWidth: "1220px",
+          maxWidth: "975px",
           mx: "auto",
           display: "flex",
           flexDirection: "column",
