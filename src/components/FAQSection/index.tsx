@@ -90,8 +90,8 @@ const FAQSection = () => {
             answer="A limit order is an order with restrictions on the maximum price to be paid or the minimum price to be received. For example, if the current price of USD/JPY is 117.00/05, a limit order to buy USD would be set at a price below 117.00 (e.g., 116.50)."
           />
           <FAQQuestion
-            question="What is a Limit Order?"
-            answer="A limit order is an order with restrictions on the maximum price to be paid or the minimum price to be received. For example, if the current price of USD/JPY is 117.00/05, a limit order to buy USD would be set at a price below 117.00 (e.g., 116.50). "
+            question="What is a Stop Loss Order?"
+            answer="A stop loss order is a type of order where an open position is automatically liquidated at a specified price. It is often used to minimize exposure to losses if the market moves against the investor's position. For example, if an investor is long on USD at 156.27, they might place a stop loss order at 155.49 to limit losses should the dollar depreciate below this level."
           />
         </Box>
 
@@ -108,12 +108,12 @@ const FAQSection = () => {
           }}
         >
           <FAQQuestion
-            question="What is a Limit Order?"
-            answer="A limit order is an order with restrictions on the maximum price to be paid or the minimum price to be received. For example, if the current price of USD/JPY is 117.00/05, a limit order to buy USD would be set at a price below 117.00 (e.g., 116.50)."
+            question="What is a Position Order?"
+            answer="Position orders are directly tied to individual positions and remain active only as long as the position is open. These orders can include stop loss or limit orders to manage risk and secure profits."
           />
           <FAQQuestion
-            question="What is a Limit Order?"
-            answer="A limit order is an order with restrictions on the maximum price to be paid or the minimum price to be received. For example, if the current price of USD/JPY is 117.00/05, a limit order to buy USD would be set at a price below 117.00 (e.g., 116.50)."
+            question="What is Foreign Exchange?"
+            answer='The Foreign Exchange market, commonly referred to as the "Forex" market, is the largest financial market in the world, with a daily average turnover exceeding US$7.5 trillion as of recent estimates. Forex involves the simultaneous buying of one currency and selling of another. Currencies are traded in pairs, such as EUR/USD or USD/JPY.'
           />
         </Box>
       </Box>

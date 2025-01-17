@@ -14,6 +14,8 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
   multiline = false,
   rows = 3,
   borderRadius = "6",
+  value = "",
+  onChange,
 }) => {
   return (
     <Box sx={{ width: width }}>
@@ -40,6 +42,8 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
         type={type}
         multiline={multiline}
         rows={multiline ? rows : undefined}
+        value={value ?? ""}
+        onChange={onChange}
         InputProps={{
           endAdornment: icon && (
             <InputAdornment position="end">

@@ -1,11 +1,19 @@
+"use client";
+
 import { Box, Typography } from "@mui/material";
 import CustomInputField from "@/src/components/CustomInputField";
 import SearchGrey from "@/src/assets/icons/search-grey.svg";
-import Topics from "./Topics";
 import FAQQuestion from "@/src/components/FAQQuestion";
 import { allQuestions } from "../../const/allQuestions";
+import { useState } from "react";
 
 const AllFAQs = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredQuestions = allQuestions.filter((question) =>
+    question.question.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <Box
       sx={{
@@ -23,11 +31,11 @@ const AllFAQs = () => {
       <CustomInputField
         placeholder="What do you need help with?"
         icon={SearchGrey}
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
       />
 
-      <Topics />
-
-      <Box mt={5}>
+      <Box>
         <Typography
           sx={{
             color: "var(--Shade-Black, #000)",
@@ -39,13 +47,13 @@ const AllFAQs = () => {
             "@media (max-width: 768px)": {
               fontSize: "40px",
               letterSpacing: "-1.28px",
-              mb: "40px",
+              mb: "32px",
             },
             "@media (max-width: 576px)": {
               fontSize: "32px",
               lineHeight: "120%",
               letterSpacing: "-0.64px",
-              mb: "32px",
+              mb: "28px",
             },
           }}
         >
@@ -59,13 +67,37 @@ const AllFAQs = () => {
             gap: "32px",
           }}
         >
-          {allQuestions.map((question, index) => (
-            <FAQQuestion
-              question={question.question}
-              answer={question.answer}
-              key={index}
-            />
-          ))}
+          {filteredQuestions.length > 0 ? (
+            filteredQuestions.map((question, index) => (
+              <FAQQuestion
+                question={question.question}
+                answer={question.answer}
+                ordered={question.ordered}
+                extra={question.extra}
+                points={question.points}
+                subDescription={question.subDescription}
+                key={index}
+              />
+            ))
+          ) : (
+            <Typography
+              sx={{
+                color: "var(--Shade-Black, #000)",
+
+                fontSize: "18px",
+                fontWeight: 400,
+                lineHeight: "145%",
+                "@media (max-width: 768px)": {
+                  fontSize: "16px",
+                },
+                "@media (max-width: 576px)": {
+                  fontSize: "12px",
+                },
+              }}
+            >
+              No FAQs match your search query.
+            </Typography>
+          )}
         </Box>
       </Box>
     </Box>
