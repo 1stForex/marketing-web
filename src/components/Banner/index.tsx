@@ -38,7 +38,7 @@ const Banner: React.FC<BannerProps> = ({
             textAlign: "center",
 
             fontSize: "24px",
-            fontWeight: 400,
+            fontWeight: 600,
             lineHeight: "120%",
             letterSpacing: "-0.48px",
             "@media (max-width: 768px)": {
