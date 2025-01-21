@@ -38,7 +38,6 @@ export default function Header() {
         alignItems: "center",
         padding: "0 40px",
         marginBottom: "30px",
-        overflowX: "hidden",
 
         "@media (max-width: 1400px)": {
           padding: "0 20px",
@@ -46,6 +45,7 @@ export default function Header() {
 
         "@media (max-width: 768px)": {
           marginBottom: "15px",
+          overflowX: "hidden",
         },
         "@media (max-width: 576px)": {
           marginBottom: "0px",

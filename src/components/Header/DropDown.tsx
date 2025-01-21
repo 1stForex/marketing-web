@@ -2,9 +2,7 @@
 
 import * as React from "react";
 import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 import { menuItems } from "@/src/const/allMenuItem";
@@ -14,21 +12,39 @@ import ChevronDown from "@/src/assets/icons/chevron-down.svg";
 export default function DropDown({ currentPath, onLinkClick }: DropDownProps) {
   const isHighlighted = ["/about-us", "/contact-us"].includes(currentPath);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
 
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setAnchorEl(null);
+      }
+    };
+
+    if (open) document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [open]);
+
   return (
-    <div>
+    <div
+      ref={dropdownRef}
+      style={{
+        position: "relative",
+      }}
+    >
       <Button
-        id="demo-positioned-button"
-        aria-controls={open ? "demo-positioned-menu" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
         variant="text"
         sx={{
@@ -59,42 +75,52 @@ export default function DropDown({ currentPath, onLinkClick }: DropDownProps) {
         </Typography>
         <Image src={ChevronDown} alt="Chevron Down Icon" />
       </Button>
-      <Menu
-        id="demo-positioned-menu"
-        aria-labelledby="demo-positioned-button"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-        disableScrollLock
-      >
-        {menuItems.map((item, index) => (
-          <MenuItem
-            key={index}
-            onClick={() => {
-              handleClose();
-              if (item.href) {
-                onLinkClick(item.href);
-              }
-            }}
-            sx={{
-              display: "flex",
-              padding: "8px 16px",
-              alignItems: "center",
-              gap: "4px",
-              alignSelf: "stretch",
-              width: item.href === null ? "267px" : "auto",
-            }}
-          >
-            {item.href ? (
-              <Link href={item.href}>
+      {open && (
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            background: "#FFF",
+            boxShadow:
+              "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+            zIndex: "1",
+            borderRadius: "8px",
+          }}
+        >
+          {menuItems.map((item, index) => (
+            <Box
+              key={index}
+              onClick={() => {
+                handleClose();
+                if (item.href) {
+                  onLinkClick(item.href);
+                }
+              }}
+              sx={{
+                display: "flex",
+                padding: "8px 16px",
+                alignItems: "center",
+                gap: "4px",
+                alignSelf: "stretch",
+                width: item.href === null ? "267px" : "auto",
+              }}
+            >
+              {item.href ? (
+                <Link href={item.href}>
+                  <Typography
+                    sx={{
+                      color: "#333",
+                      fontSize: "14px",
+                      fontStyle: "normal",
+                      fontWeight: item.isBold ? "600" : "400",
+                      lineHeight: "20.3px",
+                    }}
+                  >
+                    {item.label}
+                  </Typography>
+                </Link>
+              ) : (
                 <Typography
                   sx={{
                     color: "#333",
@@ -106,23 +132,11 @@ export default function DropDown({ currentPath, onLinkClick }: DropDownProps) {
                 >
                   {item.label}
                 </Typography>
-              </Link>
-            ) : (
-              <Typography
-                sx={{
-                  color: "#333",
-                  fontSize: "14px",
-                  fontStyle: "normal",
-                  fontWeight: item.isBold ? "600" : "400",
-                  lineHeight: "20.3px",
-                }}
-              >
-                {item.label}
-              </Typography>
-            )}
-          </MenuItem>
-        ))}
-      </Menu>
+              )}
+            </Box>
+          ))}
+        </Box>
+      )}
     </div>
   );
 }
