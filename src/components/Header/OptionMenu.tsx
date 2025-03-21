@@ -1,8 +1,8 @@
 "use client";
 
 import { Box, useMediaQuery } from "@mui/material";
-import downloadSvg from "../../assets/icons/download.svg";
-import searchSvg from "../../assets/icons/search.svg";
+// import downloadSvg from "../../assets/icons/download.svg";
+// import searchSvg from "../../assets/icons/search.svg";
 import loginSvg from "../../assets/icons/login.svg";
 import userSvg from "../../assets/icons/user.svg";
 import CustomButton from "../Button";
@@ -38,7 +38,7 @@ export default function OptionMenu({ currentPath, onLinkClick }: NavProps) {
           },
         }}
       >
-        <Box
+        {/* <Box
           sx={{
             display: "flex",
             alignItems: "center",
@@ -56,7 +56,7 @@ export default function OptionMenu({ currentPath, onLinkClick }: NavProps) {
             <Image src={downloadSvg} alt="Download Icon" />
           </Box>
           <Image src={searchSvg} alt="Download Icon" />
-        </Box>
+        </Box> */}
         <Box
           sx={{
             display: "flex",
