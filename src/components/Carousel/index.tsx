@@ -42,7 +42,7 @@ const Carousel: React.FC<CarouselProp> = ({
     variableWidth: true,
     adaptiveHeight: true,
     arrows: false,
-    speed: 1000,
+    speed: 3000,
     autoplay: autoplay,
     autoplaySpeed: 1000,
   };
