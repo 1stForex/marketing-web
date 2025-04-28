@@ -15,7 +15,7 @@ const pricing = {
     twoPair: "22.99",
     fourPair: "59.99",
     unlimitedPair: "89.99",
-    btnText: "Subcribe Monthly",
+    btnText: "Subscribe Monthly",
   },
   yearly: {
     twoPair: {
@@ -42,7 +42,7 @@ const pricing = {
         save: "290",
       },
     },
-    btnText: "Subcribe Yearly",
+    btnText: "Subscribe Yearly",
   },
 };
 
