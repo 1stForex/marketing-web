@@ -41,7 +41,7 @@ const PricingHeader = () => {
       >
         Pick the price{" "}
         <span style={{ color: "var(--primary-400-base, #F30)" }}>
-          thats right for you{" "}
+          that&#39;s right for you{" "}
         </span>
       </Typography>
 

@@ -1,10 +1,13 @@
 "use client";
 import Badge from "@/src/components/Badge";
 import Card from "@/src/components/Card";
-import { Box } from "@mui/material";
+import { Box, IconButton, useMediaQuery } from "@mui/material";
 
 import Slider from "react-slick";
 import { CarouselProp } from "@/src/types/Carousel.interface";
+import { useEffect, useRef, useState } from "react";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const Carousel: React.FC<CarouselProp> = ({
   headerLeft = false,
@@ -13,9 +16,25 @@ const Carousel: React.FC<CarouselProp> = ({
   isCarousel = true,
   children,
 }) => {
+  const sliderRef = useRef<Slider | null>(null);
+  const isMobile = useMediaQuery("(max-width: 576px)");
+  const [autoplay, setAutoplay] = useState(isMobile);
+
+  useEffect(() => {
+    setAutoplay(isMobile);
+  }, [isMobile]);
+
+  const nextCard = () => {
+    sliderRef.current?.slickNext();
+  };
+
+  const previousCard = () => {
+    sliderRef.current?.slickPrev();
+  };
+
   const settings = {
     className: "slider variable-width",
-    dots: false,
+    dots: true,
     infinite: true,
     centerMode: true,
     slidesToShow: 1,
@@ -23,6 +42,9 @@ const Carousel: React.FC<CarouselProp> = ({
     variableWidth: true,
     adaptiveHeight: true,
     arrows: false,
+    speed: 3000,
+    autoplay: autoplay,
+    autoplaySpeed: 1000,
   };
 
   return (
@@ -73,24 +95,62 @@ const Carousel: React.FC<CarouselProp> = ({
       </Box>
 
       {isCarousel ? (
-        <Box
-          sx={{
-            width: "100%",
-            overflow: "hidden",
-          }}
-        >
-          <Slider {...settings}>
-            {cards.map((card, index) => (
-              <Card
-                key={index}
-                title={card.title}
-                image={card.image}
-                description={card.description}
-                isCarousel
-              />
-            ))}
-          </Slider>
-        </Box>
+        <>
+          <Box
+            sx={{
+              width: "100%",
+              position: "relative",
+            }}
+          >
+            <Slider ref={sliderRef} {...settings}>
+              {cards.map((card, index) => (
+                <Card
+                  key={index}
+                  title={card.title}
+                  image={card.image}
+                  description={card.description}
+                  isCarousel
+                />
+              ))}
+            </Slider>
+            <Box
+              sx={{
+                display: isMobile ? "none" : "flex",
+                gap: "8px",
+                position: "absolute",
+                right: "16px",
+                top: "-65px",
+              }}
+            >
+              <IconButton
+                onClick={() => {
+                  console.log("Hello World Previous");
+                  previousCard();
+                }}
+                sx={{
+                  backgroundColor: "white",
+                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
+                  "&:hover": { backgroundColor: "#F30", color: "#FFF" },
+                }}
+              >
+                <ChevronLeftIcon />
+              </IconButton>
+              <IconButton
+                onClick={() => {
+                  console.log("Hello World NExt");
+                  nextCard();
+                }}
+                sx={{
+                  backgroundColor: "white",
+                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
+                  "&:hover": { backgroundColor: "#F30", color: "#FFF" },
+                }}
+              >
+                <ChevronRightIcon />
+              </IconButton>
+            </Box>
+          </Box>
+        </>
       ) : (
         <Box
           sx={{

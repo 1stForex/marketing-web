@@ -17,7 +17,7 @@ export const allTradingBot = [
   },
   {
     icon: Bot,
-    title: "Adaptive Tranding",
+    title: "Adaptive Trading",
     description:
       "The bot adjusts strategies in real-time, guided by AI and your chosen risk parameters, so it always aligns with your comfort level.",
   },

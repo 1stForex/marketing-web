@@ -34,3 +34,25 @@ a {
   display: flex;
   gap: 10px;
 }
+
+.slick-dots {
+  bottom: -35px !important;
+}
+
+.slick-dots li {
+  margin: 0 0px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 6px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #f30 !important;
+}
+
+@media (max-width: 460px) {
+  .slick-list {
+    padding: 0px 60px !important;
+  }
+}
