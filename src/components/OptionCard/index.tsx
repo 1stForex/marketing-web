@@ -8,7 +8,10 @@ export default function OptionCard({
   description = "",
   points = [],
   fixedSize = false,
-}: OptionCardProp) {
+  height,
+  width,
+  maxWidth,
+}: OptionCardProp & { height?: string; width?: string; maxWidth?: string }) {
   return (
     <Box
       sx={{
@@ -28,6 +31,7 @@ export default function OptionCard({
               maxWidth: "533px",
               "@media (max-width: 992px)": {
                 gap: "8px",
+                maxWidth: "100%",
               },
             }
           : {
@@ -38,10 +42,12 @@ export default function OptionCard({
           "@media (max-width: 768px)": {
             gap: "10px",
           },
-
           "@media (max-width: 375px)": {
             padding: "14px",
           },
+          height: height || "auto",
+          width: width || "auto",
+          maxWidth: maxWidth || "100%",
         }),
       }}
     >

@@ -6,27 +6,10 @@ import Link from "next/link";
 import NavLinks from "./NavLinks";
 import GroupButton from "./GroupButton";
 import OptionMenu from "./OptionMenu";
-import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const [currentPath, setCurrentPath] = useState("");
-
-  useEffect(() => {
-    const handlePopState = () => {
-      setCurrentPath(window.location.pathname);
-    };
-
-    setCurrentPath(window.location.pathname);
-    window.addEventListener("popstate", handlePopState);
-
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
-  }, []);
-
-  const handleLinkClick = (href: string) => {
-    setCurrentPath(href);
-  };
+  const currentPath = usePathname();
 
   return (
     <Box
@@ -76,7 +59,6 @@ export default function Header() {
               src={forexLogo}
               alt="Forex Logo"
               loading="lazy"
-              onClick={() => handleLinkClick("/home")}
               width={122}
               height={24}
             />
@@ -88,10 +70,7 @@ export default function Header() {
               },
             }}
           >
-            <GroupButton
-              currentPath={currentPath}
-              onLinkClick={handleLinkClick}
-            />
+            <GroupButton currentPath={currentPath} />
           </Box>
           <Box
             sx={{
@@ -100,9 +79,9 @@ export default function Header() {
               },
             }}
           >
-            <NavLinks currentPath={currentPath} onLinkClick={handleLinkClick} />
+            <NavLinks currentPath={currentPath} />
           </Box>
-          <OptionMenu currentPath={currentPath} onLinkClick={handleLinkClick} />
+          <OptionMenu currentPath={currentPath} />
         </Box>
       </Box>
     </Box>

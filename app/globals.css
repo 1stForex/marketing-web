@@ -36,7 +36,7 @@ a {
 }
 
 .slick-dots {
-  bottom: -35px !important;
+  bottom: -30px !important;
 }
 
 .slick-dots li {
@@ -51,8 +51,8 @@ a {
   color: #f30 !important;
 }
 
-@media (max-width: 460px) {
+/* @media (max-width: 460px) {
   .slick-list {
     padding: 0px 60px !important;
   }
-}
+} */

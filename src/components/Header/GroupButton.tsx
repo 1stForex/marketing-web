@@ -2,11 +2,7 @@ import { ButtonGroup, Button } from "@mui/material";
 import { NavProps } from "@/src/types/Nav.interface";
 import Link from "next/link";
 
-export default function GroupButton({
-  currentPath,
-  onLinkClick,
-  nav,
-}: NavProps) {
+export default function GroupButton({ currentPath, nav }: NavProps) {
   const color = nav ? "#FFF" : "#333";
   const isActive = (href: string) => currentPath === href;
 
@@ -32,7 +28,6 @@ export default function GroupButton({
             ...btnStyles(isActive("/ai-signal")),
             borderRadius: "32px 0 0 32px",
           }}
-          onClick={() => onLinkClick("/ai-signal")}
         >
           1st Forex AI Signal
         </Button>
@@ -43,7 +38,6 @@ export default function GroupButton({
             ...btnStyles(isActive("/academy")),
             borderRadius: "0 32px 32px 0",
           }}
-          onClick={() => onLinkClick("/academy")}
         >
           1st Forex Academy
         </Button>

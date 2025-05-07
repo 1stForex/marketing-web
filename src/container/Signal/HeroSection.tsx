@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import Hero from "@/src/components/Hero";
 import CustomButton from "@/src/components/Button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -17,8 +18,12 @@ export default function HeroSection() {
           gap: "24px",
         }}
       >
-        <CustomButton variant="red">Label</CustomButton>
-        <CustomButton variant="transparent">Label</CustomButton>
+        <Link href="/ai-signal" passHref>
+          <CustomButton variant="red">AI Signal</CustomButton>
+        </Link>
+        <Link href="/academy" passHref>
+          <CustomButton variant="transparent">Academy</CustomButton>
+        </Link>
       </Box>
     </Hero>
   );
