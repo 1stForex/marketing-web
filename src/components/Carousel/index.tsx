@@ -8,6 +8,7 @@ import { CarouselProp } from "@/src/types/Carousel.interface";
 import { useEffect, useRef, useState } from "react";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import "./Carousel.css";
 
 const Carousel: React.FC<CarouselProp> = ({
   headerLeft = false,
@@ -124,7 +125,6 @@ const Carousel: React.FC<CarouselProp> = ({
             >
               <IconButton
                 onClick={() => {
-                  console.log("Hello World Previous");
                   previousCard();
                 }}
                 sx={{
@@ -137,7 +137,6 @@ const Carousel: React.FC<CarouselProp> = ({
               </IconButton>
               <IconButton
                 onClick={() => {
-                  console.log("Hello World NExt");
                   nextCard();
                 }}
                 sx={{

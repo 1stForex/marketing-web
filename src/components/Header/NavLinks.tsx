@@ -5,11 +5,7 @@ import { links } from "@/src/const/allNavLinks";
 import { additionalLinks } from "@/src/const/allAdditionalNavLinks";
 import { NavProps } from "@/src/types/Nav.interface";
 
-export default function NavLinks({
-  currentPath,
-  onLinkClick,
-  nav = false,
-}: NavProps) {
+export default function NavLinks({ currentPath, nav = false }: NavProps) {
   const color = nav ? "#FFF" : "#333";
   const isActive = (href: string) => currentPath === href;
 
@@ -39,7 +35,6 @@ export default function NavLinks({
               color: isActive(link.href) ? "#F30" : color,
               textDecoration: isActive(link.href) ? "underline" : "none",
             }}
-            onClick={() => onLinkClick(link.href)}
           >
             {link.label}
           </Typography>
@@ -47,10 +42,7 @@ export default function NavLinks({
       ))}
 
       {!nav ? (
-        <DropDown
-          currentPath={currentPath}
-          onLinkClick={(href: string) => onLinkClick(href)}
-        />
+        <DropDown currentPath={currentPath} />
       ) : (
         additionalLinks.map((link) => (
           <Link key={link.label} href={link.href} className="link">
@@ -64,7 +56,6 @@ export default function NavLinks({
                 color: isActive(link.href) ? "#F30" : color,
                 textDecoration: isActive(link.href) ? "underline" : "none",
               }}
-              onClick={() => onLinkClick(link.href)}
             >
               {link.label}
             </Typography>

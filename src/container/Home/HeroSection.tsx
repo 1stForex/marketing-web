@@ -5,6 +5,7 @@ import Logo from "@/src/assets/icons/logo.svg";
 import StatsCard from "./StatsCard";
 import Marquee from "react-fast-marquee";
 import CustomButton from "@/src/components/Button";
+import { useRouter } from "next/navigation";
 
 const statsData = [
   { name: "Name", description: "Loreum Ipsum", value: 5 },
@@ -16,6 +17,7 @@ const statsData = [
 ];
 
 const HeroSection = () => {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -136,8 +138,15 @@ const HeroSection = () => {
             gap: "24px",
           }}
         >
-          <CustomButton variant="red">Label</CustomButton>
-          <CustomButton variant="transparent">Label</CustomButton>
+          <CustomButton variant="red" onClick={() => router.push("/ai-signal")}>
+            AI Signal
+          </CustomButton>
+          <CustomButton
+            variant="transparent"
+            onClick={() => router.push("/academy")}
+          >
+            Academy
+          </CustomButton>
         </Box>
       </Box>
 

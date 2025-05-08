@@ -122,17 +122,6 @@ export const allQuestions = [
     ],
   },
   {
-    question: "How Long Are Positions Maintained?",
-    answer:
-      "Approximately 80% of Forex trades are closed within seven days, and over 40% last fewer than two days. Positions are typically closed when:",
-    ordered: true,
-    points: [
-      "Sufficient profits are realized.",
-      "The stop loss is triggered.",
-      "Funds are needed for a better trading opportunity.",
-    ],
-  },
-  {
     question: "What is Margin in Forex Trading?",
     answer:
       "Margin is the amount of money required to open a leveraged position. For example, a 1% margin requirement means you need $1,000 to control a $100,000 position. Be cautious, as insufficient margin can lead to a margin call, where positions are liquidated to cover losses.",

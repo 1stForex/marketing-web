@@ -12,11 +12,11 @@ export default function LegacySection() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 3000,
+    speed: 5000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     vertical: !isSmallScreen,
     verticalSwiping: !isSmallScreen,
     cssEase: "linear",
@@ -35,16 +35,15 @@ export default function LegacySection() {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerMode: true,
         },
       },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false,
-        },
-      },
+      // {
+      //   breakpoint: 576,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     centerMode: true,
+      //   },
+      // },
     ],
   };
 

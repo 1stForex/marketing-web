@@ -9,7 +9,7 @@ import { menuItems } from "@/src/const/allMenuItem";
 import { DropDownProps } from "@/src/types/DropDown.interface";
 import ChevronDown from "@/src/assets/icons/chevron-down.svg";
 
-export default function DropDown({ currentPath, onLinkClick }: DropDownProps) {
+export default function DropDown({ currentPath }: DropDownProps) {
   const isHighlighted = ["/about-us", "/contact-us"].includes(currentPath);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const dropdownRef = React.useRef<HTMLDivElement>(null);
@@ -93,9 +93,6 @@ export default function DropDown({ currentPath, onLinkClick }: DropDownProps) {
               key={index}
               onClick={() => {
                 handleClose();
-                if (item.href) {
-                  onLinkClick(item.href);
-                }
               }}
               sx={{
                 display: "flex",

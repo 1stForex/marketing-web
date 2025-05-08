@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import CustomButton from "@/src/components/Button";
+import Link from "next/link";
 
 const CtaSection = () => {
   return (
@@ -10,8 +11,12 @@ const CtaSection = () => {
         gap: "24px",
       }}
     >
-      <CustomButton variant="red">Label</CustomButton>
-      <CustomButton variant="transparent">Label</CustomButton>
+      <Link href="/ai-signal" passHref>
+        <CustomButton variant="red">AI Signal</CustomButton>
+      </Link>
+      <Link href="/academy" passHref>
+        <CustomButton variant="transparent">Academy</CustomButton>
+      </Link>
     </Box>
   );
 };

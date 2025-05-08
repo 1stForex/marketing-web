@@ -10,7 +10,7 @@ import Image from "next/image";
 import TemporaryDrawer from "./Menu";
 import { NavProps } from "@/src/types/Nav.interface";
 
-export default function OptionMenu({ currentPath, onLinkClick }: NavProps) {
+export default function OptionMenu({ currentPath }: NavProps) {
   const isSmallScreen = useMediaQuery("(max-width: 1350px)");
 
   return (
@@ -113,10 +113,7 @@ export default function OptionMenu({ currentPath, onLinkClick }: NavProps) {
       </Box>
       {isSmallScreen && (
         <Box sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}>
-          <TemporaryDrawer
-            currentPath={currentPath}
-            onLinkClick={onLinkClick}
-          />
+          <TemporaryDrawer currentPath={currentPath} />
         </Box>
       )}
     </Box>
