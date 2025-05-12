@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Laptop from "@/src/assets/images/half-laptop.png";
+import Community from "@/src/assets/images/community.png";
 import Badge from "@/src/components/Badge";
 import { Box, Typography, Container } from "@mui/material";
 
@@ -101,11 +101,11 @@ export default function MissionSection() {
               position: "relative",
               maxWidth: "966px",
               width: "100%",
-              aspectRatio: "998 / 417",
+              aspectRatio: "907 / 417",
             }}
           >
             <Image
-              src={Laptop}
+              src={Community}
               alt="Laptop Image"
               fill
               style={{

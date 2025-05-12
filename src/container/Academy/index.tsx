@@ -8,6 +8,7 @@ import { whyUsCardsData } from "@/src/const/whyUsCardsData";
 import Courses from "./Cousrses";
 import UniqueApproach from "./UniqueApproach";
 import Offer from "@/src/components/Offer";
+import Signal from "@/src/assets/images/signal-mobile.png";
 
 const Academy = () => {
   return (
@@ -98,6 +99,7 @@ const Academy = () => {
         descriptionWidth={663}
         subDescription="Sign up today and start your journey to financial freedom. Together, we’ll make your trading goals a reality"
         buttonText="Sign Up"
+        imageUrl={Signal.src}
       />
     </Box>
   );

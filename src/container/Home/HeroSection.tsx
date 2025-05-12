@@ -6,18 +6,63 @@ import StatsCard from "./StatsCard";
 import Marquee from "react-fast-marquee";
 import CustomButton from "@/src/components/Button";
 import { useRouter } from "next/navigation";
-
-const statsData = [
-  { name: "Name", description: "Loreum Ipsum", value: 5 },
-  { name: "Name", description: "Loreum Ipsum", value: -5 },
-  { name: "Name", description: "Loreum Ipsum", value: 5 },
-  { name: "Name", description: "Loreum Ipsum", value: -5 },
-  { name: "Name", description: "Loreum Ipsum", value: 5 },
-  { name: "Name", description: "Loreum Ipsum", value: -5 },
-];
+import { useEffect, useRef, useState } from "react";
 
 const HeroSection = () => {
   const router = useRouter();
+  const ws = useRef<WebSocket | null>(null);
+  const [liveStats, setLiveStats] = useState<
+    { symbol: string; price: number; change_percent: number }[]
+  >([]);
+
+  useEffect(() => {
+    let isMounted = true;
+    const socket = new WebSocket(
+      `ws://${process.env.NEXT_PUBLIC_API_URL_PROD}/ws/forex-currencies/`
+    );
+    ws.current = socket;
+
+    socket.onopen = () => {
+      console.log("WebSocket connected");
+    };
+
+    socket.onmessage = (event) => {
+      try {
+        const data = JSON.parse(event.data);
+
+        if (!isMounted) return;
+
+        setLiveStats((prev) => {
+          const index = prev.findIndex((item) => item.symbol === data.symbol);
+          if (index !== -1) {
+            const updated = [...prev];
+            updated[index] = data;
+            return updated;
+          }
+          return [...prev, data];
+        });
+      } catch (err) {
+        console.error("Error parsing WebSocket data", err);
+      }
+    };
+
+    socket.onerror = (err) => {
+      console.error("WebSocket error:", err);
+    };
+
+    socket.onclose = () => {
+      console.log("WebSocket closed");
+    };
+
+    return () => {
+      isMounted = false;
+      if (ws.current && ws.current.readyState === WebSocket.OPEN) {
+        ws.current.close();
+      }
+      ws.current = null;
+    };
+  }, []);
+
   return (
     <Box
       sx={{
@@ -152,12 +197,12 @@ const HeroSection = () => {
 
       <Marquee>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          {statsData.map((data, index) => (
+          {liveStats.map((data, index) => (
             <StatsCard
               key={index}
-              name={data.name}
-              description={data.description}
-              value={data.value}
+              symbol={data.symbol}
+              change_percent={data.change_percent}
+              price={data.price}
             />
           ))}
         </Box>

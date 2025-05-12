@@ -10,8 +10,12 @@ import StatsDown from "@/src/assets/icons/stats-down.svg";
 import Image from "next/image";
 import { StatsCardProps } from "@/src/types/StatsCard.interface";
 
-const StatsCard: React.FC<StatsCardProps> = ({ name, value, description }) => {
-  const isPositive = value > 0;
+const StatsCard: React.FC<StatsCardProps> = ({
+  symbol,
+  price,
+  change_percent,
+}) => {
+  const isPositive = change_percent > 0;
   const icon = isPositive ? ArrowUp : ArrowDown;
   const statsIcon = isPositive ? StatsUp : StatsDown;
 
@@ -81,7 +85,7 @@ const StatsCard: React.FC<StatsCardProps> = ({ name, value, description }) => {
             },
           }}
         >
-          {name}
+          {symbol}
         </Typography>
 
         <Box sx={{ display: "flex", alignItems: "center", gap: "6px" }}>
@@ -105,7 +109,7 @@ const StatsCard: React.FC<StatsCardProps> = ({ name, value, description }) => {
                 letterSpacing: "-0.06px",
               }}
             >
-              {Math.abs(value)}%
+              {Math.abs(change_percent).toFixed(2)}%
             </Typography>
           </Box>
           <Typography
@@ -115,7 +119,7 @@ const StatsCard: React.FC<StatsCardProps> = ({ name, value, description }) => {
               lineHeight: "145%",
             }}
           >
-            {description}
+            {price.toFixed(4)}
           </Typography>
         </Box>
       </Box>

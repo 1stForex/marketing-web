@@ -1,18 +1,20 @@
 "use client";
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
-import StocksImg from "@/src/assets/images/Stocks.png";
+import Dashboard from "@/src/assets/images/dashboard.png";
+import mobileDashboard from "@/src/assets/images/mobile-dashboard.png";
 
 const Stocks = () => {
+  const isSmallScreen = useMediaQuery("(max-width: 576px)");
   return (
     <Box
       sx={{
         position: "relative",
-        aspectRatio: "5/3",
+        aspectRatio: isSmallScreen ? "326/413" : "33/25",
       }}
     >
       <Image
-        src={StocksImg}
+        src={isSmallScreen ? mobileDashboard : Dashboard}
         alt="stocks"
         fill
         style={{ width: "100%", objectFit: "cover" }}

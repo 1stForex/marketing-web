@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import phoneImg from "@/src/assets/images/phone.png";
+import mobileDashboard from "@/src/assets/images/mobile-dashboard.png";
 import Image from "next/image";
 import Badge from "../Badge";
 import CustomButton from "../Button";
@@ -15,7 +15,8 @@ export default function Offer({
   buttonText,
   onClick,
   points = [],
-}: OfferProps) {
+  imageUrl,
+}: OfferProps & { imageUrl?: string }) {
   const typographyStyles = {
     color: "#FFF",
     fontSize: "24px",
@@ -222,7 +223,7 @@ export default function Offer({
         }}
       >
         <Image
-          src={phoneImg}
+          src={imageUrl || mobileDashboard}
           alt="Phone Image"
           fill
           style={{ objectFit: "contain", objectPosition: "bottom" }}
