@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Badge from "@/src/components/Badge";
-import Laptop from "@/src/assets/images/laptop.png";
+import CourseLaptop from "@/src/assets/images/course.png";
 import Image from "next/image";
 
 const AboutUs = () => {
@@ -136,14 +136,14 @@ const AboutUs = () => {
       <Box
         sx={{
           width: "40%",
-          aspectRatio: "1",
+          aspectRatio: "526 / 461",
           position: "relative",
           "@media (max-width: 992px)": {
             display: "none",
           },
         }}
       >
-        <Image src={Laptop} alt="laptop" fill />
+        <Image src={CourseLaptop} alt="laptop" fill />
       </Box>
     </Box>
   );

@@ -1,5 +1,5 @@
 export interface StatsCardProps {
-  name: string;
-  value: number;
-  description: string;
+  symbol: string;
+  price: number;
+  change_percent: number;
 }

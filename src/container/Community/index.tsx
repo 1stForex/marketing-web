@@ -3,6 +3,7 @@ import HeroSection from "./HeroSection";
 import OfferSection from "./OfferSection";
 import Offer from "@/src/components/Offer";
 import JoinSection from "./JoinSection";
+import communityMobile from "@/src/assets/images/mobile-community.png";
 
 export default function Community() {
   return (
@@ -50,6 +51,7 @@ export default function Community() {
           "Create an account on 1st Forex to access the blog, signals, and courses.",
           "Engage with content by asking questions, sharing insights, and applying for contributor status. ",
         ]}
+        imageUrl={communityMobile.src}
       />
       <Container maxWidth="xl">
         <Box

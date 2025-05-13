@@ -2,7 +2,7 @@
 import Badge from "@/src/components/Badge";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import Bull from "@/src/assets/images/Bull.png";
+import Certificate from "@/src/assets/images/certificate.png";
 
 const UniqueApproach = () => {
   return (
@@ -137,8 +137,8 @@ const UniqueApproach = () => {
         }}
       >
         <Image
-          src={Bull}
-          alt="Bull"
+          src={Certificate}
+          alt="Certification"
           fill
           style={{
             objectFit: "cover",
