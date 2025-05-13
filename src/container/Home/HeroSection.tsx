@@ -18,7 +18,7 @@ const HeroSection = () => {
   useEffect(() => {
     let isMounted = true;
     const socket = new WebSocket(
-      `ws://${process.env.NEXT_PUBLIC_API_URL_PROD}/ws/forex-currencies/`
+      `wss://${process.env.NEXT_PUBLIC_WEB_SOCKET}/ws/forex-currencies/`
     );
     ws.current = socket;
 
