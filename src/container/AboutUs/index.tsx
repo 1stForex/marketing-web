@@ -62,6 +62,10 @@ export default function AboutUs() {
             flexDirection: "column",
             gap: "60px",
             mb: "80px",
+
+            "@media (max-width: 576px)": {
+              mb: "40px",
+            },
           }}
         >
           <LegacySection />

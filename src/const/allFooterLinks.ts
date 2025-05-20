@@ -3,45 +3,58 @@ export const linksList = [
     label: "Product",
     links: [
       {
-        label: "Editor",
-        href: "#",
+        label: "1st Forex AI Signal",
+        href: "/ai-signal",
       },
       {
-        label: "Runtimes",
-        href: "#",
-      },
-      {
-        label: "Rendered",
-        href: "#",
-      },
-      {
-        label: "Changelog",
-        href: "#",
+        label: "1st Forex Academy",
+        href: "/academy",
       },
     ],
   },
   {
-    label: "Community",
+    label: "Company",
     links: [
       {
-        label: "Rayna Club",
-        href: "#",
+        label: "Community",
+        href: "/community",
       },
       {
-        label: "Discord",
-        href: "#",
+        label: "Pricing",
+        href: "/pricing",
       },
       {
-        label: "Get Support",
-        href: "#",
+        label: "About",
+        href: "/about-us",
+      },
+      {
+        label: "Contact",
+        href: "/contact-us",
       },
     ],
   },
+  // {
+  //   label: "Learn",
+  //   links: [
+  //     {
+  //       label: "Documentation",
+  //       href: "#",
+  //     },
+  //     {
+  //       label: "Blog",
+  //       href: "#",
+  //     },
+  //     {
+  //       label: "Features",
+  //       href: "#",
+  //     },
+  //   ],
+  // },
   {
-    label: "Learn",
+    label: "Other",
     links: [
       {
-        label: "Documentation",
+        label: "Terms & Conditions",
         href: "#",
       },
       {
@@ -50,23 +63,6 @@ export const linksList = [
       },
       {
         label: "Features",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Use Cases",
-    links: [
-      {
-        label: "Game Design",
-        href: "#",
-      },
-      {
-        label: "Product Design",
-        href: "#",
-      },
-      {
-        label: "Pro",
         href: "#",
       },
     ],

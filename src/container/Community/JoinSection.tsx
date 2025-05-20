@@ -23,6 +23,7 @@ const CommunityBanner = () => {
         },
         "@media (max-width: 576px)": {
           gap: "16px",
+          padding: "36px 6px",
         },
       }}
     >

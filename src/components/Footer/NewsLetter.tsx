@@ -7,13 +7,14 @@ export default function NewsLetter() {
     <Box
       sx={{
         display: "flex",
-        alignItems: "center",
         justifyContent: "space-between",
+        alignItems: "flex-start",
         width: "100%",
         gap: "4px",
 
-        "@media (max-width: 900px)": {
+        "@media (max-width: 768px)": {
           flexDirection: "column",
+          alignItems: "center",
           gap: "1rem",
         },
       }}
@@ -29,7 +30,7 @@ export default function NewsLetter() {
             lineHeight: "28.8px",
             letterSpacing: "-0.48px",
 
-            "@media (max-width: 900px)": {
+            "@media (max-width: 768px)": {
               textAlign: "center",
             },
           }}
@@ -38,35 +39,39 @@ export default function NewsLetter() {
         </Typography>
         <Typography
           sx={{
-            width: "330px",
+            width: "312px",
             color: "#344054",
             fontSize: "16px",
             fontStyle: "normal",
             fontWeight: "400",
             lineHeight: "23.3px",
 
-            "@media (max-width: 900px)": {
+            "@media (max-width: 768px)": {
               textAlign: "center",
               width: "auto",
             },
           }}
         >
-          Get all the latest Rayna news delivered to your inbox
+          Get AI-driven signal alerts, strategy tips, and market
+          updates—straight to your inbox.
         </Typography>
       </Box>
       <Box
         sx={{
           display: "flex",
           gap: "8px",
-          alignItems: "center",
           maxWidth: "486px",
-
-          "@media (max-width: 900px)": {
+          "@media (max-width: 768px)": {
             width: "100%",
+            maxWidth: "100%",
           },
         }}
       >
-        <CustomInputField placeholder="Email Address" borderRadius="32" />
+        <CustomInputField
+          placeholder="Email Address"
+          borderRadius="32"
+          background="white"
+        />
         <CustomButton variant="red">Subscribe</CustomButton>
       </Box>
     </Box>

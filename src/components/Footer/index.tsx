@@ -37,10 +37,10 @@ export default function Footer() {
             width: "100%",
             borderColor: "#F0F2F5",
             borderWidth: "1px",
-            marginY: 2,
+            my: "40px",
 
             "@media (max-width: 768px)": {
-              marginY: "24px",
+              my: "24px",
             },
           }}
         />
@@ -50,10 +50,9 @@ export default function Footer() {
             width: "100%",
             borderColor: "#F0F2F5",
             borderWidth: "1px",
-            marginY: 2,
-
+            my: "40px",
             "@media (max-width: 768px)": {
-              marginY: "24px",
+              my: "24px",
             },
           }}
         />

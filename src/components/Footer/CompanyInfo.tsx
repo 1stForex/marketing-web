@@ -1,5 +1,3 @@
-"use client";
-
 import { Box, Divider, useMediaQuery } from "@mui/material";
 import Copyright from "./Copyright";
 import DownloadLinks from "./DownloadLinks";

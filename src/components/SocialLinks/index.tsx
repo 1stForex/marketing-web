@@ -2,7 +2,7 @@
 
 import facebookSvg from "../../assets/icons/facebook-color.svg";
 import linkedinSvg from "../../assets/icons/linkedin-color.svg";
-import twitterSvg from "../../assets/icons/twitter-color.svg";
+import XSvg from "../../assets/icons/x-color.svg";
 import instagramSvg from "../../assets/icons/instagram-color.svg";
 import { Box } from "@mui/material";
 import Image from "next/image";
@@ -16,6 +16,11 @@ export default function SocialLinks({ justifyContent }: SocialLinksProps) {
       href: "#",
     },
     {
+      name: "X",
+      icon: XSvg,
+      href: "#",
+    },
+    {
       name: "linkedin",
       icon: linkedinSvg,
       href: "#",
@@ -23,11 +28,6 @@ export default function SocialLinks({ justifyContent }: SocialLinksProps) {
     {
       name: "instagram",
       icon: instagramSvg,
-      href: "#",
-    },
-    {
-      name: "twitter",
-      icon: twitterSvg,
       href: "#",
     },
   ];
