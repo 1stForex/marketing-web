@@ -21,7 +21,7 @@ export default function Community() {
 
         "@media (max-width: 576px)": {
           gap: "40px",
-          mb: "40px",
+          mb: "0px",
         },
       }}
     >

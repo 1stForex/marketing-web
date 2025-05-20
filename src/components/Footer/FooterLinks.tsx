@@ -1,15 +1,8 @@
-"use client";
-
 import { Box, Typography } from "@mui/material";
-import { useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 import { linksList } from "@/src/const/allFooterLinks";
 import Link from "next/link";
 
 export default function FooterLinks() {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down(510));
-
   const commonStyle = {
     fontSize: "16px",
     fontStyle: "normal",
@@ -21,26 +14,31 @@ export default function FooterLinks() {
       sx={{
         width: "100%",
         display: "flex",
-        justifyContent: isSmallScreen ? "space-around" : "space-between",
-        gap: "24px",
+        gap: "32px",
+        "@media (max-width: 576px)": {
+          flexDirection: "column",
+          alignItems: "center",
+        },
       }}
     >
       {linksList.map((section, index) => {
-        if (
-          isSmallScreen &&
-          (section.label === "Learn" || section.label === "Use Cases")
-        ) {
-          return null;
-        }
-
         return (
-          <Box key={index}>
+          <Box
+            key={index}
+            sx={{
+              width: "357px",
+              "@media (max-width: 576px)": {
+                width: "auto",
+                textAlign: "center",
+              },
+            }}
+          >
             <Typography
               sx={{
                 ...commonStyle,
                 color: "#98A2B3",
                 fontWeight: 400,
-                marginBottom: "12px",
+                marginBottom: "24px",
               }}
             >
               {section.label}
@@ -53,7 +51,8 @@ export default function FooterLinks() {
                     display: "block",
                     color: "#667185",
                     fontWeight: 500,
-                    marginBottom: "8px",
+                    marginBottom:
+                      linkIndex !== section.links.length - 1 ? "16px" : 0,
                     textDecoration: "none",
                     "&:hover": { color: "#333" },
                   }}

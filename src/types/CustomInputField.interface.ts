@@ -10,6 +10,7 @@ export interface CustomInputFieldProps {
   rows?: number;
   borderRadius?: string;
   value?: string;
+  background?: string;
   onChange?: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;

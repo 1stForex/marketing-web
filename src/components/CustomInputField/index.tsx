@@ -15,6 +15,7 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
   rows = 3,
   borderRadius = "6",
   value = "",
+  background = "inherit",
   onChange,
 }) => {
   return (
@@ -52,6 +53,7 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
           ),
         }}
         sx={{
+          backgroundColor: background,
           ".MuiOutlinedInput-root": {
             padding: padding,
             borderColor: "var(--Grey-300, #D0D5DD)",

@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import forexLogo from "../../assets/images/forex-logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Copyright() {
   const currentYear = new Date().getFullYear();
@@ -27,13 +28,15 @@ export default function Copyright() {
           },
         }}
       >
-        <Image
-          src={forexLogo}
-          alt="Forex Logo"
-          loading="lazy"
-          width={122}
-          height={24}
-        />
+        <Link href={"/home"}>
+          <Image
+            src={forexLogo}
+            alt="Forex Logo"
+            loading="lazy"
+            width={122}
+            height={24}
+          />
+        </Link>
         <Typography
           sx={{
             ...commonStyle,
@@ -46,16 +49,15 @@ export default function Copyright() {
           sx={{
             ...commonStyle,
             color: "#475367",
-            width: "419px",
+            maxWidth: "424px",
 
             "@media (max-width: 680px)": {
               textAlign: "center",
-              width: "auto",
             },
           }}
         >
-          All trademarks, logos and brand names are the property of their
-          respective owners.
+          All content, signals, and tools are for educational and informational
+          purposes only. Trading involves risk.
         </Typography>
       </Box>
     </Box>

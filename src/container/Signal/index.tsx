@@ -63,10 +63,6 @@ export default function Signal() {
               gap: "40px",
               mb: "60px",
             },
-
-            "@media (max-width: 576px)": {
-              mb: "40px",
-            },
           }}
         >
           <OptionSection />
