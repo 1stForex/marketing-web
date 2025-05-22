@@ -33,38 +33,25 @@ export const linksList = [
       },
     ],
   },
-  // {
-  //   label: "Learn",
-  //   links: [
-  //     {
-  //       label: "Documentation",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Blog",
-  //       href: "#",
-  //     },
-  //     {
-  //       label: "Features",
-  //       href: "#",
-  //     },
-  //   ],
-  // },
   {
     label: "Other",
     links: [
       {
         label: "Terms & Conditions",
-        href: "#",
+        href: "/terms-and-conditions",
       },
       {
-        label: "Blog",
-        href: "#",
+        label: "Privacy Policy",
+        href: "/privacy-policy",
       },
-      {
-        label: "Features",
-        href: "#",
-      },
+      // {
+      //   label: "Blog",
+      //   href: "#",
+      // },
+      // {
+      //   label: "Features",
+      //   href: "#",
+      // },
     ],
   },
 ];
