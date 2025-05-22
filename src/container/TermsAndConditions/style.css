@@ -1,0 +1,46 @@
+.terms-and-conditions-section h3 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.48px;
+}
+
+.terms-and-conditions-section p {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+}
+
+.terms-and-conditions-section p span {
+  font-weight: 700;
+}
+
+.terms-and-conditions-section ul {
+  padding-left: 20px;
+}
+
+.terms-and-conditions-section ul li {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+}
+
+@media (max-width: 768px) {
+  .terms-and-conditions-section h3 {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
+  .terms-and-conditions-section p {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+  .terms-and-conditions-section ul li {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+}
