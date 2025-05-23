@@ -1,6 +1,6 @@
 export interface BannerProps {
   badgeTitle?: string;
   description: string;
-  moreDescription?: string;
+  secondaryDescription?: string;
   children: React.ReactNode;
 }

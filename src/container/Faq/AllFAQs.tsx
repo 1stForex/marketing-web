@@ -50,7 +50,7 @@ const AllFAQs = () => {
               mb: "32px",
             },
             "@media (max-width: 576px)": {
-              fontSize: "32px",
+              fontSize: "26px",
               lineHeight: "120%",
               letterSpacing: "-0.64px",
               mb: "28px",

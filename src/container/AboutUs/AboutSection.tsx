@@ -59,7 +59,7 @@ export default function AboutSection() {
               width: "100%",
             },
             "@media (max-width: 576px)": {
-              fontSize: "32px",
+              fontSize: "26px",
               letterSpacing: "-0.64px",
             },
           }}

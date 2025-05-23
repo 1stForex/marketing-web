@@ -61,9 +61,10 @@ const Home = () => {
                 "@media (max-width: 768px)": {
                   fontSize: "40px",
                   letterSpacing: "-1.28px",
+                  textAlign: "center",
                 },
                 "@media (max-width: 576px)": {
-                  fontSize: "32px",
+                  fontSize: "26px",
                   letterSpacing: "-0.64px",
                 },
               }}
@@ -119,7 +120,7 @@ const Home = () => {
         <Banner
           badgeTitle="Welcome"
           description="For over twenty years, 1st Forex has helped traders worldwide develop profitable strategies and achieve their financial goals."
-          moreDescription="From comprehensive courses to powerful trading signals and a vibrant community, we offer the tools, insights, and expertise to elevate your trading experience."
+          secondaryDescription="From comprehensive courses to powerful trading signals and a vibrant community, we offer the tools, insights, and expertise to elevate your trading experience."
         >
           <Typography
             sx={{
@@ -133,9 +134,10 @@ const Home = () => {
               "@media (max-width: 768px)": {
                 fontSize: "40px",
                 letterSpacing: "-1.28px",
+                textAlign: "center",
               },
               "@media (max-width: 576px)": {
-                fontSize: "32px",
+                fontSize: "26px",
                 letterSpacing: "-0.64px",
               },
             }}

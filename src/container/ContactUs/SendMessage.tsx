@@ -37,7 +37,7 @@ const SendMessage = () => {
             textAlign: "center",
           },
           "@media (max-width: 576px)": {
-            fontSize: "28px",
+            fontSize: "26px",
             letterSpacing: "-0.64px",
           },
         }}

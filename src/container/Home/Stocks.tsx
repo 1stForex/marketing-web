@@ -1,8 +1,8 @@
 "use client";
 import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
-import Dashboard from "@/src/assets/images/dashboard.png";
-import mobileDashboard from "@/src/assets/images/mobile-dashboard.png";
+import Dashboard from "@/src/assets/images/user_dashboard.png";
+import mobileDashboard from "@/src/assets/images/user_mobile_dashboard.png";
 
 const Stocks = () => {
   const isSmallScreen = useMediaQuery("(max-width: 576px)");

@@ -1,5 +1,7 @@
-import { Box, Typography } from "@mui/material";
-import mobileDashboard from "@/src/assets/images/mobile-dashboard.png";
+"use client";
+
+import { Box, Typography, useMediaQuery } from "@mui/material";
+import mobileDashboard from "@/src/assets/images/user_mobile_dashboard.png";
 import Image from "next/image";
 import Badge from "../Badge";
 import CustomButton from "../Button";
@@ -10,7 +12,7 @@ export default function Offer({
   title,
   specialTitle,
   description,
-  moreDescription,
+  secondaryDescription,
   descriptionWidth,
   subDescription,
   buttonText,
@@ -18,6 +20,8 @@ export default function Offer({
   points = [],
   imageUrl,
 }: OfferProps & { imageUrl?: string }) {
+  const isTabView = useMediaQuery("(min-width: 768px)");
+
   const typographyStyles = {
     color: "#FFF",
     fontSize: "24px",
@@ -27,19 +31,23 @@ export default function Offer({
     letterSpacing: "-0.48px",
     maxWidth: descriptionWidth ? `${descriptionWidth}px` : "549px",
 
-    "@media (max-width: 992)": {
+    "@media (max-width: 992px)": {
       maxWidth: "100%",
     },
 
     "@media (max-width: 768px)": {
       fontSize: "20px",
+      textAlign: "center",
     },
     "@media (max-width: 576px)": {
       fontSize: "16px",
       letterSpacing: "-0.32px",
-      textAlign: "center",
     },
   };
+
+  const textToDisplay = isTabView
+    ? `${description} ${secondaryDescription}`
+    : description;
 
   return (
     <Box
@@ -154,22 +162,19 @@ export default function Offer({
                 ...typographyStyles,
               }}
             >
-              {description}
-              <Box
-                component={"span"}
-                sx={{
-                  display: "none",
-                  "@media (max-width: 768px)": {
-                    display: "inline",
-                    minHeight: "24px",
-                  },
-                }}
-              >
-                <br />
-                <span style={{ display: "block", marginTop: "12px" }}></span>
-              </Box>{" "}
-              {moreDescription}
+              {textToDisplay}
             </Typography>
+
+            <Typography
+              sx={{
+                ...typographyStyles,
+                display: isTabView ? "none" : "inline-block",
+                mt: "12px",
+              }}
+            >
+              {secondaryDescription}
+            </Typography>
+
             {subDescription && (
               <Typography
                 sx={{

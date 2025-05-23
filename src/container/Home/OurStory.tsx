@@ -63,7 +63,7 @@ const OurStory = () => {
             mb: "24px",
           },
           "@media (max-width: 576px)": {
-            fontSize: "32px",
+            fontSize: "26px",
             letterSpacing: "-0.64px",
             mb: "16px",
           },
