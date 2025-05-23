@@ -1,18 +1,18 @@
-import Blog from "@/src/assets/icons/blog.svg";
+// import Blog from "@/src/assets/icons/blog.svg";
 import Blogger from "@/src/assets/icons/blogger.svg";
 import Video from "@/src/assets/icons/video.svg";
 import QAsvg from "@/src/assets/icons/qa.svg";
 import Performance from "@/src/assets/icons/performance.svg";
 
 export const communityOffer = [
-  {
-    icon: Blog,
-    title: "The Blog (Name TBD)",
-    points: [
-      "A dedicated space for insights, strategies, and discussions led by approved traders and our team of experts. A dedicated space for insights, strategies, and discussions led by approved traders and our team of experts.",
-      "Open to all registered users, but you’ll need an account to access exclusive signals, courses, and premium content.",
-    ],
-  },
+  // {
+  //   icon: Blog,
+  //   title: "The Blog (Name TBD)",
+  //   points: [
+  //     "A dedicated space for insights, strategies, and discussions led by approved traders and our team of experts. A dedicated space for insights, strategies, and discussions led by approved traders and our team of experts.",
+  //     "Open to all registered users, but you’ll need an account to access exclusive signals, courses, and premium content.",
+  //   ],
+  // },
   {
     icon: QAsvg,
     title: "Interactive Q&A",

@@ -29,7 +29,7 @@ const UniqueApproach = () => {
         },
 
         "@media (max-width: 576px)": {
-          padding: "20px",
+          padding: "0px",
         },
       }}
     >
@@ -38,6 +38,10 @@ const UniqueApproach = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
+
+          "@media (max-width: 768px)": {
+            alignItems: "center",
+          },
         }}
       >
         <Badge title="Our Story" />
@@ -60,9 +64,10 @@ const UniqueApproach = () => {
             "@media (max-width: 768px)": {
               fontSize: "40px",
               letterSpacing: "-1.28px",
+              textAlign: "center",
             },
             "@media (max-width: 576px)": {
-              fontSize: "32px",
+              fontSize: "26px",
               letterSpacing: "-0.64px",
             },
           }}
@@ -73,6 +78,9 @@ const UniqueApproach = () => {
         <Box
           sx={{
             maxWidth: "498px",
+            "@media (max-width: 768px)": {
+              maxWidth: "100%",
+            },
           }}
         >
           <Typography
@@ -87,6 +95,7 @@ const UniqueApproach = () => {
               "@media (max-width: 768px)": {
                 fontSize: "18px",
                 mb: "28px",
+                textAlign: "center",
               },
 
               "@media (max-width: 576px)": {
@@ -111,6 +120,7 @@ const UniqueApproach = () => {
 
               "@media (max-width: 768px)": {
                 fontSize: "18px",
+                textAlign: "center",
               },
 
               "@media (max-width: 576px)": {

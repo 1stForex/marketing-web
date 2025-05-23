@@ -47,7 +47,8 @@ export default function Signal() {
         badgeTitle="Offers"
         title="What"
         specialTitle="We Offer"
-        description="At 1st Forex AI Signal, our AI-powered app seamlessly blends decades of market experience with real-time data analysis, creating an almost perfect trading environment. With 20 years of backtesting, every signal we send is both thoroughly tested and dynamically refined to respond to the market’s changing conditions. "
+        description="At 1st Forex AI Signal, our AI-powered app seamlessly blends decades of market experience with real-time data analysis, creating an almost perfect trading environment."
+        moreDescription=" With 20 years of backtesting, every signal we send is both thoroughly tested and dynamically refined to respond to the market’s changing conditions. "
       />
       <Container maxWidth="xl">
         <Box

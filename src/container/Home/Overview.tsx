@@ -12,6 +12,7 @@ const Overview = () => {
         gap: "130px",
         "@media (max-width: 768px)": {
           flexDirection: "column",
+          alignItems: "center",
           gap: "24px",
         },
         "@media (max-width: 576px)": {
@@ -38,6 +39,7 @@ const Overview = () => {
           color: "var(--Grey-600, #475367)",
           "@media (max-width: 768px)": {
             fontSize: "24px",
+            textAlign: "center",
           },
           "@media (max-width: 576px)": {
             fontSize: "16px",
@@ -50,7 +52,21 @@ const Overview = () => {
           {" "}
           profitable strategies{" "}
         </span>
-        and achieve their financial goals. From comprehensive courses to
+        and achieve their financial goals.
+        <Box
+          component={"span"}
+          sx={{
+            display: "none",
+            "@media (max-width: 768px)": {
+              display: "inline",
+              minHeight: "24px",
+            },
+          }}
+        >
+          <br />
+          <span style={{ display: "block", marginTop: "12px" }}></span>
+        </Box>{" "}
+        From comprehensive courses to
         <span style={{ color: "var(--primary-400-base, #F30)" }}>
           {" "}
           powerful trading{" "}

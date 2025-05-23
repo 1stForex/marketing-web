@@ -6,6 +6,7 @@ import { Box, Container, Typography } from "@mui/material";
 const Banner: React.FC<BannerProps> = ({
   badgeTitle,
   description,
+  moreDescription,
   children,
 }) => {
   return (
@@ -51,6 +52,20 @@ const Banner: React.FC<BannerProps> = ({
           }}
         >
           {description}
+          <Box
+            component={"span"}
+            sx={{
+              display: "none",
+              "@media (max-width: 768px)": {
+                display: "inline",
+                minHeight: "24px",
+              },
+            }}
+          >
+            <br />
+            <span style={{ display: "block", marginTop: "12px" }}></span>
+          </Box>{" "}
+          {moreDescription}
         </Typography>
       </Box>
     </Container>

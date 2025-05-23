@@ -45,6 +45,7 @@ const Vision = () => {
             maxWidth: "802px",
             "@media (max-width: 992px)": {
               fontSize: "20px",
+              textAlign: "center",
             },
             "@media (max-width: 576px)": {
               fontSize: "16px",
@@ -55,9 +56,22 @@ const Vision = () => {
           &quot;To empower a global community of traders by blending two decades
           of expertise with cutting edge AI technology, delivering unparalleled
           forex education, state-of-the-art signals, and innovative trading
-          solutions that inspire financial growth and confidence. At 1st Forex,
-          we are shaping the future of trading by building a connected,
-          adaptive, and results-driven community.&quot;
+          solutions that inspire financial growth and confidence.
+          <Box
+            component={"span"}
+            sx={{
+              display: "none",
+              "@media (max-width: 992px)": {
+                display: "inline",
+                minHeight: "24px",
+              },
+            }}
+          >
+            <br />
+            <span style={{ display: "block", marginTop: "12px" }}></span>
+          </Box>{" "}
+          At 1st Forex, we are shaping the future of trading by building a
+          connected, adaptive, and results-driven community.&quot;
         </Typography>
       </Box>
     </Container>

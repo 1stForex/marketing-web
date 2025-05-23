@@ -118,7 +118,8 @@ const Home = () => {
       >
         <Banner
           badgeTitle="Welcome"
-          description="For over twenty years, 1st Forex has helped traders worldwide develop profitable strategies and achieve their financial goals. From comprehensive courses to powerful trading signals and a vibrant community, we offer the tools, insights, and expertise to elevate your trading experience."
+          description="For over twenty years, 1st Forex has helped traders worldwide develop profitable strategies and achieve their financial goals."
+          moreDescription="From comprehensive courses to powerful trading signals and a vibrant community, we offer the tools, insights, and expertise to elevate your trading experience."
         >
           <Typography
             sx={{

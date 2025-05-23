@@ -10,6 +10,7 @@ export default function Offer({
   title,
   specialTitle,
   description,
+  moreDescription,
   descriptionWidth,
   subDescription,
   buttonText,
@@ -36,6 +37,7 @@ export default function Offer({
     "@media (max-width: 576px)": {
       fontSize: "16px",
       letterSpacing: "-0.32px",
+      textAlign: "center",
     },
   };
 
@@ -73,6 +75,7 @@ export default function Offer({
 
           "@media (max-width: 768px)": {
             gap: "20px",
+            alignItems: "center",
           },
 
           "@media (max-width: 576px)": {
@@ -89,6 +92,7 @@ export default function Offer({
 
             "@media (max-width: 768px)": {
               gap: "17px",
+              alignItems: "center",
             },
 
             "@media (max-width: 576px)": {
@@ -115,9 +119,10 @@ export default function Offer({
                 fontSize: "40px",
                 lineHeight: "32px",
                 letterSpacing: "-1.28px",
+                textAlign: "center",
               },
               "@media (max-width: 576px)": {
-                fontSize: "32px",
+                fontSize: "26px",
                 lineHeight: "28px",
                 letterSpacing: "-0.64px",
               },
@@ -150,6 +155,20 @@ export default function Offer({
               }}
             >
               {description}
+              <Box
+                component={"span"}
+                sx={{
+                  display: "none",
+                  "@media (max-width: 768px)": {
+                    display: "inline",
+                    minHeight: "24px",
+                  },
+                }}
+              >
+                <br />
+                <span style={{ display: "block", marginTop: "12px" }}></span>
+              </Box>{" "}
+              {moreDescription}
             </Typography>
             {subDescription && (
               <Typography

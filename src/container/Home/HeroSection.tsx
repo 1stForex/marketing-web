@@ -183,11 +183,16 @@ const HeroSection = () => {
             gap: "24px",
           }}
         >
-          <CustomButton variant="red" onClick={() => router.push("/ai-signal")}>
+          <CustomButton
+            variant="red"
+            padding="16px 24px"
+            onClick={() => router.push("/ai-signal")}
+          >
             AI Signal
           </CustomButton>
           <CustomButton
             variant="transparent"
+            padding="16px 24px"
             onClick={() => router.push("/academy")}
           >
             Academy

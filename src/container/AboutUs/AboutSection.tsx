@@ -14,6 +14,7 @@ export default function AboutSection() {
 
     "@media (max-width: 768px)": {
       fontSize: "18px",
+      textAlign: "center",
     },
 
     "@media (max-width: 576px)": {
@@ -37,6 +38,7 @@ export default function AboutSection() {
             background: "#F30",
             borderRadius: "12px",
             padding: "4px 12px",
+            mx: "auto",
           }}
         >
           <Image src={Logo} alt="logo" />
@@ -53,6 +55,8 @@ export default function AboutSection() {
             "@media (max-width: 768px)": {
               fontSize: "40px",
               letterSpacing: "-1.28px",
+              textAlign: "center",
+              width: "100%",
             },
             "@media (max-width: 576px)": {
               fontSize: "32px",

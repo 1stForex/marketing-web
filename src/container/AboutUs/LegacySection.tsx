@@ -37,13 +37,6 @@ export default function LegacySection() {
           slidesToShow: 1,
         },
       },
-      // {
-      //   breakpoint: 576,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     centerMode: true,
-      //   },
-      // },
     ],
   };
 
@@ -83,6 +76,10 @@ export default function LegacySection() {
             flexDirection: "column",
             alignItems: "flex-start",
             gap: "24px",
+
+            "@media (max-width: 768px)": {
+              alignItems: "center",
+            },
           }}
         >
           <Badge title="Our Story" />
@@ -118,6 +115,7 @@ export default function LegacySection() {
 
             "@media (max-width: 768px)": {
               fontSize: "20px",
+              textAlign: "center",
             },
 
             "@media (max-width: 576px)": {

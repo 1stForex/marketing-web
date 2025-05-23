@@ -14,6 +14,7 @@ const AboutUs = () => {
 
     "@media (max-width: 768px)": {
       fontSize: "18px",
+      textAlign: "center",
     },
 
     "@media (max-width: 576px)": {
@@ -41,7 +42,7 @@ const AboutUs = () => {
         },
 
         "@media (max-width: 576px)": {
-          padding: "20px",
+          padding: "0px",
         },
       }}
     >
@@ -54,6 +55,7 @@ const AboutUs = () => {
 
           "@media (max-width: 992px)": {
             width: "auto",
+            alignItems: "center",
           },
         }}
       >
@@ -108,10 +110,17 @@ const AboutUs = () => {
           hub for traders who want to achieve financial independence and master
           the forex markets.Our online course is recognized as one of the best
           in the world, offering step-by-step guidance for traders at all
-          levels. For beginners, we start with the basics of forex trading,
-          building a solid foundation of knowledge. For advanced traders, we
-          dive into professional strategies, including our copyrighted and
-          backtested{" "}
+          levels.
+        </Typography>
+
+        <Typography
+          sx={{
+            ...typographyStyle,
+          }}
+        >
+          For beginners, we start with the basics of forex trading, building a
+          solid foundation of knowledge. For advanced traders, we dive into
+          professional strategies, including our copyrighted and backtested{" "}
           <span style={{ color: "#F30", fontWeight: 700 }}>
             Breakout System
           </span>

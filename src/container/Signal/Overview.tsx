@@ -12,6 +12,7 @@ export default function Overview() {
         gap: "130px",
         "@media (max-width: 768px)": {
           flexDirection: "column",
+          alignItems: "center",
           gap: "24px",
         },
         "@media (max-width: 576px)": {
@@ -39,6 +40,7 @@ export default function Overview() {
 
           "@media (max-width: 768px)": {
             fontSize: "20px",
+            textAlign: "center",
           },
           "@media (max-width: 576px)": {
             fontSize: "16px",
@@ -52,10 +54,23 @@ export default function Overview() {
         enhanced by cutting-edge AI to deliver superior trading results. Our
         advanced algorithms analyze real-time data, adapt to evolving trends,
         and provide reliable, automated signals directly to your mobile app
-        ensuring exceptional ROI and effortless execution. With{" "}
-        <span style={{ color: "#F30" }}>24/7 support</span>, direct access to an
-        experienced trading team, and a thriving forex community by your side,
-        professional-grade trading has never been more accessible.
+        ensuring exceptional ROI and effortless execution.
+        <Box
+          component={"span"}
+          sx={{
+            display: "none",
+            "@media (max-width: 768px)": {
+              display: "inline",
+              minHeight: "24px",
+            },
+          }}
+        >
+          <br />
+          <br />
+        </Box>{" "}
+        With <span style={{ color: "#F30" }}>24/7 support</span>, direct access
+        to an experienced trading team, and a thriving forex community by your
+        side, professional-grade trading has never been more accessible.
       </Typography>
     </Box>
   );

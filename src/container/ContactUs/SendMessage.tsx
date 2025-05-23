@@ -13,6 +13,7 @@ const SendMessage = () => {
         "@media (max-width: 768px)": {
           flexDirection: "column",
           gap: "20px",
+          alignItems: "center",
         },
         "@media (max-width: 576px)": {
           gap: "16px",
@@ -33,9 +34,10 @@ const SendMessage = () => {
             fontSize: "40px",
             letterSpacing: "-1.28px",
             maxWidth: "none",
+            textAlign: "center",
           },
           "@media (max-width: 576px)": {
-            fontSize: "32px",
+            fontSize: "28px",
             letterSpacing: "-0.64px",
           },
         }}
@@ -55,6 +57,7 @@ const SendMessage = () => {
           "@media (max-width: 768px)": {
             fontSize: "16px",
             maxWidth: "none",
+            textAlign: "center",
           },
           "@media (max-width: 576px)": {
             fontSize: "14px",
