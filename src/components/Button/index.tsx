@@ -15,6 +15,7 @@ export interface ButtonProps {
   icon?: React.ReactNode;
   borderRadius?: string;
   type?: "button" | "submit" | "reset";
+  padding?: string;
 }
 
 const StyledButton = styled(Button)<{
@@ -124,9 +125,10 @@ const CustomButton: React.FC<ButtonProps> = ({
   fontWeight = "600",
   borderRadius = "32px",
   type = "button",
+  padding,
 }) => (
   <StyledButton
-    style={{ width, height, borderRadius }}
+    style={{ width, height, borderRadius, padding }}
     onClick={onClick}
     varianttype={variant}
     disabled={disabled}

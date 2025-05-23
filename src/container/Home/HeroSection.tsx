@@ -143,9 +143,10 @@ const HeroSection = () => {
             "@media (max-width: 768px)": {
               fontSize: "40px",
               letterSpacing: "-1.28px",
+              textAlign: "center",
             },
             "@media (max-width: 576px)": {
-              fontSize: "32px",
+              fontSize: "26px",
               letterSpacing: "-0.64px",
             },
           }}
@@ -183,11 +184,16 @@ const HeroSection = () => {
             gap: "24px",
           }}
         >
-          <CustomButton variant="red" onClick={() => router.push("/ai-signal")}>
+          <CustomButton
+            variant="red"
+            padding="16px 24px"
+            onClick={() => router.push("/ai-signal")}
+          >
             AI Signal
           </CustomButton>
           <CustomButton
             variant="transparent"
+            padding="16px 24px"
             onClick={() => router.push("/academy")}
           >
             Academy

@@ -13,7 +13,8 @@ export default function BannerSection() {
     >
       <Banner
         badgeTitle="Vision"
-        description="At 1st Forex, we don’t just see ourselves as a company—we are a family of traders. Our mission goes beyond teaching and trading; it’s about building a global community where traders can connect, share, and grow together. From personalized mentorship to interactive forums, we are committed to creating a supportive environment where every trader can thrive."
+        description="At 1st Forex, we don’t just see ourselves as a company—we are a family of traders. Our mission goes beyond teaching and trading; it’s about building a global community where traders can connect, share, and grow together."
+        secondaryDescription="From personalized mentorship to interactive forums, we are committed to creating a supportive environment where every trader can thrive."
       >
         <Typography
           sx={{
@@ -28,9 +29,10 @@ export default function BannerSection() {
             "@media (max-width: 768px)": {
               fontSize: "40px",
               letterSpacing: "-1.28px",
+              textAlign: "center",
             },
             "@media (max-width: 576px)": {
-              fontSize: "32px",
+              fontSize: "26px",
               letterSpacing: "-0.64px",
             },
           }}

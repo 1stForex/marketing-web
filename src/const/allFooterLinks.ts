@@ -44,6 +44,10 @@ export const linksList = [
         label: "Privacy Policy",
         href: "/privacy-policy",
       },
+      {
+        label: "FAQ's",
+        href: "/faq",
+      },
       // {
       //   label: "Blog",
       //   href: "#",

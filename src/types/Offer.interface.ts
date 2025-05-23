@@ -3,6 +3,7 @@ export interface OfferProps {
   title: string;
   specialTitle: string;
   description?: string;
+  secondaryDescription?: string;
   descriptionWidth?: number;
   subDescription?: string;
   buttonText?: string;

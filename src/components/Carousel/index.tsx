@@ -85,6 +85,8 @@ const Carousel: React.FC<CarouselProp> = ({
             pl: headerLeft ? "24px" : "",
             gap: "16px",
             mb: "20px",
+            width: "100%",
+            alignItems: "center",
           },
         }}
       >

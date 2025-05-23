@@ -1,5 +1,7 @@
-import { Box, Typography } from "@mui/material";
-import mobileDashboard from "@/src/assets/images/mobile-dashboard.png";
+"use client";
+
+import { Box, Typography, useMediaQuery } from "@mui/material";
+import mobileDashboard from "@/src/assets/images/user_mobile_dashboard.png";
 import Image from "next/image";
 import Badge from "../Badge";
 import CustomButton from "../Button";
@@ -10,6 +12,7 @@ export default function Offer({
   title,
   specialTitle,
   description,
+  secondaryDescription,
   descriptionWidth,
   subDescription,
   buttonText,
@@ -17,6 +20,8 @@ export default function Offer({
   points = [],
   imageUrl,
 }: OfferProps & { imageUrl?: string }) {
+  const isTabView = useMediaQuery("(min-width: 768px)");
+
   const typographyStyles = {
     color: "#FFF",
     fontSize: "24px",
@@ -26,18 +31,23 @@ export default function Offer({
     letterSpacing: "-0.48px",
     maxWidth: descriptionWidth ? `${descriptionWidth}px` : "549px",
 
-    "@media (max-width: 992)": {
+    "@media (max-width: 992px)": {
       maxWidth: "100%",
     },
 
     "@media (max-width: 768px)": {
       fontSize: "20px",
+      textAlign: "center",
     },
     "@media (max-width: 576px)": {
       fontSize: "16px",
       letterSpacing: "-0.32px",
     },
   };
+
+  const textToDisplay = isTabView
+    ? `${description} ${secondaryDescription}`
+    : description;
 
   return (
     <Box
@@ -73,6 +83,7 @@ export default function Offer({
 
           "@media (max-width: 768px)": {
             gap: "20px",
+            alignItems: "center",
           },
 
           "@media (max-width: 576px)": {
@@ -89,6 +100,7 @@ export default function Offer({
 
             "@media (max-width: 768px)": {
               gap: "17px",
+              alignItems: "center",
             },
 
             "@media (max-width: 576px)": {
@@ -115,9 +127,10 @@ export default function Offer({
                 fontSize: "40px",
                 lineHeight: "32px",
                 letterSpacing: "-1.28px",
+                textAlign: "center",
               },
               "@media (max-width: 576px)": {
-                fontSize: "32px",
+                fontSize: "26px",
                 lineHeight: "28px",
                 letterSpacing: "-0.64px",
               },
@@ -149,8 +162,19 @@ export default function Offer({
                 ...typographyStyles,
               }}
             >
-              {description}
+              {textToDisplay}
             </Typography>
+
+            <Typography
+              sx={{
+                ...typographyStyles,
+                display: isTabView ? "none" : "inline-block",
+                mt: "12px",
+              }}
+            >
+              {secondaryDescription}
+            </Typography>
+
             {subDescription && (
               <Typography
                 sx={{

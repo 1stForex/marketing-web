@@ -59,9 +59,10 @@ export default function MissionSection() {
                   "@media (max-width: 768px)": {
                     fontSize: "40px",
                     letterSpacing: "-1.28px",
+                    textAlign: "center",
                   },
                   "@media (max-width: 576px)": {
-                    fontSize: "32px",
+                    fontSize: "26px",
                     letterSpacing: "-0.64px",
                   },
                 }}
@@ -90,10 +91,29 @@ export default function MissionSection() {
               Our mission is simple yet powerful: Empowering Your Trading
               Journey. We aim to inspire and guide traders at every stage,
               helping them navigate the complexities of the forex market with
-              confidence and skill. Join the 1st Forex family and be part of a
-              legacy where passion meets precision, and tradition meets
-              innovation. Together, we’ll turn dreams into financial
-              independence and trading mastery.
+              confidence and skill.
+            </Typography>
+            <Typography
+              sx={{
+                color: "#FFF",
+                fontSize: "24px",
+                fontWeight: "400",
+                lineHeight: "120%",
+                letterSpacing: "-0.48px",
+                textAlign: "center",
+
+                "@media (max-width: 768px)": {
+                  fontSize: "20px",
+                },
+                "@media (max-width: 576px)": {
+                  fontSize: "16px",
+                  letterSpacing: "-0.32px",
+                },
+              }}
+            >
+              Join the 1st Forex family and be part of a legacy where passion
+              meets precision, and tradition meets innovation. Together, we’ll
+              turn dreams into financial independence and trading mastery.
             </Typography>
           </Box>
           <Box

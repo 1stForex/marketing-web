@@ -3,9 +3,9 @@
 import { Box, Typography } from "@mui/material";
 import CustomInputField from "@/src/components/CustomInputField";
 import SearchGrey from "@/src/assets/icons/search-grey.svg";
-import FAQQuestion from "@/src/components/FAQQuestion";
 import { allQuestions } from "../../const/allQuestions";
 import { useState } from "react";
+import CustomAccordian from "@/src/components/CustomAccordian";
 
 const AllFAQs = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -50,7 +50,7 @@ const AllFAQs = () => {
               mb: "32px",
             },
             "@media (max-width: 576px)": {
-              fontSize: "32px",
+              fontSize: "26px",
               lineHeight: "120%",
               letterSpacing: "-0.64px",
               mb: "28px",
@@ -69,13 +69,9 @@ const AllFAQs = () => {
         >
           {filteredQuestions.length > 0 ? (
             filteredQuestions.map((question, index) => (
-              <FAQQuestion
-                question={question.question}
-                answer={question.answer}
-                ordered={question.ordered}
-                extra={question.extra}
-                points={question.points}
-                subDescription={question.subDescription}
+              <CustomAccordian
+                title={question.question}
+                summary={question.answer}
                 key={index}
               />
             ))

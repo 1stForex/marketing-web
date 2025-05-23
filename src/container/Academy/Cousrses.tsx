@@ -30,10 +30,11 @@ const Courses = () => {
           "@media (max-width: 768px)": {
             fontSize: "40px",
             letterSpacing: "-1.28px",
+            textAlign: "center",
             mb: "48px",
           },
           "@media (max-width: 576px)": {
-            fontSize: "32px",
+            fontSize: "26px",
             letterSpacing: "-0.64px",
             mb: "40px",
           },
