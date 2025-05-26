@@ -2,7 +2,7 @@ import Image from "next/image";
 import Badge from "@/src/components/Badge";
 import { Box, Typography } from "@mui/material";
 import CourseLaptop from "@/src/assets/images/course.png";
-import AboutUsTypography from "@/src/components/AboutUsTypography";
+import AboutUsTypography from "@/src/styled/AboutUsTypography";
 
 const AboutUs = () => {
   return (

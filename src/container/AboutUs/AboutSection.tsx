@@ -3,7 +3,7 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import About from "@/src/assets/images/about-us.jpg";
 import Logo from "@/src/assets/icons/logo.svg";
-import AboutUsTypography from "@/src/components/AboutUsTypography";
+import AboutUsTypography from "@/src/styled/AboutUsTypography";
 
 export default function AboutSection() {
   const isMobile = useMediaQuery("(min-width: 576px)");
