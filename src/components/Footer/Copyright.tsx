@@ -1,17 +1,11 @@
-import { Box, Typography } from "@mui/material";
-import forexLogo from "../../assets/images/forex-logo.png";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { Box } from "@mui/material";
+import StyledTypography from "./StyledTypography";
+import forexLogo from "../../assets/images/forex-logo.png";
 
 export default function Copyright() {
   const currentYear = new Date().getFullYear();
-
-  const commonStyle = {
-    fontSize: "16px",
-    fontStyle: "normal",
-    fontWeight: "400",
-    lineHeight: "23.3px",
-  };
 
   return (
     <Box>
@@ -37,17 +31,15 @@ export default function Copyright() {
             height={24}
           />
         </Link>
-        <Typography
+        <StyledTypography
           sx={{
-            ...commonStyle,
             color: "#1D2739",
           }}
         >
           &copy; {currentYear}. All rights reserved.
-        </Typography>
-        <Typography
+        </StyledTypography>
+        <StyledTypography
           sx={{
-            ...commonStyle,
             color: "#475367",
             maxWidth: "424px",
 
@@ -58,7 +50,7 @@ export default function Copyright() {
         >
           All content, signals, and tools are for educational and informational
           purposes only. Trading involves risk.
-        </Typography>
+        </StyledTypography>
       </Box>
     </Box>
   );

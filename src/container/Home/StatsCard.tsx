@@ -33,7 +33,7 @@ const StatsCard: React.FC<StatsCardProps> = ({
         mr: "17px",
         "@media (max-width: 576px)": {
           mr: "12px",
-          minWidth: "196px",
+          minWidth: "170px",
         },
       }}
     >

@@ -1,14 +1,9 @@
-import { Box, Typography } from "@mui/material";
-import { linksList } from "@/src/const/allFooterLinks";
 import Link from "next/link";
+import { Box } from "@mui/material";
+import StyledTypography from "./StyledTypography";
+import { linksList } from "@/src/const/allFooterLinks";
 
 export default function FooterLinks() {
-  const commonStyle = {
-    fontSize: "16px",
-    fontStyle: "normal",
-    lineHeight: "23.2px",
-  };
-
   return (
     <Box
       sx={{
@@ -33,21 +28,18 @@ export default function FooterLinks() {
               },
             }}
           >
-            <Typography
+            <StyledTypography
               sx={{
-                ...commonStyle,
                 color: "#98A2B3",
-                fontWeight: 400,
                 marginBottom: "24px",
               }}
             >
               {section.label}
-            </Typography>
+            </StyledTypography>
             {section.links.map((link, linkIndex) => (
               <Link key={linkIndex} href={link.href} passHref>
-                <Typography
+                <StyledTypography
                   sx={{
-                    ...commonStyle,
                     display: "block",
                     color: "#667185",
                     fontWeight: 500,
@@ -58,7 +50,7 @@ export default function FooterLinks() {
                   }}
                 >
                   {link.label}
-                </Typography>
+                </StyledTypography>
               </Link>
             ))}
           </Box>

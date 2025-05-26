@@ -1,5 +1,5 @@
 import Hero from "@/src/components/Hero";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import CtaSection from "./CtaSection";
 import VisionBanner from "./VisionBanner";
 import AboutUs from "./AboutUs";
@@ -9,6 +9,7 @@ import Courses from "./Cousrses";
 import UniqueApproach from "./UniqueApproach";
 import Offer from "@/src/components/Offer";
 import Signal from "@/src/assets/images/signal-mobile.png";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const Academy = () => {
   return (
@@ -62,30 +63,12 @@ const Academy = () => {
             cards={whyUsCardsData}
             isCarousel
           >
-            <Typography
-              sx={{
-                color: "var(--Grey-900, #333)",
-                fontSize: "48px",
-                fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "-1.92px",
-
-                "@media (max-width: 768px)": {
-                  fontSize: "40px",
-                  letterSpacing: "-1.28px",
-                  textAlign: "center",
-                },
-                "@media (max-width: 576px)": {
-                  fontSize: "26px",
-                  letterSpacing: "-0.64px",
-                },
-              }}
-            >
+            <HeadTypography color="#333">
               Why{" "}
               <span style={{ color: "var(--primary-400-base, #F30)" }}>
                 Choose Us?
               </span>
-            </Typography>
+            </HeadTypography>
           </Carousel>
 
           <Courses />
@@ -96,7 +79,8 @@ const Academy = () => {
       <Offer
         title="Join the"
         specialTitle="1st Forex Family"
-        description="At 1st Forex Trading Academy, we are more than just an educational platform. We are a lifelong partner in your trading journey, committed to helping you succeed every step of the way. Whether you’re taking your first steps in trading or sharpening advanced strategies, we’re here to guide, support, and celebrate your achievements."
+        description="At 1st Forex Trading Academy, we are more than just an educational platform. We are a lifelong partner in your trading journey, committed to helping you succeed every step of the way."
+        secondaryDescription="Whether you’re taking your first steps in trading or sharpening advanced strategies, we’re here to guide, support, and celebrate your achievements."
         descriptionWidth={663}
         subDescription="Sign up today and start your journey to financial freedom. Together, we’ll make your trading goals a reality"
         buttonText="Sign Up"

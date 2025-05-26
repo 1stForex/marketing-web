@@ -1,5 +1,5 @@
 "use client";
-import { Box, Typography } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import Logo from "@/src/assets/icons/logo.svg";
 import StatsCard from "./StatsCard";
@@ -7,8 +7,11 @@ import Marquee from "react-fast-marquee";
 import CustomButton from "@/src/components/Button";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import HeadTypography from "@/src/styled/HeadTypography";
+import BaseTypography from "@/src/styled/BaseTypography";
 
 const HeroSection = () => {
+  const isMobile = useMediaQuery("(max-width: 576px)");
   const router = useRouter();
   const ws = useRef<WebSocket | null>(null);
   const [liveStats, setLiveStats] = useState<
@@ -132,36 +135,13 @@ const HeroSection = () => {
           <Image src={Logo} alt="logo" />
         </Box>
 
-        <Typography
+        <HeadTypography color="#FFF" textAlign={"center"} maxWidth={"464px"}>
+          Empowering Your Trading Journey
+        </HeadTypography>
+
+        <BaseTypography
           sx={{
             color: "#FFF",
-            fontSize: "48px",
-            fontWeight: 700,
-            letterSpacing: "-1.92px",
-            maxWidth: "464px",
-            textAlign: "center",
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
-            },
-          }}
-        >
-          Empowering Your Trading Journey
-        </Typography>
-
-        <Typography
-          sx={{
-            color: "var(--Shade-White, #FFF)",
-            textAlign: "center",
-
-            fontSize: "24px",
-            lineHeight: "120%",
-            letterSpacing: "-0.48px",
             maxWidth: "650px",
             "@media (max-width: 992px)": {
               fontSize: "20px",
@@ -175,7 +155,7 @@ const HeroSection = () => {
         >
           Gain the confidence, knowledge, and support you need to thrive in the
           global forex markets.
-        </Typography>
+        </BaseTypography>
 
         <Box
           sx={{
@@ -186,14 +166,14 @@ const HeroSection = () => {
         >
           <CustomButton
             variant="red"
-            padding="16px 24px"
+            padding={isMobile ? "16px 24px" : "16px 48px"}
             onClick={() => router.push("/ai-signal")}
           >
             AI Signal
           </CustomButton>
           <CustomButton
             variant="transparent"
-            padding="16px 24px"
+            padding={isMobile ? "16px 24px" : "16px 48px"}
             onClick={() => router.push("/academy")}
           >
             Academy

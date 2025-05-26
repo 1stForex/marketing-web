@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import HeroSection from "./HeroSection";
 import Overview from "./Overview";
 import Stocks from "./Stocks";
@@ -8,6 +8,7 @@ import Banner from "@/src/components/Banner";
 import OurStory from "./OurStory";
 import Carousel from "@/src/components/Carousel";
 import { homeKeyOfferingsCardData } from "@/src/const/homeKeyOfferingsCardData";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const Home = () => {
   return (
@@ -49,31 +50,12 @@ const Home = () => {
             cards={homeKeyOfferingsCardData}
             isCarousel={false}
           >
-            <Typography
-              sx={{
-                color: "var(--Grey-900, #333)",
-                textAlign: "center",
-
-                fontSize: "48px",
-                fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "-1.92px",
-                "@media (max-width: 768px)": {
-                  fontSize: "40px",
-                  letterSpacing: "-1.28px",
-                  textAlign: "center",
-                },
-                "@media (max-width: 576px)": {
-                  fontSize: "26px",
-                  letterSpacing: "-0.64px",
-                },
-              }}
-            >
+            <HeadTypography color="#333" textAlign={"center"}>
               Key{" "}
               <span style={{ color: "var(--primary-400-base, #F30)" }}>
                 Offerings
               </span>
-            </Typography>
+            </HeadTypography>
           </Carousel>
         </Box>
       </Container>
@@ -122,31 +104,12 @@ const Home = () => {
           description="For over twenty years, 1st Forex has helped traders worldwide develop profitable strategies and achieve their financial goals."
           secondaryDescription="From comprehensive courses to powerful trading signals and a vibrant community, we offer the tools, insights, and expertise to elevate your trading experience."
         >
-          <Typography
-            sx={{
-              color: "var(--Shade-White, #FFF)",
-              textAlign: "center",
-
-              fontSize: "48px",
-              fontWeight: 700,
-              lineHeight: "100%",
-              letterSpacing: "-1.92px",
-              "@media (max-width: 768px)": {
-                fontSize: "40px",
-                letterSpacing: "-1.28px",
-                textAlign: "center",
-              },
-              "@media (max-width: 576px)": {
-                fontSize: "26px",
-                letterSpacing: "-0.64px",
-              },
-            }}
-          >
+          <HeadTypography color="#FFF" textAlign={"center"}>
             Welcome to{" "}
             <span style={{ color: "var(--primary-400-base, #F30)" }}>
               1st Forex
             </span>
-          </Typography>
+          </HeadTypography>
         </Banner>
       </Box>
     </Box>

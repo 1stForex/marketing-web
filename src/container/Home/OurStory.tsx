@@ -3,6 +3,7 @@ import Badge from "@/src/components/Badge";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Bull from "@/src/assets/images/Bull.png";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const OurStory = () => {
   const paragraphs = [
@@ -47,30 +48,21 @@ const OurStory = () => {
         <Badge title="Our Story" />
       </Box>
 
-      <Typography
+      <HeadTypography
         sx={{
           mb: "32px",
-          color: "var(--Grey-900, #333)",
+          color: "#333",
           textAlign: "center",
-
-          fontSize: "48px",
-          fontWeight: 700,
-          lineHeight: "100%",
-          letterSpacing: "-1.92px",
           "@media (max-width: 768px)": {
-            fontSize: "40px",
-            letterSpacing: "-1.28px",
             mb: "24px",
           },
           "@media (max-width: 576px)": {
-            fontSize: "26px",
-            letterSpacing: "-0.64px",
             mb: "16px",
           },
         }}
       >
         About <span style={{ color: "var(--primary-400-base, #F30)" }}>Us</span>
-      </Typography>
+      </HeadTypography>
 
       <Box
         sx={{

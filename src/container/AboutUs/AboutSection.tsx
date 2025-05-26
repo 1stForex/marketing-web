@@ -1,26 +1,50 @@
-import { Box, Typography } from "@mui/material";
+"use client";
+import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import About from "@/src/assets/images/about-us.jpg";
 import Logo from "@/src/assets/icons/logo.svg";
+import AboutUsTypography from "@/src/styled/AboutUsTypography";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 export default function AboutSection() {
-  const typographyStyle = {
-    color: "#000",
-    fontSize: "20px",
-    fontStyle: "normal",
-    fontWeight: "400",
-    lineHeight: "120%",
-    letterSpacing: "-0.4px",
+  const isMobile = useMediaQuery("(min-width: 576px)");
 
-    "@media (max-width: 768px)": {
-      fontSize: "18px",
-      textAlign: "center",
-    },
+  const firstParagraphFirstHalfHTML = `Founded in Montreal over
+            <span style="color:#F30; font-weight:700;">
+              20 years ago
+            </span>
+            , 1st Forex has grown to become a global leader in forex education
+            and trading signals.`;
 
-    "@media (max-width: 576px)": {
-      fontSize: "16px",
-    },
-  };
+  const firstParagraphSecondHalfHTML = `From humble beginnings conducting in-person
+            seminars and offering web-based forex signals, we’ve evolved into a
+            trusted name in the industry with over
+            <span style="color: #F30; font-weight: 700;">
+              1,000 satisfied customers
+            </span>
+            worldwide.`;
+
+  const thirdParagraphFirstHalfHTML = `At the heart of 1st Forex is our
+            <span style="color:#F30, font-weight: 700;">
+              CEO, Luc Verville
+            </span>
+            , a seasoned trader with over
+            <span style="color:#F30, font-weight: 700;">
+              22 years of experience
+            </span>
+            in the forex industry.`;
+
+  const thirdParagraphSecondHalfHTML = `Driven by a dream to build the world’s best
+            forex company and foster a real community of apex traders, Luc’s
+            vision has shaped every aspect of 1st Forex.`;
+
+  const firstParagraph = isMobile
+    ? `${firstParagraphFirstHalfHTML} ${firstParagraphSecondHalfHTML}`
+    : firstParagraphFirstHalfHTML;
+
+  const thirdParagraph = isMobile
+    ? `${thirdParagraphFirstHalfHTML} ${thirdParagraphSecondHalfHTML}`
+    : thirdParagraphFirstHalfHTML;
 
   return (
     <Box>
@@ -43,29 +67,17 @@ export default function AboutSection() {
         >
           <Image src={Logo} alt="logo" />
         </Box>
-        <Typography
+        <HeadTypography
           sx={{
             color: "#333",
-            fontSize: "48px",
-            fontStyle: "normal",
-            fontWeight: "700",
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
-
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
+            "@media (max-width: 992px)": {
               textAlign: "center",
               width: "100%",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
             },
           }}
         >
           About Us
-        </Typography>
+        </HeadTypography>
       </Box>
       <Box
         sx={{
@@ -80,53 +92,37 @@ export default function AboutSection() {
             gap: "20px",
           }}
         >
-          <Typography
+          <AboutUsTypography
+            dangerouslySetInnerHTML={{ __html: firstParagraph }}
+          />
+          <AboutUsTypography
             sx={{
-              ...typographyStyle,
+              display: isMobile ? "none" : "block",
             }}
-          >
-            Founded in Montreal over{" "}
-            <span style={{ color: "#F30" }}>20 years ago</span>, 1st Forex has
-            grown to become a global leader in forex education and trading
-            signals. From humble beginnings conducting in-person seminars and
-            offering web-based forex signals, we’ve evolved into a trusted name
-            in the industry with over{" "}
-            <span style={{ color: "#F30" }}>1,000 satisfied customers</span>{" "}
-            worldwide.
-          </Typography>
-          <Typography
-            sx={{
-              ...typographyStyle,
-            }}
-          >
+            dangerouslySetInnerHTML={{ __html: firstParagraphSecondHalfHTML }}
+          />
+          <AboutUsTypography>
             Today, headquartered in the vibrant city of{" "}
-            <span style={{ color: "#F30" }}>Dubai</span>, United Arab Emirates,
-            we continue to empower traders to achieve financial independence and
-            master the forex markets
-          </Typography>
-          <Typography
+            <span style={{ color: "#F30", fontWeight: "700" }}>Dubai</span>,
+            United Arab Emirates, we continue to empower traders to achieve
+            financial independence and master the forex markets
+          </AboutUsTypography>
+          <AboutUsTypography
+            dangerouslySetInnerHTML={{ __html: thirdParagraph }}
+          />
+          <AboutUsTypography
             sx={{
-              ...typographyStyle,
+              display: isMobile ? "none" : "block",
             }}
-          >
-            At the heart of 1st Forex is our{" "}
-            <span style={{ color: "#F30" }}>CEO, Luc Verville</span>, a seasoned
-            trader with over{" "}
-            <span style={{ color: "#F30" }}>22 years of experience</span> in the
-            forex industry. Driven by a dream to build the world’s best forex
-            company and foster a real community of apex traders, Luc’s vision
-            has shaped every aspect of 1st Forex.
-          </Typography>
-          <Typography
-            sx={{
-              ...typographyStyle,
-            }}
-          >
+            dangerouslySetInnerHTML={{ __html: thirdParagraphSecondHalfHTML }}
+          />
+          <AboutUsTypography>
             He is supported by an exceptional team, including experienced
             traders and a leading{" "}
-            <span style={{ color: "#F30" }}>AI expert</span>, ensuring our
-            offerings remain cutting-edge and unparalleled in the industry.
-          </Typography>
+            <span style={{ color: "#F30", fontWeight: "700" }}>AI expert</span>,
+            ensuring our offerings remain cutting-edge and unparalleled in the
+            industry.
+          </AboutUsTypography>
         </Box>
         <Box
           sx={{

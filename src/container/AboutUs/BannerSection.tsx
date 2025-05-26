@@ -1,5 +1,6 @@
 import Banner from "@/src/components/Banner";
-import { Box, Typography } from "@mui/material";
+import HeadTypography from "@/src/styled/HeadTypography";
+import { Box } from "@mui/material";
 
 export default function BannerSection() {
   return (
@@ -16,29 +17,9 @@ export default function BannerSection() {
         description="At 1st Forex, we don’t just see ourselves as a company—we are a family of traders. Our mission goes beyond teaching and trading; it’s about building a global community where traders can connect, share, and grow together."
         secondaryDescription="From personalized mentorship to interactive forums, we are committed to creating a supportive environment where every trader can thrive."
       >
-        <Typography
-          sx={{
-            color: "var(--Shade-White, #FFF)",
-            textAlign: "center",
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
-            maxWidth: "535px",
-
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
-            },
-          }}
-        >
+        <HeadTypography color="#FFF" textAlign={"center"} maxWidth={"535px"}>
           More Than a Business —A Community
-        </Typography>
+        </HeadTypography>
       </Banner>
     </Box>
   );

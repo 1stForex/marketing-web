@@ -3,10 +3,11 @@ import AdvertiseCard from "./AdvertiseCard";
 import { allAIAssistance } from "@/src/const/allAIAssistance";
 import { allTradingBot } from "@/src/const/allTradingBot";
 import { allMentorship } from "@/src/const/allMentorship";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useScroll } from "framer-motion";
 import { useRef } from "react";
 import Badge from "@/src/components/Badge";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 export default function OptionSection() {
   const container = useRef(null);
@@ -46,30 +47,12 @@ export default function OptionSection() {
         }}
       >
         <Badge title="Offers" />
-        <Typography
-          sx={{
-            color: "var(--Grey-900, #333)",
-            textAlign: "center",
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
-            },
-          }}
-        >
+        <HeadTypography color="#333" textAlign={"center"}>
           Your{" "}
           <span style={{ color: " var(--primary-400-base, #F30)" }}>
             Options
           </span>
-        </Typography>
+        </HeadTypography>
       </Box>
       {cardData.map(({ title, specialText, cardInfo }, index) => {
         const targetScale = 1 - (cardData.length - index) * 0.05;

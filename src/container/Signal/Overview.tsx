@@ -1,23 +1,9 @@
-"use client";
-import { Box, Typography, useMediaQuery } from "@mui/material";
-import Logo from "@/src/assets/icons/logo.svg";
 import Image from "next/image";
+import Logo from "@/src/assets/icons/logo.svg";
+import { Box } from "@mui/material";
+import OverviewBaseTypography from "./OverviewBaseTypography";
 
 export default function Overview() {
-  const isTabView = useMediaQuery("(min-width: 768px)");
-  const firstHalfText = `1st Forex AI Signal merges
-        <span style="color: #F30;">20 years</span> of market expertise with
-        our copyrighted <span style="color: #F30;">Break Out System</span>,
-        enhanced by cutting-edge AI to deliver superior trading results. Our
-        advanced algorithms analyze real-time data, adapt to evolving trends,
-        and provide reliable, automated signals directly to your mobile app
-        ensuring exceptional ROI and effortless execution.`;
-  const secondHalfText = `With <span style="color: #F30;">24/7 support</span>, direct access
-        to an experienced trading team, and a thriving forex community by your
-        side, professional-grade trading has never been more accessible.`;
-  const textToDisplay = isTabView
-    ? `${firstHalfText} ${secondHalfText}`
-    : firstHalfText;
   return (
     <Box
       sx={{
@@ -43,45 +29,26 @@ export default function Overview() {
       >
         <Image src={Logo} alt="logo" />
       </Box>
-      <Typography
-        sx={{
-          fontSize: "24px",
-          fontWeight: 600,
-          lineHeight: "120%",
-          letterSpacing: "-0.48px",
-          color: "#333",
-
-          "@media (max-width: 768px)": {
-            fontSize: "20px",
-            textAlign: "center",
-          },
-          "@media (max-width: 576px)": {
-            fontSize: "16px",
-            letterSpacing: "-0.32px",
-          },
-        }}
-        dangerouslySetInnerHTML={{ __html: textToDisplay }}
-      />
-      <Typography
-        sx={{
-          display: isTabView ? "none" : "block",
-          fontSize: "24px",
-          fontWeight: 600,
-          lineHeight: "120%",
-          letterSpacing: "-0.48px",
-          color: "#333",
-
-          "@media (max-width: 768px)": {
-            fontSize: "20px",
-            textAlign: "center",
-          },
-          "@media (max-width: 576px)": {
-            fontSize: "16px",
-            letterSpacing: "-0.32px",
-          },
-        }}
-        dangerouslySetInnerHTML={{ __html: secondHalfText }}
-      />
+      <Box>
+        <OverviewBaseTypography mb={"12px"}>
+          1st Forex AI Signal merges
+          <span style={{ color: "#F30" }}> 20 years </span> of market expertise
+          with our copyrighted{" "}
+          <span style={{ color: "#F30" }}>Break Out System</span>, enhanced by
+          cutting-edge AI to deliver superior trading results.
+        </OverviewBaseTypography>
+        <OverviewBaseTypography mb={"12px"}>
+          Our advanced algorithms analyze real-time data, adapt to evolving
+          trends, and provide reliable, automated signals directly to your
+          mobile app ensuring exceptional ROI and effortless execution.
+        </OverviewBaseTypography>
+        <OverviewBaseTypography>
+          With <span style={{ color: "#F30" }}>24/7 support</span>, direct
+          access to an experienced trading team, and a thriving forex community
+          by your side, professional-grade trading has never been more
+          accessible.
+        </OverviewBaseTypography>
+      </Box>
     </Box>
   );
 }

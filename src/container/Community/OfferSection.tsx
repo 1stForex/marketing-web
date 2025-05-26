@@ -1,7 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Badge from "@/src/components/Badge";
 import OptionCard from "@/src/components/OptionCard";
 import { communityOffer } from "@/src/const/communityOffer";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 export default function OfferSection() {
   return (
@@ -42,27 +43,9 @@ export default function OfferSection() {
         }}
       >
         <Badge title="Community" />
-        <Typography
-          sx={{
-            textAlign: "center",
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
-            maxWidth: "734px",
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
-            },
-          }}
-        >
+        <HeadTypography textAlign={"center"} maxWidth={"734px"}>
           What <span style={{ color: "#F30" }}>We Offer?</span>
-        </Typography>
+        </HeadTypography>
       </Box>
       <Box
         sx={{

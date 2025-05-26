@@ -4,6 +4,7 @@ import CourseCard from "./CourseCard";
 import CustomButton from "@/src/components/Button";
 import FreeCourse from "@/src/assets/images/basic.png";
 import AdvanceCourse from "@/src/assets/images/advance.png";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const Courses = () => {
   return (
@@ -17,32 +18,22 @@ const Courses = () => {
     >
       <Badge title="Learn" />
 
-      <Typography
+      <HeadTypography
         sx={{
-          color: "var(--Grey-900, #333)",
-          fontSize: "48px",
-          fontWeight: 700,
-          lineHeight: "100%",
-          letterSpacing: "-1.92px",
+          color: "#333",
           mt: "21px",
           mb: "56px",
-
           "@media (max-width: 768px)": {
-            fontSize: "40px",
-            letterSpacing: "-1.28px",
-            textAlign: "center",
             mb: "48px",
           },
           "@media (max-width: 576px)": {
-            fontSize: "26px",
-            letterSpacing: "-0.64px",
             mb: "40px",
           },
         }}
       >
         Our{" "}
         <span style={{ color: "var(--primary-400-base, #F30)" }}>Courses</span>
-      </Typography>
+      </HeadTypography>
 
       <Box
         sx={{
