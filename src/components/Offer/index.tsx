@@ -1,4 +1,6 @@
-import { Box, Typography } from "@mui/material";
+"use client";
+
+import { Box, Typography, styled } from "@mui/material";
 import mobileDashboard from "@/src/assets/images/user_mobile_dashboard.png";
 import Image from "next/image";
 import Badge from "../Badge";
@@ -18,7 +20,7 @@ export default function Offer({
   points = [],
   imageUrl,
 }: OfferProps & { imageUrl?: string }) {
-  const typographyStyles = {
+  const StyledTypography = styled(Typography)(() => ({
     color: "#FFF",
     fontSize: "24px",
     fontStyle: "normal",
@@ -26,11 +28,9 @@ export default function Offer({
     lineHeight: "120%",
     letterSpacing: "-0.48px",
     maxWidth: descriptionWidth ? `${descriptionWidth}px` : "549px",
-
     "@media (max-width: 992px)": {
       maxWidth: "100%",
     },
-
     "@media (max-width: 768px)": {
       fontSize: "20px",
       textAlign: "center",
@@ -39,7 +39,7 @@ export default function Offer({
       fontSize: "16px",
       letterSpacing: "-0.32px",
     },
-  };
+  }));
 
   return (
     <Box
@@ -150,30 +150,17 @@ export default function Offer({
             }}
           >
             <Box>
-              <Typography
+              <StyledTypography
                 sx={{
-                  ...typographyStyles,
                   mb: "12px",
                 }}
               >
                 {description}
-              </Typography>
-              <Typography
-                sx={{
-                  ...typographyStyles,
-                }}
-              >
-                {secondaryDescription}
-              </Typography>
+              </StyledTypography>
+              <StyledTypography>{secondaryDescription}</StyledTypography>
             </Box>
             {subDescription && (
-              <Typography
-                sx={{
-                  ...typographyStyles,
-                }}
-              >
-                {subDescription}
-              </Typography>
+              <StyledTypography>{subDescription}</StyledTypography>
             )}
           </Box>
         )}

@@ -3,37 +3,19 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import About from "@/src/assets/images/about-us.jpg";
 import Logo from "@/src/assets/icons/logo.svg";
+import AboutUsTypography from "@/src/components/AboutUsTypography";
 
 export default function AboutSection() {
   const isMobile = useMediaQuery("(min-width: 576px)");
-  const typographyStyle = {
-    color: "#000",
-    fontSize: "20px",
-    fontStyle: "normal",
-    fontWeight: "400",
-    lineHeight: "120%",
-    letterSpacing: "-0.4px",
-    "@media (max-width: 992px)": {
-      textAlign: "center",
-    },
 
-    "@media (max-width: 768px)": {
-      fontSize: "18px",
-    },
-
-    "@media (max-width: 576px)": {
-      fontSize: "16px",
-    },
-  };
-
-  const firstParagraphFirstHalf = `Founded in Montreal over
+  const firstParagraphFirstHalfHTML = `Founded in Montreal over
             <span style="color:#F30; font-weight:700;">
               20 years ago
             </span>
             , 1st Forex has grown to become a global leader in forex education
             and trading signals.`;
 
-  const firstParagraphSecondHalf = `From humble beginnings conducting in-person
+  const firstParagraphSecondHalfHTML = `From humble beginnings conducting in-person
             seminars and offering web-based forex signals, we’ve evolved into a
             trusted name in the industry with over
             <span style="color: #F30; font-weight: 700;">
@@ -41,7 +23,7 @@ export default function AboutSection() {
             </span>
             worldwide.`;
 
-  const thirdParagraphFirstHalf = `At the heart of 1st Forex is our
+  const thirdParagraphFirstHalfHTML = `At the heart of 1st Forex is our
             <span style="color:#F30, font-weight: 700;">
               CEO, Luc Verville
             </span>
@@ -51,17 +33,17 @@ export default function AboutSection() {
             </span>
             in the forex industry.`;
 
-  const thirdParagraphSecondHalf = `Driven by a dream to build the world’s best
+  const thirdParagraphSecondHalfHTML = `Driven by a dream to build the world’s best
             forex company and foster a real community of apex traders, Luc’s
             vision has shaped every aspect of 1st Forex.`;
 
   const firstParagraph = isMobile
-    ? `${firstParagraphFirstHalf} ${firstParagraphSecondHalf}`
-    : firstParagraphFirstHalf;
+    ? `${firstParagraphFirstHalfHTML} ${firstParagraphSecondHalfHTML}`
+    : firstParagraphFirstHalfHTML;
 
   const thirdParagraph = isMobile
-    ? `${thirdParagraphFirstHalf} ${thirdParagraphSecondHalf}`
-    : thirdParagraphFirstHalf;
+    ? `${thirdParagraphFirstHalfHTML} ${thirdParagraphSecondHalfHTML}`
+    : thirdParagraphFirstHalfHTML;
 
   return (
     <Box>
@@ -125,53 +107,37 @@ export default function AboutSection() {
             gap: "20px",
           }}
         >
-          <Typography
-            sx={{
-              ...typographyStyle,
-            }}
+          <AboutUsTypography
             dangerouslySetInnerHTML={{ __html: firstParagraph }}
           />
-          <Typography
+          <AboutUsTypography
             sx={{
-              ...typographyStyle,
               display: isMobile ? "none" : "block",
             }}
-            dangerouslySetInnerHTML={{ __html: firstParagraphSecondHalf }}
+            dangerouslySetInnerHTML={{ __html: firstParagraphSecondHalfHTML }}
           />
-          <Typography
-            sx={{
-              ...typographyStyle,
-            }}
-          >
+          <AboutUsTypography>
             Today, headquartered in the vibrant city of{" "}
             <span style={{ color: "#F30", fontWeight: "700" }}>Dubai</span>,
             United Arab Emirates, we continue to empower traders to achieve
             financial independence and master the forex markets
-          </Typography>
-          <Typography
-            sx={{
-              ...typographyStyle,
-            }}
+          </AboutUsTypography>
+          <AboutUsTypography
             dangerouslySetInnerHTML={{ __html: thirdParagraph }}
           />
-          <Typography
+          <AboutUsTypography
             sx={{
-              ...typographyStyle,
               display: isMobile ? "none" : "block",
             }}
-            dangerouslySetInnerHTML={{ __html: thirdParagraphSecondHalf }}
+            dangerouslySetInnerHTML={{ __html: thirdParagraphSecondHalfHTML }}
           />
-          <Typography
-            sx={{
-              ...typographyStyle,
-            }}
-          >
+          <AboutUsTypography>
             He is supported by an exceptional team, including experienced
             traders and a leading{" "}
             <span style={{ color: "#F30", fontWeight: "700" }}>AI expert</span>,
             ensuring our offerings remain cutting-edge and unparalleled in the
             industry.
-          </Typography>
+          </AboutUsTypography>
         </Box>
         <Box
           sx={{
