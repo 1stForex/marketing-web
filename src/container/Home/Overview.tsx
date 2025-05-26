@@ -1,6 +1,7 @@
-import { Box, Typography } from "@mui/material";
-import Logo from "@/src/assets/icons/logo.svg";
 import Image from "next/image";
+import Logo from "@/src/assets/icons/logo.svg";
+import { Box } from "@mui/material";
+import HomeOverViewTypography from "@/src/styled/HomeOverViewTypography";
 
 const Overview = () => {
   return (
@@ -29,22 +30,9 @@ const Overview = () => {
         <Image src={Logo} alt="logo" />
       </Box>
       <Box>
-        <Typography
+        <HomeOverViewTypography
           sx={{
-            fontSize: "32px",
-            fontWeight: 600,
-            lineHeight: "120%",
-            letterSpacing: "-0.64px",
-            color: "var(--Grey-600, #475367)",
             mb: "12px",
-            "@media (max-width: 768px)": {
-              fontSize: "24px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
-              lineHeight: "145%",
-            },
           }}
         >
           For over twenty years, 1st Forex has helped traders worldwide develop
@@ -53,24 +41,8 @@ const Overview = () => {
             profitable strategies
           </span>{" "}
           and achieve their financial goals.
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: "32px",
-            fontWeight: 600,
-            lineHeight: "120%",
-            letterSpacing: "-0.64px",
-            color: "var(--Grey-600, #475367)",
-            "@media (max-width: 768px)": {
-              fontSize: "24px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
-              lineHeight: "145%",
-            },
-          }}
-        >
+        </HomeOverViewTypography>
+        <HomeOverViewTypography>
           From comprehensive courses to
           <span style={{ color: "var(--primary-400-base, #F30)" }}>
             {" "}
@@ -83,7 +55,7 @@ const Overview = () => {
             elevate
           </span>{" "}
           your trading experience.
-        </Typography>
+        </HomeOverViewTypography>
       </Box>
     </Box>
   );
