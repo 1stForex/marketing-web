@@ -1,5 +1,7 @@
 import Badge from "@/src/components/Badge";
-import { Box, Typography } from "@mui/material";
+import BaseTypography from "@/src/styled/BaseTypography";
+import HeadTypography from "@/src/styled/HeadTypography";
+import { Box } from "@mui/material";
 
 export default function HeroSection() {
   return (
@@ -63,74 +65,21 @@ export default function HeroSection() {
       >
         <Badge title="Community" />
 
-        <Typography
-          sx={{
-            color: "var(--Shade-White, #FFF)",
-            textAlign: "center",
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
-            maxWidth: "734px",
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
-            },
-          }}
-        >
+        <HeadTypography color="#FFF" textAlign={"center"} maxWidth={"734px"}>
           Welcome to the 1st Forex Community
-        </Typography>
+        </HeadTypography>
 
-        <Typography
-          sx={{
-            color: "var(--Shade-White, #FFF)",
-            textAlign: "center",
-            fontSize: "24px",
-            fontWeight: 400,
-            lineHeight: "120%",
-            letterSpacing: "-0.48px",
-            maxWidth: "842px",
-            "@media (max-width: 768px)": {
-              fontSize: "20px",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
-              letterSpacing: "-0.32px",
-            },
-          }}
-        >
+        <BaseTypography color="#FFF" fontWeight={400} maxWidth={"842px"}>
           A place where forex traders of all levels come together as a “family”
           to learn, grow, and support one another. Whether you’re just starting
           out or a seasoned professional, our community is designed to help you
           achieve success in your trading journey.
-        </Typography>
-        <Typography
-          sx={{
-            color: "var(--Shade-White, #FFF)",
-            textAlign: "center",
-            fontSize: "24px",
-            fontWeight: 400,
-            lineHeight: "120%",
-            letterSpacing: "-0.48px",
-            maxWidth: "842px",
-            "@media (max-width: 768px)": {
-              fontSize: "20px",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
-              letterSpacing: "-0.32px",
-            },
-          }}
-        >
+        </BaseTypography>
+        <BaseTypography color="#FFF" fontWeight={400} maxWidth={"842px"}>
           Whether you’re just starting out or a seasoned professional, our
           community is designed to help you achieve success in your trading
           journey.
-        </Typography>
+        </BaseTypography>
       </Box>
     </Box>
   );

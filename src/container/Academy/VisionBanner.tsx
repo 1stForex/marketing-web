@@ -1,5 +1,6 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Banner from "@/src/components/Banner";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const VisionBanner = () => {
   return (
@@ -15,28 +16,9 @@ const VisionBanner = () => {
         badgeTitle="Vision"
         description="To make forex education affordable, effective, and accessible to traders worldwide. By combining our proven teaching methods with innovative AI technology, we aim to build a thriving community of successful traders equipped with both knowledge and cutting-edge tools to excel in the markets."
       >
-        <Typography
-          sx={{
-            color: "var(--Shade-White, #FFF)",
-            textAlign: "center",
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
-
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
-            },
-          }}
-        >
+        <HeadTypography color="#FFF" textAlign={"center"}>
           Our Vision
-        </Typography>
+        </HeadTypography>
       </Banner>
     </Box>
   );

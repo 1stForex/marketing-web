@@ -1,9 +1,10 @@
 "use client";
 import Badge from "@/src/components/Badge";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import CustomButton from "@/src/components/Button";
 import { useRouter } from "next/navigation";
 import CustomAccordian from "../CustomAccordian";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const FAQSection = () => {
   const router = useRouter();
@@ -39,29 +40,17 @@ const FAQSection = () => {
       >
         <Badge title="Knowledge Base" />
 
-        <Typography
+        <HeadTypography
           sx={{
             color: "var(--Grey-900, #333)",
             textAlign: "center",
-
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-              textAlign: "center",
-            },
             "@media (max-width: 576px)": {
-              fontSize: "26px",
               lineHeight: "120%",
-              letterSpacing: "-0.64px",
             },
           }}
         >
           FAQ&#39;s
-        </Typography>
+        </HeadTypography>
       </Box>
 
       <Box

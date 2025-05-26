@@ -3,8 +3,10 @@
 import { allLegacy } from "@/src/const/allLegacy";
 import Badge from "@/src/components/Badge";
 import OptionCard from "@/src/components/OptionCard";
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Slider from "react-slick";
+import HeadTypography from "@/src/styled/HeadTypography";
+import BaseTypography from "@/src/styled/BaseTypography";
 
 export default function LegacySection() {
   const isSmallScreen = useMediaQuery(`(max-width: 992px)`);
@@ -83,71 +85,40 @@ export default function LegacySection() {
           }}
         >
           <Badge title="Our Story" />
-          <Typography
-            sx={{
-              fontSize: "48px",
-              fontStyle: "normal",
-              fontWeight: "700",
-              lineHeight: "100%",
-              letterSpacing: "-1.92px",
-              color: "#000",
-
-              "@media (max-width: 768px)": {
-                fontSize: "40px",
-                letterSpacing: "-1.28px",
-                textAlign: "center",
-              },
-              "@media (max-width: 576px)": {
-                fontSize: "26px",
-                letterSpacing: "-0.64px",
-              },
-            }}
-          >
-            A Legacy of Excellence
-          </Typography>
+          <HeadTypography color="#000">A Legacy of Excellence</HeadTypography>
         </Box>
-        <Typography
+        <BaseTypography
           sx={{
             fontSize: "20px",
             fontStyle: "normal",
             fontWeight: "400",
-            lineHeight: "120%",
             letterSpacing: "-0.4px",
+            textAlign: "left",
 
             "@media (max-width: 768px)": {
-              fontSize: "20px",
               textAlign: "center",
-            },
-
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
             },
           }}
         >
           Behind 1st Forex is a dynamic and diverse team of forex veterans,
           successful young traders, and AI specialists.
-        </Typography>
-        <Typography
+        </BaseTypography>
+        <BaseTypography
           sx={{
             fontSize: "20px",
             fontStyle: "normal",
             fontWeight: "400",
-            lineHeight: "120%",
             letterSpacing: "-0.4px",
+            textAlign: "left",
 
             "@media (max-width: 768px)": {
-              fontSize: "20px",
               textAlign: "center",
-            },
-
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
             },
           }}
         >
           This unique blend of experience and innovation allows us to stay ahead
           of market trends and deliver unmatched value to our community
-        </Typography>
+        </BaseTypography>
       </Box>
       <Box
         sx={{

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Badge from "@/src/components/Badge";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import CourseLaptop from "@/src/assets/images/course.png";
 import AboutUsTypography from "@/src/styled/AboutUsTypography";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const AboutUs = () => {
   return (
@@ -47,27 +48,7 @@ const AboutUs = () => {
           <Badge title="Offers" />
         </Box>
 
-        <Typography
-          sx={{
-            color: "var(--Grey-900, #333)",
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
-
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
-            },
-          }}
-        >
-          About Us
-        </Typography>
+        <HeadTypography color="#333">About Us</HeadTypography>
 
         <AboutUsTypography>
           At 1st Forex{" "}

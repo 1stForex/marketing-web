@@ -1,8 +1,9 @@
 "use client";
 
 import Badge from "@/src/components/Badge";
+import BaseTypography from "@/src/styled/BaseTypography";
 import { BannerProps } from "@/src/types/Banner.interface";
-import { Box, Container, Typography, useMediaQuery } from "@mui/material";
+import { Box, Container, useMediaQuery } from "@mui/material";
 
 const Banner: React.FC<BannerProps> = ({
   badgeTitle,
@@ -39,47 +40,19 @@ const Banner: React.FC<BannerProps> = ({
 
         {children}
 
-        <Typography
-          sx={{
-            color: "var(--Shade-White, #FFF)",
-            textAlign: "center",
-
-            fontSize: "24px",
-            fontWeight: 600,
-            lineHeight: "120%",
-            letterSpacing: "-0.48px",
-            "@media (max-width: 768px)": {
-              fontSize: "20px",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
-              letterSpacing: "-0.32px",
-            },
-          }}
-        >
+        <BaseTypography color="#FFF" fontWeight={600}>
           {textToDisplay}
-        </Typography>
+        </BaseTypography>
         {secondaryDescription && (
-          <Typography
+          <BaseTypography
             sx={{
               display: isTabView ? "none" : "inline",
-              color: "var(--Shade-White, #FFF)",
-              textAlign: "center",
-              fontSize: "24px",
+              color: "#FFF",
               fontWeight: 600,
-              lineHeight: "120%",
-              letterSpacing: "-0.48px",
-              "@media (max-width: 768px)": {
-                fontSize: "20px",
-              },
-              "@media (max-width: 576px)": {
-                fontSize: "16px",
-                letterSpacing: "-0.32px",
-              },
             }}
           >
             {secondaryDescription}
-          </Typography>
+          </BaseTypography>
         )}
       </Box>
     </Container>

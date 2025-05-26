@@ -1,8 +1,10 @@
 "use client";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Logo from "@/src/assets/icons/logo.svg";
 import Image from "next/image";
 import CustomButton from "@/src/components/Button";
+import HeadTypography from "@/src/styled/HeadTypography";
+import BaseTypography from "@/src/styled/BaseTypography";
 
 const CommunityBanner = () => {
   return (
@@ -53,35 +55,15 @@ const CommunityBanner = () => {
           },
         }}
       >
-        <Typography
-          sx={{
-            color: "var(--Shade-Black, #000)",
-            textAlign: "center",
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
-            },
-          }}
-        >
+        <HeadTypography color="#000" textAlign={"center"}>
           Your Voice, Your Community
-        </Typography>
+        </HeadTypography>
 
-        <Typography
+        <BaseTypography
           sx={{
             color: "var(--Shade-Black, #000)",
-            textAlign: "center",
             fontSize: "20px",
             fontWeight: 400,
-            lineHeight: "120%",
             letterSpacing: "-0.4px",
             "@media (max-width: 768px)": {
               fontSize: "18px",
@@ -94,7 +76,7 @@ const CommunityBanner = () => {
           Whether you&apos;re here to learn, share, or grow, the 1st Forex
           Community is the perfect place to connect with like-minded individuals
           and take your trading to the next level.
-        </Typography>
+        </BaseTypography>
 
         <CustomButton>Join Us Now</CustomButton>
       </Box>

@@ -1,6 +1,8 @@
 "use client";
 import Badge from "@/src/components/Badge";
-import { Box, Typography } from "@mui/material";
+import BaseTypography from "@/src/styled/BaseTypography";
+import HeadTypography from "@/src/styled/HeadTypography";
+import { Box } from "@mui/material";
 
 const PricingHeader = () => {
   return (
@@ -21,50 +23,16 @@ const PricingHeader = () => {
     >
       <Badge title="Pricing" />
 
-      <Typography
-        sx={{
-          color: "var(--Grey-900, #333)",
-          textAlign: "center",
-          fontSize: "48px",
-          fontWeight: 700,
-          lineHeight: "100%",
-          letterSpacing: "-1.92px",
-          "@media (max-width: 768px)": {
-            fontSize: "40px",
-            letterSpacing: "-1.28px",
-            textAlign: "center",
-          },
-          "@media (max-width: 576px)": {
-            fontSize: "26px",
-            letterSpacing: "-0.64px",
-          },
-        }}
-      >
+      <HeadTypography color="#333" textAlign={"center"}>
         Pick the price{" "}
         <span style={{ color: "var(--primary-400-base, #F30)" }}>
           that&#39;s right for you{" "}
         </span>
-      </Typography>
+      </HeadTypography>
 
-      <Typography
-        sx={{
-          color: "var(--Grey-900, #333)",
-          textAlign: "center",
-          fontSize: "24px",
-          fontWeight: 400,
-          lineHeight: "120%",
-          letterSpacing: "-0.48px",
-          "@media (max-width: 768px)": {
-            fontSize: "20px",
-          },
-          "@media (max-width: 576px)": {
-            fontSize: "16px",
-            letterSpacing: "-0.32px",
-          },
-        }}
-      >
+      <BaseTypography color="#333" fontWeight={400}>
         Join millions of other customers on this platform
-      </Typography>
+      </BaseTypography>
     </Box>
   );
 };

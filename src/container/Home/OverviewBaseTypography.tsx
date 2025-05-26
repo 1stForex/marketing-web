@@ -1,7 +1,7 @@
 "use client";
 import { styled, Typography } from "@mui/material";
 
-const HomeOverViewTypography = styled(Typography)(() => ({
+const OverviewBaseTypography = styled(Typography)(() => ({
   fontSize: "32px",
   fontWeight: 600,
   lineHeight: "120%",
@@ -17,4 +17,4 @@ const HomeOverViewTypography = styled(Typography)(() => ({
   },
 }));
 
-export default HomeOverViewTypography;
+export default OverviewBaseTypography;

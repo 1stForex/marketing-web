@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Badge from "@/src/components/Badge";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const SendMessage = () => {
   return (
@@ -22,29 +23,18 @@ const SendMessage = () => {
     >
       <Badge title="Contact" />
 
-      <Typography
+      <HeadTypography
         sx={{
-          color: "var(--Grey-900, #333)",
-          fontSize: "48px",
-          fontWeight: 700,
-          lineHeight: "100%",
-          letterSpacing: "-1.92px",
+          color: "#333",
           maxWidth: "381px",
           "@media (max-width: 768px)": {
-            fontSize: "40px",
-            letterSpacing: "-1.28px",
             maxWidth: "none",
-            textAlign: "center",
-          },
-          "@media (max-width: 576px)": {
-            fontSize: "26px",
-            letterSpacing: "-0.64px",
           },
         }}
       >
         Send Us A{" "}
         <span style={{ color: "var(--primary-400-base, #F30)" }}>Message</span>
-      </Typography>
+      </HeadTypography>
 
       <Typography
         sx={{

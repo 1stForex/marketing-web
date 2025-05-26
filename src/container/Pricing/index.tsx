@@ -1,6 +1,5 @@
 import { Box, Container } from "@mui/material";
 import PricingHeader from "./PricingHeader";
-// import PricingPlanSection from "./PricingPlanSection";
 import PricingSection from "./PricingSection";
 
 const Pricing = () => {
@@ -27,7 +26,6 @@ const Pricing = () => {
       >
         <PricingHeader />
         <PricingSection />
-        {/* <PricingPlanSection /> */}
       </Box>
     </Container>
   );

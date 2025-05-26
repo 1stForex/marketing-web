@@ -6,6 +6,7 @@ import SearchGrey from "@/src/assets/icons/search-grey.svg";
 import { allQuestions } from "../../const/allQuestions";
 import { useState } from "react";
 import CustomAccordian from "@/src/components/CustomAccordian";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const AllFAQs = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -36,29 +37,22 @@ const AllFAQs = () => {
       />
 
       <Box>
-        <Typography
+        <HeadTypography
           sx={{
-            color: "var(--Shade-Black, #000)",
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
+            color: "#000",
             mb: "60px",
             "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
+              textAlign: "left",
               mb: "32px",
             },
             "@media (max-width: 576px)": {
-              fontSize: "26px",
               lineHeight: "120%",
-              letterSpacing: "-0.64px",
               mb: "28px",
             },
           }}
         >
           All FAQ&#39;s
-        </Typography>
+        </HeadTypography>
 
         <Box
           sx={{

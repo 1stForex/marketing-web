@@ -4,6 +4,7 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Bull from "@/src/assets/images/Bull.png";
 import { paragraphs } from "@/src/const/aboutUsStory";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const OurStory = () => {
   return (
@@ -36,30 +37,9 @@ const OurStory = () => {
         <Badge title="Our Story" />
       </Box>
 
-      <Typography
-        sx={{
-          mb: "15px",
-          color: "var(--Grey-900, #333)",
-          textAlign: "center",
-
-          fontSize: "48px",
-          fontWeight: "700",
-          lineHeight: "100%",
-          letterSpacing: "-1.92px",
-
-          "@media (max-width: 768px)": {
-            fontSize: "40px",
-            letterSpacing: "-1.28px",
-            textAlign: "center",
-          },
-          "@media (max-width: 576px)": {
-            fontSize: "26px",
-            letterSpacing: "-0.64px",
-          },
-        }}
-      >
+      <HeadTypography mb={"15px"} color="#333" textAlign={"center"}>
         A Legacy of Excellence
-      </Typography>
+      </HeadTypography>
 
       <Typography
         sx={{

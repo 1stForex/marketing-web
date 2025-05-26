@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Logo from "@/src/assets/icons/logo.svg";
 import { Box } from "@mui/material";
-import HomeOverViewTypography from "@/src/styled/HomeOverViewTypography";
+import OverviewBaseTypography from "./OverviewBaseTypography";
 
 const Overview = () => {
   return (
@@ -30,19 +30,15 @@ const Overview = () => {
         <Image src={Logo} alt="logo" />
       </Box>
       <Box>
-        <HomeOverViewTypography
-          sx={{
-            mb: "12px",
-          }}
-        >
+        <OverviewBaseTypography mb={"12px"}>
           For over twenty years, 1st Forex has helped traders worldwide develop
           <span style={{ color: "var(--primary-400-base, #F30)" }}>
             {" "}
             profitable strategies
           </span>{" "}
           and achieve their financial goals.
-        </HomeOverViewTypography>
-        <HomeOverViewTypography>
+        </OverviewBaseTypography>
+        <OverviewBaseTypography>
           From comprehensive courses to
           <span style={{ color: "var(--primary-400-base, #F30)" }}>
             {" "}
@@ -55,7 +51,7 @@ const Overview = () => {
             elevate
           </span>{" "}
           your trading experience.
-        </HomeOverViewTypography>
+        </OverviewBaseTypography>
       </Box>
     </Box>
   );

@@ -1,4 +1,5 @@
 "use client";
+import BaseTypography from "@/src/styled/BaseTypography";
 import { CardProps } from "@/src/types/Card.interface";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
@@ -83,26 +84,17 @@ const Card: React.FC<CardProps> = ({
           />
         </Box>
 
-        <Typography
+        <BaseTypography
           sx={{
-            color: "var(--Shade-Black, #000)",
-            textAlign: "center",
-            fontSize: "24px",
+            color: "#000",
             fontWeight: 700,
-            lineHeight: "120%",
-            letterSpacing: "-0.48px",
-            "@media (max-width: 768px)": {
-              fontSize: "20px",
-            },
             "@media (max-width: 576px)": {
-              fontSize: "16px",
-              letterSpacing: "-0.32px",
               textAlign: "start",
             },
           }}
         >
           {title}
-        </Typography>
+        </BaseTypography>
       </Box>
 
       <Typography

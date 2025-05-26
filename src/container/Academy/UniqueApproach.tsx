@@ -3,6 +3,7 @@ import Badge from "@/src/components/Badge";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Certificate from "@/src/assets/images/certificate.png";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const UniqueApproach = () => {
   return (
@@ -46,34 +47,19 @@ const UniqueApproach = () => {
       >
         <Badge title="Our Story" />
 
-        <Typography
+        <HeadTypography
           sx={{
             mb: "24px",
             mt: "21px",
             color: "var(--Grey-900, #333)",
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
             maxWidth: "464px",
-
             "@media (max-width: 992px)": {
               maxWidth: "100%",
-            },
-
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-              textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
             },
           }}
         >
           Our Unique Approach
-        </Typography>
+        </HeadTypography>
 
         <Box
           sx={{

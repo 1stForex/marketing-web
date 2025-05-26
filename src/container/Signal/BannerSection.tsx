@@ -1,5 +1,6 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Banner from "@/src/components/Banner";
+import BaseTypography from "@/src/styled/BaseTypography";
 
 export default function BannerSection() {
   return (
@@ -36,28 +37,12 @@ export default function BannerSection() {
       }}
     >
       <Banner description='"Just imagine having twenty years of proven market expertise and seasoned traders at your side —instantly accessible and enhanced by cutting-edge AI guidance. It’s like placing an entire professional trading firm in the palm of your hand, offering real-time analysis, insights, and strategic support whenever you need it. Experience a new level of confidence and control in every trade."'>
-        <Typography
-          sx={{
-            color: "#FFF",
-            textAlign: "center",
-            fontSize: "24px",
-            fontWeight: 600,
-            lineHeight: "120%",
-            letterSpacing: "-0.48px",
-            "@media (max-width: 768px)": {
-              fontSize: "20px",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
-              letterSpacing: "-0.32px",
-            },
-          }}
-        >
+        <BaseTypography color="#FFF" fontWeight={600}>
           With 1st Forex AI Signal, you’re not just receiving signals—you’re
           stepping into a fully supported, data-driven, and user-centric trading
           ecosystem designed to help you grow, succeed, and achieve your
           financial goals.
-        </Typography>
+        </BaseTypography>
       </Banner>
     </Box>
   );

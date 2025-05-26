@@ -1,7 +1,7 @@
 "use client";
 import { styled, Typography } from "@mui/material";
 
-const SignalOverViewTypography = styled(Typography)(() => ({
+const OverviewBaseTypography = styled(Typography)(() => ({
   fontSize: "24px",
   fontWeight: 600,
   lineHeight: "120%",
@@ -18,4 +18,4 @@ const SignalOverViewTypography = styled(Typography)(() => ({
   },
 }));
 
-export default SignalOverViewTypography;
+export default OverviewBaseTypography;

@@ -1,5 +1,5 @@
 import Hero from "@/src/components/Hero";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import CtaSection from "./CtaSection";
 import VisionBanner from "./VisionBanner";
 import AboutUs from "./AboutUs";
@@ -9,6 +9,7 @@ import Courses from "./Cousrses";
 import UniqueApproach from "./UniqueApproach";
 import Offer from "@/src/components/Offer";
 import Signal from "@/src/assets/images/signal-mobile.png";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 const Academy = () => {
   return (
@@ -62,30 +63,12 @@ const Academy = () => {
             cards={whyUsCardsData}
             isCarousel
           >
-            <Typography
-              sx={{
-                color: "var(--Grey-900, #333)",
-                fontSize: "48px",
-                fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "-1.92px",
-
-                "@media (max-width: 768px)": {
-                  fontSize: "40px",
-                  letterSpacing: "-1.28px",
-                  textAlign: "center",
-                },
-                "@media (max-width: 576px)": {
-                  fontSize: "26px",
-                  letterSpacing: "-0.64px",
-                },
-              }}
-            >
+            <HeadTypography color="#333">
               Why{" "}
               <span style={{ color: "var(--primary-400-base, #F30)" }}>
                 Choose Us?
               </span>
-            </Typography>
+            </HeadTypography>
           </Carousel>
 
           <Courses />

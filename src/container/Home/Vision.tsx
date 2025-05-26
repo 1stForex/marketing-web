@@ -1,6 +1,7 @@
 "use client";
-import { Box, Container, Typography, useMediaQuery } from "@mui/material";
+import { Box, Container, useMediaQuery } from "@mui/material";
 import Badge from "@/src/components/Badge";
+import BaseTypography from "@/src/styled/BaseTypography";
 
 const Vision = () => {
   const firstHalfText = `"To empower a global community of traders by blending two decades
@@ -51,47 +52,37 @@ const Vision = () => {
           <Badge title="Vision Statement" />
         </Box>
 
-        <Typography
+        <BaseTypography
           sx={{
-            color: "var(--Shade-White, #FFF)",
-            fontSize: "24px",
+            color: "#FFF",
             fontWeight: 600,
             lineHeight: "144%",
-            letterSpacing: "-0.48px",
             maxWidth: "802px",
+            textAlign: "left",
             "@media (max-width: 992px)": {
               fontSize: "20px",
               textAlign: "center",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
-              letterSpacing: "-0.32px",
             },
           }}
         >
           {textToDisplay}
-        </Typography>
-        <Typography
+        </BaseTypography>
+        <BaseTypography
           sx={{
             display: isTabView ? "none" : "inline-block",
-            color: "var(--Shade-White, #FFF)",
-            fontSize: "24px",
+            color: "#FFF",
             fontWeight: 600,
             lineHeight: "144%",
-            letterSpacing: "-0.48px",
             maxWidth: "802px",
+            textAlign: "left",
             "@media (max-width: 992px)": {
               fontSize: "20px",
               textAlign: "center",
             },
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
-              letterSpacing: "-0.32px",
-            },
           }}
         >
           {secondHalfText}
-        </Typography>
+        </BaseTypography>
       </Box>
     </Container>
   );

@@ -1,7 +1,9 @@
 "use client";
 import Badge from "@/src/components/Badge";
+import BaseTypography from "@/src/styled/BaseTypography";
+import HeadTypography from "@/src/styled/HeadTypography";
 import { HeroProps } from "@/src/types/Hero.interface";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 const Hero: React.FC<HeroProps> = ({
   badgeTitle,
@@ -52,51 +54,15 @@ const Hero: React.FC<HeroProps> = ({
         {badgeTitle && <Badge title={badgeTitle} />}
 
         {title && (
-          <Typography
-            sx={{
-              color: "var(--Shade-White, #FFF)",
-              textAlign: "center",
-              fontSize: "48px",
-              fontWeight: 700,
-              lineHeight: "100%",
-              letterSpacing: "-1.92px",
-              maxWidth: "734px",
-              "@media (max-width: 768px)": {
-                fontSize: "40px",
-                letterSpacing: "-1.28px",
-                textAlign: "center",
-              },
-              "@media (max-width: 576px)": {
-                fontSize: "26px",
-                letterSpacing: "-0.64px",
-              },
-            }}
-          >
+          <HeadTypography color="#FFF" textAlign={"center"} maxWidth={"734px"}>
             {title}
-          </Typography>
+          </HeadTypography>
         )}
 
         {description && (
-          <Typography
-            sx={{
-              color: "var(--Shade-White, #FFF)",
-              textAlign: "center",
-              fontSize: "24px",
-              fontWeight: 400,
-              lineHeight: "120%",
-              letterSpacing: "-0.48px",
-              maxWidth: "842px",
-              "@media (max-width: 768px)": {
-                fontSize: "20px",
-              },
-              "@media (max-width: 576px)": {
-                fontSize: "16px",
-                letterSpacing: "-0.32px",
-              },
-            }}
-          >
+          <BaseTypography color="#FFF" fontWeight={400} maxWidth={"842px"}>
             {description}
-          </Typography>
+          </BaseTypography>
         )}
 
         {children}

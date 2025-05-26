@@ -1,9 +1,10 @@
 "use client";
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import About from "@/src/assets/images/about-us.jpg";
 import Logo from "@/src/assets/icons/logo.svg";
 import AboutUsTypography from "@/src/styled/AboutUsTypography";
+import HeadTypography from "@/src/styled/HeadTypography";
 
 export default function AboutSection() {
   const isMobile = useMediaQuery("(min-width: 576px)");
@@ -66,33 +67,17 @@ export default function AboutSection() {
         >
           <Image src={Logo} alt="logo" />
         </Box>
-        <Typography
+        <HeadTypography
           sx={{
             color: "#333",
-            fontSize: "48px",
-            fontStyle: "normal",
-            fontWeight: "700",
-            lineHeight: "100%",
-            letterSpacing: "-1.92px",
-
             "@media (max-width: 992px)": {
               textAlign: "center",
               width: "100%",
             },
-
-            "@media (max-width: 768px)": {
-              fontSize: "40px",
-              letterSpacing: "-1.28px",
-            },
-
-            "@media (max-width: 576px)": {
-              fontSize: "26px",
-              letterSpacing: "-0.64px",
-            },
           }}
         >
           About Us
-        </Typography>
+        </HeadTypography>
       </Box>
       <Box
         sx={{
