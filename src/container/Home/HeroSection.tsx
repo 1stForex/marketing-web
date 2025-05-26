@@ -1,5 +1,5 @@
 "use client";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import Logo from "@/src/assets/icons/logo.svg";
 import StatsCard from "./StatsCard";
@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 const HeroSection = () => {
+  const isMobile = useMediaQuery("(max-width: 576px)");
   const router = useRouter();
   const ws = useRef<WebSocket | null>(null);
   const [liveStats, setLiveStats] = useState<
@@ -186,14 +187,14 @@ const HeroSection = () => {
         >
           <CustomButton
             variant="red"
-            padding="16px 24px"
+            padding={isMobile ? "16px 24px" : "16px 48px"}
             onClick={() => router.push("/ai-signal")}
           >
             AI Signal
           </CustomButton>
           <CustomButton
             variant="transparent"
-            padding="16px 24px"
+            padding={isMobile ? "16px 24px" : "16px 48px"}
             onClick={() => router.push("/academy")}
           >
             Academy

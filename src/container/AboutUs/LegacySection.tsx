@@ -125,9 +125,28 @@ export default function LegacySection() {
           }}
         >
           Behind 1st Forex is a dynamic and diverse team of forex veterans,
-          successful young traders, and AI specialists. This unique blend of
-          experience and innovation allows us to stay ahead of market trends and
-          deliver unmatched value to our community
+          successful young traders, and AI specialists.
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: "20px",
+            fontStyle: "normal",
+            fontWeight: "400",
+            lineHeight: "120%",
+            letterSpacing: "-0.4px",
+
+            "@media (max-width: 768px)": {
+              fontSize: "20px",
+              textAlign: "center",
+            },
+
+            "@media (max-width: 576px)": {
+              fontSize: "16px",
+            },
+          }}
+        >
+          This unique blend of experience and innovation allows us to stay ahead
+          of market trends and deliver unmatched value to our community
         </Typography>
       </Box>
       <Box

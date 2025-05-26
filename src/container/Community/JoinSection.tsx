@@ -9,7 +9,7 @@ const CommunityBanner = () => {
     <Box
       sx={{
         borderRadius: "32px",
-        background: "var(--Grey-50, #F9FAFB)",
+        background: "rgb(237,239,240)",
         boxShadow:
           "-5px 5px 13px -5px rgba(16, 25, 40, 0.05), 0px 2px 4px -1px rgba(16, 25, 40, 0.02)",
         padding: "80px 16px",

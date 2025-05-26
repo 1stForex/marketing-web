@@ -109,6 +109,28 @@ export default function HeroSection() {
           out or a seasoned professional, our community is designed to help you
           achieve success in your trading journey.
         </Typography>
+        <Typography
+          sx={{
+            color: "var(--Shade-White, #FFF)",
+            textAlign: "center",
+            fontSize: "24px",
+            fontWeight: 400,
+            lineHeight: "120%",
+            letterSpacing: "-0.48px",
+            maxWidth: "842px",
+            "@media (max-width: 768px)": {
+              fontSize: "20px",
+            },
+            "@media (max-width: 576px)": {
+              fontSize: "16px",
+              letterSpacing: "-0.32px",
+            },
+          }}
+        >
+          Whether you’re just starting out or a seasoned professional, our
+          community is designed to help you achieve success in your trading
+          journey.
+        </Typography>
       </Box>
     </Box>
   );

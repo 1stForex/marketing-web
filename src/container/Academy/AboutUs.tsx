@@ -96,6 +96,13 @@ const AboutUs = () => {
           </span>
           , we combine nearly two decades of experience with cutting-edge
           technology to deliver a unique and effective learning experience.
+        </Typography>
+
+        <Typography
+          sx={{
+            ...typographyStyle,
+          }}
+        >
           Based in Dubai, our academy is a global hub for traders who want to
           achieve financial independence and master the forex markets.
         </Typography>
@@ -105,13 +112,10 @@ const AboutUs = () => {
             ...typographyStyle,
           }}
         >
-          At 1st Forex Trading Academy, we combine nearly two decades of
-          experience with cutting-edge technology to deliver a unique and
-          effective learning experience. Based in Dubai, our academy is a global
-          hub for traders who want to achieve financial independence and master
-          the forex markets.Our online course is recognized as one of the best
-          in the world, offering step-by-step guidance for traders at all
-          levels.
+          Our online course is recognized as one of the best in the world,
+          offering step-by-step guidance for traders at all levels. For
+          beginners, we start with the basics of forex trading, building a solid
+          foundation of knowledge.
         </Typography>
 
         <Typography
@@ -119,9 +123,8 @@ const AboutUs = () => {
             ...typographyStyle,
           }}
         >
-          For beginners, we start with the basics of forex trading, building a
-          solid foundation of knowledge. For advanced traders, we dive into
-          professional strategies, including our copyrighted and backtested{" "}
+          For advanced traders, we dive into professional strategies, including
+          our copyrighted and backtested{" "}
           <span style={{ color: "#F30", fontWeight: 700 }}>
             Breakout System
           </span>

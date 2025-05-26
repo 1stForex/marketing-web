@@ -10,10 +10,11 @@ const Banner: React.FC<BannerProps> = ({
   secondaryDescription,
   children,
 }) => {
-  const isTabView = useMediaQuery("(min-width: 768px)");
-  const textToDisplay = isTabView
-    ? `${description} ${secondaryDescription}`
-    : description;
+  const isTabView = useMediaQuery("(min-width: 769px)");
+  const textToDisplay =
+    secondaryDescription && isTabView
+      ? `${description} ${secondaryDescription}`
+      : description;
   return (
     <Container maxWidth="xl">
       <Box
@@ -58,27 +59,28 @@ const Banner: React.FC<BannerProps> = ({
         >
           {textToDisplay}
         </Typography>
-
-        <Typography
-          sx={{
-            display: isTabView ? "none" : "inline",
-            color: "var(--Shade-White, #FFF)",
-            textAlign: "center",
-            fontSize: "24px",
-            fontWeight: 600,
-            lineHeight: "120%",
-            letterSpacing: "-0.48px",
-            "@media (max-width: 768px)": {
-              fontSize: "20px",
-            },
-            "@media (max-width: 576px)": {
-              fontSize: "16px",
-              letterSpacing: "-0.32px",
-            },
-          }}
-        >
-          {secondaryDescription}
-        </Typography>
+        {secondaryDescription && (
+          <Typography
+            sx={{
+              display: isTabView ? "none" : "inline",
+              color: "var(--Shade-White, #FFF)",
+              textAlign: "center",
+              fontSize: "24px",
+              fontWeight: 600,
+              lineHeight: "120%",
+              letterSpacing: "-0.48px",
+              "@media (max-width: 768px)": {
+                fontSize: "20px",
+              },
+              "@media (max-width: 576px)": {
+                fontSize: "16px",
+                letterSpacing: "-0.32px",
+              },
+            }}
+          >
+            {secondaryDescription}
+          </Typography>
+        )}
       </Box>
     </Container>
   );

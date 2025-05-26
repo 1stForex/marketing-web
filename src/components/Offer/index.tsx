@@ -1,6 +1,4 @@
-"use client";
-
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import mobileDashboard from "@/src/assets/images/user_mobile_dashboard.png";
 import Image from "next/image";
 import Badge from "../Badge";
@@ -20,8 +18,6 @@ export default function Offer({
   points = [],
   imageUrl,
 }: OfferProps & { imageUrl?: string }) {
-  const isTabView = useMediaQuery("(min-width: 768px)");
-
   const typographyStyles = {
     color: "#FFF",
     fontSize: "24px",
@@ -44,10 +40,6 @@ export default function Offer({
       letterSpacing: "-0.32px",
     },
   };
-
-  const textToDisplay = isTabView
-    ? `${description} ${secondaryDescription}`
-    : description;
 
   return (
     <Box
@@ -157,24 +149,23 @@ export default function Offer({
               }),
             }}
           >
-            <Typography
-              sx={{
-                ...typographyStyles,
-              }}
-            >
-              {textToDisplay}
-            </Typography>
-
-            <Typography
-              sx={{
-                ...typographyStyles,
-                display: isTabView ? "none" : "inline-block",
-                mt: "12px",
-              }}
-            >
-              {secondaryDescription}
-            </Typography>
-
+            <Box>
+              <Typography
+                sx={{
+                  ...typographyStyles,
+                  mb: "12px",
+                }}
+              >
+                {description}
+              </Typography>
+              <Typography
+                sx={{
+                  ...typographyStyles,
+                }}
+              >
+                {secondaryDescription}
+              </Typography>
+            </Box>
             {subDescription && (
               <Typography
                 sx={{

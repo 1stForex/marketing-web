@@ -66,8 +66,9 @@ export default function Community() {
               gap: "40px",
             },
           }}
-        ></Box>
-        <JoinSection />
+        >
+          <JoinSection />
+        </Box>
       </Container>
     </Box>
   );
