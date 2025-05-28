@@ -3,9 +3,9 @@ export const TermsAndCondition = [
     section: [
       `<p>Welcome to the 1st FX!</p>
       <br/>
-      <p>These terms and conditions, together with any documents that expressly incorporate by reference (collectively, referred to as “Terms of Use” or “Terms”), govern the access to and use of ________________________ (the “Website”) or ____________ mobile application (the “App”), including any content, functionality, and services provided, such as Forex education, AI-powered trading signals, and community engagement features (collectively, the "Services").</p>
+      <p>These terms and conditions, together with any documents that expressly incorporate by reference (collectively, referred to as <span>“Terms of Use” or “Terms”</span>), govern the access to and use of ________________________ (the <span>“Website”</span>) or ____________ mobile application (the <span>“App”</span>), including any content, functionality, and services provided, such as Forex education, AI-powered trading signals, and community engagement features (collectively, the "Services").</p>
         <br/>
-      <p>By accessing or using the Website, you signify your acceptance of and agreement to comply with these Terms. The Website and its content are owned and operated by_________________, a _______________company bearing license ____________ and having its registered office at ______________, Dubai, UAE (the “Company”).</p>
+      <p>By accessing or using the Website, you signify your acceptance of and agreement to comply with these Terms. The Website and its content are owned and operated by_________________, a _______________company bearing license ____________ and having its registered office at ______________, Dubai, UAE (the <span>“Company”</span>).</p>
       <br/>
       <p>These Terms constitute a binding agreement between you (the "User") and the Company, including its affiliates (collectively referred to as "we," "us," or "our"). The use of "you," "your," or "User" refers to any individual or entity accessing the Services provided through the Website.</p>
       `,
@@ -15,7 +15,7 @@ export const TermsAndCondition = [
     section: [
       `<h3>ACCEPTANCE OF AGREEMENT</h3>`,
       `<br/>`,
-      `<p>Please read the following terms carefully. By registering for, accessing, browsing, or using the website, you acknowledge that you have read, understood, and agree to be bound by the terms including any modifications that we make, whether you are a “Visitor” (simply browsing Website) or you are a “Member” (you have registered with Website). You also acknowledge and agree that you have read and understood our Privacy Statement, found at _____________/privacy-policy, incorporated herein by reference., without any limitation or qualification.</p>
+      `<p>Please read the following terms carefully. By registering for, accessing, browsing, or using the website, you acknowledge that you have read, understood, and agree to be bound by the terms including any modifications that we make, whether you are a “Visitor” (simply browsing Website) or you are a “Member” (you have registered with Website). You also acknowledge and agree that you have read and understood <span>our Privacy Statement, found at _____________/privacy-policy, incorporated herein by reference.</span>, without any limitation or qualification.</p>
         <br/>
         <p>We may modify these Terms at any time without notice to you by posting revised Terms on our site. It is your responsibility to regularly check the Website to determine if there have been changes to these Terms and to review such changes. If You do not agree to these Terms, do not use the website. If, at any time, any part of the Terms is no longer acceptable to You, immediately terminate Your use of the website. Any terms and conditions proposed by you which are in addition to or which conflict with these terms and conditions of service are expressly rejected by the website and shall be of no force or effect.</p>
         <br/>
@@ -99,7 +99,7 @@ export const TermsAndCondition = [
       `<br/>`,
       `<p>Our services are exclusively offered to and may be solely used by persons of or over the age of eighteen (18) years and residing in a jurisdiction where the access to or use of the Services is not restricted by the applicable law and the Terms. By purchasing or signing up for any service we offer, You warrant and represent to Us to be of or over the age of eighteen (18) years.</p>
         <br/>
-        <p><span>We reserve the right to refuse, restrict, or terminate the provision of any and all services to You in the event You (i) are subject to the relevant International sanctions, (ii) have a criminal record related to financial crime, or(iii) are residing in a Prohibited Jurisdiction. You understand that there may be restrictions or laws in some jurisdictions that prohibit Your access to one or more of the Services, and You undertake sole responsibility for using such services in compliance with all such applicable laws of Your jurisdiction.</span></p>`,
+        <p>We reserve the right to refuse, restrict, or terminate the provision of any and all services to You in the event You (i) are subject to the relevant International sanctions, (ii) have a criminal record related to financial crime, or(iii) are residing in a Prohibited Jurisdiction. You understand that there may be restrictions or laws in some jurisdictions that prohibit Your access to one or more of the Services, and You undertake sole responsibility for using such services in compliance with all such applicable laws of Your jurisdiction.</p>`,
     ],
   },
   {

@@ -17,7 +17,7 @@ const ToggleBtn = styled((props: SwitchProps) => (
       transform: "translateX(16px)",
       color: "#fff",
       "& + .MuiSwitch-track": {
-        backgroundColor: "#34C759",
+        backgroundColor: "#F30",
         opacity: 1,
         border: 0,
         ...theme.applyStyles("dark", {
