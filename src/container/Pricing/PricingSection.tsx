@@ -58,32 +58,39 @@ const PricingSection = () => {
           gap: "12px",
           position: "relative",
           left: "75px",
+
+          "@media (max-width: 576px)": {
+            position: "static",
+            left: "0",
+            flexDirection: "column",
+            alignItems: "center",
+          },
         }}
       >
-        <Typography>Monthly</Typography>
-        <ToggleBtn onChange={() => setIsMonthly(!isMonthly)} />
-        <Box sx={{ display: "flex", gap: "8px" }}>
+        <Box sx={{ display: "flex", gap: "12px" }}>
+          <Typography>Monthly</Typography>
+          <ToggleBtn onChange={() => setIsMonthly(!isMonthly)} />
           <Typography>Yearly</Typography>
-          <Box
+        </Box>
+        <Box
+          sx={{
+            padding: "2px 12px",
+            borderRadius: "12px",
+            background: "#E7F6EC",
+            border: "1px solid #91D6A8",
+            visibility: isMonthly ? "hidden" : "visible",
+          }}
+        >
+          <Typography
             sx={{
-              padding: "2px 12px",
-              borderRadius: "12px",
-              background: "#E7F6EC",
-              border: "1px solid #91D6A8",
-              visibility: isMonthly ? "hidden" : "visible",
+              color: "#0F973D",
+              fontSize: "14px",
+              fontWeight: "500",
+              lineHeight: "145%",
             }}
           >
-            <Typography
-              sx={{
-                color: "#0F973D",
-                fontSize: "14px",
-                fontWeight: "500",
-                lineHeight: "145%",
-              }}
-            >
-              Save up to $275
-            </Typography>
-          </Box>
+            Save up to $275
+          </Typography>
         </Box>
       </Box>
       <Box
