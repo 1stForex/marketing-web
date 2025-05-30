@@ -11,7 +11,7 @@ export const allTradingBot = [
   // },
   {
     icon: Management,
-    title: "Efforless Management",
+    title: "Effortless Management",
     description:
       "Enjoy reliable signals and automated execution without manual intervention.",
   },
