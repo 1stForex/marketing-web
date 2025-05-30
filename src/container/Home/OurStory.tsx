@@ -11,7 +11,7 @@ const OurStory = () => {
     "Through our 1st Forex Academy, we have trained over 1,000 happy students and traders via online courses and in-person seminars, constantly refining our curriculum to remain one of the best in the world. Our track record speaks for itself, with countless success stories from those who have trusted us to guide their trading journey.",
     "Our team is the perfect blend of experienced forex veterans, young and successful traders, and cutting-edge AI specialists. Together, we are committed to staying ahead of industry trends, incorporating state-of-the-art AI technology into our signals and tools.",
     "From automated bots to advanced signals available on our mobile app and user-friendly website, we direct our clients toward smarter and more profitable trading decisions.",
-    "At 1st Forex, we don’t just see clients—we see family. We are passionate about what we do, and we are dedicated to building a thriving, connected community where traders of all levels can learn, grow, and succeed",
+    "At 1st Forex, we don’t just see clients—we see family. We are passionate about what we do, and we are dedicated to building a thriving, connected community where traders of all levels can learn, grow, and succeed.",
   ];
 
   return (

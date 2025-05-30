@@ -27,7 +27,7 @@ export const whyUsCardsData = [
     title: "Global Community",
     image: Diversity,
     description:
-      "Join a network of like-minded traders who share insights, experiences, and success stories..",
+      "Join a network of like-minded traders who share insights, experiences, and success stories.",
   },
   {
     title: "Dubai-Based Seminars",

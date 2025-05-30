@@ -9,7 +9,7 @@ export default function HeroSection() {
       badgeTitle="1st Forex AI Signal"
       bgImagePath="HomeHeroBg.jpg"
       title="Where Cutting-Edge AI Meets 20 Years of Proven Results"
-      description="Experience fully automated, AI-powered forex signals backed by two decaded of proven success."
+      description="Experience fully automated, AI-powered forex signals backed by two decades of proven success."
     >
       <Box
         sx={{
