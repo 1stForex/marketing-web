@@ -1,4 +1,6 @@
+import { RoutesUrls } from "../const/Enum";
+
 export interface NavProps {
-  currentPath: string;
+  currentPath: RoutesUrls;
   nav?: boolean;
 }
