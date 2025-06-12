@@ -7,9 +7,10 @@ import NavLinks from "./NavLinks";
 import GroupButton from "./GroupButton";
 import OptionMenu from "./OptionMenu";
 import { usePathname } from "next/navigation";
+import { RoutesUrls } from "@/src/const/Enum";
 
 export default function Header() {
-  const currentPath = usePathname();
+  const currentPath = usePathname() as RoutesUrls;
 
   return (
     <Box
