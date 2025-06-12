@@ -18,7 +18,7 @@ export default function LegacySection() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 0,
     vertical: !isSmallScreen,
     verticalSwiping: !isSmallScreen,
     cssEase: "linear",
@@ -117,7 +117,7 @@ export default function LegacySection() {
           }}
         >
           This unique blend of experience and innovation allows us to stay ahead
-          of market trends and deliver unmatched value to our community
+          of market trends and deliver unmatched value to our community.
         </BaseTypography>
       </Box>
       <Box

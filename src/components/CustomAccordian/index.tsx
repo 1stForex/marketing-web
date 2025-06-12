@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Divider } from "@mui/material";
+import { Divider, List, ListItem, ListItemText } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -11,12 +11,20 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 interface CustomAccordianProps {
   title: string;
   summary: string;
+  subSummary?: string;
+  summaryPoints?: string[];
+  summaryPointsOrdered?: boolean;
+  extra?: { description: string; points: string[] };
   isExpanded?: boolean;
 }
 
 const CustomAccordian = ({
   title,
   summary,
+  subSummary,
+  summaryPoints,
+  summaryPointsOrdered = false,
+  extra,
   isExpanded,
 }: CustomAccordianProps) => {
   const [expanded, setExpanded] = React.useState(isExpanded ? true : false);
@@ -120,6 +128,98 @@ const CustomAccordian = ({
           >
             {summary}
           </Typography>
+          {summaryPoints && (
+            <List
+              sx={{
+                padding: 0,
+                margin: 0,
+                listStyleType: summaryPointsOrdered ? "decimal" : "disc",
+                pl: 2,
+              }}
+            >
+              {summaryPoints.map((point, index) => (
+                <ListItem
+                  key={index}
+                  sx={{ display: "list-item", padding: "0" }}
+                >
+                  <ListItemText
+                    primary={point}
+                    slotProps={{
+                      primary: {
+                        sx: {
+                          fontSize: "16px",
+                          fontWeight: 400,
+                          color: "#000",
+                        },
+                      },
+                    }}
+                  />
+                </ListItem>
+              ))}
+            </List>
+          )}
+          {extra && (
+            <>
+              <Typography
+                sx={{
+                  fontSize: "18px",
+                  fontWeight: "400",
+                  color: "#000",
+                  lineHeight: "145%",
+
+                  "@media (max-width: 576px)": {
+                    fontSize: "12px",
+                  },
+                }}
+              >
+                {extra.description}
+              </Typography>
+              <List
+                sx={{
+                  padding: 0,
+                  margin: 0,
+                  listStyleType: "disc",
+                  pl: 2,
+                }}
+              >
+                {extra.points.map((point, index) => (
+                  <ListItem
+                    key={index}
+                    sx={{ display: "list-item", padding: "0" }}
+                  >
+                    <ListItemText
+                      primary={point}
+                      slotProps={{
+                        primary: {
+                          sx: {
+                            fontSize: "16px",
+                            fontWeight: 400,
+                            color: "#000",
+                          },
+                        },
+                      }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </>
+          )}
+          {subSummary && (
+            <Typography
+              sx={{
+                fontSize: "18px",
+                fontWeight: "400",
+                color: "#000",
+                lineHeight: "145%",
+
+                "@media (max-width: 576px)": {
+                  fontSize: "12px",
+                },
+              }}
+            >
+              {subSummary}
+            </Typography>
+          )}
         </AccordionDetails>
       </Accordion>
     </div>

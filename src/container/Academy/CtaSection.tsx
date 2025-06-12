@@ -12,10 +12,10 @@ const CtaSection = () => {
       }}
     >
       <Link href="/ai-signal" passHref>
-        <CustomButton variant="red">AI Signal</CustomButton>
+        <CustomButton variant="transparent">AI Signal</CustomButton>
       </Link>
       <Link href="/academy" passHref>
-        <CustomButton variant="transparent">Academy</CustomButton>
+        <CustomButton variant="red">Academy</CustomButton>
       </Link>
     </Box>
   );

@@ -105,7 +105,7 @@ const Carousel: React.FC<CarouselProp> = ({
               position: "relative",
             }}
           >
-            <Slider ref={sliderRef} {...settings}>
+            <Slider ref={sliderRef} {...settings} className="custom-carousel">
               {cards.map((card, index) => (
                 <Card
                   key={index}

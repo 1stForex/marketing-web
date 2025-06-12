@@ -5,6 +5,8 @@ import CustomButton from "@/src/components/Button";
 import FreeCourse from "@/src/assets/images/basic.png";
 import AdvanceCourse from "@/src/assets/images/advance.png";
 import HeadTypography from "@/src/styled/HeadTypography";
+import Link from "next/link";
+import { RedirectUrls } from "@/src/const/Enum";
 
 const Courses = () => {
   return (
@@ -57,7 +59,7 @@ const Courses = () => {
         <CourseCard
           title="Free Basic Forex Course"
           price={0.0}
-          description="Perfect for beginners looking to get started with forex trading"
+          description="Perfect for beginners looking to get started with forex trading."
           rating={5}
           reviews={91}
           image={FreeCourse}
@@ -112,7 +114,12 @@ const Courses = () => {
           absolutely free!
         </Typography>
 
-        <Box flexShrink={0}>
+        <Box
+          flexShrink={0}
+          component={Link}
+          href={RedirectUrls.REGISTER_URL}
+          passHref
+        >
           <CustomButton variant="black">Sign Up</CustomButton>
         </Box>
       </Box>

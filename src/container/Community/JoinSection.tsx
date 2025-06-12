@@ -5,8 +5,11 @@ import Image from "next/image";
 import CustomButton from "@/src/components/Button";
 import HeadTypography from "@/src/styled/HeadTypography";
 import BaseTypography from "@/src/styled/BaseTypography";
+import { useRouter } from "next/navigation";
+import { RedirectUrls } from "@/src/const/Enum";
 
 const CommunityBanner = () => {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -78,7 +81,9 @@ const CommunityBanner = () => {
           and take your trading to the next level.
         </BaseTypography>
 
-        <CustomButton>Join Us Now</CustomButton>
+        <CustomButton onClick={() => router.push(RedirectUrls.REGISTER_URL)}>
+          Join Us Now
+        </CustomButton>
       </Box>
     </Box>
   );

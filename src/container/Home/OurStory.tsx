@@ -7,7 +7,7 @@ import HeadTypography from "@/src/styled/HeadTypography";
 
 const OurStory = () => {
   const paragraphs = [
-    "Founded in 2004, 1st Forex has been a trusted name in the forex trading industry for over two decades. Based in the United Arab Emirates, we specialize in providing top-notch forex education and reliable trading signals, empowering traders worldwide to achieve their financial goals",
+    "Founded in 2004, 1st Forex has been a trusted name in the forex trading industry for over two decades. Based in the United Arab Emirates, we specialize in providing top-notch forex education and reliable trading signals, empowering traders worldwide to achieve their financial goals.",
     "Through our 1st Forex Academy, we have trained over 1,000 happy students and traders via online courses and in-person seminars, constantly refining our curriculum to remain one of the best in the world. Our track record speaks for itself, with countless success stories from those who have trusted us to guide their trading journey.",
     "Our team is the perfect blend of experienced forex veterans, young and successful traders, and cutting-edge AI specialists. Together, we are committed to staying ahead of industry trends, incorporating state-of-the-art AI technology into our signals and tools.",
     "From automated bots to advanced signals available on our mobile app and user-friendly website, we direct our clients toward smarter and more profitable trading decisions.",
@@ -184,13 +184,16 @@ const OurStory = () => {
         <Box
           sx={{
             position: "relative",
-            width: "35%",
+            minWidth: "410px",
+            borderRadius: "32px",
+            boxShadow: "0px 1.5px 4px -1px rgba(16, 25, 40, 0.07)",
             aspectRatio: "1",
             "@media (max-width: 992px)": {
-              width: "50%",
+              minWidth: "60%",
             },
             "@media (max-width: 576px)": {
               width: "100%",
+              minWidth: "auto",
             },
           }}
         >

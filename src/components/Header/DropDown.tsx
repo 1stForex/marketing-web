@@ -8,9 +8,12 @@ import Image from "next/image";
 import { menuItems } from "@/src/const/allMenuItem";
 import { DropDownProps } from "@/src/types/DropDown.interface";
 import ChevronDown from "@/src/assets/icons/chevron-down.svg";
+import { RoutesUrls } from "@/src/const/Enum";
 
 export default function DropDown({ currentPath }: DropDownProps) {
-  const isHighlighted = ["/about-us", "/contact-us"].includes(currentPath);
+  const isHighlighted = [RoutesUrls.ABOUT_US, RoutesUrls.CONTACT_US].includes(
+    currentPath
+  );
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const dropdownRef = React.useRef<HTMLDivElement>(null);
   const open = Boolean(anchorEl);

@@ -66,6 +66,10 @@ const AllFAQs = () => {
               <CustomAccordian
                 title={question.question}
                 summary={question.answer}
+                subSummary={question.subDescription}
+                summaryPoints={question.points}
+                summaryPointsOrdered={question.ordered}
+                extra={question.extra}
                 key={index}
               />
             ))

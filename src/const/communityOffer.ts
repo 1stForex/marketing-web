@@ -42,7 +42,7 @@ export const communityOffer = [
     title: "Weekly Performance Discussions",
     points: [
       "Reflect on the week’s performance with fellow traders.",
-      "Share insights, discuss strategies, and celebrate wins together",
+      "Share insights, discuss strategies, and celebrate wins together.",
     ],
   },
 ];

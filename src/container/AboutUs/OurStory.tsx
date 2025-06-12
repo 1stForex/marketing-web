@@ -249,13 +249,16 @@ const OurStory = () => {
         <Box
           sx={{
             position: "relative",
-            width: "35%",
+            minWidth: "410px",
+            borderRadius: "32px",
+            boxShadow: "0px 1.5px 4px -1px rgba(16, 25, 40, 0.07)",
             aspectRatio: "1",
             "@media (max-width: 992px)": {
-              width: "50%",
+              minWidth: "60%",
             },
             "@media (max-width: 576px)": {
               width: "100%",
+              minWidth: "auto",
             },
           }}
         >

@@ -50,9 +50,3 @@ a {
 .slick-dots li.slick-active button:before {
   color: #f30 !important;
 }
-
-/* @media (max-width: 460px) {
-  .slick-list {
-    padding: 0px 60px !important;
-  }
-} */

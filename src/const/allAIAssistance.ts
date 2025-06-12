@@ -26,6 +26,6 @@ export const allAIAssistance = [
     icon: Support,
     title: "Ongoing Support",
     description:
-      "Get help from our 24/7 support team or ask the AI assistant about position sizes, lot allocation, and strategy adjustments ensuring with you through every step of your trading journey",
+      "Get help from our 24/7 support team or ask the AI assistant about position sizes, lot allocation, and strategy adjustments ensuring with you through every step of your trading journey.",
   },
 ];

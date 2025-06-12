@@ -215,7 +215,7 @@ export default function Offer({
       <Box
         sx={{
           position: "relative",
-          maxWidth: "418px",
+          maxWidth: "460px",
           width: "100%",
           aspectRatio: "418 / 505",
 
