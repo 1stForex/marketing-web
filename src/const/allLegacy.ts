@@ -8,7 +8,7 @@ export const allLegacy = [
     icon: Police,
     title: "Forex Veterans",
     description:
-      "Decades of trading expertise provide the foundation for our education and strategies",
+      "Decades of trading expertise provide the foundation for our education and strategies.",
   },
   {
     icon: Family,
@@ -26,6 +26,6 @@ export const allLegacy = [
     icon: Scrum,
     title: "Top-Tier Support Team",
     description:
-      "Our experienced and dedicated professionals work tirelessly to ensure a seamless experience for every trader in our community",
+      "Our experienced and dedicated professionals work tirelessly to ensure a seamless experience for every trader in our community.",
   },
 ];

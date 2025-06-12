@@ -1,14 +1,16 @@
+import { RoutesUrls } from "./Enum";
+
 export const linksList = [
   {
     label: "Product",
     links: [
       {
         label: "1st Forex AI Signal",
-        href: "/ai-signal",
+        href: RoutesUrls.AI_SIGNAL,
       },
       {
         label: "1st Forex Academy",
-        href: "/academy",
+        href: RoutesUrls.ACADEMY,
       },
     ],
   },
@@ -17,19 +19,19 @@ export const linksList = [
     links: [
       {
         label: "Community",
-        href: "/community",
+        href: RoutesUrls.COMMUNITY,
       },
       {
         label: "Pricing",
-        href: "/pricing",
+        href: RoutesUrls.PRICING,
       },
       {
         label: "About",
-        href: "/about-us",
+        href: RoutesUrls.ABOUT_US,
       },
       {
         label: "Contact",
-        href: "/contact-us",
+        href: RoutesUrls.CONTACT_US,
       },
     ],
   },
@@ -38,15 +40,15 @@ export const linksList = [
     links: [
       {
         label: "Terms & Conditions",
-        href: "/terms-and-conditions",
+        href: RoutesUrls.TERMS_AND_CONDITIONS,
       },
       {
         label: "Privacy Policy",
-        href: "/privacy-policy",
+        href: RoutesUrls.PRIVACY_POLICY,
       },
       {
         label: "FAQ's",
-        href: "/faq",
+        href: RoutesUrls.FAQ,
       },
       // {
       //   label: "Blog",

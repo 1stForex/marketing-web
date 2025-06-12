@@ -126,9 +126,6 @@ const PricingSection = () => {
           }
           billing={isMonthly ? undefined : pricing.yearly.twoPair.billing}
           freeSave={isMonthly ? undefined : pricing.yearly.twoPair.freeSave}
-          btnLabel={
-            isMonthly ? pricing.monthly.btnText : pricing.yearly.btnText
-          }
           features={twoPairFeatures}
         />
         <DetailPricingCard
@@ -141,9 +138,6 @@ const PricingSection = () => {
           }
           billing={isMonthly ? undefined : pricing.yearly.fourPair.billing}
           freeSave={isMonthly ? undefined : pricing.yearly.fourPair.freeSave}
-          btnLabel={
-            isMonthly ? pricing.monthly.btnText : pricing.yearly.btnText
-          }
           features={fourPairFeatures}
           isPopular
         />
@@ -158,9 +152,6 @@ const PricingSection = () => {
           billing={isMonthly ? undefined : pricing.yearly.unlimitedPair.billing}
           freeSave={
             isMonthly ? undefined : pricing.yearly.unlimitedPair.freeSave
-          }
-          btnLabel={
-            isMonthly ? pricing.monthly.btnText : pricing.yearly.btnText
           }
           features={unlimitedPairFeatures}
         />

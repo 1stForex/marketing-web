@@ -4,7 +4,7 @@ export interface PricingCardProps {
   variant?: "white" | "black";
   badgeProps: BadgeProps;
   price: string;
-  btnLabel: string;
+  btnLabel?: string;
   btnOnClick?: () => void;
   features: string[];
 }

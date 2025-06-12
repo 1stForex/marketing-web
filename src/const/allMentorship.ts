@@ -7,13 +7,13 @@ export const allMentorship = [
     icon: Guide,
     title: "Expert Guidance",
     description:
-      "Opt for direct mentorship from an experienced trader who will help you interpret signals, refine strategies, and improve results. ",
+      "Opt for direct mentorship from an experienced trader who will help you interpret signals, refine strategies, and improve results.",
   },
   {
     icon: Finance,
     title: "All-Inclusive Support",
     description:
-      "This premium service combines the AI-assisted app and the automated bot with human insight, giving you a comprehensive solution ",
+      "This premium service combines the AI-assisted app and the automated bot with human insight, giving you a comprehensive solution.",
   },
   {
     icon: Strategy,

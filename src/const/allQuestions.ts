@@ -29,12 +29,12 @@ export const allQuestions = [
     answer:
       "Initially dominated by central banks, commercial banks, and investment banks, the Forex market now includes a wide range of participants such as:",
     points: [
-      "Large multinational corporations",
-      "Global money managers",
-      "Registered dealers",
-      "International money brokers",
-      "Futures and options traders",
-      "Private speculators",
+      "Large multinational corporations.",
+      "Global money managers.",
+      "Registered dealers.",
+      "International money brokers.",
+      "Futures and options traders.",
+      "Private speculators.",
     ],
   },
   {
@@ -52,15 +52,15 @@ export const allQuestions = [
     answer:
       "At 1st Forex, we recommend using our proprietary and copyrighted Breakout System, which has been designed to identify profitable opportunities in trending markets. This system combines:",
     points: [
-      "Advanced technical indicators",
-      "Key breakout patterns",
-      "Proven risk management techniques",
+      "Advanced technical indicators.",
+      "Key breakout patterns.",
+      "Proven risk management techniques.",
     ],
     extra: {
       description: "Additionally, traders may complement this system with:",
       points: [
         "Technical Analysis: Studying charts, trend lines, support/resistance levels, and mathematical indicators.",
-        "Fundamental Analysis: Interpreting economic indicators, news, and events",
+        "Fundamental Analysis: Interpreting economic indicators, news, and events.",
       ],
     },
     subDescription:
@@ -71,10 +71,10 @@ export const allQuestions = [
     answer:
       "The Forex market operates 24 hours a day, five days a week. Major trading sessions include:",
     points: [
-      "Sydney: 10 PM – 7 AM GMT",
-      "Tokyo: 12 AM – 9 AM GMT",
-      "London: 8 AM – 5 PM GMT",
-      "New York: 1 PM – 10 PM GMT",
+      "Sydney: 10 PM – 7 AM GMT.",
+      "Tokyo: 12 AM – 9 AM GMT.",
+      "London: 8 AM – 5 PM GMT.",
+      "New York: 1 PM – 10 PM GMT.",
     ],
   },
   {
@@ -124,7 +124,7 @@ export const allQuestions = [
   {
     question: "What is Margin in Forex Trading?",
     answer:
-      "Margin is the amount of money required to open a leveraged position. For example, a 1% margin requirement means you need $1,000 to control a $100,000 position. Be cautious, as insufficient margin can lead to a margin call, where positions are liquidated to cover losses.",
+      "Margin is the amount of money required to open a leveraged position. For example, a 1% margin requirement means you need $1,000 to control a $100,000 position. Be cautious, an insufficient margin can lead to a margin call, where positions are liquidated to cover losses.",
   },
   {
     question: "What is Slippage, and How Does It Affect Trades?",

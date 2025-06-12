@@ -127,4 +127,4 @@ const StatsCard: React.FC<StatsCardProps> = ({
   );
 };
 
-export default StatsCard;
+export default React.memo(StatsCard);

@@ -11,9 +11,9 @@ export default function AboutSection() {
 
   const firstParagraphFirstHalfHTML = `Founded in Montreal over
             <span style="color:#F30; font-weight:700;">
-              20 years ago
+              20 years ago,
             </span>
-            , 1st Forex has grown to become a global leader in forex education
+             1st Forex has grown to become a global leader in forex education
             and trading signals.`;
 
   const firstParagraphSecondHalfHTML = `From humble beginnings conducting in-person
@@ -26,9 +26,9 @@ export default function AboutSection() {
 
   const thirdParagraphFirstHalfHTML = `At the heart of 1st Forex is our
             <span style="color:#F30, font-weight: 700;">
-              CEO, Luc Verville
+              CEO, Luc Verville,
             </span>
-            , a seasoned trader with over
+            a seasoned trader with over
             <span style="color:#F30, font-weight: 700;">
               22 years of experience
             </span>
@@ -62,7 +62,9 @@ export default function AboutSection() {
             background: "#F30",
             borderRadius: "12px",
             padding: "4px 12px",
-            mx: "auto",
+            "@media (max-width: 992px)": {
+              mx: "auto",
+            },
           }}
         >
           <Image src={Logo} alt="logo" />
@@ -105,7 +107,7 @@ export default function AboutSection() {
             Today, headquartered in the vibrant city of{" "}
             <span style={{ color: "#F30", fontWeight: "700" }}>Dubai</span>,
             United Arab Emirates, we continue to empower traders to achieve
-            financial independence and master the forex markets
+            financial independence and master the forex markets.
           </AboutUsTypography>
           <AboutUsTypography
             dangerouslySetInnerHTML={{ __html: thirdParagraph }}

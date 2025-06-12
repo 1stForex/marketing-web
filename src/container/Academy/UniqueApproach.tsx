@@ -30,7 +30,7 @@ const UniqueApproach = () => {
         },
 
         "@media (max-width: 576px)": {
-          padding: "0px",
+          padding: "16px",
         },
       }}
     >

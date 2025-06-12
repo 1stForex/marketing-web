@@ -6,9 +6,10 @@ import StatsCard from "./StatsCard";
 import Marquee from "react-fast-marquee";
 import CustomButton from "@/src/components/Button";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import HeadTypography from "@/src/styled/HeadTypography";
 import BaseTypography from "@/src/styled/BaseTypography";
+import CustomVideo from "@/src/components/CustomVideo";
 
 const HeroSection = () => {
   const isMobile = useMediaQuery("(max-width: 576px)");
@@ -17,6 +18,9 @@ const HeroSection = () => {
   const [liveStats, setLiveStats] = useState<
     { symbol: string; price: number; change_percent: number }[]
   >([]);
+
+  const handleAiSignalClick = () => router.push("/ai-signal");
+  const handleAcademyClick = () => router.push("/academy");
 
   useEffect(() => {
     let isMounted = true;
@@ -66,6 +70,22 @@ const HeroSection = () => {
     };
   }, []);
 
+  const renderedStats = useMemo(
+    () => (
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        {liveStats.map((data) => (
+          <StatsCard
+            key={data.symbol}
+            symbol={data.symbol}
+            change_percent={data.change_percent}
+            price={data.price}
+          />
+        ))}
+      </Box>
+    ),
+    [liveStats]
+  );
+
   return (
     <Box
       sx={{
@@ -87,25 +107,7 @@ const HeroSection = () => {
         overflow: "hidden",
       }}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          zIndex: -1,
-        }}
-      >
-        <source src="/HeroBgVideo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
+      <CustomVideo />
       <Box
         sx={{
           display: "flex",
@@ -132,7 +134,7 @@ const HeroSection = () => {
             padding: "4px 12px",
           }}
         >
-          <Image src={Logo} alt="logo" />
+          <Image src={Logo} alt="logo" priority />
         </Box>
 
         <HeadTypography color="#FFF" textAlign={"center"} maxWidth={"464px"}>
@@ -167,32 +169,21 @@ const HeroSection = () => {
           <CustomButton
             variant="red"
             padding={isMobile ? "16px 24px" : "16px 48px"}
-            onClick={() => router.push("/ai-signal")}
+            onClick={handleAiSignalClick}
           >
             AI Signal
           </CustomButton>
           <CustomButton
             variant="transparent"
             padding={isMobile ? "16px 24px" : "16px 48px"}
-            onClick={() => router.push("/academy")}
+            onClick={handleAcademyClick}
           >
             Academy
           </CustomButton>
         </Box>
       </Box>
 
-      <Marquee>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          {liveStats.map((data, index) => (
-            <StatsCard
-              key={index}
-              symbol={data.symbol}
-              change_percent={data.change_percent}
-              price={data.price}
-            />
-          ))}
-        </Box>
-      </Marquee>
+      <Marquee>{renderedStats}</Marquee>
     </Box>
   );
 };

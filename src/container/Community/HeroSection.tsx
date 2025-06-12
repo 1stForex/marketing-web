@@ -1,4 +1,5 @@
 import Badge from "@/src/components/Badge";
+import CustomVideo from "@/src/components/CustomVideo";
 import BaseTypography from "@/src/styled/BaseTypography";
 import HeadTypography from "@/src/styled/HeadTypography";
 import { Box } from "@mui/material";
@@ -28,25 +29,7 @@ export default function HeroSection() {
         justifyContent: "center",
       }}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          zIndex: -1,
-        }}
-      >
-        <source src="/HeroBgVideo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
+      <CustomVideo />
       <Box
         sx={{
           display: "flex",

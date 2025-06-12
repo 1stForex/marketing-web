@@ -8,7 +8,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import menuSvg from "../../assets/icons/menu.svg";
 import Image from "next/image";
-import searchSvg from "../../assets/icons/search-white.svg";
 import crossSvg from "../../assets/icons/cross.svg";
 import GroupButton from "./GroupButton";
 import NavLinks from "./NavLinks";
@@ -21,6 +20,7 @@ import appleStore from "../../assets/images/apple-store.png";
 import googlePlay from "../../assets/images/google-play.png";
 import SocialMediaLinks from "./SocialMediaLinks";
 import { NavProps } from "@/src/types/Nav.interface";
+import { RedirectUrls } from "@/src/const/Enum";
 
 export default function TemporaryDrawer({ currentPath }: NavProps) {
   const [open, setOpen] = React.useState(false);
@@ -71,25 +71,6 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
               }}
             >
               <ListItemButton
-                sx={{
-                  padding: "0",
-                }}
-              >
-                <Image
-                  src={searchSvg}
-                  alt="Search Icon"
-                  width={20}
-                  height={20}
-                />
-              </ListItemButton>
-            </ListItem>
-            <ListItem
-              sx={{
-                width: "auto",
-                padding: "0",
-              }}
-            >
-              <ListItemButton
                 onClick={toggleDrawer(false)}
                 sx={{
                   padding: "0",
@@ -129,7 +110,10 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
                 padding: "0",
               }}
             >
-              <ListItemButton>
+              <ListItemButton
+                LinkComponent={Link}
+                href={RedirectUrls.REGISTER_URL}
+              >
                 <CustomButton
                   variant="red"
                   width="100%"
@@ -153,7 +137,10 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
                 padding: "0",
               }}
             >
-              <ListItemButton>
+              <ListItemButton
+                LinkComponent={Link}
+                href={RedirectUrls.LOGIN_URL}
+              >
                 <CustomButton
                   variant="transparent"
                   width="100%"

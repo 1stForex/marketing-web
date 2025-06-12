@@ -196,9 +196,11 @@ const DetailPricingCard = ({
         ))}
       </Box>
 
-      <CustomButton width="100%" borderRadius="8px" onClick={btnOnClick}>
-        {btnLabel}
-      </CustomButton>
+      {btnLabel && (
+        <CustomButton width="100%" borderRadius="8px" onClick={btnOnClick}>
+          {btnLabel}
+        </CustomButton>
+      )}
     </Box>
   );
 };
