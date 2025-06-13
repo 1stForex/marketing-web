@@ -18,7 +18,7 @@ export default function LegacySection() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0,
+    autoplaySpeed: 5000,
     vertical: !isSmallScreen,
     verticalSwiping: !isSmallScreen,
     cssEase: "linear",
@@ -37,6 +37,7 @@ export default function LegacySection() {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          speed: 2000,
         },
       },
     ],
