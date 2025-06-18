@@ -58,11 +58,6 @@ export default function HeroSection() {
           out or a seasoned professional, our community is designed to help you
           achieve success in your trading journey.
         </BaseTypography>
-        <BaseTypography color="#FFF" fontWeight={400} maxWidth={"842px"}>
-          Whether you’re just starting out or a seasoned professional, our
-          community is designed to help you achieve success in your trading
-          journey.
-        </BaseTypography>
       </Box>
     </Box>
   );
