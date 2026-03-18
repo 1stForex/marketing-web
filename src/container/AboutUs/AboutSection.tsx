@@ -26,7 +26,7 @@ export default function AboutSection() {
 
   const thirdParagraphFirstHalfHTML = `At the heart of 1st Forex is our
             <span style="color:#F30, font-weight: 700;">
-              CEO, Luc Verville,
+              CEO, Marie Josée Bergeron,
             </span>
             a seasoned trader with over
             <span style="color:#F30, font-weight: 700;">
@@ -35,7 +35,7 @@ export default function AboutSection() {
             in the forex industry.`;
 
   const thirdParagraphSecondHalfHTML = `Driven by a dream to build the world’s best
-            forex company and foster a real community of apex traders, Luc’s
+            forex company and foster a real community of apex traders, Marie Josée’s
             vision has shaped every aspect of 1st Forex.`;
 
   const firstParagraph = isMobile
