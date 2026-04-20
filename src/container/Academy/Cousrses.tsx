@@ -110,8 +110,7 @@ const Courses = () => {
             },
           }}
         >
-          🎁 Refer 3 friends to the free course, and receive the complete course
-          absolutely free!
+          🎁 Refer 3 friends and receive 1 month free signals
         </Typography>
 
         <Box

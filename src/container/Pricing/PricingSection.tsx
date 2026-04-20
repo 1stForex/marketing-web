@@ -4,42 +4,40 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import DetailPricingCard from "./DetailPricingCard";
 import {
-  fourPairFeatures,
-  twoPairFeatures,
   unlimitedPairFeatures,
 } from "@/src/const/pricingPlanFeatures";
 import ToggleBtn from "@/src/components/ToggleBtn";
 
 const pricing = {
   monthly: {
-    twoPair: "22.99",
-    fourPair: "59.99",
-    unlimitedPair: "89.99",
+    // twoPair: "22.99",
+    // fourPair: "59.99",
+    unlimitedPair: "49.99",
     btnText: "Subscribe Monthly",
   },
   yearly: {
-    twoPair: {
-      pricing: "20.83",
-      billing: "249.99",
-      freeSave: {
-        month: "1",
-        save: "26",
-      },
-    },
-    fourPair: {
-      pricing: "50.00",
-      billing: "599.99",
+    // twoPair: {
+    //   pricing: "20.83",
+    //   billing: "249.99",
+    //   freeSave: {
+    //     month: "1",
+    //     save: "26",
+    //   },
+    // },
+    // fourPair: {
+    //   pricing: "50.00",
+    //   billing: "599.99",
+    //   freeSave: {
+    //     month: "2",
+    //     save: "120",
+    //   },
+    // },
+    unlimitedPair: {
+      pricing: "41.66",
+      billing: "499.90",
       freeSave: {
         month: "2",
-        save: "120",
-      },
-    },
-    unlimitedPair: {
-      pricing: "65.83",
-      billing: "789.99",
-      freeSave: {
-        month: "3",
-        save: "290",
+        save: "100",
       },
     },
     btnText: "Subscribe Yearly",
@@ -89,7 +87,7 @@ const PricingSection = () => {
               lineHeight: "145%",
             }}
           >
-            Save up to $275
+            Save up to $100
           </Typography>
         </Box>
       </Box>
@@ -118,7 +116,7 @@ const PricingSection = () => {
           },
         }}
       >
-        <DetailPricingCard
+        {/* <DetailPricingCard
           badgeProps={{ title: "2 Pairs", variant: "grey" }}
           subText="Get the Signals triggered by our system for your selected 2 pairs."
           price={
@@ -140,7 +138,7 @@ const PricingSection = () => {
           freeSave={isMonthly ? undefined : pricing.yearly.fourPair.freeSave}
           features={fourPairFeatures}
           isPopular
-        />
+        /> */}
         <DetailPricingCard
           badgeProps={{ title: "Unlimited", variant: "black" }}
           subText="Get ALL the Royals registered by our system for ALL pairs."
