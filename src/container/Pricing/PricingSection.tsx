@@ -4,8 +4,6 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import DetailPricingCard from "./DetailPricingCard";
 import {
-  fourPairFeatures,
-  twoPairFeatures,
   unlimitedPairFeatures,
 } from "@/src/const/pricingPlanFeatures";
 import ToggleBtn from "@/src/components/ToggleBtn";
@@ -35,11 +33,11 @@ const pricing = {
     //   },
     // },
     unlimitedPair: {
-      pricing: "65.83",
-      billing: "789.99",
+      pricing: "41.66",
+      billing: "499.90",
       freeSave: {
-        month: "3",
-        save: "290",
+        month: "2",
+        save: "100",
       },
     },
     btnText: "Subscribe Yearly",
@@ -89,7 +87,7 @@ const PricingSection = () => {
               lineHeight: "145%",
             }}
           >
-            Save up to $275
+            Save up to $100
           </Typography>
         </Box>
       </Box>
