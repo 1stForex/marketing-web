@@ -11,48 +11,68 @@ const CourseCard: React.FC<CourseCardProps> = ({
   rating,
   reviews,
   image,
+  oldPrice,
 }) => {
   return (
     <Box
       sx={{
         display: "flex",
-        flexDirection: "column",
-        gap: "16px",
-        width: "387px",
+        flexDirection: "row",
+        gap: "32px",
+        width: "100%",
+        padding: "24px",
+        borderRadius: "32px",
+        background: "var(--Grey-50, #F9FAFB)",
+        boxShadow:
+          "0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05)",
+        alignItems: "center",
+        mb: "64px",
 
-        "@media (max-width: 430px)": {
-          width: "auto",
+        "@media (max-width: 786px)": {
+          flexDirection: "column",
+          gap: "16px",
+          padding: "16px",
+          mb: "40px",
         },
       }}
     >
       <Box
         sx={{
-          width: "100%",
-          height: "352px",
-          borderRadius: "32px",
-          background: "var(--Grey-50, #F9FAFB)",
+          flexShrink: 0,
+          width: "400px",
+          height: "300px",
+          borderRadius: "24px",
+          overflow: "hidden",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-          overflow: "hidden",
+
+          "@media (max-width: 1200px)": {
+            width: "300px",
+            height: "225px",
+          },
+
+          "@media (max-width: 786px)": {
+            width: "100%",
+            height: "auto",
+            aspectRatio: "16 / 9",
+          },
         }}
       >
         <Image
           src={image}
-          alt="logo"
-          style={{ width: "100%", height: "100%" }}
+          alt={title}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </Box>
 
-      <Box>
+      <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
         <Box
           sx={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
-            mb: "2px",
+            gap: "12px",
+            mb: "4px",
           }}
         >
           <Typography
@@ -61,44 +81,73 @@ const CourseCard: React.FC<CourseCardProps> = ({
               fontSize: "24px",
               fontWeight: 700,
               lineHeight: "145%",
-
+              whiteSpace: "nowrap",
               "@media (max-width: 768px)": {
                 fontSize: "20px",
               },
-              "@media (max-width: 576px)": {
-                fontSize: "16px",
-                letterSpacing: "-0.32px",
-              },
             }}
           >
-            {title}
+            {price === 0 ? (
+              "Free"
+            ) : (
+              <>
+                <span style={{ fontSize: "18px", fontWeight: 700 }}>$</span>
+                {price.toFixed(2)}
+              </>
+            )}
           </Typography>
-          <Typography
-            sx={{
-              color: "var(--Grey-900, #101928)",
-              fontSize: "18px",
-              fontWeight: 600,
-              lineHeight: "145%",
-              display: "flex",
-              alignItems: "flex-start",
-              "@media (max-width: 576px)": {
-                fontSize: "16px",
-              },
-            }}
-          >
-            <span style={{ fontSize: "11px", fontWeight: 700 }}>$</span>
-            {price.toFixed(2)}
-          </Typography>
+          {oldPrice && (
+            <Typography
+              sx={{
+                color: "#F30",
+                fontSize: "18px",
+                fontWeight: 600,
+                textDecoration: "line-through",
+                lineHeight: "145%",
+                "@media (max-width: 768px)": {
+                  fontSize: "16px",
+                },
+              }}
+            >
+              ${oldPrice.toFixed(2)}
+            </Typography>
+          )}
         </Box>
 
         <Typography
           sx={{
+            color: "var(--Grey-900, #101928)",
+            fontSize: "32px",
+            fontWeight: 700,
+            lineHeight: "120%",
+            mb: "12px",
+
+            "@media (max-width: 1200px)": {
+              fontSize: "28px",
+            },
+            "@media (max-width: 768px)": {
+              fontSize: "24px",
+            },
+            "@media (max-width: 576px)": {
+              fontSize: "20px",
+            },
+          }}
+        >
+          {title}
+        </Typography>
+
+        <Typography
+          sx={{
             color: "var(--Grey-800, #1D2739)",
-            fontSize: "12px",
+            fontSize: "16px",
             fontWeight: 400,
-            lineHeight: "145%",
-            maxWidth: "305px",
-            mb: "4px",
+            lineHeight: "160%",
+            mb: "20px",
+            maxWidth: "600px",
+
+            "@media (max-width: 768px)": {
+              fontSize: "14px",
+            },
           }}
         >
           {description}
@@ -116,12 +165,12 @@ const CourseCard: React.FC<CourseCardProps> = ({
           <Typography
             sx={{
               color: "var(--Grey-800, #1D2739)",
-              fontSize: "14px",
-              fontWeight: 400,
+              fontSize: "16px",
+              fontWeight: 500,
               lineHeight: "20px",
             }}
           >
-            ({reviews})
+            ({reviews} Reviews)
           </Typography>
         </Box>
       </Box>
