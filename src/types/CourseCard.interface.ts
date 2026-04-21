@@ -7,4 +7,5 @@ export interface CourseCardProps {
   rating: number;
   reviews: number;
   image: string | StaticImageData;
+  oldPrice?: number;
 }
