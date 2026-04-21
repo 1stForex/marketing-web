@@ -39,7 +39,7 @@ const Courses = () => {
       <CourseCard
         title="Complete Forex Course"
         price={0}
-        oldPrice={39.99}
+        oldPrice={3000}
         description="Gain access to our full course, including the exclusive Breakout System, quizzes, and interactive modules."
         rating={5}
         reviews={91}
