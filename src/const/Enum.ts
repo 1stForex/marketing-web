@@ -1,6 +1,6 @@
 export enum RedirectUrls {
-  LOGIN_URL = "https://staging.d35j4x2pon0w36.amplifyapp.com/auth/login",
-  REGISTER_URL = "https://staging.d35j4x2pon0w36.amplifyapp.com/auth/register",
+  LOGIN_URL = "https://staging.d1bhofzjxuviaa.amplifyapp.com/auth/login",
+  REGISTER_URL = "https://staging.d1bhofzjxuviaa.amplifyapp.com/auth/register",
 }
 
 export enum RoutesUrls {
