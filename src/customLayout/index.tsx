@@ -11,13 +11,9 @@ export default function CustomLayout({
 }>) {
   return (
     <ThemeProvider theme={theme}>
-      <html lang="en">
-        <body>
-          <Header />
-          {children}
-          <Footer />
-        </body>
-      </html>
+      <Header />
+      {children}
+      <Footer />
     </ThemeProvider>
   );
 }
