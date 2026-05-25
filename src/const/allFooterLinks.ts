@@ -43,6 +43,18 @@ export const linksList = [
         href: RoutesUrls.TERMS_AND_CONDITIONS,
       },
       {
+        label: "Risk Disclaimer & Terms and Conditions",
+        href: RoutesUrls.RISK_DISCLAIMER_TERMS_AND_CONDITIONS,
+      },
+      {
+        label: "Acceptable Use Policy",
+        href: RoutesUrls.ACCEPTABLE_USE_POLICY,
+      },
+      {
+        label: "Refund Policy",
+        href: RoutesUrls.REFUND_POLICY,
+      },
+      {
         label: "Privacy Policy",
         href: RoutesUrls.PRIVACY_POLICY,
       },
