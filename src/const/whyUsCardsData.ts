@@ -30,7 +30,7 @@ export const whyUsCardsData = [
       "Join a network of like-minded traders who share insights, experiences, and success stories.",
   },
   {
-    title: "Dubai-Based Seminars",
+    title: "Costa Rica-Based Seminars",
     image: Building,
     description:
       "Attend in-person seminars every three months to deepen your understanding and connect with fellow traders.",

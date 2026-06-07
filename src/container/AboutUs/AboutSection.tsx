@@ -104,9 +104,9 @@ export default function AboutSection() {
             dangerouslySetInnerHTML={{ __html: firstParagraphSecondHalfHTML }}
           />
           <AboutUsTypography>
-            Today, headquartered in the vibrant city of{" "}
-            <span style={{ color: "#F30", fontWeight: "700" }}>Dubai</span>,
-            United Arab Emirates, we continue to empower traders to achieve
+            Today, headquartered in{" "}
+            <span style={{ color: "#F30", fontWeight: "700" }}>Costa Rica</span>,
+            we continue to empower traders to achieve
             financial independence and master the forex markets.
           </AboutUsTypography>
           <AboutUsTypography

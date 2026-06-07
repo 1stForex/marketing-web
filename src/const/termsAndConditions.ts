@@ -5,7 +5,7 @@ export const TermsAndCondition = [
       <br/>
       <p>These terms and conditions, together with any documents that expressly incorporate by reference (collectively, referred to as <span>“Terms of Use” or “Terms”</span>), govern the access to and use of ________________________ (the <span>“Website”</span>) or ____________ mobile application (the <span>“App”</span>), including any content, functionality, and services provided, such as Forex education, AI-powered trading signals, and community engagement features (collectively, the "Services").</p>
         <br/>
-      <p>By accessing or using the Website, you signify your acceptance of and agreement to comply with these Terms. The Website and its content are owned and operated by_________________, a _______________company bearing license ____________ and having its registered office at ______________, Dubai, UAE (the <span>“Company”</span>).</p>
+      <p>By accessing or using the Website, you signify your acceptance of and agreement to comply with these Terms. The Website and its content are owned and operated by_________________, a _______________company bearing license ____________ and having its registered office at ______________, Costa Rica (the <span>“Company”</span>).</p>
       <br/>
       <p>These Terms constitute a binding agreement between you (the "User") and the Company, including its affiliates (collectively referred to as "we," "us," or "our"). The use of "you," "your," or "User" refers to any individual or entity accessing the Services provided through the Website.</p>
       `,
@@ -54,7 +54,7 @@ export const TermsAndCondition = [
         <li>Sell or otherwise transfer your profile;</li>
         <li> Use any information obtained from US in order to harass, abuse, or harm another person;</li>
         <li>Post or transmit any advertising, promotional materials, or other forms of solicitation, whether personal or commercial, including chain letters, pyramid schemes, and links or URLs to third party websites deemed as commercial;</li>
-        <li>Violate any applicable law or regulation while accessing and using our sites, including, without limitation, the rules and regulations of the UAE regulators and the national or other securities exchanges (especially and including the rule against making false or misleading statements to manipulate the price of any security);</li>
+        <li>Violate any applicable law or regulation while accessing and using our sites, including, without limitation, the rules and regulations of Costa Rican regulators and the national or other securities exchanges (especially and including the rule against making false or misleading statements to manipulate the price of any security);</li>
         <li>Post or transmit any file that contains viruses, corrupted files, "Trojan Horses," or any other contaminating or harmful files that may damage or corrupt someone else's computer;</li>
         <li>Use any automated means, including without limitation, agents, robots, scripts, or spiders, to access, monitor, copy or harvest data from any part of our sites;</li>
         <li>Use any automated means, including without limitation, agents, robots, scripts, or spiders, to post content to any part of our website;</li>
@@ -321,7 +321,7 @@ export const TermsAndCondition = [
       `<br/>`,
       `<h3>Governing Law</h3>`,
       `<br/>`,
-      `<p>The terms and any related legal relationships herein are subject to and shall be governed by the laws of the United Arab Emirates. Any disputes arising from these terms or related agreements will be submitted to the exclusive jurisdiction of the Dubai Courts (Excluding DIFC Courts).</p>`,
+      `<p>The terms and any related legal relationships herein are subject to and shall be governed by the laws of Costa Rica. Any disputes arising from these terms or related agreements will be submitted to the exclusive jurisdiction of the courts of Costa Rica.</p>`,
     ],
   },
   {

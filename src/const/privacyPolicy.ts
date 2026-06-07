@@ -254,7 +254,7 @@ export const PrivacyPolicySection = [
     section: [
       `<h3>INTERNATIONAL TRANSFERS</h3>`,
       `<br/>`,
-      `<p>We are headquartered in UAE and maintain offices and partnerships with service providers in various countries. As a result, your personal data may be transferred to the ________ or other locations outside your state, province, country, or other governmental jurisdiction, where our offices or those of our service providers are located. Please note that privacy laws in these locations may not offer the same level of protection as those in your jurisdiction. When such transfers occur, we will ensure that recipients of your personal data provide data security and protection in compliance with applicable laws.</p>
+      `<p>We are headquartered in Costa Rica and maintain offices and partnerships with service providers in various countries. As a result, your personal data may be transferred to the ________ or other locations outside your state, province, country, or other governmental jurisdiction, where our offices or those of our service providers are located. Please note that privacy laws in these locations may not offer the same level of protection as those in your jurisdiction. When such transfers occur, we will ensure that recipients of your personal data provide data security and protection in compliance with applicable laws.</p>
       <br/>
       <p>In accordance with EEA data protection laws, when transferring your personal data outside the EEA, we adhere to the following guidelines:</p>
       <br/>

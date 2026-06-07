@@ -60,7 +60,7 @@ const AboutUs = () => {
         </AboutUsTypography>
 
         <AboutUsTypography>
-          Based in Dubai, our academy is a global hub for traders who want to
+          Based in Costa Rica, our academy is a global hub for traders who want to
           achieve financial independence and master the forex markets.
         </AboutUsTypography>
 
