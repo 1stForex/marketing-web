@@ -11,6 +11,7 @@ export enum RoutesUrls {
   COMMUNITY = "/community",
   CONTACT_US = "/contact-us",
   FAQ = "/faq",
+  HISTORICAL_PERFORMANCE = "/historical-performance",
   HOME = "/home",
   PRICING = "/pricing",
   PRIVACY_POLICY = "/privacy-policy",

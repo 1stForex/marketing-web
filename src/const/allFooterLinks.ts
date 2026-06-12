@@ -12,6 +12,10 @@ export const linksList = [
         label: "1st Forex Academy",
         href: RoutesUrls.ACADEMY,
       },
+      {
+        label: "Historical Performance",
+        href: RoutesUrls.HISTORICAL_PERFORMANCE,
+      },
     ],
   },
   {
