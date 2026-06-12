@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   Box,
   Button,
-  Chip,
   Container,
   Dialog,
   DialogActions,
@@ -23,6 +22,7 @@ import {
   performanceMonthNames,
 } from "@/src/const/historicalPerformance";
 import { RedirectUrls } from "@/src/const/Enum";
+import Hero from "@/src/components/Hero";
 
 interface MonthPerformance {
   month: string;
@@ -112,90 +112,34 @@ export default function HistoricalPerformance() {
             mx: "auto",
             display: "flex",
             flexDirection: "column",
-            gap: "48px",
+            gap: "60px",
             mb: "80px",
             "@media (max-width: 768px)": {
-              gap: "36px",
+              gap: "48px",
               mb: "56px",
+            },
+            "@media (max-width: 576px)": {
+              gap: "40px",
             },
           }}
         >
-          <Box
-            sx={{
-              position: "relative",
-              display: "grid",
-              gridTemplateColumns: "1.1fr .9fr",
-              gap: "32px",
-              alignItems: "stretch",
-              minHeight: "430px",
-              p: "48px",
-              borderRadius: "8px",
-              color: "#FFF",
-              background:
-                "linear-gradient(135deg, #111 0%, #222 54%, #F30 160%)",
-              boxShadow:
-                "0px 24px 48px -24px rgba(16, 25, 40, 0.35)",
-              "@media (max-width: 900px)": {
-                gridTemplateColumns: "1fr",
-                p: "32px",
-              },
-              "@media (max-width: 576px)": {
-                p: "24px",
-              },
-            }}
+          <Hero
+            badgeTitle="Performance"
+            title="Historical Trade Performance"
+            description="Review a sample performance record from 2016 through 2025. Yearly results open into monthly summaries, while complete daily trade history stays inside the member dashboard."
+            bgImagePath="/HomeHeroBg.jpg"
           >
-            <Box sx={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-              <Chip
-                label="Historical Performance"
-                sx={{
-                  width: "fit-content",
-                  color: "#FFF",
-                  border: "1px solid rgba(255,255,255,.35)",
-                  background: "rgba(255,255,255,.08)",
-                  fontWeight: 700,
-                }}
-              />
-              <Typography
-                component="h1"
-                sx={{
-                  maxWidth: "700px",
-                  fontSize: "56px",
-                  fontWeight: 800,
-                  lineHeight: "100%",
-                  letterSpacing: "-1.6px",
-                  "@media (max-width: 768px)": {
-                    fontSize: "40px",
-                  },
-                  "@media (max-width: 576px)": {
-                    fontSize: "32px",
-                  },
-                }}
-              >
-                Review yearly and monthly trade history at a glance.
-              </Typography>
-              <Typography
-                sx={{
-                  maxWidth: "720px",
-                  color: "#EAECF0",
-                  fontSize: "20px",
-                  lineHeight: "140%",
-                  "@media (max-width: 576px)": {
-                    fontSize: "16px",
-                  },
-                }}
-              >
-                Explore a sample performance record from 2016 through 2025.
-                Yearly results open into monthly summaries, while complete
-                daily trade details stay inside the member dashboard.
-              </Typography>
-            </Box>
-
             <Box
               sx={{
-                alignSelf: "end",
                 display: "grid",
-                gridTemplateColumns: "1fr 1fr",
+                gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
                 gap: "12px",
+                maxWidth: "820px",
+                width: "100%",
+                mt: "8px",
+                "@media (max-width: 900px)": {
+                  gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+                },
                 "@media (max-width: 576px)": {
                   gridTemplateColumns: "1fr",
                 },
@@ -205,22 +149,37 @@ export default function HistoricalPerformance() {
                 <Box
                   key={metric.label}
                   sx={{
-                    p: "20px",
-                    borderRadius: "8px",
-                    background: "rgba(255,255,255,.1)",
-                    border: "1px solid rgba(255,255,255,.16)",
+                    p: "18px",
+                    borderRadius: "24px",
+                    background: "rgba(255,255,255,.12)",
+                    border: "1px solid rgba(255,255,255,.24)",
+                    backdropFilter: "blur(6px)",
                   }}
                 >
-                  <Typography sx={{ color: "#D0D5DD", fontSize: "14px" }}>
+                  <Typography
+                    sx={{
+                      color: "#F0F2F5",
+                      fontSize: "14px",
+                      fontWeight: 600,
+                      textAlign: "center",
+                    }}
+                  >
                     {metric.label}
                   </Typography>
-                  <Typography sx={{ fontSize: "30px", fontWeight: 800 }}>
+                  <Typography
+                    sx={{
+                      color: "#FFF",
+                      fontSize: "30px",
+                      fontWeight: 800,
+                      textAlign: "center",
+                    }}
+                  >
                     {metric.value}
                   </Typography>
                 </Box>
               ))}
             </Box>
-          </Box>
+          </Hero>
 
           <Box
             sx={{
@@ -242,8 +201,9 @@ export default function HistoricalPerformance() {
                 sx={{
                   p: "24px",
                   border: "1px solid #EAECF0",
-                  borderRadius: "8px",
-                  boxShadow: "0 16px 30px -24px rgba(16, 25, 40, .45)",
+                  borderRadius: "32px",
+                  background: "#FFF",
+                  boxShadow: "0px 1.5px 4px -1px rgba(16, 25, 40, 0.07)",
                 }}
               >
                 <Typography sx={{ color: "#667185", fontWeight: 600 }}>
@@ -259,32 +219,60 @@ export default function HistoricalPerformance() {
             ))}
           </Box>
 
-          <Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
             <Typography
               component="h2"
               sx={{
                 color: "#333",
-                fontSize: "36px",
-                fontWeight: 800,
-                letterSpacing: "-.8px",
+                fontSize: "48px",
+                fontWeight: 700,
+                lineHeight: "100%",
+                letterSpacing: "-1.92px",
                 mb: "12px",
+                textAlign: "center",
+                "@media (max-width: 768px)": {
+                  fontSize: "40px",
+                  letterSpacing: "-1.28px",
+                },
                 "@media (max-width: 576px)": {
-                  fontSize: "28px",
+                  fontSize: "26px",
+                  letterSpacing: "-0.64px",
                 },
               }}
             >
-              Yearly breakdown
+              Yearly <span style={{ color: "#F30" }}>breakdown</span>
             </Typography>
-            <Typography sx={{ color: "#667185", fontSize: "18px", mb: "24px" }}>
+            <Typography
+              sx={{
+                color: "#667185",
+                fontSize: "20px",
+                lineHeight: "145%",
+                mb: "24px",
+                maxWidth: "780px",
+                textAlign: "center",
+                "@media (max-width: 576px)": {
+                  fontSize: "16px",
+                },
+              }}
+            >
               Select any year to inspect the monthly summary. Select any month
               to continue into the dashboard for daily trade history.
             </Typography>
 
             <Box
               sx={{
+                width: "100%",
                 border: "1px solid #EAECF0",
-                borderRadius: "8px",
+                borderRadius: "32px",
                 overflow: "hidden",
+                background: "#FFF",
+                boxShadow: "0px 1.5px 4px -1px rgba(16, 25, 40, 0.07)",
               }}
             >
               <Box sx={{ overflowX: "auto" }}>
@@ -320,7 +308,7 @@ export default function HistoricalPerformance() {
                             }
                             sx={{
                               cursor: "pointer",
-                              background: isExpanded ? "#FFF7F5" : "#FFF",
+                              background: isExpanded ? "#FFF4EF" : "#FFF",
                               "&:hover": { background: "#FFF7F5" },
                             }}
                           >
@@ -384,7 +372,7 @@ export default function HistoricalPerformance() {
         onClose={() => setSelectedMonth(null)}
         maxWidth="xs"
         fullWidth
-        PaperProps={{ sx: { borderRadius: "8px", p: "8px" } }}
+        PaperProps={{ sx: { borderRadius: "32px", p: "8px" } }}
       >
         <DialogContent sx={{ pt: "28px" }}>
           <Box sx={{ display: "flex", justifyContent: "space-between", gap: "16px" }}>
@@ -394,7 +382,7 @@ export default function HistoricalPerformance() {
                 height: "48px",
                 display: "grid",
                 placeItems: "center",
-                borderRadius: "8px",
+                borderRadius: "50%",
                 background: "#FFF0EB",
                 color: "#F30",
               }}
@@ -409,7 +397,15 @@ export default function HistoricalPerformance() {
               <CloseRoundedIcon />
             </IconButton>
           </Box>
-          <Typography sx={{ mt: "20px", color: "#333", fontSize: "26px", fontWeight: 800 }}>
+          <Typography
+            sx={{
+              mt: "20px",
+              color: "#333",
+              fontSize: "26px",
+              fontWeight: 800,
+              letterSpacing: "-0.52px",
+            }}
+          >
             Daily trade history is inside the dashboard.
           </Typography>
           <Typography sx={{ mt: "12px", color: "#667185", lineHeight: "150%" }}>
@@ -490,7 +486,7 @@ function MonthlyBreakdown({
   const months = buildMonthlyPerformance(year);
 
   return (
-    <Box sx={{ p: "20px" }}>
+    <Box sx={{ p: "24px" }}>
       <Box
         sx={{
           display: "flex",
@@ -498,9 +494,13 @@ function MonthlyBreakdown({
           justifyContent: "space-between",
           gap: "16px",
           mb: "16px",
+          "@media (max-width: 768px)": {
+            alignItems: "flex-start",
+            flexDirection: "column",
+          },
         }}
       >
-        <Typography sx={{ color: "#333", fontWeight: 800 }}>
+        <Typography sx={{ color: "#333", fontSize: "20px", fontWeight: 800 }}>
           {year.year} monthly summary
         </Typography>
         <Typography sx={{ color: "#667185", fontSize: "14px" }}>
@@ -530,10 +530,11 @@ function MonthlyBreakdown({
               gap: "12px",
               p: "16px",
               border: "1px solid #EAECF0",
-              borderRadius: "8px",
+              borderRadius: "24px",
               background: "#FFF",
               color: "#333",
               textTransform: "none",
+              boxShadow: "0px 1.5px 4px -1px rgba(16, 25, 40, 0.07)",
               "&:hover": {
                 background: "#FFF7F5",
                 borderColor: "#F30",
@@ -541,7 +542,9 @@ function MonthlyBreakdown({
             }}
           >
             <Box sx={{ textAlign: "left" }}>
-              <Typography sx={{ fontWeight: 800 }}>{month.month}</Typography>
+              <Typography sx={{ fontWeight: 800, lineHeight: "145%" }}>
+                {month.month}
+              </Typography>
               <Typography sx={{ color: "#667185", fontSize: "13px" }}>
                 {month.trades} trades • {getWinRate(month.wins, month.trades)}
               </Typography>
