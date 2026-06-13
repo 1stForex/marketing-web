@@ -270,12 +270,19 @@ export default function HistoricalPerformance() {
                 width: "100%",
                 border: "1px solid #EAECF0",
                 borderRadius: "32px",
-                overflow: "hidden",
+                overflow: "visible",
                 background: "#FFF",
                 boxShadow: "0px 1.5px 4px -1px rgba(16, 25, 40, 0.07)",
               }}
             >
-              <Box sx={{ overflowX: "auto" }}>
+              <Box
+                sx={{
+                  overflowX: "visible",
+                  "@media (max-width: 900px)": {
+                    overflowX: "auto",
+                  },
+                }}
+              >
                 <Box component="table" sx={{ width: "100%", borderCollapse: "collapse", minWidth: "860px" }}>
                   <Box component="thead" sx={{ background: "#F9FAFB" }}>
                     <Box component="tr">
@@ -284,11 +291,16 @@ export default function HistoricalPerformance() {
                           key={heading}
                           component="th"
                           sx={{
+                            position: "sticky",
+                            top: 0,
+                            zIndex: 2,
                             p: "16px",
+                            background: "#F9FAFB",
                             color: "#667185",
                             fontSize: "14px",
                             textAlign: "left",
                             borderBottom: "1px solid #EAECF0",
+                            boxShadow: "0px 8px 14px -14px rgba(16, 25, 40, 0.45)",
                           }}
                         >
                           {heading}
