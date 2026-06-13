@@ -96,12 +96,106 @@ const metricCards = [
   { label: "Avg. Win Rate", value: getWinRate(totals.wins, totals.trades) },
 ];
 
+const tableHeadings = [
+  "Year",
+  "Trades",
+  "Wins",
+  "Losses",
+  "Win Rate",
+  "Net Pips",
+  "Best Pair",
+  "",
+];
+
+interface PinnedHeaderState {
+  visible: boolean;
+  left: number;
+  width: number;
+  scrollLeft: number;
+  tableWidth: number;
+  columns: number[];
+}
+
 export default function HistoricalPerformance() {
   const [expandedYear, setExpandedYear] = React.useState<number>(2025);
   const [selectedMonth, setSelectedMonth] = React.useState<{
     year: number;
     month: string;
   } | null>(null);
+  const tableViewportRef = React.useRef<HTMLDivElement | null>(null);
+  const tableHeaderRowRef = React.useRef<HTMLTableRowElement | null>(null);
+  const [pinnedHeader, setPinnedHeader] = React.useState<PinnedHeaderState>({
+    visible: false,
+    left: 0,
+    width: 0,
+    scrollLeft: 0,
+    tableWidth: 0,
+    columns: [],
+  });
+
+  React.useEffect(() => {
+    const tableViewport = tableViewportRef.current;
+    const tableHeaderRow = tableHeaderRowRef.current;
+
+    if (!tableViewport || !tableHeaderRow) return;
+
+    let animationFrame = 0;
+
+    const updatePinnedHeader = () => {
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = window.requestAnimationFrame(() => {
+        const viewportRect = tableViewport.getBoundingClientRect();
+        const headerRect = tableHeaderRow.getBoundingClientRect();
+        const columns = Array.from(tableHeaderRow.children).map(
+          (cell) => cell.getBoundingClientRect().width
+        );
+        const visible =
+          headerRect.top <= 0 && viewportRect.bottom > headerRect.height;
+
+        setPinnedHeader((current) => {
+          const next = {
+            visible,
+            left: viewportRect.left,
+            width: viewportRect.width,
+            scrollLeft: tableViewport.scrollLeft,
+            tableWidth: tableViewport.scrollWidth,
+            columns,
+          };
+
+          const sameColumns =
+            current.columns.length === next.columns.length &&
+            current.columns.every((width, index) => width === next.columns[index]);
+
+          if (
+            current.visible === next.visible &&
+            current.left === next.left &&
+            current.width === next.width &&
+            current.scrollLeft === next.scrollLeft &&
+            current.tableWidth === next.tableWidth &&
+            sameColumns
+          ) {
+            return current;
+          }
+
+          return next;
+        });
+      });
+    };
+
+    updatePinnedHeader();
+    window.addEventListener("scroll", updatePinnedHeader, { passive: true });
+    window.addEventListener("resize", updatePinnedHeader);
+    tableViewport.addEventListener("scroll", updatePinnedHeader, {
+      passive: true,
+    });
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener("scroll", updatePinnedHeader);
+      window.removeEventListener("resize", updatePinnedHeader);
+      tableViewport.removeEventListener("scroll", updatePinnedHeader);
+    };
+  }, [expandedYear]);
 
   return (
     <Box sx={{ overflowX: "hidden" }}>
@@ -276,6 +370,7 @@ export default function HistoricalPerformance() {
               }}
             >
               <Box
+                ref={tableViewportRef}
                 sx={{
                   overflowX: "visible",
                   "@media (max-width: 900px)": {
@@ -285,15 +380,12 @@ export default function HistoricalPerformance() {
               >
                 <Box component="table" sx={{ width: "100%", borderCollapse: "collapse", minWidth: "860px" }}>
                   <Box component="thead" sx={{ background: "#F9FAFB" }}>
-                    <Box component="tr">
-                      {["Year", "Trades", "Wins", "Losses", "Win Rate", "Net Pips", "Best Pair", ""].map((heading) => (
+                    <Box component="tr" ref={tableHeaderRowRef}>
+                      {tableHeadings.map((heading) => (
                         <Box
                           key={heading}
                           component="th"
                           sx={{
-                            position: "sticky",
-                            top: 0,
-                            zIndex: 2,
                             p: "16px",
                             background: "#F9FAFB",
                             color: "#667185",
@@ -378,6 +470,60 @@ export default function HistoricalPerformance() {
           </Box>
         </Box>
       </Container>
+
+      {pinnedHeader.visible && (
+        <Box
+          aria-hidden
+          sx={{
+            position: "fixed",
+            top: 0,
+            left: `${pinnedHeader.left}px`,
+            width: `${pinnedHeader.width}px`,
+            zIndex: 1200,
+            overflow: "hidden",
+            border: "1px solid #EAECF0",
+            borderTop: 0,
+            borderRadius: "0 0 20px 20px",
+            background: "#F9FAFB",
+            boxShadow: "0px 12px 26px -18px rgba(16, 25, 40, 0.45)",
+            pointerEvents: "none",
+          }}
+        >
+          <Box
+            component="table"
+            sx={{
+              width: `${pinnedHeader.tableWidth}px`,
+              borderCollapse: "collapse",
+              transform: `translateX(-${pinnedHeader.scrollLeft}px)`,
+            }}
+          >
+            <Box component="thead">
+              <Box component="tr">
+                {tableHeadings.map((heading, index) => (
+                  <Box
+                    key={heading || "actions"}
+                    component="th"
+                    sx={{
+                      width: pinnedHeader.columns[index]
+                        ? `${pinnedHeader.columns[index]}px`
+                        : "auto",
+                      p: "16px",
+                      background: "#F9FAFB",
+                      color: "#667185",
+                      fontSize: "14px",
+                      textAlign: "left",
+                      borderBottom: "1px solid #EAECF0",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {heading}
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      )}
 
       <Dialog
         open={Boolean(selectedMonth)}
