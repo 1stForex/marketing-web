@@ -18,82 +18,33 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import {
   HistoricalYearPerformance,
+  historicalPerformanceRange,
+  historicalPerformanceTotals,
   historicalPerformanceYears,
-  performanceMonthNames,
 } from "@/src/const/historicalPerformance";
 import { RedirectUrls } from "@/src/const/Enum";
 import Hero from "@/src/components/Hero";
 
-interface MonthPerformance {
-  month: string;
-  trades: number;
-  wins: number;
-  losses: number;
-  netPips: number;
-}
-
-const tradeWeights = [0.08, 0.07, 0.09, 0.08, 0.1, 0.08, 0.07, 0.08, 0.09, 0.09, 0.09, 0.08];
-const lossWeights = [0.09, 0.07, 0.08, 0.09, 0.08, 0.1, 0.07, 0.08, 0.09, 0.08, 0.09, 0.08];
-
-function getWinRate(wins: number, trades: number) {
-  return trades ? `${Math.round((wins / trades) * 100)}%` : "0%";
+function formatPercent(value: number) {
+  return `${Number(value.toFixed(2)).toLocaleString("en-US")}%`;
 }
 
 function formatNumber(value: number) {
   return new Intl.NumberFormat("en-US").format(value);
 }
 
-function buildMonthlyPerformance(year: HistoricalYearPerformance): MonthPerformance[] {
-  let assignedTrades = 0;
-  let assignedLosses = 0;
-  let assignedPips = 0;
-
-  return performanceMonthNames.map((month, index) => {
-    const isLast = index === performanceMonthNames.length - 1;
-    const trades = isLast
-      ? year.trades - assignedTrades
-      : Math.max(4, Math.round(year.trades * tradeWeights[index]));
-    const losses = isLast
-      ? year.losses - assignedLosses
-      : Math.max(1, Math.round(year.losses * lossWeights[index]));
-    const wins = Math.max(0, trades - losses);
-    const netPips = isLast
-      ? year.netPips - assignedPips
-      : Math.round(year.netPips * tradeWeights[index]);
-
-    assignedTrades += trades;
-    assignedLosses += losses;
-    assignedPips += netPips;
-
-    return {
-      month,
-      trades,
-      wins,
-      losses,
-      netPips,
-    };
-  });
-}
-
-const totals = historicalPerformanceYears.reduce(
-  (summary, year) => ({
-    trades: summary.trades + year.trades,
-    wins: summary.wins + year.wins,
-    losses: summary.losses + year.losses,
-    netPips: summary.netPips + year.netPips,
-  }),
-  { trades: 0, wins: 0, losses: 0, netPips: 0 }
-);
-
 const bestYear = historicalPerformanceYears.reduce((best, year) =>
   year.netPips > best.netPips ? year : best
 );
 
 const metricCards = [
-  { label: "Total Trades", value: formatNumber(totals.trades) },
-  { label: "Wins", value: formatNumber(totals.wins) },
-  { label: "Losses", value: formatNumber(totals.losses) },
-  { label: "Avg. Win Rate", value: getWinRate(totals.wins, totals.trades) },
+  { label: "Entered Trades", value: formatNumber(historicalPerformanceTotals.trades) },
+  { label: "Wins", value: formatNumber(historicalPerformanceTotals.wins) },
+  { label: "Losses", value: formatNumber(historicalPerformanceTotals.losses) },
+  {
+    label: "Avg. Win Rate",
+    value: formatPercent(historicalPerformanceTotals.winRate),
+  },
 ];
 
 const tableHeadings = [
@@ -117,7 +68,9 @@ interface PinnedHeaderState {
 }
 
 export default function HistoricalPerformance() {
-  const [expandedYear, setExpandedYear] = React.useState<number>(2025);
+  const [expandedYear, setExpandedYear] = React.useState<number>(
+    historicalPerformanceYears[0]?.year ?? 0
+  );
   const [selectedMonth, setSelectedMonth] = React.useState<{
     year: number;
     month: string;
@@ -220,7 +173,7 @@ export default function HistoricalPerformance() {
           <Hero
             badgeTitle="Performance"
             title="Historical Trade Performance"
-            description="Review a sample performance record from 2016 through 2025. Yearly results open into monthly summaries, while complete daily trade history stays inside the member dashboard."
+            description="Review historical performance from 2018 through May 2026. Yearly results open into monthly summaries, while complete daily trade history stays inside the member dashboard."
             bgImagePath="/HomeHeroBg.jpg"
           >
             <Box
@@ -288,7 +241,11 @@ export default function HistoricalPerformance() {
             {[
               ["Best Year", `${bestYear.year}`, `${formatNumber(bestYear.netPips)} net pips`],
               ["Best Pair", bestYear.bestPair, "Most productive major pair"],
-              ["History Range", "2016-2025", "10 years of performance data"],
+              [
+                "History Range",
+                historicalPerformanceRange.label,
+                `${historicalPerformanceYears.length} years of performance data`,
+              ],
             ].map(([label, value, detail]) => (
               <Box
                 key={label}
@@ -421,7 +378,7 @@ export default function HistoricalPerformance() {
                             <TableCell color="#0F9F6E">{year.wins}</TableCell>
                             <TableCell color="#D92D20">{year.losses}</TableCell>
                             <TableCell strong>
-                              {getWinRate(year.wins, year.trades)}
+                              {formatPercent(year.winRate)}
                             </TableCell>
                             <TableCell>{formatNumber(year.netPips)}</TableCell>
                             <TableCell>{year.bestPair}</TableCell>
@@ -641,8 +598,6 @@ function MonthlyBreakdown({
   year: HistoricalYearPerformance;
   onMonthClick: (month: string) => void;
 }) {
-  const months = buildMonthlyPerformance(year);
-
   return (
     <Box sx={{ p: "24px" }}>
       <Box
@@ -678,9 +633,9 @@ function MonthlyBreakdown({
           },
         }}
       >
-        {months.map((month) => (
+        {year.months.map((month) => (
           <Button
-            key={month.month}
+            key={month.monthKey}
             onClick={() => onMonthClick(month.month)}
             sx={{
               justifyContent: "space-between",
@@ -704,7 +659,10 @@ function MonthlyBreakdown({
                 {month.month}
               </Typography>
               <Typography sx={{ color: "#667185", fontSize: "13px" }}>
-                {month.trades} trades • {getWinRate(month.wins, month.trades)}
+                {month.trades} trades • {formatPercent(month.winRate)}
+              </Typography>
+              <Typography sx={{ color: "#98A2B3", fontSize: "12px", mt: "2px" }}>
+                {formatNumber(month.netPips)} net pips
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", color: "#F30" }}>
