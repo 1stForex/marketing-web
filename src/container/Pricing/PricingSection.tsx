@@ -53,13 +53,12 @@ const PricingSection = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
           gap: "12px",
           position: "relative",
-          left: "75px",
 
           "@media (max-width: 576px)": {
             position: "static",
-            left: "0",
             flexDirection: "column",
             alignItems: "center",
           },

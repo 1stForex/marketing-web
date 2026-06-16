@@ -19,6 +19,7 @@ const Hero: React.FC<HeroProps> = ({
         minHeight: "465px",
         height: "100%",
         borderRadius: "32px",
+        padding: "72px 24px",
         background: `linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(${bgImagePath})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -29,9 +30,12 @@ const Hero: React.FC<HeroProps> = ({
         justifyContent: "center",
         "@media (max-width: 768px)": {
           minHeight: "400px",
+          padding: "56px 20px",
         },
         "@media (max-width: 576px)": {
-          minHeight: "377px",
+          minHeight: "auto",
+          borderRadius: "28px",
+          padding: "40px 16px",
         },
       }}
     >
@@ -42,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({
           alignItems: "center",
           justifyContent: "center",
           gap: "24px",
-          padding: "16px",
+          width: "100%",
           "@media (max-width: 768px)": {
             gap: "20px",
           },

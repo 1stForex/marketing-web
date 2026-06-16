@@ -10,7 +10,7 @@ export default function NewsLetter() {
         justifyContent: "space-between",
         alignItems: "flex-start",
         width: "100%",
-        gap: "4px",
+        gap: "24px",
 
         "@media (max-width: 768px)": {
           flexDirection: "column",
@@ -64,6 +64,12 @@ export default function NewsLetter() {
           "@media (max-width: 768px)": {
             width: "100%",
             maxWidth: "100%",
+          },
+          "@media (max-width: 576px)": {
+            flexDirection: "column",
+            "& .MuiButtonBase-root": {
+              width: "100%",
+            },
           },
         }}
       >

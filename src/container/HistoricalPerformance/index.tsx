@@ -283,17 +283,15 @@ export default function HistoricalPerformance() {
                 color: "#333",
                 fontSize: "48px",
                 fontWeight: 700,
-                lineHeight: "100%",
-                letterSpacing: "-1.92px",
+                lineHeight: "112%",
+                letterSpacing: "0",
                 mb: "12px",
                 textAlign: "center",
                 "@media (max-width: 768px)": {
                   fontSize: "40px",
-                  letterSpacing: "-1.28px",
                 },
                 "@media (max-width: 576px)": {
                   fontSize: "26px",
-                  letterSpacing: "-0.64px",
                 },
               }}
             >
@@ -330,6 +328,7 @@ export default function HistoricalPerformance() {
                 ref={tableViewportRef}
                 sx={{
                   overflowX: "visible",
+                  WebkitOverflowScrolling: "touch",
                   "@media (max-width: 900px)": {
                     overflowX: "auto",
                   },

@@ -25,8 +25,8 @@ export default function Offer({
     fontSize: "24px",
     fontStyle: "normal",
     fontWeight: "400",
-    lineHeight: "120%",
-    letterSpacing: "-0.48px",
+    lineHeight: "145%",
+    letterSpacing: "0",
     maxWidth: descriptionWidth ? `${descriptionWidth}px` : "549px",
     "@media (max-width: 992px)": {
       maxWidth: "100%",
@@ -37,7 +37,6 @@ export default function Offer({
     },
     "@media (max-width: 576px)": {
       fontSize: "16px",
-      letterSpacing: "-0.32px",
     },
   }));
 
@@ -107,8 +106,8 @@ export default function Offer({
               fontSize: "48px",
               fontStyle: "normal",
               fontWeight: "700",
-              lineHeight: "48px",
-              letterSpacing: "-1.92px",
+              lineHeight: "112%",
+              letterSpacing: "0",
               maxWidth: "535px",
 
               "@media (max-width: 992px)": {
@@ -117,14 +116,11 @@ export default function Offer({
 
               "@media (max-width: 768px)": {
                 fontSize: "40px",
-                lineHeight: "32px",
-                letterSpacing: "-1.28px",
+                lineHeight: "116%",
                 textAlign: "center",
               },
               "@media (max-width: 576px)": {
                 fontSize: "26px",
-                lineHeight: "28px",
-                letterSpacing: "-0.64px",
               },
             }}
           >
@@ -188,14 +184,13 @@ export default function Offer({
                   fontSize: "24px",
                   fontStyle: "normal",
                   fontWeight: "400",
-                  lineHeight: "120%",
-                  letterSpacing: "-0.48px",
+                  lineHeight: "145%",
+                  letterSpacing: "0",
                   "@media (max-width: 768px)": {
                     fontSize: "20px",
                   },
                   "@media (max-width: 576px)": {
                     fontSize: "16px",
-                    letterSpacing: "-0.32px",
                   },
                 }}
               >

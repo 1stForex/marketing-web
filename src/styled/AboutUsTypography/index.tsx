@@ -6,8 +6,8 @@ const AboutUsTypography = styled(Typography)(() => ({
   fontSize: "20px",
   fontStyle: "normal",
   fontWeight: "400",
-  lineHeight: "120%",
-  letterSpacing: "-0.4px",
+  lineHeight: "145%",
+  letterSpacing: "0",
   "@media (max-width: 992px)": {
     textAlign: "center",
   },

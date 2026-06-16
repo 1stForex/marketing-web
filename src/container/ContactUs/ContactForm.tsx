@@ -24,6 +24,8 @@ const ContactForm = () => {
             alignItems: "center",
             gap: "18px",
             "@media (max-width: 576px)": {
+              flexDirection: "column",
+              alignItems: "stretch",
               gap: "16px",
             },
           }}

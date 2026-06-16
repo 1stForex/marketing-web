@@ -28,11 +28,15 @@ const StyledButton = styled(Button)<{
   fontWeight: fontWeight,
   display: "flex",
   alignItems: "center",
+  justifyContent: "center",
   gap: "10px",
   lineHeight: "1.2",
   padding: padding || "16px 24px",
   fontSize: fontSize || "16px",
-  textWrap: "nowrap",
+  minHeight: "44px",
+  minWidth: "44px",
+  textAlign: "center",
+  whiteSpace: "normal",
   ...(varianttype === "red"
     ? {
         backgroundColor: "#F30",
@@ -108,7 +112,7 @@ const StyledButton = styled(Button)<{
         },
       }),
   "@media (max-width: 576px)": {
-    padding: "8px 16px",
+    padding: "11px 16px",
     fontSize: "14px",
   },
 }));

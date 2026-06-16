@@ -5,17 +5,16 @@ const HeadTypography = styled(Typography)(() => ({
   fontSize: "48px",
   fontStyle: "normal",
   fontWeight: "700",
-  lineHeight: "100%",
-  letterSpacing: "-1.92px",
+  lineHeight: "112%",
+  letterSpacing: "0",
 
   "@media (max-width: 768px)": {
-    fontSize: "40px",
-    letterSpacing: "-1.28px",
+    fontSize: "38px",
     textAlign: "center",
   },
   "@media (max-width: 576px)": {
-    fontSize: "26px",
-    letterSpacing: "-0.64px",
+    fontSize: "28px",
+    lineHeight: "116%",
   },
 }));
 

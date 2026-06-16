@@ -28,6 +28,7 @@ export default function Header() {
         },
 
         "@media (max-width: 768px)": {
+          padding: "0 16px",
           marginBottom: "15px",
           overflowX: "hidden",
         },
@@ -45,6 +46,9 @@ export default function Header() {
           alignItems: "center",
           gap: "10px",
           alignSelf: "stretch",
+          "@media (max-width: 576px)": {
+            padding: "18px 0",
+          },
         }}
       >
         <Box

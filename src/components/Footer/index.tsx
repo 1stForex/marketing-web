@@ -28,7 +28,7 @@ export default function Footer() {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          Width: "100%",
+          width: "100%",
         }}
       >
         <NewsLetter />

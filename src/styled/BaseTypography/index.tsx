@@ -3,8 +3,8 @@ import { styled, Typography } from "@mui/material";
 
 const BaseTypography = styled(Typography)(() => ({
   fontSize: "24px",
-  lineHeight: "120%",
-  letterSpacing: "-0.48px",
+  lineHeight: "145%",
+  letterSpacing: "0",
   textAlign: "center",
 
   "@media (max-width: 768px)": {
@@ -12,7 +12,6 @@ const BaseTypography = styled(Typography)(() => ({
   },
   "@media (max-width: 576px)": {
     fontSize: "16px",
-    letterSpacing: "-0.32px",
   },
 }));
 

@@ -49,7 +49,7 @@ const CustomAccordian = ({
           },
 
           "@media (max-width: 576px)": {
-            padding: "17px 10px",
+            padding: "14px 12px",
           },
         }}
       >
@@ -69,14 +69,14 @@ const CustomAccordian = ({
             padding: 0,
             cursor: "pointer",
             userSelect: "none",
-            minHeight: "24px",
+            minHeight: "44px",
             transition:
               "min-height 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1)",
             "& .MuiAccordionSummary-content": {
               margin: "0 !important",
             },
             "&.Mui-expanded": {
-              minHeight: "24px",
+              minHeight: "44px",
               "& > .MuiAccordionSummary-content": {
                 margin: "0",
               },
@@ -91,12 +91,11 @@ const CustomAccordian = ({
               fontSize: "24px",
               fontWeight: "700",
               color: "#333",
-              lineHeight: "120%",
-              letterSpacing: "-0.48px",
+              lineHeight: "125%",
+              letterSpacing: "0",
 
               "@media (max-width: 576px)": {
                 fontSize: "18px",
-                letterSpacing: "-0.36px",
               },
             }}
           >

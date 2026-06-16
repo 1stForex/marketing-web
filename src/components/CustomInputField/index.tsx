@@ -56,6 +56,7 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
           backgroundColor: background,
           ".MuiOutlinedInput-root": {
             padding: padding,
+            minHeight: "44px",
             borderColor: "var(--Grey-300, #D0D5DD)",
             borderRadius: `${borderRadius}px`,
             "&:hover .MuiOutlinedInput-notchedOutline": {
@@ -79,10 +80,10 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
           },
           "@media (max-width: 576px)": {
             ".MuiOutlinedInput-root": {
-              padding: "8px 16px",
+              padding: "11px 14px",
             },
             "input::placeholder, textarea::placeholder": {
-              fontSize: "12px",
+              fontSize: "13px",
             },
           },
         }}

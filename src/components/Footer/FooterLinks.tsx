@@ -8,11 +8,17 @@ export default function FooterLinks() {
     <Box
       sx={{
         width: "100%",
-        display: "flex",
+        display: "grid",
+        gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
         gap: "32px",
+        "@media (max-width: 768px)": {
+          gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+          gap: "28px",
+        },
         "@media (max-width: 576px)": {
-          flexDirection: "column",
+          gridTemplateColumns: "1fr",
           alignItems: "center",
+          gap: "24px",
         },
       }}
     >
@@ -21,9 +27,9 @@ export default function FooterLinks() {
           <Box
             key={index}
             sx={{
-              width: "357px",
+              minWidth: 0,
               "@media (max-width: 576px)": {
-                width: "auto",
+                width: "100%",
                 textAlign: "center",
               },
             }}
@@ -43,6 +49,7 @@ export default function FooterLinks() {
                     display: "block",
                     color: "#667185",
                     fontWeight: 500,
+                    py: "2px",
                     marginBottom:
                       linkIndex !== section.links.length - 1 ? "16px" : 0,
                     textDecoration: "none",
