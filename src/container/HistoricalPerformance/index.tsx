@@ -173,7 +173,7 @@ export default function HistoricalPerformance() {
           <Hero
             badgeTitle="Performance"
             title="Historical Trade Performance"
-            description="Review historical performance from 2018 through May 2026. Yearly results open into monthly summaries, while complete daily trade history stays inside the member dashboard."
+            description="Review historical performance from 2016 through May 2026. Yearly results open into monthly summaries, while complete daily trade history stays inside the member dashboard."
             bgImagePath="/HomeHeroBg.jpg"
           >
             <Box
