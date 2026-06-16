@@ -4,6 +4,7 @@ import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomLayout from "@/src/customLayout";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const montserrat = Montserrat({
@@ -25,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <CustomLayout>{children}</CustomLayout>
+        <AppRouterCacheProvider>
+          <CustomLayout>{children}</CustomLayout>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
