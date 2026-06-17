@@ -881,7 +881,7 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
     "netPips": 25525,
     "profitUsd": 0,
     "winRate": 88.44,
-    "bestPair": "5-pair basket",
+    "bestPair": "USD/CAD",
     "note": "Marketing display result from the 2016-2021 five-pair candidate dataset.",
     "months": [
       {
@@ -1065,7 +1065,7 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
     "netPips": 29891,
     "profitUsd": 0,
     "winRate": 90.91,
-    "bestPair": "5-pair basket",
+    "bestPair": "EUR/USD",
     "note": "Marketing display result from the 2016-2021 five-pair candidate dataset.",
     "months": [
       {
@@ -1249,7 +1249,7 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
     "netPips": 28757,
     "profitUsd": 0,
     "winRate": 92.2,
-    "bestPair": "5-pair basket",
+    "bestPair": "EUR/USD",
     "note": "Marketing display result from the 2016-2021 five-pair candidate dataset.",
     "months": [
       {
@@ -1433,7 +1433,7 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
     "netPips": 26033,
     "profitUsd": 0,
     "winRate": 86.76,
-    "bestPair": "5-pair basket",
+    "bestPair": "AUD/USD",
     "note": "Marketing display result from the 2016-2021 five-pair candidate dataset.",
     "months": [
       {
@@ -1617,7 +1617,7 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
     "netPips": 27507,
     "profitUsd": 475300.6,
     "winRate": 96.12,
-    "bestPair": "5-pair basket",
+    "bestPair": "EUR/USD",
     "note": "Updated 2016-2017 five-pair historical results from the high-winrate profile export.",
     "months": [
       {
@@ -1801,7 +1801,7 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
     "netPips": 27296,
     "profitUsd": 467313.4,
     "winRate": 93.5,
-    "bestPair": "5-pair basket",
+    "bestPair": "EUR/USD",
     "note": "Updated 2016-2017 five-pair historical results from the high-winrate profile export.",
     "months": [
       {

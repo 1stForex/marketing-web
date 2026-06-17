@@ -33,21 +33,9 @@ function formatNumber(value: number) {
   return new Intl.NumberFormat("en-US").format(value);
 }
 
-function getBestPeriod(year: HistoricalYearPerformance) {
-  return year.months.reduce((best, month) =>
-    month.netPips > best.netPips ? month : best
-  );
-}
-
-function formatBestPeriod(year: HistoricalYearPerformance) {
-  const bestPeriod = getBestPeriod(year);
-  return `${bestPeriod.month} (${formatNumber(bestPeriod.netPips)} pips)`;
-}
-
 const bestYear = historicalPerformanceYears.reduce((best, year) =>
   year.netPips > best.netPips ? year : best
 );
-const bestYearPeriod = getBestPeriod(bestYear);
 
 const metricCards = [
   { label: "Entered Trades", value: formatNumber(historicalPerformanceTotals.trades) },
@@ -254,8 +242,8 @@ export default function HistoricalPerformance() {
               ["Best Year", `${bestYear.year}`, `${formatNumber(bestYear.netPips)} net pips`],
               [
                 "Best Pair",
-                bestYearPeriod.month,
-                `${formatNumber(bestYearPeriod.netPips)} net pips in ${bestYear.year}`,
+                bestYear.bestPair,
+                "Most productive major pair",
               ],
               [
                 "History Range",
@@ -396,7 +384,7 @@ export default function HistoricalPerformance() {
                               {formatPercent(year.winRate)}
                             </TableCell>
                             <TableCell>{formatNumber(year.netPips)}</TableCell>
-                            <TableCell>{formatBestPeriod(year)}</TableCell>
+                            <TableCell>{year.bestPair}</TableCell>
                             <TableCell>
                               <IconButton
                                 size="small"
