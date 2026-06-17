@@ -66,7 +66,7 @@ const tableHeadings = [
   "Losses",
   "Win Rate",
   "Net Pips",
-  "Best Period",
+  "Best Pair",
   "",
 ];
 
@@ -253,7 +253,7 @@ export default function HistoricalPerformance() {
             {[
               ["Best Year", `${bestYear.year}`, `${formatNumber(bestYear.netPips)} net pips`],
               [
-                "Best Period",
+                "Best Pair",
                 bestYearPeriod.month,
                 `${formatNumber(bestYearPeriod.netPips)} net pips in ${bestYear.year}`,
               ],
