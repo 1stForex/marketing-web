@@ -1,6 +1,10 @@
 export const RedirectUrls = {
-  LOGIN_URL: process.env.NEXT_PUBLIC_APP_LOGIN_URL ?? "/auth/login",
-  REGISTER_URL: process.env.NEXT_PUBLIC_APP_REGISTER_URL ?? "/auth/register",
+  LOGIN_URL:
+    process.env.NEXT_PUBLIC_APP_LOGIN_URL ??
+    "https://staging.d1bhofzjxuviaa.amplifyapp.com/auth/login",
+  REGISTER_URL:
+    process.env.NEXT_PUBLIC_APP_REGISTER_URL ??
+    "https://staging.d1bhofzjxuviaa.amplifyapp.com/auth/register",
 } as const;
 
 export enum RoutesUrls {
