@@ -58,6 +58,16 @@ const tableHeadings = [
   "",
 ];
 
+const mobileTableLabels = [
+  "Year",
+  "Trades",
+  "Wins",
+  "Losses",
+  "Win Rate",
+  "Net Pips",
+  "Best Pair",
+];
+
 interface PinnedHeaderState {
   visible: boolean;
   left: number;
@@ -326,6 +336,12 @@ export default function HistoricalPerformance() {
                 overflow: "visible",
                 background: "#FFF",
                 boxShadow: "0px 1.5px 4px -1px rgba(16, 25, 40, 0.07)",
+                "@media (max-width: 700px)": {
+                  border: "0",
+                  borderRadius: 0,
+                  background: "transparent",
+                  boxShadow: "none",
+                },
               }}
             >
               <Box
@@ -336,10 +352,32 @@ export default function HistoricalPerformance() {
                   "@media (max-width: 900px)": {
                     overflowX: "auto",
                   },
+                  "@media (max-width: 700px)": {
+                    overflowX: "visible",
+                  },
                 }}
               >
-                <Box component="table" sx={{ width: "100%", borderCollapse: "collapse", minWidth: "860px" }}>
-                  <Box component="thead" sx={{ background: "#F9FAFB" }}>
+                <Box
+                  component="table"
+                  sx={{
+                    width: "100%",
+                    borderCollapse: "collapse",
+                    minWidth: "860px",
+                    "@media (max-width: 700px)": {
+                      minWidth: 0,
+                      display: "block",
+                    },
+                  }}
+                >
+                  <Box
+                    component="thead"
+                    sx={{
+                      background: "#F9FAFB",
+                      "@media (max-width: 700px)": {
+                        display: "none",
+                      },
+                    }}
+                  >
                     <Box component="tr" ref={tableHeaderRowRef}>
                       {tableHeadings.map((heading) => (
                         <Box
@@ -360,7 +398,16 @@ export default function HistoricalPerformance() {
                       ))}
                     </Box>
                   </Box>
-                  <Box component="tbody">
+                  <Box
+                    component="tbody"
+                    sx={{
+                      "@media (max-width: 700px)": {
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "14px",
+                      },
+                    }}
+                  >
                     {historicalPerformanceYears.map((year) => {
                       const isExpanded = expandedYear === year.year;
                       return (
@@ -374,18 +421,40 @@ export default function HistoricalPerformance() {
                               cursor: "pointer",
                               background: isExpanded ? "#FFF4EF" : "#FFF",
                               "&:hover": { background: "#FFF7F5" },
+                              "@media (max-width: 700px)": {
+                                display: "grid",
+                                gridTemplateColumns: "1fr",
+                                gap: "10px",
+                                p: "18px",
+                                border: "1px solid #EAECF0",
+                                borderRadius: "24px",
+                                background: isExpanded ? "#FFF4EF" : "#FFF",
+                                boxShadow: "0px 12px 26px -20px rgba(16, 25, 40, 0.32)",
+                              },
                             }}
                           >
-                            <TableCell strong>{year.year}</TableCell>
-                            <TableCell>{year.trades}</TableCell>
-                            <TableCell color="#0F9F6E">{year.wins}</TableCell>
-                            <TableCell color="#D92D20">{year.losses}</TableCell>
-                            <TableCell strong>
+                            <TableCell label={mobileTableLabels[0]} strong>
+                              {year.year}
+                            </TableCell>
+                            <TableCell label={mobileTableLabels[1]}>
+                              {year.trades}
+                            </TableCell>
+                            <TableCell label={mobileTableLabels[2]} color="#0F9F6E">
+                              {year.wins}
+                            </TableCell>
+                            <TableCell label={mobileTableLabels[3]} color="#D92D20">
+                              {year.losses}
+                            </TableCell>
+                            <TableCell label={mobileTableLabels[4]} strong>
                               {formatPercent(year.winRate)}
                             </TableCell>
-                            <TableCell>{formatNumber(year.netPips)}</TableCell>
-                            <TableCell>{year.bestPair}</TableCell>
-                            <TableCell>
+                            <TableCell label={mobileTableLabels[5]}>
+                              {formatNumber(year.netPips)}
+                            </TableCell>
+                            <TableCell label={mobileTableLabels[6]}>
+                              {year.bestPair}
+                            </TableCell>
+                            <TableCell isAction>
                               <IconButton
                                 size="small"
                                 aria-label={`Toggle ${year.year} monthly breakdown`}
@@ -409,6 +478,14 @@ export default function HistoricalPerformance() {
                                   p: 0,
                                   borderBottom: "1px solid #EAECF0",
                                   background: "#FCFCFD",
+                                  "@media (max-width: 700px)": {
+                                    display: "block",
+                                    border: "1px solid #EAECF0",
+                                    borderRadius: "24px",
+                                    background: "#FCFCFD",
+                                    overflow: "hidden",
+                                    boxShadow: "0px 12px 26px -20px rgba(16, 25, 40, 0.26)",
+                                  },
                                 }}
                               >
                                 <MonthlyBreakdown
@@ -447,6 +524,9 @@ export default function HistoricalPerformance() {
             background: "#F9FAFB",
             boxShadow: "0px 12px 26px -18px rgba(16, 25, 40, 0.45)",
             pointerEvents: "none",
+            "@media (max-width: 700px)": {
+              display: "none",
+            },
           }}
         >
           <Box
@@ -570,12 +650,16 @@ export default function HistoricalPerformance() {
 
 function TableCell({
   children,
+  label,
   strong = false,
   color = "#333",
+  isAction = false,
 }: {
   children: React.ReactNode;
+  label?: string;
   strong?: boolean;
   color?: string;
+  isAction?: boolean;
 }) {
   return (
     <Box
@@ -587,8 +671,42 @@ function TableCell({
         fontWeight: strong ? 800 : 600,
         borderBottom: "1px solid #EAECF0",
         whiteSpace: "nowrap",
+        "@media (max-width: 700px)": {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: isAction ? "center" : "space-between",
+          gap: "14px",
+          p: isAction ? "2px 0 0" : "0",
+          borderBottom: isAction ? "0" : "1px solid #F0F2F5",
+          minHeight: isAction ? "36px" : "30px",
+          whiteSpace: "normal",
+          textAlign: "right",
+          fontSize: strong ? "16px" : "15px",
+          "&:last-of-type": {
+            borderBottom: 0,
+          },
+        },
       }}
     >
+      {!isAction && (
+        <Box
+          component="span"
+          sx={{
+            display: "none",
+            "@media (max-width: 700px)": {
+              display: "inline-flex",
+              flex: "0 0 auto",
+              color: "#667185",
+              fontSize: "12px",
+              fontWeight: 700,
+              textTransform: "uppercase",
+              letterSpacing: "0.04em",
+            },
+          }}
+        >
+          {label}
+        </Box>
+      )}
       {children}
     </Box>
   );
@@ -602,7 +720,14 @@ function MonthlyBreakdown({
   onMonthClick: (month: string) => void;
 }) {
   return (
-    <Box sx={{ p: "24px" }}>
+    <Box
+      sx={{
+        p: "24px",
+        "@media (max-width: 700px)": {
+          p: "18px",
+        },
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -614,12 +739,34 @@ function MonthlyBreakdown({
             alignItems: "flex-start",
             flexDirection: "column",
           },
+          "@media (max-width: 700px)": {
+            gap: "8px",
+            mb: "14px",
+          },
         }}
       >
-        <Typography sx={{ color: "#333", fontSize: "20px", fontWeight: 800 }}>
+        <Typography
+          sx={{
+            color: "#333",
+            fontSize: "20px",
+            fontWeight: 800,
+            "@media (max-width: 700px)": {
+              fontSize: "18px",
+            },
+          }}
+        >
           {year.year} monthly summary
         </Typography>
-        <Typography sx={{ color: "#667185", fontSize: "14px" }}>
+        <Typography
+          sx={{
+            color: "#667185",
+            fontSize: "14px",
+            "@media (max-width: 700px)": {
+              fontSize: "13px",
+              lineHeight: "145%",
+            },
+          }}
+        >
           {year.note}
         </Typography>
       </Box>
@@ -633,6 +780,7 @@ function MonthlyBreakdown({
           },
           "@media (max-width: 576px)": {
             gridTemplateColumns: "1fr",
+            gap: "10px",
           },
         }}
       >
@@ -654,6 +802,11 @@ function MonthlyBreakdown({
               "&:hover": {
                 background: "#FFF7F5",
                 borderColor: "#F30",
+              },
+              "@media (max-width: 700px)": {
+                minHeight: "86px",
+                borderRadius: "20px",
+                p: "14px",
               },
             }}
           >
