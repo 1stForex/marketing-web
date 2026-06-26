@@ -45,7 +45,7 @@ const AboutUs = () => {
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Badge title="Offers" />
+          <Badge title="Academy" />
         </Box>
 
         <HeadTypography color="#333">About Us</HeadTypography>
@@ -85,7 +85,7 @@ const AboutUs = () => {
           <span style={{ color: "#F30", fontWeight: 700 }}>community</span> and,
           more importantly, a{" "}
           <span style={{ color: "#F30", fontWeight: 700 }}>family</span> of
-          traders. With over 1,000 satisfied students, we are dedicated to
+          traders. With thousands of satisfied students, we are dedicated to
           creating an inclusive and supportive environment where everyone can
           thrive.
         </AboutUsTypography>

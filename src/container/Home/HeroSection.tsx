@@ -155,8 +155,9 @@ const HeroSection = () => {
             },
           }}
         >
-          Gain the confidence, knowledge, and support you need to thrive in the
-          global forex markets.
+          At 1st Forex, we empower traders with AI-driven signals, expert
+          education, and a supportive global community, helping you trade
+          smarter, grow faster, and build confidence in every market.
         </BaseTypography>
 
         <Box

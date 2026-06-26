@@ -140,7 +140,7 @@ const PricingSection = () => {
         /> */}
         <DetailPricingCard
           badgeProps={{ title: "Unlimited", variant: "black" }}
-          subText="Get ALL the Royals registered by our system for ALL pairs."
+          subText="Get unlimited access to every available pair, AI-generated signals, and advanced learning resources."
           price={
             isMonthly
               ? pricing.monthly.unlimitedPair

@@ -21,7 +21,19 @@ export default function GroupButton({ currentPath, nav }: NavProps) {
   });
 
   return (
-    <ButtonGroup>
+    <ButtonGroup
+      sx={{
+        flexWrap: "wrap",
+        justifyContent: "center",
+        rowGap: "8px",
+        "@media (max-width: 420px)": {
+          width: "100%",
+          "& .MuiButtonGroup-grouped": {
+            minWidth: "calc(50% - 1px)",
+          },
+        },
+      }}
+    >
       <Link href="/ai-signal" passHref>
         <Button
           sx={{
@@ -29,7 +41,7 @@ export default function GroupButton({ currentPath, nav }: NavProps) {
             borderRadius: "32px 0 0 32px",
           }}
         >
-          1st Forex AI Signal
+          AI Signals
         </Button>
       </Link>
       <Link href="/academy" passHref>
@@ -39,7 +51,7 @@ export default function GroupButton({ currentPath, nav }: NavProps) {
             borderRadius: "0 32px 32px 0",
           }}
         >
-          1st Forex Academy
+          Academy
         </Button>
       </Link>
     </ButtonGroup>

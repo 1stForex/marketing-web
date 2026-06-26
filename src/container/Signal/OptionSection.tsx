@@ -48,9 +48,9 @@ export default function OptionSection() {
       >
         <Badge title="Offers" />
         <HeadTypography color="#333" textAlign={"center"}>
-          Your{" "}
+          Signal{" "}
           <span style={{ color: " var(--primary-400-base, #F30)" }}>
-            Options
+            Plans
           </span>
         </HeadTypography>
       </Box>

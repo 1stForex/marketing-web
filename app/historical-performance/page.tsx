@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import HistoricalPerformance from "@/src/container/HistoricalPerformance";
 
 export const metadata: Metadata = {
-  title: "Historical Performance | 1st Forex",
+  title: "Performance History | 1st Forex",
   description:
-    "Review yearly and monthly historical trade performance from 2016 through May 2026.",
+    "View yearly results broken down into monthly summaries, with complete daily trade history available in the member dashboard.",
 };
 
 export default function HistoricalPerformancePage() {

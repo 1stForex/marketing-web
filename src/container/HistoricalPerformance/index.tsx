@@ -181,9 +181,9 @@ export default function HistoricalPerformance() {
           }}
         >
           <Hero
-            badgeTitle="Performance"
-            title="Historical Trade Performance"
-            description="Review historical performance from 2016 through May 2026. Yearly results open into monthly summaries, while complete daily trade history stays inside the member dashboard."
+            badgeTitle="Performance History"
+            title="Performance History"
+            description="View yearly results broken down into monthly summaries, with complete daily trade history available in the member dashboard."
             bgImagePath="/HomeHeroBg.jpg"
           >
             <Box
@@ -208,8 +208,8 @@ export default function HistoricalPerformance() {
                   sx={{
                     p: "18px",
                     borderRadius: "24px",
-                    background: "rgba(255,255,255,.12)",
-                    border: "1px solid rgba(255,255,255,.24)",
+                    background: "#F30",
+                    border: "1px solid rgba(255,255,255,.34)",
                     backdropFilter: "blur(6px)",
                   }}
                 >
@@ -265,19 +265,19 @@ export default function HistoricalPerformance() {
                 key={label}
                 sx={{
                   p: "24px",
-                  border: "1px solid #EAECF0",
+                  border: "1px solid #F30",
                   borderRadius: "32px",
-                  background: "#FFF",
-                  boxShadow: "0px 1.5px 4px -1px rgba(16, 25, 40, 0.07)",
+                  background: "#F30",
+                  boxShadow: "0px 16px 32px -24px rgba(255, 51, 0, 0.7)",
                 }}
               >
-                <Typography sx={{ color: "#667185", fontWeight: 600 }}>
+                <Typography sx={{ color: "rgba(255,255,255,.82)", fontWeight: 600 }}>
                   {label}
                 </Typography>
-                <Typography sx={{ color: "#333", fontSize: "32px", fontWeight: 800 }}>
+                <Typography sx={{ color: "#FFF", fontSize: "32px", fontWeight: 800 }}>
                   {value}
                 </Typography>
-                <Typography sx={{ color: "#667185", mt: "4px" }}>
+                <Typography sx={{ color: "rgba(255,255,255,.82)", mt: "4px" }}>
                   {detail}
                 </Typography>
               </Box>
@@ -309,7 +309,7 @@ export default function HistoricalPerformance() {
                 },
               }}
             >
-              Yearly <span style={{ color: "#F30" }}>breakdown</span>
+              Annual <span style={{ color: "#F30" }}>Breakdown</span>
             </Typography>
             <Typography
               sx={{
@@ -755,7 +755,7 @@ function MonthlyBreakdown({
             },
           }}
         >
-          {year.year} monthly summary
+          {year.year} Monthly Summary
         </Typography>
         <Typography
           sx={{

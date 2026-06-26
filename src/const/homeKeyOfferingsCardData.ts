@@ -19,6 +19,6 @@ export const homeKeyOfferingsCardData = [
     title: "Supportive Community",
     image: UpDownArrows,
     description:
-      "Learn time-tested strategies and market fundamentals from accomplished professionals.",
+      "Connect with traders, share ideas, and grow with exclusive insights, market commentary, and community support.",
   },
 ];

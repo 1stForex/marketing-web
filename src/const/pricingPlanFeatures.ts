@@ -15,21 +15,21 @@ const premiumPlanFeatures = [
 ];
 
 const twoPairFeatures = [
-  "2 pairs of Royals",
+  "Signals for 2 selected pairs",
   "8-24 Signals Monthly",
   "Registration in our system",
 ];
 
 const fourPairFeatures = [
-  "4 pairs of Royals",
+  "Signals for 4 selected pairs",
   "16-50 Signals Monthly",
   "Registration in our system",
 ];
 
 const unlimitedPairFeatures = [
-  "Unlimited pairs of Royals",
-  "Exclusive content",
-  "Registration in our system",
+  "Unlimited access to every available trading pair",
+  "AI-generated trading signals across all pairs",
+  "Community access and account registration included",
 ];
 
 export {

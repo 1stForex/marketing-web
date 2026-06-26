@@ -4,7 +4,7 @@ export const paragraphs = [
     points: [
       "From online courses to in-person seminars, our curriculum caters to traders of all levels.",
       "Beginners build a strong foundation with essential concepts, while advanced traders gain access to professional strategies like our copyrighted Breakout System, meticulously backtested for success.",
-      "With over 1,000 happy students, our academy remains one of the top-rated in the world.",
+      "With thousands of happy students, our academy remains one of the top-rated in the world.",
     ],
   },
   {

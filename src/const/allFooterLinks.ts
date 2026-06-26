@@ -13,7 +13,7 @@ export const linksList = [
         href: RoutesUrls.ACADEMY,
       },
       {
-        label: "Historical Performance",
+        label: "Performance History",
         href: RoutesUrls.HISTORICAL_PERFORMANCE,
       },
     ],
@@ -22,12 +22,12 @@ export const linksList = [
     label: "Company",
     links: [
       {
-        label: "Community",
-        href: RoutesUrls.COMMUNITY,
-      },
-      {
         label: "Pricing",
         href: RoutesUrls.PRICING,
+      },
+      {
+        label: "Community",
+        href: RoutesUrls.COMMUNITY,
       },
       {
         label: "About",

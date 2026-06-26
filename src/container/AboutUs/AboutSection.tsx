@@ -1,5 +1,5 @@
 "use client";
-import { Box, useMediaQuery } from "@mui/material";
+import { Box } from "@mui/material";
 import Image from "next/image";
 import About from "@/src/assets/images/about-us.jpg";
 import Logo from "@/src/assets/icons/logo.svg";
@@ -7,44 +7,13 @@ import AboutUsTypography from "@/src/styled/AboutUsTypography";
 import HeadTypography from "@/src/styled/HeadTypography";
 
 export default function AboutSection() {
-  const isMobile = useMediaQuery("(min-width: 576px)");
-
-  const firstParagraphFirstHalfHTML = `Founded in Montreal over
-            <span style="color:#F30; font-weight:700;">
-              20 years ago,
-            </span>
-             1st Forex has grown to become a global leader in forex education
-            and trading signals.`;
-
-  const firstParagraphSecondHalfHTML = `From humble beginnings conducting in-person
-            seminars and offering web-based forex signals, we’ve evolved into a
-            trusted name in the industry with over
-            <span style="color: #F30; font-weight: 700;">
-              1,000 satisfied customers
-            </span>
-            worldwide.`;
-
-  const thirdParagraphFirstHalfHTML = `At the heart of 1st Forex is our
-            <span style="color:#F30, font-weight: 700;">
-              CEO, Marie Josée Bergeron,
-            </span>
-            a seasoned trader with over
-            <span style="color:#F30, font-weight: 700;">
-              22 years of experience
-            </span>
-            in the forex industry.`;
-
-  const thirdParagraphSecondHalfHTML = `Driven by a dream to build the world’s best
-            forex company and foster a real community of apex traders, Marie Josée’s
-            vision has shaped every aspect of 1st Forex.`;
-
-  const firstParagraph = isMobile
-    ? `${firstParagraphFirstHalfHTML} ${firstParagraphSecondHalfHTML}`
-    : firstParagraphFirstHalfHTML;
-
-  const thirdParagraph = isMobile
-    ? `${thirdParagraphFirstHalfHTML} ${thirdParagraphSecondHalfHTML}`
-    : thirdParagraphFirstHalfHTML;
+  const paragraphs = [
+    "Founded in Montreal over 20 years ago, 1st Forex has grown into a global company focused on forex education and trading signals. What started as in-person seminars and early online signals has developed into a trusted platform used by thousands of traders worldwide.",
+    "A key part of our work is our Breakout Strategy, a proven trading method designed to spot strong market moves early. This strategy is at the core of our signals, education, and AI systems, helping traders make more consistent and informed decisions.",
+    "Now based in Costa Rica, our goal remains the same: to help traders build confidence, improve their skills, and work toward financial independence in the forex market.",
+    "Leading 1st Forex is our CEO, Marie Josée Bergeron, who has over 22 years of experience in forex trading. Her vision of building a strong trading company and real trader community has shaped everything we do.",
+    "She is supported by a skilled team of traders and an AI specialist who help keep our strategies and signals accurate, modern, and effective.",
+  ];
 
   return (
     <Box>
@@ -85,6 +54,11 @@ export default function AboutSection() {
         sx={{
           display: "flex",
           gap: "95px",
+          alignItems: "center",
+          "@media (max-width: 992px)": {
+            gap: "32px",
+            flexDirection: "column",
+          },
         }}
       >
         <Box
@@ -94,46 +68,32 @@ export default function AboutSection() {
             gap: "20px",
           }}
         >
-          <AboutUsTypography
-            dangerouslySetInnerHTML={{ __html: firstParagraph }}
-          />
-          <AboutUsTypography
-            sx={{
-              display: isMobile ? "none" : "block",
-            }}
-            dangerouslySetInnerHTML={{ __html: firstParagraphSecondHalfHTML }}
-          />
-          <AboutUsTypography>
-            Today, headquartered in{" "}
-            <span style={{ color: "#F30", fontWeight: "700" }}>Costa Rica</span>,
-            we continue to empower traders to achieve
-            financial independence and master the forex markets.
-          </AboutUsTypography>
-          <AboutUsTypography
-            dangerouslySetInnerHTML={{ __html: thirdParagraph }}
-          />
-          <AboutUsTypography
-            sx={{
-              display: isMobile ? "none" : "block",
-            }}
-            dangerouslySetInnerHTML={{ __html: thirdParagraphSecondHalfHTML }}
-          />
-          <AboutUsTypography>
-            He is supported by an exceptional team, including experienced
-            traders and a leading{" "}
-            <span style={{ color: "#F30", fontWeight: "700" }}>AI expert</span>,
-            ensuring our offerings remain cutting-edge and unparalleled in the
-            industry.
-          </AboutUsTypography>
+          {paragraphs.map((paragraph) => (
+            <AboutUsTypography key={paragraph}>{paragraph}</AboutUsTypography>
+          ))}
         </Box>
         <Box
           sx={{
+            position: "relative",
+            flex: "0 0 416px",
+            width: "416px",
+            aspectRatio: "1",
+            overflow: "hidden",
+            borderRadius: "32px",
+            boxShadow: "0px 16px 34px -24px rgba(16, 25, 40, 0.45)",
             "@media (max-width: 992px)": {
-              display: "none",
+              width: "min(100%, 416px)",
+              flexBasis: "auto",
             },
           }}
         >
-          <Image src={About} alt="Image" width={416} height={416} />
+          <Image
+            src={About}
+            alt="1st Forex team"
+            fill
+            sizes="(max-width: 992px) 100vw, 416px"
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
         </Box>
       </Box>
     </Box>

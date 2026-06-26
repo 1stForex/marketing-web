@@ -24,14 +24,15 @@ const PricingHeader = () => {
       <Badge title="Pricing" />
 
       <HeadTypography color="#333" textAlign={"center"}>
-        Pick the price{" "}
+        Start Trading with{" "}
         <span style={{ color: "var(--primary-400-base, #F30)" }}>
-          that&#39;s right for you{" "}
+          Confidence
         </span>
       </HeadTypography>
 
       <BaseTypography color="#333" fontWeight={400}>
-        Join millions of other customers on this platform
+        Get access to proven signals, performance tracking, and the tools you
+        need to grow.
       </BaseTypography>
     </Box>
   );
