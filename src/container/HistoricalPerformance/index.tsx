@@ -615,7 +615,7 @@ export default function HistoricalPerformance() {
         <DialogActions sx={{ px: "24px", pb: "24px", gap: "10px" }}>
           <Button
             component={Link}
-            href={RedirectUrls.LOGIN_URL}
+            href={RedirectUrls.HISTORICAL_RESULTS_URL}
             sx={{
               color: "#333",
               border: "1px solid #D0D5DD",

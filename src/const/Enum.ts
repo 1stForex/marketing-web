@@ -1,10 +1,20 @@
+const envUrl = (value?: string) => value?.trim() || undefined;
+
+const APP_BASE_URL = (
+  envUrl(process.env.NEXT_PUBLIC_APP_URL) ??
+  "https://staging.d1bhofzjxuviaa.amplifyapp.com"
+).replace(/\/$/, "");
+
 export const RedirectUrls = {
   LOGIN_URL:
-    process.env.NEXT_PUBLIC_APP_LOGIN_URL ??
-    "https://staging.d1bhofzjxuviaa.amplifyapp.com/auth/login",
+    envUrl(process.env.NEXT_PUBLIC_APP_LOGIN_URL) ??
+    `${APP_BASE_URL}/auth/login`,
   REGISTER_URL:
-    process.env.NEXT_PUBLIC_APP_REGISTER_URL ??
-    "https://staging.d1bhofzjxuviaa.amplifyapp.com/auth/register",
+    envUrl(process.env.NEXT_PUBLIC_APP_REGISTER_URL) ??
+    `${APP_BASE_URL}/auth/register`,
+  HISTORICAL_RESULTS_URL:
+    envUrl(process.env.NEXT_PUBLIC_APP_HISTORICAL_RESULTS_URL) ??
+    `${APP_BASE_URL}/historical-results`,
 } as const;
 
 export enum RoutesUrls {
