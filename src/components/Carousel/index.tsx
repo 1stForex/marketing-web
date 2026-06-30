@@ -48,6 +48,45 @@ const Carousel: React.FC<CarouselProp> = ({
     autoplaySpeed: 1000,
   };
 
+  const renderStackedCards = (carouselCards = false) => (
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex",
+        gap: "20px",
+        ...(carouselCards
+          ? {
+              flexDirection: "column",
+              maxWidth: "540px",
+              mx: "auto",
+              px: { xs: "16px", sm: "24px" },
+            }
+          : {
+              px: "8px",
+              "@media (max-width: 992px)": {
+                flexDirection: "column",
+              },
+              "@media (max-width: 768px)": {
+                gap: "16px",
+              },
+              "@media (max-width: 576px)": {
+                gap: "12px",
+              },
+            }),
+      }}
+    >
+      {cards.map((card, index) => (
+        <Card
+          key={index}
+          title={card.title}
+          image={card.image}
+          description={card.description}
+          isCarousel={carouselCards ? false : undefined}
+        />
+      ))}
+    </Box>
+  );
+
   return (
     <Box
       sx={{
@@ -58,6 +97,8 @@ const Carousel: React.FC<CarouselProp> = ({
         justifyContent: "center",
         borderRadius: "32px",
         background: "var(--Grey-50, #F9FAFB)",
+        maxWidth: "100%",
+        overflow: "hidden",
         boxShadow:
           "0px 5px 13px -5px rgba(16, 25, 40, 0.05), 0px 2px 4px -1px rgba(16, 25, 40, 0.02)",
         "@media (max-width: 576px)": {
@@ -97,11 +138,15 @@ const Carousel: React.FC<CarouselProp> = ({
         {children}
       </Box>
 
-      {isCarousel ? (
+      {isCarousel && isMobile ? (
+        renderStackedCards(true)
+      ) : isCarousel ? (
         <>
           <Box
             sx={{
               width: "100%",
+              maxWidth: "100%",
+              overflow: "hidden",
               position: "relative",
             }}
           >
@@ -153,31 +198,7 @@ const Carousel: React.FC<CarouselProp> = ({
           </Box>
         </>
       ) : (
-        <Box
-          sx={{
-            display: "flex",
-            gap: "20px",
-            px: "8px",
-            "@media (max-width: 992px)": {
-              flexDirection: "column",
-            },
-            "@media (max-width: 768px)": {
-              gap: "16px",
-            },
-            "@media (max-width: 576px)": {
-              gap: "12px",
-            },
-          }}
-        >
-          {cards.map((card, index) => (
-            <Card
-              key={index}
-              title={card.title}
-              image={card.image}
-              description={card.description}
-            />
-          ))}
-        </Box>
+        renderStackedCards()
       )}
     </Box>
   );
