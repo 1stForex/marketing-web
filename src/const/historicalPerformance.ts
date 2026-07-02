@@ -30,37 +30,37 @@ export interface HistoricalYearPerformance {
 }
 
 export const historicalPerformanceRange = {
-  startMonth: "2016-01",
-  endMonth: "2026-05",
-  label: "2016-May 2026",
+  "startMonth": "2016-01",
+  "endMonth": "2026-06",
+  "label": "2016-June 2026"
 };
 
 export const historicalPerformanceTotals = {
-  "signals": 2127,
-  "trades": 1431,
-  "wins": 1316,
-  "losses": 114,
+  "signals": 2140,
+  "trades": 1445,
+  "wins": 1328,
+  "losses": 116,
   "breakeven": 1,
-  "notEntered": 696,
-  "netPips": 277386,
-  "profitUsd": 2917929.6,
-  "winRate": 91.96
+  "notEntered": 695,
+  "netPips": 279681.0,
+  "profitUsd": 2908767.0,
+  "winRate": 91.9
 };
 
 export const historicalPerformanceYears: HistoricalYearPerformance[] = [
   {
     "year": 2026,
-    "signals": 87,
-    "trades": 54,
-    "wins": 52,
-    "losses": 2,
+    "signals": 100,
+    "trades": 68,
+    "wins": 64,
+    "losses": 4,
     "breakeven": 0,
-    "notEntered": 33,
-    "netPips": 9557,
-    "profitUsd": 169247.6,
-    "winRate": 96.3,
+    "notEntered": 32,
+    "netPips": 11852.0,
+    "profitUsd": 160085.0,
+    "winRate": 94.12,
     "bestPair": "USD/CAD",
-    "note": "Partial-year performance through May 2026 from the uploaded historical stats.",
+    "note": "Partial-year performance through June 2026 from uploaded live testing results.",
     "months": [
       {
         "month": "January",
@@ -121,16 +121,30 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
       {
         "month": "May",
         "monthKey": "2026-05",
-        "signals": 17,
+        "signals": 16,
         "trades": 4,
         "wins": 4,
         "losses": 0,
         "breakeven": 0,
-        "notEntered": 13,
-        "netPips": 516,
-        "profitUsd": 9162.6,
-        "winRate": 100,
-        "dataQuality": "exact_live_m15"
+        "notEntered": 12,
+        "netPips": 516.0,
+        "profitUsd": 0,
+        "winRate": 100.0,
+        "dataQuality": "closed_trades_upload"
+      },
+      {
+        "month": "June",
+        "monthKey": "2026-06",
+        "signals": 14,
+        "trades": 14,
+        "wins": 12,
+        "losses": 2,
+        "breakeven": 0,
+        "notEntered": 0,
+        "netPips": 2295.0,
+        "profitUsd": 0,
+        "winRate": 85.71,
+        "dataQuality": "closed_trades_upload_missing_sl_tp_times"
       }
     ]
   },
