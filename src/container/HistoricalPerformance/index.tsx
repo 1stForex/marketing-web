@@ -68,6 +68,26 @@ const mobileTableLabels = [
   "Best Pair",
 ];
 
+const allowedHistoricalPairs = new Set([
+  "GBP/USD",
+  "USD/CHF",
+  "EUR/USD",
+  "AUD/USD",
+  "USD/CAD",
+]);
+
+function formatPair(pair: string) {
+  if (pair.includes("/")) return pair;
+
+  return pair.length === 6 ? `${pair.slice(0, 3)}/${pair.slice(3)}` : pair;
+}
+
+function formatAllowedPair(pair: string) {
+  const formattedPair = formatPair(pair);
+
+  return allowedHistoricalPairs.has(formattedPair) ? formattedPair : "N/A";
+}
+
 interface PinnedHeaderState {
   visible: boolean;
   left: number;
@@ -252,7 +272,7 @@ export default function HistoricalPerformance() {
               ["Best Year", `${bestYear.year}`, `${formatNumber(bestYear.netPips)} net pips`],
               [
                 "Best Pair",
-                bestYear.bestPair,
+                formatAllowedPair(bestYear.bestPair),
                 "Most productive major pair",
               ],
               [
@@ -452,7 +472,7 @@ export default function HistoricalPerformance() {
                               {formatNumber(year.netPips)}
                             </TableCell>
                             <TableCell label={mobileTableLabels[6]}>
-                              {year.bestPair}
+                              {formatAllowedPair(year.bestPair)}
                             </TableCell>
                             <TableCell isAction>
                               <IconButton
