@@ -111,7 +111,7 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
               }}
             >
               <ListItemButton
-                LinkComponent={Link}
+                component="a"
                 href={RedirectUrls.REGISTER_URL}
               >
                 <CustomButton
@@ -138,7 +138,7 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
               }}
             >
               <ListItemButton
-                LinkComponent={Link}
+                component="a"
                 href={RedirectUrls.LOGIN_URL}
               >
                 <CustomButton

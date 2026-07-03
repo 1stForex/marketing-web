@@ -9,12 +9,11 @@ import CustomButton from "../Button";
 import Image from "next/image";
 import TemporaryDrawer from "./Menu";
 import { NavProps } from "@/src/types/Nav.interface";
-import { useRouter } from "next/navigation";
 import { RedirectUrls } from "@/src/const/Enum";
+import { openExternalUrl } from "@/src/utils/openExternalUrl";
 
 export default function OptionMenu({ currentPath }: NavProps) {
   const isSmallScreen = useMediaQuery("(max-width: 1350px)");
-  const router = useRouter();
   return (
     <Box
       sx={{
@@ -73,7 +72,7 @@ export default function OptionMenu({ currentPath }: NavProps) {
                   }}
                 />
               }
-              onClick={() => router.push(RedirectUrls.LOGIN_URL)}
+              onClick={() => openExternalUrl(RedirectUrls.LOGIN_URL)}
             >
               Login
             </CustomButton>
@@ -90,7 +89,7 @@ export default function OptionMenu({ currentPath }: NavProps) {
                 }}
               />
             }
-            onClick={() => router.push(RedirectUrls.REGISTER_URL)}
+            onClick={() => openExternalUrl(RedirectUrls.REGISTER_URL)}
           >
             Register
           </CustomButton>
