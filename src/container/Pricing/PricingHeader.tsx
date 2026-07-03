@@ -12,7 +12,7 @@ import Image from "next/image";
 const proofPoints = [
   {
     icon: <AutoGraphRoundedIcon />,
-    value: "1,431",
+    value: "1,348",
     label: "Historical trades tracked",
   },
   {
