@@ -1,7 +1,13 @@
 const envUrl = (value?: string) => value?.trim() || undefined;
+const appBaseFromPath = (value?: string) =>
+  envUrl(value)
+    ?.replace(/\/(?:auth\/(?:login|register)|historical-results|subscription)\/?$/, "")
+    .replace(/\/$/, "");
 
 const APP_BASE_URL = (
   envUrl(process.env.NEXT_PUBLIC_APP_URL) ??
+  appBaseFromPath(process.env.NEXT_PUBLIC_APP_LOGIN_URL) ??
+  appBaseFromPath(process.env.NEXT_PUBLIC_APP_REGISTER_URL) ??
   "https://staging.d1bhofzjxuviaa.amplifyapp.com"
 ).replace(/\/$/, "");
 
@@ -12,6 +18,9 @@ export const RedirectUrls = {
   REGISTER_URL:
     envUrl(process.env.NEXT_PUBLIC_APP_REGISTER_URL) ??
     `${APP_BASE_URL}/auth/register`,
+  SUBSCRIPTION_URL:
+    envUrl(process.env.NEXT_PUBLIC_APP_SUBSCRIPTION_URL) ??
+    `${APP_BASE_URL}/subscription`,
   HISTORICAL_RESULTS_URL:
     envUrl(process.env.NEXT_PUBLIC_APP_HISTORICAL_RESULTS_URL) ??
     `${APP_BASE_URL}/historical-results`,

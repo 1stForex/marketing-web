@@ -11,15 +11,13 @@ const Pricing = () => {
           mx: "auto",
           display: "flex",
           flexDirection: "column",
-          gap: "60px",
+          gap: { xs: "34px", md: "48px" },
           mb: "80px",
           overflowX: "hidden",
           "@media (max-width: 768px)": {
-            gap: "50px",
             mb: "50px",
           },
           "@media (max-width: 576px)": {
-            gap: "40px",
             mb: "40px",
           },
         }}
