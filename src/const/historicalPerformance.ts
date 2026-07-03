@@ -36,15 +36,15 @@ export const historicalPerformanceRange = {
 };
 
 export const historicalPerformanceTotals = {
-  "signals": 1763,
-  "trades": 1337,
-  "wins": 1226,
-  "losses": 111,
+  "signals": 1777,
+  "trades": 1348,
+  "wins": 1236,
+  "losses": 112,
   "breakeven": 0,
-  "notEntered": 428,
-  "netPips": 280586.0,
+  "notEntered": 431,
+  "netPips": 282671.0,
   "profitUsd": 4887458.9,
-  "winRate": 91.7
+  "winRate": 91.69
 };
 
 export const historicalPerformanceYears: HistoricalYearPerformance[] = [
@@ -150,15 +150,15 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
   },
   {
     "year": 2025,
-    "signals": 161,
-    "trades": 161,
-    "wins": 150,
-    "losses": 11,
+    "signals": 175,
+    "trades": 172,
+    "wins": 160,
+    "losses": 12,
     "breakeven": 0,
-    "notEntered": 0,
-    "netPips": 35582.0,
+    "notEntered": 3,
+    "netPips": 37667.0,
     "profitUsd": 627169.7,
-    "winRate": 93.17,
+    "winRate": 93.02,
     "bestPair": "GBP/USD",
     "note": "Marketing-aligned historical display dataset with daily trade rows populated for dashboard review.",
     "months": [
@@ -319,16 +319,16 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
       {
         "month": "December",
         "monthKey": "2025-12",
-        "signals": 0,
-        "trades": 0,
-        "wins": 0,
-        "losses": 0,
+        "signals": 14,
+        "trades": 11,
+        "wins": 10,
+        "losses": 1,
         "breakeven": 0,
-        "notEntered": 0,
-        "netPips": 0.0,
-        "profitUsd": 0.0,
-        "winRate": 0.0,
-        "dataQuality": "marketing_gap_repair_display_dataset"
+        "notEntered": 3,
+        "netPips": 2085.0,
+        "profitUsd": 0,
+        "winRate": 90.91,
+        "dataQuality": "dec_2025_filtered_trades_upload"
       }
     ]
   },
