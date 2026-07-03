@@ -102,7 +102,7 @@ export default function LegacySection() {
           }}
         >
           Behind 1st Forex is a dynamic and diverse team of forex veterans,
-          successful young traders, and AI specialists.
+          successful young traders, and product specialists.
         </BaseTypography>
         <BaseTypography
           sx={{

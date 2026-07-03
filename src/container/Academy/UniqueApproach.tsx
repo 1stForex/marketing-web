@@ -92,8 +92,8 @@ const UniqueApproach = () => {
           >
             What sets us apart is our ability to blend tradition with
             innovation. While our course content is rooted in tried-and-true
-            strategies we&#39;ve honed since 2004, we&#39;ve integrated advanced
-            AI technology to enhance the learning experience.
+            strategies we&#39;ve honed since 2004, we&#39;ve integrated practical
+            tools to enhance the learning experience.
           </Typography>
 
           <Typography
@@ -114,9 +114,8 @@ const UniqueApproach = () => {
               },
             }}
           >
-            From AI forex signals to automated trading bots, our tools
-            complement your education and help you make smarter trading
-            decisions.
+            From trading signals to platform tools, our resources complement
+            your education and help you make clearer trading decisions.
           </Typography>
         </Box>
       </Box>

@@ -155,7 +155,7 @@ const HeroSection = () => {
             },
           }}
         >
-          At 1st Forex, we empower traders with AI-driven signals, expert
+          At 1st Forex, we empower traders with trading signals, expert
           education, and a supportive global community, helping you trade
           smarter, grow faster, and build confidence in every market.
         </BaseTypography>
@@ -172,7 +172,7 @@ const HeroSection = () => {
             padding={isMobile ? "16px 24px" : "16px 48px"}
             onClick={handleAiSignalClick}
           >
-            AI Signal
+            Trading Signals
           </CustomButton>
           <CustomButton
             variant="transparent"

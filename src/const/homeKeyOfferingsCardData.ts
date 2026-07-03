@@ -13,7 +13,7 @@ export const homeKeyOfferingsCardData = [
     title: "Advanced Signals & Strategic Insights",
     image: Care,
     description:
-      "Access reliable, AI-powered signals and intuitive market guidance that adapts to changing conditions, informing your every move.",
+      "Access reliable trading signals and practical market guidance for a clearer decision-making process.",
   },
   {
     title: "Supportive Community",

@@ -5,7 +5,7 @@ export const linksList = [
     label: "Product",
     links: [
       {
-        label: "1st Forex AI Signal",
+        label: "1st Forex Trading Signals",
         href: RoutesUrls.AI_SIGNAL,
       },
       {

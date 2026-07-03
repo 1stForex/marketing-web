@@ -18,9 +18,9 @@ export const allLegacy = [
   },
   {
     icon: Specialist,
-    title: "AI Specialists",
+    title: "Product Specialists",
     description:
-      "Advanced algorithms and data-driven insights enhance our trading tools, making them smarter and more effective.",
+      "Data, design, and engineering support the tools traders use to review signals and manage their workflow.",
   },
   {
     icon: Scrum,

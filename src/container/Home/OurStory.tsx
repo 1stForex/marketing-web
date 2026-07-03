@@ -9,8 +9,8 @@ const OurStory = () => {
   const paragraphs = [
     "Founded in 2004, 1st Forex has been a trusted name in the forex trading industry for over two decades. Based in Costa Rica, we specialize in providing top-notch forex education and reliable trading signals, empowering traders worldwide to achieve their financial goals.",
     "Through our 1st Forex Academy, we have trained thousands of happy students and traders via online courses and in-person seminars, constantly refining our curriculum to remain one of the best in the world. Our track record speaks for itself, with countless success stories from those who have trusted us to guide their trading journey.",
-    "Our team is the perfect blend of experienced forex veterans, young and successful traders, and cutting-edge AI specialists. Together, we are committed to staying ahead of industry trends, incorporating state-of-the-art AI technology into our signals and tools.",
-    "From automated bots to advanced signals available on our mobile app and user-friendly website, we direct our clients toward smarter and more profitable trading decisions.",
+    "Our team blends experienced forex veterans, successful traders, and product specialists. Together, we focus on practical education, disciplined signals, and tools traders can actually use.",
+    "From structured signals to platform tools available on our mobile app and user-friendly website, we help clients make clearer trading decisions.",
     "At 1st Forex, we don’t just see clients—we see family. We are passionate about what we do, and we are dedicated to building a thriving, connected community where traders of all levels can learn, grow, and succeed.",
   ];
 

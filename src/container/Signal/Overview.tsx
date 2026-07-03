@@ -31,16 +31,16 @@ export default function Overview() {
       </Box>
       <Box>
         <OverviewBaseTypography mb={"12px"}>
-          1st Forex AI Signal merges
+          1st Forex Trading Signals merge
           <span style={{ color: "#F30" }}> 20 years </span> of market expertise
           with our copyrighted{" "}
-          <span style={{ color: "#F30" }}>Break Out System</span>, enhanced by
-          cutting-edge AI to deliver superior trading results.
+          <span style={{ color: "#F30" }}>Break Out System</span> to support a
+          more disciplined trading process.
         </OverviewBaseTypography>
         <OverviewBaseTypography mb={"12px"}>
-          Our advanced algorithms analyze real-time data, adapt to evolving
-          trends, and provide reliable, automated signals directly to your
-          mobile app ensuring exceptional ROI and effortless execution.
+          Our process reviews market structure, risk levels, and historical
+          behavior to deliver clear signals directly to your dashboard and
+          mobile experience.
         </OverviewBaseTypography>
         <OverviewBaseTypography>
           With <span style={{ color: "#F30" }}>24/7 support</span>, direct

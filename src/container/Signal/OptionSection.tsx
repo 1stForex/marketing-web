@@ -18,8 +18,8 @@ export default function OptionSection() {
 
   const cardData = [
     {
-      title: "Fully Automated",
-      specialText: "Trading Bot",
+      title: "Rules-Based",
+      specialText: "Signal Process",
       cardInfo: allTradingBot,
     },
     {
@@ -29,7 +29,7 @@ export default function OptionSection() {
     },
     {
       title: "App-Based Signals with",
-      specialText: "AI Assistance",
+      specialText: "Trader Support",
       cardInfo: allAIAssistance,
     },
   ];

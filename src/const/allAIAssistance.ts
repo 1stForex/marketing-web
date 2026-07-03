@@ -14,7 +14,7 @@ export const allAIAssistance = [
     icon: Insight,
     title: "Intelligent Insights",
     description:
-      "Our AI assistant factors in market conditions, historical patterns, and risk management preferences, guiding you toward informed decisions.",
+      "Review market conditions, historical patterns, and risk management preferences before acting on a signal.",
   },
   {
     icon: Transparency,
@@ -26,6 +26,6 @@ export const allAIAssistance = [
     icon: Support,
     title: "Ongoing Support",
     description:
-      "Get help from our 24/7 support team or ask the AI assistant about position sizes, lot allocation, and strategy adjustments ensuring with you through every step of your trading journey.",
+      "Get help from our support team around platform questions, signal access, and your trading workflow.",
   },
 ];

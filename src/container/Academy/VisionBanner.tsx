@@ -14,7 +14,7 @@ const VisionBanner = () => {
     >
       <Banner
         badgeTitle="Vision"
-        description="To make forex education affordable, effective, and accessible to traders worldwide. By combining our proven teaching methods with innovative AI technology, we aim to build a thriving community of successful traders equipped with both knowledge and cutting-edge tools to excel in the markets."
+        description="To make forex education affordable, effective, and accessible to traders worldwide. By combining proven teaching methods with practical trading tools, we aim to build a thriving community equipped with knowledge, discipline, and market confidence."
       >
         <HeadTypography color="#FFF" textAlign={"center"}>
           Our Vision

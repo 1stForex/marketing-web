@@ -28,7 +28,7 @@ const fourPairFeatures = [
 
 const unlimitedPairFeatures = [
   "Unlimited access to every available trading pair",
-  "AI-generated trading signals across all pairs",
+  "Trading signals across all available pairs",
   "Community access and account registration included",
 ];
 

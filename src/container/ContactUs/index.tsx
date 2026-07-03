@@ -30,7 +30,7 @@ const ContactUs = () => {
           badgeTitle="Help Section"
           bgImagePath="/ContactUsBg.jpg"
           title="Contact Us"
-          description="Experience fully automated, AI-powered forex signals backed by two decades of proven success."
+          description="Reach the 1st Forex team for account, billing, signals, course, or partnership support."
         >
           <FeaturesAndLinks />
         </Hero>

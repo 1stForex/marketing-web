@@ -41,7 +41,7 @@ export default function GroupButton({ currentPath, nav }: NavProps) {
             borderRadius: "32px 0 0 32px",
           }}
         >
-          AI Signals
+          Trading Signals
         </Button>
       </Link>
       <Link href="/academy" passHref>

@@ -1,7 +1,7 @@
 export const PrivacyPolicySection = [
   {
     section: [
-      `<p>At 1st FX, including our subsidiary(ies) and/or affiliate(s), (<span>"Company," "we," "our,"</span> or <span>"us"</span>), is committed to protecting the privacy of its customers and users (hereinafter referred to as “User/ Customer/ User/ you/ your”). This Privacy Policy ("Policy") explains how we collect, use, disclose, and protect your personal data when you access our website ("Website") or use our services ("Services"), including AI-powered trading tools, educational resources, and community engagement features. This Policy applies to situations where the Company act as data controllers or equivalent under local or applicable law concept. When we refer to “personal data” we mean any information relating to an identified or identifiable individual.</p>
+      `<p>At 1st FX, including our subsidiary(ies) and/or affiliate(s), (<span>"Company," "we," "our,"</span> or <span>"us"</span>), is committed to protecting the privacy of its customers and users (hereinafter referred to as “User/ Customer/ User/ you/ your”). This Privacy Policy ("Policy") explains how we collect, use, disclose, and protect your personal data when you access our website ("Website") or use our services ("Services"), including trading signal tools, educational resources, and community engagement features. This Policy applies to situations where the Company act as data controllers or equivalent under local or applicable law concept. When we refer to “personal data” we mean any information relating to an identified or identifiable individual.</p>
       <br/>
       <p>This Policy applies to personal data that we collect from you when you visit this Website, create an account, use our propriety tools or services ("you" or "your" being interpreted accordingly). The Policy provides information on what personal data we collect, why we collect personal data, how it is used, the lawful basis on which your personal data is processed, how it is stored, and how we share information.</p>
       <br/>
@@ -26,7 +26,7 @@ export const PrivacyPolicySection = [
         <p>We offer a community feature to enable learning and engagement among users. If you choose to post messages on our message boards, online/ offline chats or other message areas or leave feedback for other users, we may retain this information. While utilizing this feature, the following information may be publicly visible:</p>
         <br/>
         <ul>
-        <li>username, the image you have elected to provide as your user avatar, signature, “About me”, Twitter handle, YouTube channel link, YouTube username, Facebook profile, Instagram profile and website, date joined, subscription level. If you subscribe to our AI-powered tool for trade signals, please be aware that the tool will collect personal data such as your address, email address, name, and phone number. For users registering for Premium subscription services, our third-party payment processor will handle the necessary payment information, including credit card, bank account, or payment account details required for account registration and processing.</li>
+        <li>username, the image you have elected to provide as your user avatar, signature, “About me”, Twitter handle, YouTube channel link, YouTube username, Facebook profile, Instagram profile and website, date joined, subscription level. If you subscribe to our trading signal service, please be aware that the service may collect personal data such as your address, email address, name, and phone number. For users registering for Premium subscription services, our third-party payment processor will handle the necessary payment information, including credit card, bank account, or payment account details required for account registration and processing.</li>
         </ul>
         <br/>
         <p>Contact data: We also process any personal data you choose to give when corresponding with us by phone, email, or otherwise visiting and interacting with this Website or any other services we operate. By providing your phone number, you agree to receive text messages from us. Message and data rates may apply. Message frequency varies. We will not share your contact phone number with any other parties unless explicitly specified by this policy.</p>
@@ -101,11 +101,11 @@ export const PrivacyPolicySection = [
   },
   {
     section: [
-      `<h3>AI Services</h3>`,
+      `<h3>Service Improvement</h3>`,
       `<br/>`,
-      `<p>We leverage anonymized and aggregated data from user interactions with our AI tools to continuously enhance the functionality, accuracy, and effectiveness of our AI systems. Specifically, this involves refining machine learning algorithms to produce reliable outputs, improving predictive models, and developing more advanced trading and educational features. Our AI-driven enhancements are guided by principles of fairness, transparency, and user-centered design, ensuring that improvements meet user needs without introducing bias.</p>
+      `<p>We leverage anonymized and aggregated data from user interactions with our tools to continuously improve functionality, accuracy, reliability, and the overall user experience. This may include improving trading and educational features, product usability, reporting, and service quality.</p>
         <br/>
-        <p>To protect user privacy, all data used in AI training undergoes strict anonymization and encryption processes. Personally identifiable information (PII) is removed before any data is utilized for system enhancement. This ensures that the data cannot be traced back to individual users. Additionally, our development process involves rigorous testing, monitoring, and validation to align AI system improvements with ethical standards, regulatory requirements, and the overall objective of delivering value to our users. By continuously advancing our AI capabilities, we strive to create tools that empower users to make informed trading decisions while adhering to the highest standards of privacy and security.</p>`,
+        <p>To protect user privacy, personal data used for service improvement is handled with appropriate safeguards. Personally identifiable information is limited to what is required for the relevant business purpose, and we use testing, monitoring, and validation to align improvements with regulatory requirements and user expectations.</p>`,
     ],
   },
   {
@@ -165,9 +165,9 @@ export const PrivacyPolicySection = [
   },
   {
     section: [
-      `<h3>AI Data Sharing</h3>`,
+      `<h3>Service Improvement Data Sharing</h3>`,
       `<br/>`,
-      `<p>Anonymized and aggregated data used for AI development may be shared with partners to improve our AI tools. No personally identifiable information (PII) is included in this process. For more details, please refer to our AI policy.</p>`,
+      `<p>Anonymized and aggregated data used for service improvement may be shared with partners to improve our tools. No personally identifiable information (PII) is included in this process.</p>`,
     ],
   },
   {
@@ -254,7 +254,7 @@ export const PrivacyPolicySection = [
     section: [
       `<h3>INTERNATIONAL TRANSFERS</h3>`,
       `<br/>`,
-      `<p>We are headquartered in Costa Rica and maintain offices and partnerships with service providers in various countries. As a result, your personal data may be transferred to the ________ or other locations outside your state, province, country, or other governmental jurisdiction, where our offices or those of our service providers are located. Please note that privacy laws in these locations may not offer the same level of protection as those in your jurisdiction. When such transfers occur, we will ensure that recipients of your personal data provide data security and protection in compliance with applicable laws.</p>
+      `<p>We are headquartered in Costa Rica and maintain offices and partnerships with service providers in various countries. As a result, your personal data may be transferred to Costa Rica, the United States, Canada, or other locations outside your state, province, country, or other governmental jurisdiction, where our offices or those of our service providers are located. Please note that privacy laws in these locations may not offer the same level of protection as those in your jurisdiction. When such transfers occur, we will ensure that recipients of your personal data provide data security and protection in compliance with applicable laws.</p>
       <br/>
       <p>In accordance with EEA data protection laws, when transferring your personal data outside the EEA, we adhere to the following guidelines:</p>
       <br/>

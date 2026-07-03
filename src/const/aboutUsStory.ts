@@ -10,18 +10,18 @@ export const paragraphs = [
   {
     label: "State-of-the-Art Technology",
     points: [
-      "We lead the industry with innovative tools powered by AI technology, including automated bots and AI-driven signals.",
-      "Our mobile app and user-friendly website provide seamless access to these tools, ensuring traders can make informed and profitable decisions.",
+      "We combine structured market analysis, practical education, and easy-to-use tools for traders who want a clearer process.",
+      "Our mobile app and user-friendly website provide seamless access to signals, education, and community features.",
     ],
   },
   {
     label: "Our Team: Expertise Meets Passion",
     description:
-      "Behind 1st Forex is a dynamic and diverse team of forex veterans, successful young traders, and AI specialists. This unique blend of experience and innovation allows us to stay ahead of market trends and deliver unmatched value to our community.",
+      "Behind 1st Forex is a dynamic and diverse team of forex veterans, successful young traders, and product specialists. This blend of experience and execution helps us deliver practical value to our community.",
     points: [
       "Forex Veterans: Decades of trading expertise provide the foundation for our education and strategies.",
       "Young Innovators: Fresh perspectives and modern trading techniques keep us at the cutting edge.",
-      "AI Specialists: Advanced algorithms and data-driven insights enhance our trading tools, making them smarter and more effective.",
+      "Product Specialists: Data, design, and engineering support the tools traders use every day.",
       "Top-Tier Support Team: Our experienced and dedicated professionals work tirelessly to ensure a seamless experience for every trader in our community.",
     ],
   },

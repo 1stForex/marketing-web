@@ -62,7 +62,7 @@ export const acceptableUsePolicy: LegalDocument = {
     {
       title: "Intellectual Property & Content Protection",
       paragraphs: [
-        "All educational materials, analytical content, AI-assisted analytical signals, branding, videos, written content, and proprietary methodologies remain the intellectual property of the company.",
+        "All educational materials, analytical content, trading signals, branding, videos, written content, and proprietary methodologies remain the intellectual property of the company.",
         "Users may not copy, reproduce, distribute, publish, sublicense, or commercially exploit company materials without prior written authorization.",
         "Unauthorized redistribution of subscription content or analytical signals may result in immediate account termination and potential legal action.",
       ],
@@ -138,7 +138,7 @@ export const refundPolicy: LegalDocument = {
       paragraphs: ["Subscription-based services may include:"],
       bullets: [
         "analytical trade signal access,",
-        "AI-assisted market analytics,",
+        "market analytics,",
         "premium analytical content,",
         "membership services,",
         "and enhanced educational resources.",
@@ -238,7 +238,7 @@ export const riskDisclaimerTerms: LegalDocument = {
     {
       title: "Risk Disclaimer",
       paragraphs: [
-        "The information, educational materials, analytical content, and AI-assisted market signals provided by the company are intended strictly for educational and informational purposes only.",
+        "The information, educational materials, analytical content, and market signals provided by the company are intended strictly for educational and informational purposes only.",
       ],
     },
     {
@@ -299,11 +299,11 @@ export const riskDisclaimerTerms: LegalDocument = {
       ],
     },
     {
-      title: "AI-Assisted Analytical Technology",
+      title: "Analytical Technology",
       paragraphs: [
-        "The company utilizes proprietary AI-assisted analytical technology designed to support market analysis and analytical trade signal generation based on structured market research methodologies.",
-        "The AI-assisted system is intended exclusively as an analytical and educational support tool.",
-        "The AI system does not guarantee profits, does not eliminate trading risk, and should not be interpreted as an autonomous investment management or guaranteed trading system.",
+        "The company utilizes proprietary analytical technology designed to support market analysis and trade signal generation based on structured market research methodologies.",
+        "The system is intended exclusively as an analytical and educational support tool.",
+        "The system does not guarantee profits, does not eliminate trading risk, and should not be interpreted as an autonomous investment management or guaranteed trading system.",
         "Market conditions may change rapidly, and analytical signals may become invalid due to volatility, liquidity conditions, geopolitical events, or other market factors.",
       ],
     },
@@ -325,7 +325,7 @@ export const riskDisclaimerTerms: LegalDocument = {
       title: "Nature of Services",
       paragraphs: [
         "The company operates exclusively as an educational and analytical services provider.",
-        "Services may include free educational forex training, market analysis, membership-based analytical services, AI-assisted market signals, and digital educational content.",
+        "Services may include free educational forex training, market analysis, membership-based analytical services, market signals, and digital educational content.",
         "The company does not operate as a broker, financial advisor, investment manager, securities dealer, or custodial financial institution.",
       ],
     },
@@ -347,7 +347,7 @@ export const riskDisclaimerTerms: LegalDocument = {
     {
       title: "Subscription Services",
       paragraphs: [
-        "Certain analytical services and AI-assisted market signal services may require paid subscriptions.",
+        "Certain analytical services and market signal services may require paid subscriptions.",
         "Subscription pricing, billing terms, renewal terms, and cancellation policies may be updated periodically at the company's discretion.",
         "Access to subscription services may be suspended or terminated for non-payment, misuse of the platform, abusive conduct, or violations of these Terms & Conditions.",
       ],
@@ -355,7 +355,7 @@ export const riskDisclaimerTerms: LegalDocument = {
     {
       title: "Intellectual Property",
       paragraphs: [
-        "All educational content, analytical materials, AI-assisted signals, branding, platform infrastructure, videos, written materials, and proprietary methodologies remain the intellectual property of the company.",
+        "All educational content, analytical materials, trading signals, branding, platform infrastructure, videos, written materials, and proprietary methodologies remain the intellectual property of the company.",
         "Users may not reproduce, redistribute, resell, or commercially exploit any company materials without prior written authorization.",
       ],
     },

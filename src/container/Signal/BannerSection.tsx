@@ -36,12 +36,11 @@ export default function BannerSection() {
         },
       }}
     >
-      <Banner description='"Just imagine having twenty years of proven market expertise and seasoned traders at your side —instantly accessible and enhanced by cutting-edge AI guidance. It’s like placing an entire professional trading firm in the palm of your hand, offering real-time analysis, insights, and strategic support whenever you need it. Experience a new level of confidence and control in every trade."'>
+      <Banner description='"Imagine having twenty years of market experience, structured trade planning, and seasoned traders behind the process. 1st Forex brings signals, analysis, and education into one practical platform so traders can move with more clarity and discipline."'>
         <BaseTypography color="#FFF" fontWeight={600}>
-          With 1st Forex AI Signal, you’re not just receiving signals—you’re
-          stepping into a fully supported, data-driven, and user-centric trading
-          ecosystem designed to help you grow, succeed, and achieve your
-          financial goals.
+          With 1st Forex Trading Signals, you’re not just receiving alerts.
+          You’re stepping into a supported, data-informed trading ecosystem
+          designed to help you learn, review, and execute with more confidence.
         </BaseTypography>
       </Banner>
     </Box>

@@ -12,10 +12,10 @@ export const whyUsCardsData = [
       "Study at your own pace with engaging quizzes and tests to reinforce your knowledge.",
   },
   {
-    title: "AI-Powered Assistance",
+    title: "Practical Support",
     image: AIPowered,
     description:
-      "Get support from our AI assistant and expert professors to answer your questions and clarify concepts.",
+      "Get support from our team and learning resources to answer your questions and clarify key concepts.",
   },
   {
     title: "Experienced Mentors",

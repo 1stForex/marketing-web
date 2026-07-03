@@ -11,13 +11,21 @@ const APP_BASE_URL = (
   "https://staging.d1bhofzjxuviaa.amplifyapp.com"
 ).replace(/\/$/, "");
 
+const safeRegisterUrl = () => {
+  const configured = envUrl(process.env.NEXT_PUBLIC_APP_REGISTER_URL);
+
+  if (configured && !/\/auth\/login\/?$/.test(configured)) {
+    return configured;
+  }
+
+  return `${APP_BASE_URL}/auth/register`;
+};
+
 export const RedirectUrls = {
   LOGIN_URL:
     envUrl(process.env.NEXT_PUBLIC_APP_LOGIN_URL) ??
     `${APP_BASE_URL}/auth/login`,
-  REGISTER_URL:
-    envUrl(process.env.NEXT_PUBLIC_APP_REGISTER_URL) ??
-    `${APP_BASE_URL}/auth/register`,
+  REGISTER_URL: safeRegisterUrl(),
   SUBSCRIPTION_URL:
     envUrl(process.env.NEXT_PUBLIC_APP_SUBSCRIPTION_URL) ??
     `${APP_BASE_URL}/subscription`,

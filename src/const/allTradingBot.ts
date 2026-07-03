@@ -11,14 +11,14 @@ export const allTradingBot = [
   // },
   {
     icon: Management,
-    title: "Effortless Management",
+    title: "Clear Signal Management",
     description:
-      "Enjoy reliable signals and automated execution without manual intervention.",
+      "Track reliable signals, trade levels, and historical context from one platform.",
   },
   {
     icon: Bot,
-    title: "Adaptive Trading",
+    title: "Risk-Aware Planning",
     description:
-      "The bot adjusts strategies in real-time, guided by AI and your chosen risk parameters, so it always aligns with your comfort level.",
+      "Use entry, stop loss, and take profit levels to align each signal with your personal risk plan.",
   },
 ];

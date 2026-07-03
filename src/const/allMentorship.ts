@@ -13,7 +13,7 @@ export const allMentorship = [
     icon: Finance,
     title: "All-Inclusive Support",
     description:
-      "This premium service combines the AI-assisted app and the automated bot with human insight, giving you a comprehensive solution.",
+      "This service combines the app, signals, education, and human insight into one practical trading workflow.",
   },
   {
     icon: Strategy,

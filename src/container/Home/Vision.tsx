@@ -5,8 +5,8 @@ import BaseTypography from "@/src/styled/BaseTypography";
 
 const Vision = () => {
   const firstHalfText = `"To empower a global community of traders by blending two decades
-          of expertise with cutting edge AI technology, delivering unparalleled
-          forex education, state-of-the-art signals, and innovative trading
+          of expertise with practical technology, delivering clear
+          forex education, structured signals, and useful trading
           solutions that inspire financial growth and confidence.`;
   const secondHalfText = `At 1st Forex, we are shaping the future of trading by building a
           connected, adaptive, and results-driven community."`;
