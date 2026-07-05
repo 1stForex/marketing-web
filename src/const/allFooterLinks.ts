@@ -63,7 +63,7 @@ export const linksList = [
         href: RoutesUrls.PRIVACY_POLICY,
       },
       {
-        label: "FAQ's",
+        label: "FAQs",
         href: RoutesUrls.FAQ,
       },
       // {

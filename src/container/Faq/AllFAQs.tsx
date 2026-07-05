@@ -51,7 +51,7 @@ const AllFAQs = () => {
             },
           }}
         >
-          All FAQ&#39;s
+          All FAQs
         </HeadTypography>
 
         <Box

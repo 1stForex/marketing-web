@@ -1,5 +1,5 @@
 export const allTopics = [
-  { title: `All Faq's` },
+  { title: "All FAQs" },
   { title: `Topic` },
   { title: `Topic` },
   { title: `Topic` },
