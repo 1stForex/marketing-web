@@ -8,7 +8,7 @@ export const contactUsFeaturesData = [
     icon: Chat,
   },
   {
-    title: "support@1forex.com",
+    title: "support@1stforex.com",
     description: "Get instant Help From our Support",
     icon: Mail,
   },
