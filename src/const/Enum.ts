@@ -1,4 +1,12 @@
-const envUrl = (value?: string) => value?.trim() || undefined;
+const DASHBOARD_URL = "https://dashboard.1stforex.com";
+const LEGACY_DASHBOARD_URL = "https://staging.d1bhofzjxuviaa.amplifyapp.com";
+
+const envUrl = (value?: string) => {
+  const trimmed = value?.trim();
+  if (!trimmed) return undefined;
+
+  return trimmed.replace(LEGACY_DASHBOARD_URL, DASHBOARD_URL);
+};
 const appBaseFromPath = (value?: string) =>
   envUrl(value)
     ?.replace(/\/(?:auth\/(?:login|register)|historical-results|subscription)\/?$/, "")
@@ -8,7 +16,7 @@ const APP_BASE_URL = (
   envUrl(process.env.NEXT_PUBLIC_APP_URL) ??
   appBaseFromPath(process.env.NEXT_PUBLIC_APP_LOGIN_URL) ??
   appBaseFromPath(process.env.NEXT_PUBLIC_APP_REGISTER_URL) ??
-  "https://staging.d1bhofzjxuviaa.amplifyapp.com"
+  DASHBOARD_URL
 ).replace(/\/$/, "");
 
 const safeRegisterUrl = () => {
