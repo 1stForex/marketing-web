@@ -70,7 +70,7 @@ const DetailPricingCard = ({
             right: "0",
           }}
         >
-          <Typography>Most Popular</Typography>
+          <Typography>Unlimited Access</Typography>
         </Box>
       )}
       <Box
