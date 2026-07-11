@@ -9,6 +9,7 @@ import StatsDown from "@/src/assets/icons/stats-down.svg";
 
 import Image from "next/image";
 import { StatsCardProps } from "@/src/types/StatsCard.interface";
+import { formatPrice } from "@/src/utils/formatPrice";
 
 const StatsCard: React.FC<StatsCardProps> = ({
   symbol,
@@ -119,7 +120,7 @@ const StatsCard: React.FC<StatsCardProps> = ({
               lineHeight: "145%",
             }}
           >
-            {price.toFixed(4)}
+            {formatPrice(price)}
           </Typography>
         </Box>
       </Box>
