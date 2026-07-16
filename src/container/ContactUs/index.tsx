@@ -3,8 +3,11 @@ import { Box, Container } from "@mui/material";
 import FeaturesAndLinks from "./FeaturesAndLinks";
 import FAQSection from "@/src/components/FAQSection";
 import ContactSection from "./ContactSection";
+import { getTranslations } from "next-intl/server";
 
-const ContactUs = () => {
+const ContactUs = async () => {
+  const t = await getTranslations("Contact");
+
   return (
     <Container maxWidth="xl">
       <Box
@@ -27,10 +30,10 @@ const ContactUs = () => {
         }}
       >
         <Hero
-          badgeTitle="Help Section"
+          badgeTitle={t("heroBadge")}
           bgImagePath="/ContactUsBg.jpg"
-          title="Contact Us"
-          description="Reach the 1st Forex team for account, billing, signals, course, or partnership support."
+          title={t("heroTitle")}
+          description={t("heroDescription")}
         >
           <FeaturesAndLinks />
         </Hero>

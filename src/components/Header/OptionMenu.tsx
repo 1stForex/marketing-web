@@ -11,8 +11,11 @@ import TemporaryDrawer from "./Menu";
 import { NavProps } from "@/src/types/Nav.interface";
 import { RedirectUrls } from "@/src/const/Enum";
 import { openExternalUrl } from "@/src/utils/openExternalUrl";
+import LanguageSwitcher from "../LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 export default function OptionMenu({ currentPath }: NavProps) {
+  const t = useTranslations("Navigation");
   const isSmallScreen = useMediaQuery("(max-width: 1350px)");
   return (
     <Box
@@ -23,7 +26,7 @@ export default function OptionMenu({ currentPath }: NavProps) {
       <Box
         sx={{
           display: "flex",
-          width: "434px",
+          width: "590px",
           height: "56px",
           alignItems: "center",
           justifyContent: "flex-end",
@@ -31,7 +34,7 @@ export default function OptionMenu({ currentPath }: NavProps) {
           flexShrink: 0,
 
           "@media (max-width: 1400px)": {
-            width: "343px",
+            width: "500px",
           },
           "@media (max-width: 1350px)": {
             width: "auto",
@@ -60,6 +63,15 @@ export default function OptionMenu({ currentPath }: NavProps) {
               },
             }}
           >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                "@media (max-width: 1350px)": { display: "none" },
+              }}
+            >
+              <LanguageSwitcher />
+            </Box>
             <CustomButton
               variant="white"
               icon={
@@ -74,7 +86,7 @@ export default function OptionMenu({ currentPath }: NavProps) {
               }
               onClick={() => openExternalUrl(RedirectUrls.LOGIN_URL)}
             >
-              Login
+              {t("login")}
             </CustomButton>
           </Box>
           <CustomButton
@@ -91,12 +103,18 @@ export default function OptionMenu({ currentPath }: NavProps) {
             }
             onClick={() => openExternalUrl(RedirectUrls.REGISTER_URL)}
           >
-            Register
+            {t("register")}
           </CustomButton>
         </Box>
       </Box>
       {isSmallScreen && (
-        <Box sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            marginInlineStart: "auto",
+          }}
+        >
           <TemporaryDrawer currentPath={currentPath} />
         </Box>
       )}

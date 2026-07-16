@@ -1,7 +1,7 @@
 import { RoutesUrls } from "./Enum";
 
 export const menuItems = [
-  { label: "Company", href: null, isBold: true },
-  { label: "About Us", href: RoutesUrls.ABOUT_US },
-  { label: "Contact Us", href: RoutesUrls.CONTACT_US },
-];
+  { key: "company", href: null, isBold: true },
+  { key: "aboutUs", href: RoutesUrls.ABOUT_US, isBold: false },
+  { key: "contactUs", href: RoutesUrls.CONTACT_US, isBold: false },
+] as const;

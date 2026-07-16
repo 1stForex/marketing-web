@@ -3,18 +3,18 @@ import Mail from "@/src/assets/icons/mail.svg";
 
 export const contactUsFeaturesData = [
   {
-    title: "Live Chat",
-    description: "Get instant Help From our Support",
+    titleKey: "liveChat",
+    descriptionKey: "liveChatDescription",
     icon: Chat,
   },
   {
-    title: "support@1stforex.com",
-    description: "Get instant Help From our Support",
+    titleKey: "supportEmail",
+    descriptionKey: "supportEmailDescription",
     icon: Mail,
   },
   {
-    title: "Request a callback",
-    description: "Instant help from our support",
+    titleKey: "callback",
+    descriptionKey: "callbackDescription",
     icon: Mail,
   },
-];
+] as const;

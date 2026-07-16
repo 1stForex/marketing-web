@@ -1,8 +1,10 @@
 import { ButtonGroup, Button } from "@mui/material";
 import { NavProps } from "@/src/types/Nav.interface";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function GroupButton({ currentPath, nav }: NavProps) {
+  const t = useTranslations("Navigation");
   const color = nav ? "#FFF" : "#333";
   const isActive = (href: string) => currentPath === href;
 
@@ -41,7 +43,7 @@ export default function GroupButton({ currentPath, nav }: NavProps) {
             borderRadius: "32px 0 0 32px",
           }}
         >
-          Trading Signals
+          {t("tradingSignals")}
         </Button>
       </Link>
       <Link href="/academy" passHref>
@@ -51,7 +53,7 @@ export default function GroupButton({ currentPath, nav }: NavProps) {
             borderRadius: "0 32px 32px 0",
           }}
         >
-          Academy
+          {t("academy")}
         </Button>
       </Link>
     </ButtonGroup>

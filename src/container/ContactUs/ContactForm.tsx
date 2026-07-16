@@ -6,6 +6,7 @@ import type { ChangeEvent, FormEvent } from "react";
 import CustomInputField from "@/src/components/CustomInputField";
 import CustomButton from "@/src/components/Button";
 import { postPublicForm } from "@/src/services/publicApi";
+import { useTranslations } from "next-intl";
 
 const initialForm = {
   first_name: "",
@@ -17,6 +18,7 @@ const initialForm = {
 };
 
 const ContactForm = () => {
+  const t = useTranslations("Contact");
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle"
@@ -40,14 +42,14 @@ const ContactForm = () => {
         source: "contact-page",
       });
       setStatus("success");
-      setMessage(response.detail || "Thanks. We will get back to you shortly.");
+      setMessage(response.detail || t("success"));
       setForm(initialForm);
     } catch (error) {
       setStatus("error");
       setMessage(
         error instanceof Error
           ? error.message
-          : "Please check the form and try again."
+          : t("error")
       );
     }
   };
@@ -80,41 +82,41 @@ const ContactForm = () => {
           }}
         >
           <CustomInputField
-            placeholder="John"
-            label="First Name*"
+            placeholder={t("firstNamePlaceholder")}
+            label={t("firstName")}
             value={form.first_name}
             onChange={updateField("first_name")}
           />
           <CustomInputField
-            placeholder="Doe"
-            label="Last Name"
+            placeholder={t("lastNamePlaceholder")}
+            label={t("lastName")}
             value={form.last_name}
             onChange={updateField("last_name")}
           />
         </Box>
         <CustomInputField
-          placeholder="john@1stforex.com"
-          label="Email*"
+          placeholder={t("emailPlaceholder")}
+          label={t("email")}
           type="email"
           value={form.email}
           onChange={updateField("email")}
         />
         <CustomInputField
-          placeholder="+1 234 569 7687"
-          label="Phone"
+          placeholder={t("phonePlaceholder")}
+          label={t("phone")}
           value={form.phone}
           onChange={updateField("phone")}
         />
         <CustomInputField
-          placeholder="Account support"
-          label="Subject"
+          placeholder={t("subjectPlaceholder")}
+          label={t("subject")}
           value={form.subject}
           onChange={updateField("subject")}
         />
         <CustomInputField
-          placeholder="Tell us how we can help..."
-          label="Message*"
-          helperText="Share the key details so the team can route your request properly."
+          placeholder={t("messagePlaceholder")}
+          label={t("message")}
+          helperText={t("messageHelper")}
           padding="22px 16px"
           multiline
           value={form.message}
@@ -139,7 +141,7 @@ const ContactForm = () => {
           type="submit"
           disabled={status === "loading"}
         >
-          {status === "loading" ? "Sending..." : "Submit"}
+          {status === "loading" ? t("sending") : t("submit")}
         </CustomButton>
       </Box>
     </form>

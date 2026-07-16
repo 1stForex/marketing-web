@@ -1,8 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import Badge from "@/src/components/Badge";
 import HeadTypography from "@/src/styled/HeadTypography";
+import { getTranslations } from "next-intl/server";
 
-const SendMessage = () => {
+const SendMessage = async () => {
+  const t = await getTranslations("Contact");
+
   return (
     <Box
       sx={{
@@ -21,7 +24,7 @@ const SendMessage = () => {
         },
       }}
     >
-      <Badge title="Contact" />
+      <Badge title={t("contactBadge")} />
 
       <HeadTypography
         sx={{
@@ -32,8 +35,10 @@ const SendMessage = () => {
           },
         }}
       >
-        Send Us A{" "}
-        <span style={{ color: "var(--primary-400-base, #F30)" }}>Message</span>
+        {t("sendMessagePrefix")}{" "}
+        <span style={{ color: "var(--primary-400-base, #F30)" }}>
+          {t("sendMessageAccent")}
+        </span>
       </HeadTypography>
 
       <Typography
@@ -54,8 +59,7 @@ const SendMessage = () => {
           },
         }}
       >
-        You may also leave your contact information here, and a 1st Forex
-        representative will contact you within 1 working day.
+        {t("responseDescription")}
       </Typography>
     </Box>
   );

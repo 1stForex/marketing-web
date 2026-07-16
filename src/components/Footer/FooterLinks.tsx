@@ -2,8 +2,10 @@ import Link from "next/link";
 import { Box } from "@mui/material";
 import StyledTypography from "./StyledTypography";
 import { linksList } from "@/src/const/allFooterLinks";
+import { useTranslations } from "next-intl";
 
 export default function FooterLinks() {
+  const t = useTranslations("Footer");
   return (
     <Box
       sx={{
@@ -40,7 +42,7 @@ export default function FooterLinks() {
                 marginBottom: "24px",
               }}
             >
-              {section.label}
+              {t(section.key)}
             </StyledTypography>
             {section.links.map((link, linkIndex) => (
               <Link key={linkIndex} href={link.href} passHref>
@@ -56,7 +58,7 @@ export default function FooterLinks() {
                     "&:hover": { color: "#333" },
                   }}
                 >
-                  {link.label}
+                  {t(link.key)}
                 </StyledTypography>
               </Link>
             ))}

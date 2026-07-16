@@ -6,8 +6,10 @@ import type { FormEvent } from "react";
 import CustomButton from "../Button";
 import CustomInputField from "../CustomInputField";
 import { postPublicForm } from "@/src/services/publicApi";
+import { useTranslations } from "next-intl";
 
 export default function NewsLetter() {
+  const t = useTranslations("Footer");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle"
@@ -25,12 +27,12 @@ export default function NewsLetter() {
         source: "marketing-footer",
       });
       setStatus("success");
-      setMessage(response.detail || "You are subscribed.");
+      setMessage(response.detail || t("subscribed"));
       setEmail("");
     } catch (error) {
       setStatus("error");
       setMessage(
-        error instanceof Error ? error.message : "Please enter a valid email."
+        error instanceof Error ? error.message : t("invalidEmail")
       );
     }
   };
@@ -70,7 +72,7 @@ export default function NewsLetter() {
             },
           }}
         >
-          Join our newsletter
+          {t("newsletterTitle")}
         </Typography>
         <Typography
           sx={{
@@ -87,8 +89,7 @@ export default function NewsLetter() {
             },
         }}
       >
-          Get trading signal updates, strategy notes, and market commentary
-          straight to your inbox.
+          {t("newsletterDescription")}
         </Typography>
       </Box>
       <Box
@@ -111,13 +112,13 @@ export default function NewsLetter() {
         <CustomInputField
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          placeholder="Email Address"
+          placeholder={t("emailAddress")}
           borderRadius="32"
           background="white"
           type="email"
         />
         <CustomButton variant="red" type="submit" disabled={status === "loading"}>
-          {status === "loading" ? "Subscribing..." : "Subscribe"}
+          {status === "loading" ? t("subscribing") : t("subscribe")}
         </CustomButton>
       </Box>
       {message && (

@@ -9,8 +9,10 @@ import { menuItems } from "@/src/const/allMenuItem";
 import { DropDownProps } from "@/src/types/DropDown.interface";
 import ChevronDown from "@/src/assets/icons/chevron-down.svg";
 import { RoutesUrls } from "@/src/const/Enum";
+import { useTranslations } from "next-intl";
 
 export default function DropDown({ currentPath }: DropDownProps) {
+  const t = useTranslations("Navigation");
   const isHighlighted = [RoutesUrls.ABOUT_US, RoutesUrls.CONTACT_US].includes(
     currentPath
   );
@@ -74,7 +76,7 @@ export default function DropDown({ currentPath }: DropDownProps) {
             textDecoration: isHighlighted ? "underline" : "none",
           }}
         >
-          Company
+          {t("company")}
         </Typography>
         <Image src={ChevronDown} alt="Chevron Down Icon" />
       </Button>
@@ -117,7 +119,7 @@ export default function DropDown({ currentPath }: DropDownProps) {
                       lineHeight: "20.3px",
                     }}
                   >
-                    {item.label}
+                    {t(item.key)}
                   </Typography>
                 </Link>
               ) : (
@@ -130,7 +132,7 @@ export default function DropDown({ currentPath }: DropDownProps) {
                     lineHeight: "20.3px",
                   }}
                 >
-                  {item.label}
+                  {t(item.key)}
                 </Typography>
               )}
             </Box>

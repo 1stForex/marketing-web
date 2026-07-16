@@ -3,8 +3,10 @@ import Image from "next/image";
 import { Box } from "@mui/material";
 import StyledTypography from "./StyledTypography";
 import forexLogo from "../../assets/images/forex-logo.png";
+import { useTranslations } from "next-intl";
 
 export default function Copyright() {
+  const t = useTranslations("Footer");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -36,7 +38,7 @@ export default function Copyright() {
             color: "#1D2739",
           }}
         >
-          &copy; {currentYear}. All rights reserved.
+          &copy; {currentYear}. {t("rightsReserved")}
         </StyledTypography>
         <StyledTypography
           sx={{
@@ -48,8 +50,7 @@ export default function Copyright() {
             },
           }}
         >
-          All content, signals, and tools are for educational and informational
-          purposes only. Trading involves risk.
+          {t("riskNotice")}
         </StyledTypography>
       </Box>
     </Box>

@@ -5,6 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomLayout from "@/src/customLayout";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
+import { getLocaleDirection } from "@/src/i18n/config";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const montserrat = Montserrat({
@@ -13,23 +16,37 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-export const metadata: Metadata = {
-  title: "1stForex",
-  applicationName: "1stForex",
-  description: "Explore 1stForex trading signals, academy resources, performance history, and community support.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata");
+  return {
+    title: t("title"),
+    applicationName: t("applicationName"),
+    description: t("description"),
+  };
+}
 
-export default function RootLayout({
+export const dynamic = "force-dynamic";
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html
+      lang={locale}
+      dir={getLocaleDirection(locale)}
+      suppressHydrationWarning
+    >
       <body>
-        <AppRouterCacheProvider>
-          <CustomLayout>{children}</CustomLayout>
-        </AppRouterCacheProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <AppRouterCacheProvider>
+            <CustomLayout>{children}</CustomLayout>
+          </AppRouterCacheProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

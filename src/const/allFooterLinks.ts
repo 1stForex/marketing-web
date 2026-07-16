@@ -2,68 +2,68 @@ import { RoutesUrls } from "./Enum";
 
 export const linksList = [
   {
-    label: "Product",
+    key: "product",
     links: [
       {
-        label: "1st Forex Trading Signals",
+        key: "tradingSignals",
         href: RoutesUrls.AI_SIGNAL,
       },
       {
-        label: "1st Forex Academy",
+        key: "academy",
         href: RoutesUrls.ACADEMY,
       },
       {
-        label: "Performance History",
+        key: "performanceHistory",
         href: RoutesUrls.HISTORICAL_PERFORMANCE,
       },
     ],
   },
   {
-    label: "Company",
+    key: "company",
     links: [
       {
-        label: "Pricing",
+        key: "pricing",
         href: RoutesUrls.PRICING,
       },
       {
-        label: "Community",
+        key: "community",
         href: RoutesUrls.COMMUNITY,
       },
       {
-        label: "About",
+        key: "about",
         href: RoutesUrls.ABOUT_US,
       },
       {
-        label: "Contact",
+        key: "contact",
         href: RoutesUrls.CONTACT_US,
       },
     ],
   },
   {
-    label: "Other",
+    key: "other",
     links: [
       {
-        label: "Terms & Conditions",
+        key: "terms",
         href: RoutesUrls.TERMS_AND_CONDITIONS,
       },
       {
-        label: "Risk Disclaimer & Terms and Conditions",
+        key: "riskDisclaimer",
         href: RoutesUrls.RISK_DISCLAIMER_TERMS_AND_CONDITIONS,
       },
       {
-        label: "Acceptable Use Policy",
+        key: "acceptableUse",
         href: RoutesUrls.ACCEPTABLE_USE_POLICY,
       },
       {
-        label: "Refund Policy",
+        key: "refundPolicy",
         href: RoutesUrls.REFUND_POLICY,
       },
       {
-        label: "Privacy Policy",
+        key: "privacyPolicy",
         href: RoutesUrls.PRIVACY_POLICY,
       },
       {
-        label: "FAQs",
+        key: "faqs",
         href: RoutesUrls.FAQ,
       },
       // {
@@ -76,4 +76,4 @@ export const linksList = [
       // },
     ],
   },
-];
+] as const;

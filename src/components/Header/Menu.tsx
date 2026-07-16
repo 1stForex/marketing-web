@@ -21,9 +21,15 @@ import googlePlay from "../../assets/images/google-play.png";
 import SocialMediaLinks from "./SocialMediaLinks";
 import { NavProps } from "@/src/types/Nav.interface";
 import { RedirectUrls } from "@/src/const/Enum";
+import LanguageSwitcher from "../LanguageSwitcher";
+import { useLocale, useTranslations } from "next-intl";
+import { getLocaleDirection } from "@/src/i18n/config";
 
 export default function TemporaryDrawer({ currentPath }: NavProps) {
   const [open, setOpen] = React.useState(false);
+  const locale = useLocale();
+  const t = useTranslations("Navigation");
+  const direction = getLocaleDirection(locale);
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -47,8 +53,8 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
           width: "100vw",
         },
       }}
-      role="presentation"
-      onClick={toggleDrawer(false)}
+      role="navigation"
+      aria-label={t("menu")}
     >
       <Box>
         <Box
@@ -76,7 +82,7 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
                   padding: "0",
                 }}
               >
-                <Image src={crossSvg} alt="Cross Icon" />
+                <Image src={crossSvg} alt={t("closeMenu")} />
               </ListItemButton>
             </ListItem>
           </List>
@@ -100,6 +106,9 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
               <NavLinks currentPath={currentPath} nav={true} />
             </ListItem>
           </List>
+        </Box>
+        <Box sx={{ padding: "8px 16px 16px" }}>
+          <LanguageSwitcher fullWidth inverse />
         </Box>
       </Box>
       <Box>
@@ -128,7 +137,7 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
                     />
                   }
                 >
-                  Register
+                  {t("register")}
                 </CustomButton>
               </ListItemButton>
             </ListItem>
@@ -155,7 +164,7 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
                     />
                   }
                 >
-                  Login
+                  {t("login")}
                 </CustomButton>
               </ListItemButton>
             </ListItem>
@@ -184,7 +193,7 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
                     lineHeight: "23.2px",
                   }}
                 >
-                  Trade Like a pro
+                  {t("tradeLikeAPro")}
                 </Typography>
               </ListItemText>
             </ListItem>
@@ -269,9 +278,13 @@ export default function TemporaryDrawer({ currentPath }: NavProps) {
           minWidth: "45px",
         }}
       >
-        <Image src={menuSvg} alt="Menu Icon" />
+        <Image src={menuSvg} alt={t("menu")} />
       </Button>
-      <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+      <Drawer
+        anchor={direction === "rtl" ? "left" : "right"}
+        open={open}
+        onClose={toggleDrawer(false)}
+      >
         {DrawerList}
       </Drawer>
     </div>

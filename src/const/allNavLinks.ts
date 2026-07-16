@@ -1,6 +1,6 @@
 export const links = [
-  { label: "Home", href: "/home" },
-  { label: "Performance History", href: "/historical-performance" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Community", href: "/community" },
-];
+  { key: "home", href: "/home" },
+  { key: "performanceHistory", href: "/historical-performance" },
+  { key: "pricing", href: "/pricing" },
+  { key: "community", href: "/community" },
+] as const;
