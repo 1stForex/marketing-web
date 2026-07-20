@@ -1,5 +1,5 @@
 "use client";
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import forexLogo from "../../assets/images/forex-logo.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,9 +8,19 @@ import GroupButton from "./GroupButton";
 import OptionMenu from "./OptionMenu";
 import { usePathname } from "next/navigation";
 import { RoutesUrls } from "@/src/const/Enum";
+import { useLocale } from "next-intl";
+
+const DEFAULT_COMPACT_BREAKPOINT = 1599;
+const FRENCH_COMPACT_BREAKPOINT = 1799;
 
 export default function Header() {
   const currentPath = usePathname() as RoutesUrls;
+  const locale = useLocale();
+  const compactBreakpoint =
+    locale === "fr-CA"
+      ? FRENCH_COMPACT_BREAKPOINT
+      : DEFAULT_COMPACT_BREAKPOINT;
+  const isCompact = useMediaQuery(`(max-width: ${compactBreakpoint}px)`);
 
   return (
     <Box
@@ -57,9 +67,14 @@ export default function Header() {
             justifyContent: "space-between",
             alignItems: "center",
             alignSelf: "stretch",
+            gap: "12px",
           }}
         >
-          <Link href="/home">
+          <Box
+            component={Link}
+            href="/home"
+            sx={{ display: "flex", flexShrink: 0 }}
+          >
             <Image
               src={forexLogo}
               alt="Forex Logo"
@@ -67,26 +82,18 @@ export default function Header() {
               width={122}
               height={24}
             />
-          </Link>
-          <Box
-            sx={{
-              "@media (max-width: 1599px)": {
-                display: "none",
-              },
-            }}
-          >
-            <GroupButton currentPath={currentPath} />
           </Box>
-          <Box
-            sx={{
-              "@media (max-width: 1599px)": {
-                display: "none",
-              },
-            }}
-          >
-            <NavLinks currentPath={currentPath} />
-          </Box>
-          <OptionMenu currentPath={currentPath} />
+          {!isCompact && (
+            <Box sx={{ flexShrink: 0 }}>
+              <GroupButton currentPath={currentPath} />
+            </Box>
+          )}
+          {!isCompact && (
+            <Box sx={{ flexShrink: 0 }}>
+              <NavLinks currentPath={currentPath} />
+            </Box>
+          )}
+          <OptionMenu currentPath={currentPath} compact={isCompact} />
         </Box>
       </Box>
     </Box>
