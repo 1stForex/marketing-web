@@ -17,7 +17,7 @@ export const socialMedia = [
   {
     name: "instagram",
     icon: instagramSvg,
-    href: "#",
+    href: "https://www.instagram.com/1stforex?igsh=ejI0cDdjNjhkOWF3&utm_source=qr",
   },
   {
     name: "twitter",
