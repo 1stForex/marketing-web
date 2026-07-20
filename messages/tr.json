@@ -303,7 +303,14 @@
     "why": {
       "badge": "Neden biz",
       "start": "Neden",
-      "highlight": "Bizi Seçer misiniz?"
+      "highlight": "Bizi Seçer misiniz?",
+      "cards": {
+        "interactiveLearning": {"title": "Etkileşimli Öğrenme", "description": "Bilginizi pekiştiren ilgi çekici test ve sınavlarla kendi hızınızda öğrenin."},
+        "practicalSupport": {"title": "Pratik Destek", "description": "Sorularınızı yanıtlamak ve temel kavramları netleştirmek için ekibimizden ve eğitim kaynaklarımızdan destek alın."},
+        "experiencedMentors": {"title": "Deneyimli Mentorlar", "description": "Yılların deneyimine sahip gerçek yatırımcılardan kişiselleştirilmiş rehberlik alın."},
+        "globalCommunity": {"title": "Küresel Topluluk", "description": "Görüşlerini, deneyimlerini ve başarı hikâyelerini paylaşan yatırımcılardan oluşan bir ağa katılın."},
+        "globalSeminars": {"title": "Küresel Seminerler ve Atölyeler", "description": "Bilginizi derinleştirmek ve diğer yatırımcılarla bağlantı kurmak için odaklı oturumlara ve uygulamalı atölyelere katılın."}
+      }
     },
     "about": {
       "badge": "Akademi",

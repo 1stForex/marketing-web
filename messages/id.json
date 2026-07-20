@@ -303,7 +303,14 @@
     "why": {
       "badge": "Mengapa kita",
       "start": "Mengapa",
-      "highlight": "Pilih Kami?"
+      "highlight": "Pilih Kami?",
+      "cards": {
+        "interactiveLearning": {"title": "Pembelajaran Interaktif", "description": "Belajar sesuai kecepatan Anda melalui kuis dan tes menarik untuk memperkuat pemahaman."},
+        "practicalSupport": {"title": "Dukungan Praktis", "description": "Dapatkan dukungan dari tim dan sumber belajar kami untuk menjawab pertanyaan dan memperjelas konsep penting."},
+        "experiencedMentors": {"title": "Mentor Berpengalaman", "description": "Belajar dari trader nyata yang berpengalaman selama bertahun-tahun melalui panduan yang dipersonalisasi."},
+        "globalCommunity": {"title": "Komunitas Global", "description": "Bergabunglah dengan jaringan trader yang saling berbagi wawasan, pengalaman, dan kisah sukses."},
+        "globalSeminars": {"title": "Seminar & Lokakarya Global", "description": "Ikuti sesi terarah dan lokakarya praktis untuk memperdalam pemahaman serta terhubung dengan sesama trader."}
+      }
     },
     "about": {
       "badge": "Akademi",

@@ -303,7 +303,14 @@
     "why": {
       "badge": "Why us",
       "start": "Why",
-      "highlight": "Choose Us?"
+      "highlight": "Choose Us?",
+      "cards": {
+        "interactiveLearning": {"title": "Interactive Learning", "description": "Study at your own pace with engaging quizzes and tests to reinforce your knowledge."},
+        "practicalSupport": {"title": "Practical Support", "description": "Get support from our team and learning resources to answer your questions and clarify key concepts."},
+        "experiencedMentors": {"title": "Experienced Mentors", "description": "Access real traders with years of experience for personalized guidance and advice."},
+        "globalCommunity": {"title": "Global Community", "description": "Join a network of like-minded traders who share insights, experiences, and success stories."},
+        "globalSeminars": {"title": "Global Seminars & Workshops", "description": "Attend focused sessions and practical workshops designed to deepen your understanding and connect you with fellow traders."}
+      }
     },
     "about": {
       "badge": "Academy",

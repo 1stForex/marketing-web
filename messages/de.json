@@ -303,7 +303,14 @@
     "why": {
       "badge": "Warum wir",
       "start": "Warum",
-      "highlight": "Wählen Sie uns?"
+      "highlight": "Wählen Sie uns?",
+      "cards": {
+        "interactiveLearning": {"title": "Interaktives Lernen", "description": "Lernen Sie in Ihrem eigenen Tempo mit ansprechenden Quizzen und Tests, die Ihr Wissen festigen."},
+        "practicalSupport": {"title": "Praktische Unterstützung", "description": "Unser Team und unsere Lernressourcen helfen Ihnen, Fragen zu beantworten und wichtige Konzepte zu klären."},
+        "experiencedMentors": {"title": "Erfahrene Mentoren", "description": "Profitieren Sie von persönlicher Anleitung durch echte Trader mit langjähriger Erfahrung."},
+        "globalCommunity": {"title": "Globale Community", "description": "Werden Sie Teil eines Netzwerks von Tradern, die Erkenntnisse, Erfahrungen und Erfolgsgeschichten teilen."},
+        "globalSeminars": {"title": "Globale Seminare und Workshops", "description": "Nehmen Sie an fokussierten Sitzungen und praktischen Workshops teil, um Ihr Wissen zu vertiefen und sich mit anderen Tradern zu vernetzen."}
+      }
     },
     "about": {
       "badge": "Akademie",

@@ -303,7 +303,14 @@
     "why": {
       "badge": "Tại sao là chúng tôi",
       "start": "Tại sao",
-      "highlight": "Chọn chúng tôi?"
+      "highlight": "Chọn chúng tôi?",
+      "cards": {
+        "interactiveLearning": {"title": "Học tập tương tác", "description": "Học theo tốc độ của riêng bạn với các bài kiểm tra và câu hỏi hấp dẫn để củng cố kiến thức."},
+        "practicalSupport": {"title": "Hỗ trợ thực tế", "description": "Nhận hỗ trợ từ đội ngũ và tài nguyên học tập của chúng tôi để giải đáp câu hỏi và làm rõ các khái niệm quan trọng."},
+        "experiencedMentors": {"title": "Cố vấn giàu kinh nghiệm", "description": "Nhận hướng dẫn cá nhân từ các nhà giao dịch thực tế có nhiều năm kinh nghiệm."},
+        "globalCommunity": {"title": "Cộng đồng toàn cầu", "description": "Tham gia mạng lưới các nhà giao dịch cùng chia sẻ kiến thức, kinh nghiệm và câu chuyện thành công."},
+        "globalSeminars": {"title": "Hội thảo và chuyên đề toàn cầu", "description": "Tham gia các buổi học tập trung và hội thảo thực hành để nâng cao hiểu biết và kết nối với những nhà giao dịch khác."}
+      }
     },
     "about": {
       "badge": "Học viện",

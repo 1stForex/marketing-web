@@ -22,6 +22,9 @@ export async function generateMetadata(): Promise<Metadata> {
     title: t("title"),
     applicationName: t("applicationName"),
     description: t("description"),
+    other: {
+      google: "notranslate",
+    },
   };
 }
 
@@ -39,9 +42,11 @@ export default async function RootLayout({
     <html
       lang={locale}
       dir={getLocaleDirection(locale)}
+      className="notranslate"
+      translate="no"
       suppressHydrationWarning
     >
-      <body>
+      <body className="notranslate">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AppRouterCacheProvider>
             <CustomLayout>{children}</CustomLayout>

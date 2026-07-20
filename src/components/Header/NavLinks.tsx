@@ -19,6 +19,7 @@ export default function NavLinks({ currentPath, nav = false }: NavProps) {
         gap: "18px",
         alignSelf: "stretch",
         flexDirection: nav ? "column" : "row",
+        whiteSpace: nav ? "normal" : "nowrap",
 
         "@media (max-width: 1330px)": {
           gap: "24px",

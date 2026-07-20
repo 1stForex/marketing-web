@@ -6,33 +6,23 @@ import Diversity from "@/src/assets/icons/Diversity.svg";
 
 export const whyUsCardsData = [
   {
-    title: "Interactive Learning",
+    key: "interactiveLearning",
     image: Conversation,
-    description:
-      "Study at your own pace with engaging quizzes and tests to reinforce your knowledge.",
   },
   {
-    title: "Practical Support",
+    key: "practicalSupport",
     image: AIPowered,
-    description:
-      "Get support from our team and learning resources to answer your questions and clarify key concepts.",
   },
   {
-    title: "Experienced Mentors",
+    key: "experiencedMentors",
     image: Mentoring,
-    description:
-      "Access real traders with years of experience for personalized guidance and advice.",
   },
   {
-    title: "Global Community",
+    key: "globalCommunity",
     image: Diversity,
-    description:
-      "Join a network of like-minded traders who share insights, experiences, and success stories.",
   },
   {
-    title: "Global Seminars & Workshops",
+    key: "globalSeminars",
     image: Building,
-    description:
-      "Attend focused sessions and practical workshops designed to deepen your understanding and connect you with fellow traders.",
   },
-];
+] as const;

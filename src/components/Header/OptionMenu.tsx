@@ -16,7 +16,7 @@ import { useTranslations } from "next-intl";
 
 export default function OptionMenu({ currentPath }: NavProps) {
   const t = useTranslations("Navigation");
-  const isSmallScreen = useMediaQuery("(max-width: 1350px)");
+  const isSmallScreen = useMediaQuery("(max-width: 1599px)");
   return (
     <Box
       sx={{
@@ -28,17 +28,14 @@ export default function OptionMenu({ currentPath }: NavProps) {
       <Box
         sx={{
           display: "flex",
-          width: "590px",
+          width: "auto",
           height: "56px",
           alignItems: "center",
           justifyContent: "flex-end",
           gap: "9px",
           flexShrink: 0,
 
-          "@media (max-width: 1400px)": {
-            width: "500px",
-          },
-          "@media (max-width: 1350px)": {
+          "@media (max-width: 1599px)": {
             width: "auto",
             flexDirection: "row-reverse",
           },
@@ -51,7 +48,7 @@ export default function OptionMenu({ currentPath }: NavProps) {
             gap: "12px",
             alignSelf: "stretch",
 
-            "@media (max-width: 1350px)": {
+            "@media (max-width: 1599px)": {
               gap: "7px",
             },
           }}
@@ -60,7 +57,7 @@ export default function OptionMenu({ currentPath }: NavProps) {
             sx={{
               display: "flex",
               gap: ".5rem",
-              "@media (max-width: 1350px)": {
+              "@media (max-width: 1599px)": {
                 display: "none",
               },
             }}
@@ -69,7 +66,7 @@ export default function OptionMenu({ currentPath }: NavProps) {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                "@media (max-width: 1350px)": { display: "none" },
+                "@media (max-width: 1599px)": { display: "none" },
               }}
             >
               <LanguageSwitcher />

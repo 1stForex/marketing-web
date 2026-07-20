@@ -70,7 +70,7 @@ export default function Header() {
           </Link>
           <Box
             sx={{
-              "@media (max-width: 1350px)": {
+              "@media (max-width: 1599px)": {
                 display: "none",
               },
             }}
@@ -79,7 +79,7 @@ export default function Header() {
           </Box>
           <Box
             sx={{
-              "@media (max-width: 1350px)": {
+              "@media (max-width: 1599px)": {
                 display: "none",
               },
             }}

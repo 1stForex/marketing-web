@@ -17,6 +17,7 @@ export default function GroupButton({ currentPath, nav }: NavProps) {
     fontStyle: "normal",
     fontWeight: 600,
     lineHeight: "20.3px",
+    whiteSpace: "nowrap",
     textTransform: "none",
     color: isActive ? "#FFF" : color,
     background: isActive ? "#F30" : "transparent",
@@ -25,7 +26,7 @@ export default function GroupButton({ currentPath, nav }: NavProps) {
   return (
     <ButtonGroup
       sx={{
-        flexWrap: "wrap",
+        flexWrap: nav ? "wrap" : "nowrap",
         justifyContent: "center",
         rowGap: "8px",
         "@media (max-width: 420px)": {

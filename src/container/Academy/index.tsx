@@ -13,6 +13,12 @@ import { useTranslations } from "next-intl";
 
 const Academy = () => {
   const t = useTranslations("Academy");
+  const whyUsCards = whyUsCardsData.map(({ key, image }) => ({
+    image,
+    title: t(`why.cards.${key}.title`),
+    description: t(`why.cards.${key}.description`),
+  }));
+
   return (
     <Box
       sx={{
@@ -61,7 +67,7 @@ const Academy = () => {
           <Carousel
             badgeTitle={t("why.badge")}
             headerLeft
-            cards={whyUsCardsData}
+            cards={whyUsCards}
             isCarousel
           >
             <HeadTypography color="#333">
