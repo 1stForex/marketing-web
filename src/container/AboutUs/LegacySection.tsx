@@ -7,8 +7,10 @@ import { Box, useMediaQuery } from "@mui/material";
 import Slider from "react-slick";
 import HeadTypography from "@/src/styled/HeadTypography";
 import BaseTypography from "@/src/styled/BaseTypography";
+import { useTranslations } from "next-intl";
 
 export default function LegacySection() {
+  const t = useTranslations("About");
   const isSmallScreen = useMediaQuery(`(max-width: 992px)`);
 
   const settings = {
@@ -85,8 +87,8 @@ export default function LegacySection() {
             },
           }}
         >
-          <Badge title="Our Story" />
-          <HeadTypography color="#000">A Legacy of Excellence</HeadTypography>
+          <Badge title={t("storyBadge")} />
+          <HeadTypography color="#000">{t("legacy.title")}</HeadTypography>
         </Box>
         <BaseTypography
           sx={{
@@ -101,8 +103,7 @@ export default function LegacySection() {
             },
           }}
         >
-          Behind 1st Forex is a dynamic and diverse team of forex veterans,
-          successful young traders, and product specialists.
+          {t("legacy.paragraph1")}
         </BaseTypography>
         <BaseTypography
           sx={{
@@ -117,8 +118,7 @@ export default function LegacySection() {
             },
           }}
         >
-          This unique blend of experience and innovation allows us to stay ahead
-          of market trends and deliver unmatched value to our community.
+          {t("legacy.paragraph2")}
         </BaseTypography>
       </Box>
       <Box
@@ -145,8 +145,8 @@ export default function LegacySection() {
               >
                 <OptionCard
                   icon={item.icon}
-                  title={item.title}
-                  description={item.description}
+                  title={t(`legacy.cards.${index}.title`)}
+                  description={t(`legacy.cards.${index}.description`)}
                   fixedSize={true}
                 />
               </Box>

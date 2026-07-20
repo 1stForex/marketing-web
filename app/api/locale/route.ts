@@ -2,14 +2,14 @@ import { NextRequest, NextResponse } from "next/server";
 import {
   isEnabledLocale,
   LOCALE_COOKIE_NAME,
-  normalizeLocale,
+  matchLocale,
 } from "@/src/i18n/config";
 
 export async function POST(request: NextRequest) {
   const body = (await request.json().catch(() => null)) as {
     locale?: string;
   } | null;
-  const locale = body?.locale ? normalizeLocale(body.locale) : null;
+  const locale = matchLocale(body?.locale);
 
   if (!locale || !isEnabledLocale(locale)) {
     return NextResponse.json(

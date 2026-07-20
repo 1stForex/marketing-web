@@ -1,7 +1,9 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 const CustomVideo = () => {
+  const t = useTranslations("Media");
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // added to resolve Sarafi autoplay issues by forcefully / manually playing the video
@@ -36,7 +38,7 @@ const CustomVideo = () => {
     >
       <source src="/HeroBgVideo.webm" type="video/webm" />
       <source src="/HeroBgVideo.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+      {t("unsupportedVideo")}
     </video>
   );
 };

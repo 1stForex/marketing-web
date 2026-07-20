@@ -2,8 +2,10 @@ import Image from "next/image";
 import Logo from "@/src/assets/icons/logo.svg";
 import { Box } from "@mui/material";
 import OverviewBaseTypography from "./OverviewBaseTypography";
+import { getTranslations } from "next-intl/server";
 
-const Overview = () => {
+const Overview = async () => {
+  const t = await getTranslations("Home.overview");
   return (
     <Box
       sx={{
@@ -31,26 +33,22 @@ const Overview = () => {
       </Box>
       <Box>
         <OverviewBaseTypography mb={"12px"}>
-          For over twenty years, 1st Forex has helped traders worldwide develop
-          <span style={{ color: "var(--primary-400-base, #F30)" }}>
-            {" "}
-            profitable strategies
-          </span>{" "}
-          and achieve their financial goals.
+          {t.rich("first", {
+            accent: (chunks) => (
+              <span style={{ color: "var(--primary-400-base, #F30)" }}>
+                {chunks}
+              </span>
+            ),
+          })}
         </OverviewBaseTypography>
         <OverviewBaseTypography>
-          From comprehensive courses to
-          <span style={{ color: "var(--primary-400-base, #F30)" }}>
-            {" "}
-            powerful trading
-          </span>{" "}
-          signals and a vibrant community, we offer the tools, insights, and
-          expertise to
-          <span style={{ color: "var(--primary-400-base, #F30)" }}>
-            {" "}
-            elevate
-          </span>{" "}
-          your trading experience.
+          {t.rich("second", {
+            accent: (chunks) => (
+              <span style={{ color: "var(--primary-400-base, #F30)" }}>
+                {chunks}
+              </span>
+            ),
+          })}
         </OverviewBaseTypography>
       </Box>
     </Box>

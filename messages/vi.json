@@ -1,0 +1,652 @@
+{
+  "LocaleSwitcher": {
+    "label": "Ngôn ngữ",
+    "updateFailed": "Không thể cập nhật ngôn ngữ của bạn. Vui lòng thử lại."
+  },
+  "Media": {"unsupportedVideo": "Trình duyệt của bạn không hỗ trợ video này."},
+  "Metadata": {
+    "title": "1stForex",
+    "applicationName": "1stForex",
+    "description": "Khám phá tín hiệu giao dịch, tài nguyên học viện, lịch sử hiệu suất và hỗ trợ cộng đồng của 1stForex."
+  },
+  "Navigation": {
+    "home": "Trang chủ",
+    "performanceHistory": "Lịch sử hiệu suất",
+    "pricing": "Bảng giá",
+    "community": "Cộng đồng",
+    "company": "Công ty",
+    "aboutUs": "Về chúng tôi",
+    "contactUs": "Liên hệ",
+    "tradingSignals": "Tín hiệu giao dịch",
+    "academy": "Học viện",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "menu": "Mở menu",
+    "closeMenu": "Đóng menu",
+    "tradeLikeAPro": "Giao dịch như chuyên gia"
+  },
+  "Footer": {
+    "product": "Sản phẩm",
+    "company": "Công ty",
+    "other": "Khác",
+    "tradingSignals": "Tín hiệu giao dịch 1st Forex",
+    "academy": "Học viện 1st Forex",
+    "performanceHistory": "Lịch sử hiệu suất",
+    "pricing": "Bảng giá",
+    "community": "Cộng đồng",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "terms": "Điều khoản và Điều kiện",
+    "riskDisclaimer": "Tuyên bố rủi ro và Điều khoản và Điều kiện",
+    "acceptableUse": "Chính sách sử dụng được chấp nhận",
+    "refundPolicy": "Chính sách hoàn tiền",
+    "privacyPolicy": "Chính sách bảo mật",
+    "faqs": "Câu hỏi thường gặp",
+    "newsletterTitle": "Đăng ký bản tin",
+    "newsletterDescription": "Nhận cập nhật tín hiệu, ghi chú chiến lược và bình luận thị trường trực tiếp qua email.",
+    "emailAddress": "Địa chỉ email",
+    "subscribing": "Đang đăng ký...",
+    "subscribe": "Đăng ký",
+    "subscribed": "Bạn đã đăng ký.",
+    "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ.",
+    "rightsReserved": "Bảo lưu mọi quyền.",
+    "riskNotice": "Tất cả nội dung, tín hiệu và công cụ chỉ nhằm mục đích giáo dục và cung cấp thông tin. Giao dịch có rủi ro."
+  },
+  "Contact": {
+    "heroBadge": "Trung tâm trợ giúp",
+    "heroTitle": "Liên hệ với chúng tôi",
+    "heroDescription": "Liên hệ đội ngũ 1st Forex để được hỗ trợ về tài khoản, thanh toán, tín hiệu, khóa học hoặc quan hệ đối tác.",
+    "liveChat": "Trò chuyện trực tiếp",
+    "liveChatDescription": "Nhận trợ giúp nhanh từ đội ngũ hỗ trợ",
+    "supportEmail": "support@1stforex.com",
+    "supportEmailDescription": "Gửi email cho đội ngũ hỗ trợ",
+    "callback": "Yêu cầu gọi lại",
+    "callbackDescription": "Yêu cầu đội ngũ hỗ trợ liên hệ với bạn",
+    "contactBadge": "Liên hệ",
+    "sendMessagePrefix": "Gửi cho chúng tôi một",
+    "sendMessageAccent": "tin nhắn",
+    "responseDescription": "Bạn cũng có thể để lại thông tin liên hệ tại đây. Đại diện 1st Forex sẽ liên hệ trong vòng một ngày làm việc.",
+    "firstName": "Tên*",
+    "firstNamePlaceholder": "An",
+    "lastName": "Họ",
+    "lastNamePlaceholder": "Nguyễn",
+    "email": "Email*",
+    "emailPlaceholder": "an@1stforex.com",
+    "phone": "Điện thoại",
+    "phonePlaceholder": "+84 912 345 678",
+    "subject": "Chủ đề",
+    "subjectPlaceholder": "Hỗ trợ tài khoản",
+    "message": "Tin nhắn*",
+    "messagePlaceholder": "Hãy cho chúng tôi biết cách hỗ trợ bạn...",
+    "messageHelper": "Chia sẻ các thông tin chính để đội ngũ chuyển yêu cầu của bạn đến đúng bộ phận.",
+    "success": "Cảm ơn bạn. Chúng tôi sẽ sớm phản hồi.",
+    "error": "Vui lòng kiểm tra biểu mẫu và thử lại.",
+    "sending": "Đang gửi...",
+    "submit": "Gửi"
+  },
+  "Home": {
+    "hero": {
+      "title": "Nâng tầm hành trình giao dịch của bạn",
+      "description": "Tại 1st Forex, chúng tôi hỗ trợ nhà giao dịch bằng tín hiệu giao dịch, chương trình đào tạo chuyên sâu và cộng đồng toàn cầu tích cực, giúp bạn giao dịch thông minh hơn, tiến bộ nhanh hơn và tự tin trên mọi thị trường.",
+      "signalsCta": "Tín hiệu giao dịch",
+      "academyCta": "Học viện"
+    },
+    "overview": {
+      "first": "Trong hơn hai mươi năm, 1st Forex đã giúp các nhà giao dịch trên toàn thế giới phát triển <accent>chiến lược sinh lời</accent> và đạt được mục tiêu tài chính.",
+      "second": "Từ các khóa học toàn diện đến <accent>tín hiệu giao dịch mạnh mẽ</accent> và một cộng đồng năng động, chúng tôi cung cấp công cụ, kiến thức và chuyên môn để <accent>nâng cao</accent> trải nghiệm giao dịch của bạn."
+    },
+    "offerings": {
+      "badge": "Dịch vụ",
+      "title": "Các <accent>dịch vụ chính</accent>",
+      "trainingTitle": "Đào tạo do chuyên gia hướng dẫn",
+      "trainingDescription": "Học các chiến lược đã được kiểm chứng và nền tảng thị trường từ những chuyên gia giàu kinh nghiệm.",
+      "signalsTitle": "Tín hiệu nâng cao và góc nhìn chiến lược",
+      "signalsDescription": "Tiếp cận tín hiệu đáng tin cậy và hướng dẫn thị trường thực tế để đưa ra quyết định rõ ràng hơn.",
+      "communityTitle": "Cộng đồng hỗ trợ",
+      "communityDescription": "Kết nối với các nhà giao dịch, chia sẻ ý tưởng và phát triển cùng những góc nhìn độc quyền, bình luận thị trường và sự hỗ trợ từ cộng đồng."
+    },
+    "vision": {
+      "badge": "Tầm nhìn",
+      "first": "\"Trao quyền cho cộng đồng nhà giao dịch toàn cầu bằng cách kết hợp hai thập kỷ kinh nghiệm với công nghệ thiết thực, cung cấp chương trình giáo dục forex rõ ràng, tín hiệu có cấu trúc và giải pháp hữu ích giúp thúc đẩy tăng trưởng tài chính và sự tự tin.",
+      "second": "Tại 1st Forex, chúng tôi định hình tương lai giao dịch bằng cách xây dựng một cộng đồng kết nối, linh hoạt và hướng đến kết quả.\""
+    },
+    "story": {
+      "badge": "Câu chuyện của chúng tôi",
+      "title": "Về <accent>chúng tôi</accent>",
+      "heading": "Chúng tôi đã bắt đầu như thế nào?",
+      "paragraph1": "Được thành lập năm 2004, 1st Forex đã là một tên tuổi đáng tin cậy trong ngành giao dịch forex hơn hai thập kỷ. Có trụ sở tại Costa Rica, chúng tôi chuyên cung cấp chương trình giáo dục forex chất lượng và tín hiệu đáng tin cậy, giúp các nhà giao dịch trên toàn thế giới đạt mục tiêu tài chính.",
+      "paragraph2": "Thông qua Học viện 1st Forex, chúng tôi đã đào tạo hàng nghìn học viên và nhà giao dịch bằng các khóa học trực tuyến và hội thảo trực tiếp. Giáo trình luôn được cải tiến để duy trì vị thế hàng đầu. Nhiều câu chuyện thành công của những người tin tưởng chúng tôi là minh chứng rõ ràng nhất.",
+      "paragraph3": "Đội ngũ của chúng tôi kết hợp các chuyên gia forex giàu kinh nghiệm, nhà giao dịch thành công và chuyên gia sản phẩm. Chúng tôi tập trung vào giáo dục thực tiễn, tín hiệu có kỷ luật và những công cụ nhà giao dịch thực sự có thể sử dụng.",
+      "paragraph4": "Từ tín hiệu có cấu trúc đến các công cụ trên ứng dụng di động và trang web dễ sử dụng, chúng tôi giúp khách hàng đưa ra quyết định giao dịch rõ ràng hơn.",
+      "paragraph5": "Tại 1st Forex, chúng tôi không chỉ nhìn thấy khách hàng mà còn nhìn thấy một gia đình. Chúng tôi tận tâm xây dựng một cộng đồng phát triển và gắn kết, nơi nhà giao dịch ở mọi cấp độ có thể học hỏi, trưởng thành và thành công."
+    },
+    "welcome": {
+      "badge": "Chào mừng",
+      "title": "Chào mừng đến với <accent>1st Forex</accent>",
+      "description": "Trong hơn hai mươi năm, 1st Forex đã giúp các nhà giao dịch trên toàn thế giới phát triển chiến lược sinh lời và đạt được mục tiêu tài chính.",
+      "secondaryDescription": "Từ các khóa học toàn diện đến tín hiệu giao dịch mạnh mẽ và một cộng đồng năng động, chúng tôi cung cấp công cụ, kiến thức và chuyên môn để nâng cao trải nghiệm giao dịch của bạn."
+    }
+  },
+  "Pricing": {
+    "badge": "Định giá",
+    "headlineStart": "Nhận quyền truy cập vào",
+    "headlineHighlight": "mọi tín hiệu.",
+    "description": "Một kế hoạch không giới hạn dành cho tín hiệu giao dịch, khả năng hiển thị hiệu suất lịch sử, nội dung học viện và các công cụ cộng đồng được xây dựng xung quanh việc thực thi có kỷ luật.",
+    "signalPreviewAlt": "Xem trước tín hiệu di động 1stForex",
+    "signalLabel": "TÍN HIỆU 1STFOREX",
+    "signalExample": "EUR/USD · MUA",
+    "signalDescription": "Bối cảnh nhập cảnh, dừng lỗ, chốt lời và hiệu suất trong một quy trình tín hiệu.",
+    "proof": {
+      "trades": "Các giao dịch lịch sử được theo dõi",
+      "winRate": "Tỷ lệ thắng lịch sử",
+      "pairs": "Các cặp FX chính được bảo hiểm",
+      "coverage": "Tin tức trong tuần thị trường"
+    },
+    "monthly": "hàng tháng",
+    "yearly": "Hàng năm",
+    "toggleYearly": "Chuyển đổi thanh toán hàng năm",
+    "twoMonthsFree": "2 tháng miễn phí hàng năm",
+    "includedTitle": "Bao gồm những gì",
+    "freeTitle": "Tài khoản miễn phí",
+    "unlimited": "Không giới hạn",
+    "unlimitedAccess": "Truy cập không giới hạn",
+    "perMonth": "/tháng",
+    "monthlyBilling": "Thanh toán hàng tháng. Hủy bỏ bất cứ lúc nào.",
+    "yearlyBilling": "${amount} thanh toán hàng năm. Hai tháng bao gồm miễn phí.",
+    "planDescription": "Nhận mọi tín hiệu, mọi cặp được hỗ trợ, bảng thông tin hiệu suất lịch sử, quyền truy cập học viện và không gian làm việc cộng đồng.",
+    "startSignals": "Bắt đầu nhận tín hiệu",
+    "included": {
+      "pairs": "Mỗi cặp giao dịch chính có sẵn",
+      "signals": "Tín hiệu giao dịch",
+      "levels": "Các mức vào lệnh, dừng lỗ và chốt lời",
+      "history": "Bảng điều khiển hiệu suất lịch sử",
+      "daily": "Khả năng hiển thị chi tiết giao dịch hàng ngày",
+      "academy": "Truy cập vào học viện",
+      "community": "Truy cập cộng đồng",
+      "cancel": "Hủy bất cứ lúc nào"
+    },
+    "free": {
+      "community": "Truy cập cộng đồng",
+      "previews": "Xem trước tín hiệu hạn chế",
+      "registration": "Đăng ký tài khoản",
+      "academy": "Truy cập vào học viện",
+      "allPairs": "Tất cả các cặp giao dịch",
+      "signals": "Tín hiệu giao dịch",
+      "levels": "Cấp độ đầu vào, SL và TP",
+      "dashboard": "Trang tổng quan về hiệu suất"
+    },
+    "badges": {
+      "cancel": "Hủy bất cứ lúc nào",
+      "checkout": "Thanh toán an toàn",
+      "instant": "Truy cập tức thì"
+    },
+    "process": {
+      "title": "Quá trình của chúng tôi. Lợi thế của bạn.",
+      "rules": "Quy tắc hướng dẫn nghiên cứu",
+      "engine": "Động cơ tín hiệu",
+      "alerts": "Cảnh báo thời gian thực",
+      "access": "Quyền truy cập của thành viên"
+    },
+    "trust": {
+      "checkout": {
+        "title": "Thanh toán an toàn",
+        "text": "Thanh toán được xử lý thông qua luồng thanh toán được kết nối."
+      },
+      "performance": {
+        "title": "Khả năng hiển thị hiệu suất",
+        "text": "Xem xét kết quả lịch sử hàng năm, hàng tháng và hàng ngày."
+      },
+      "cancel": {
+        "title": "Hủy bất cứ lúc nào",
+        "text": "Kiểm soát việc thanh toán từ tài khoản thành viên của bạn."
+      }
+    }
+  },
+  "HistoricalPerformance": {
+    "badge": "Lịch sử hiệu suất",
+    "title": "Lịch sử hiệu suất",
+    "description": "Xem kết quả hàng năm được chia thành các bản tóm tắt hàng tháng, với lịch sử giao dịch hàng ngày đầy đủ có sẵn trong bảng điều khiển thành viên.",
+    "metrics": {
+      "trades": "Giao dịch đã thực hiện",
+      "wins": "Thắng",
+      "losses": "Tổn thất",
+      "winRate": "Trung bình Tỷ lệ thắng"
+    },
+    "summary": {
+      "bestYear": "Năm tốt nhất",
+      "bestPair": "Cặp đôi xuất sắc nhất",
+      "bestPairDetail": "Cặp chính hiệu quả nhất",
+      "range": "Phạm vi lịch sử",
+      "rangeDetail": "{count} năm dữ liệu hiệu suất"
+    },
+    "annualStart": "Hàng năm",
+    "annualHighlight": "Sự cố",
+    "annualDescription": "Chọn bất kỳ năm nào để kiểm tra bản tóm tắt hàng tháng. Chọn bất kỳ tháng nào để tiếp tục vào bảng điều khiển để xem lịch sử giao dịch hàng ngày.",
+    "columns": {
+      "year": "Năm",
+      "trades": "Giao dịch",
+      "wins": "Thắng",
+      "losses": "Tổn thất",
+      "winRate": "Tỷ lệ thắng",
+      "netPips": "Pip ròng",
+      "bestPair": "Cặp đôi xuất sắc nhất"
+    },
+    "monthlySummary": "{year} Tóm tắt hàng tháng",
+    "monthlyNote": "Kết quả hàng tháng dựa trên tập dữ liệu lịch sử được công bố.",
+    "tradeCount": "{count, plural, one {# giao dịch} other {# giao dịch}}",
+    "netPips": "{value} số pip ròng",
+    "modal": {
+      "close": "Đóng",
+      "title": "Lịch sử giao dịch hàng ngày nằm trong bảng điều khiển.",
+      "description": "Đăng nhập hoặc tạo tài khoản để xem chi tiết giao dịch hàng ngày cho {month} {year}, bao gồm các mục nhập, thoát, kết quả và ghi chú giao dịch.",
+      "login": "Đăng nhập",
+      "signup": "Đăng ký"
+    }
+  },
+  "About": {
+    "badge": "Về chúng tôi",
+    "heroStart": "Chào mừng đến với 1st Forex: Ở đâu",
+    "heroHighlight": "Truyền thống đáp ứng sự đổi mới",
+    "teamAlt": "Đội 1st Forex",
+    "communityAlt": "Cộng đồng giao dịch 1st Forex",
+    "visionBadge": "Tầm nhìn",
+    "storyBadge": "Câu chuyện của chúng tôi",
+    "about": {
+      "title": "Về chúng tôi",
+      "paragraph1": "Được thành lập tại Montreal hơn 20 năm trước, 1st Forex đã phát triển thành một công ty toàn cầu tập trung vào giáo dục ngoại hối và tín hiệu giao dịch. Những gì bắt đầu là các cuộc hội thảo trực tiếp và các tín hiệu trực tuyến ban đầu đã phát triển thành một nền tảng đáng tin cậy được hàng nghìn nhà giao dịch trên toàn thế giới sử dụng.",
+      "paragraph2": "Một phần quan trọng trong công việc của chúng tôi là Chiến lược đột phá, một phương thức giao dịch đã được chứng minh được thiết kế để phát hiện sớm những biến động mạnh của thị trường. Chiến lược này là cốt lõi trong tín hiệu và đào tạo của chúng tôi, giúp các nhà giao dịch đưa ra quyết định nhất quán và sáng suốt hơn.",
+      "paragraph3": "Hiện có trụ sở tại Costa Rica, mục tiêu của chúng tôi vẫn như cũ: giúp các nhà giao dịch xây dựng sự tự tin, cải thiện kỹ năng của họ và hướng tới sự độc lập về tài chính trên thị trường ngoại hối.",
+      "paragraph4": "Dẫn đầu 1st Forex là Giám đốc điều hành của chúng tôi, Marie Josée Bergeron, người có hơn 22 năm kinh nghiệm trong lĩnh vực giao dịch ngoại hối. Tầm nhìn của cô về việc xây dựng một công ty thương mại mạnh mẽ và cộng đồng nhà giao dịch thực sự đã định hình mọi việc chúng tôi làm.",
+      "paragraph5": "Cô được hỗ trợ bởi đội ngũ nhà giao dịch và chuyên gia sản phẩm lành nghề, những người giúp duy trì chiến lược, tín hiệu và nền tảng của chúng tôi rõ ràng, hiện đại và hiệu quả."
+    },
+    "mission": {
+      "title": "Sứ mệnh của chúng tôi",
+      "paragraph1": "Sứ mệnh của chúng tôi rất đơn giản nhưng mạnh mẽ: Trao quyền cho hành trình giao dịch của bạn. Chúng tôi mong muốn truyền cảm hứng và hướng dẫn các nhà giao dịch ở mọi giai đoạn, giúp họ vượt qua sự phức tạp của thị trường ngoại hối một cách tự tin và kỹ năng.",
+      "paragraph2": "Hãy gia nhập gia đình 1st Forex và trở thành một phần của di sản nơi niềm đam mê đáp ứng sự chính xác và truyền thống đáp ứng sự đổi mới. Cùng nhau, chúng ta sẽ biến ước mơ thành sự độc lập về tài chính và làm chủ giao dịch."
+    },
+    "community": {
+      "title": "Hơn cả một doanh nghiệp - Một cộng đồng",
+      "description": "Tại 1st Forex, chúng tôi không chỉ coi mình là một công ty—chúng tôi còn là một gia đình gồm các nhà giao dịch. Sứ mệnh của chúng tôi vượt xa việc giảng dạy và kinh doanh; đó là việc xây dựng một cộng đồng toàn cầu nơi các nhà giao dịch có thể kết nối, chia sẻ và cùng nhau phát triển.",
+      "secondaryDescription": "Từ cố vấn cá nhân hóa đến các diễn đàn tương tác, chúng tôi cam kết tạo ra một môi trường hỗ trợ nơi mọi nhà giao dịch đều có thể phát triển."
+    },
+    "legacy": {
+      "title": "Di sản xuất sắc",
+      "paragraph1": "Đằng sau 1st Forex là một nhóm năng động và đa dạng gồm các chuyên gia ngoại hối kỳ cựu, nhà giao dịch trẻ thành công và chuyên gia sản phẩm.",
+      "paragraph2": "Sự kết hợp độc đáo giữa kinh nghiệm và sự đổi mới này cho phép chúng tôi đón đầu xu hướng thị trường và mang lại giá trị chưa từng có cho cộng đồng của mình.",
+      "cards": {
+        "0": {
+          "title": "Cựu chiến binh ngoại hối",
+          "description": "Kinh nghiệm chuyên môn về giao dịch qua nhiều thập kỷ cung cấp nền tảng cho việc đào tạo và chiến lược của chúng tôi."
+        },
+        "1": {
+          "title": "Nhà đổi mới trẻ",
+          "description": "Những quan điểm mới mẻ và kỹ thuật giao dịch hiện đại giúp chúng tôi luôn dẫn đầu."
+        },
+        "2": {
+          "title": "Chuyên gia sản phẩm",
+          "description": "Dữ liệu, thiết kế và kỹ thuật hỗ trợ các công cụ mà nhà giao dịch sử dụng để xem xét tín hiệu và quản lý quy trình làm việc của họ."
+        },
+        "3": {
+          "title": "Nhóm hỗ trợ hàng đầu",
+          "description": "Các chuyên gia giàu kinh nghiệm và tận tâm của chúng tôi làm việc không mệt mỏi để đảm bảo trải nghiệm liền mạch cho mọi nhà giao dịch trong cộng đồng của chúng tôi."
+        }
+      }
+    }
+  },
+  "Academy": {
+    "badge": "Học viện giao dịch",
+    "title": "Cổng vào thành công trong Forex của bạn",
+    "description": "Kể từ năm 2004, Học viện Giao dịch 1st Forex đã cung cấp cho các nhà giao dịch trên toàn thế giới nền giáo dục ngoại hối hàng đầu. Cho dù bạn là một nhà giao dịch đầy tham vọng bắt đầu từ đầu hay một chuyên gia dày dạn đang tìm cách tinh chỉnh chiến lược của mình, các khóa học tương tác, toàn diện của chúng tôi được thiết kế để nâng cao hành trình giao dịch của bạn.",
+    "signup": "Đăng ký",
+    "free": "Miễn phí",
+    "reviews": "(Đánh giá {count})",
+    "why": {
+      "badge": "Tại sao là chúng tôi",
+      "start": "Tại sao",
+      "highlight": "Chọn chúng tôi?"
+    },
+    "about": {
+      "badge": "Học viện",
+      "title": "Về chúng tôi",
+      "imageAlt": "Khóa học học viện ngoại hối",
+      "paragraph1": "Tại Học viện Thương mại 1st Forex, chúng tôi kết hợp gần hai thập kỷ kinh nghiệm với công nghệ hiện đại để mang lại trải nghiệm học tập độc đáo và hiệu quả.",
+      "paragraph2": "Có trụ sở tại Costa Rica, học viện của chúng tôi là trung tâm toàn cầu dành cho các nhà giao dịch muốn đạt được sự độc lập về tài chính và làm chủ thị trường ngoại hối.",
+      "paragraph3": "Khóa học trực tuyến của chúng tôi cung cấp hướng dẫn từng bước cho nhà giao dịch ở mọi cấp độ. Người mới bắt đầu bắt đầu với những điều cơ bản và xây dựng nền tảng kiến ​​thức vững chắc.",
+      "paragraph4": "Các nhà giao dịch nâng cao nghiên cứu các chiến lược chuyên nghiệp, bao gồm Hệ thống đột phá có bản quyền và đã được kiểm tra lại của chúng tôi.",
+      "paragraph5": "Chúng tôi còn hơn cả một học viện. Chúng tôi là một cộng đồng và một gia đình các nhà giao dịch, cống hiến hết mình cho một môi trường hòa nhập và hỗ trợ, nơi mọi người đều có thể phát triển."
+    },
+    "vision": {
+      "badge": "Tầm nhìn",
+      "title": "Tầm nhìn của chúng tôi",
+      "description": "Để làm cho việc đào tạo ngoại hối có giá cả phải chăng, hiệu quả và dễ tiếp cận đối với các nhà giao dịch trên toàn thế giới. Bằng cách kết hợp các phương pháp giảng dạy đã được chứng minh với các công cụ giao dịch thực tế, chúng tôi mong muốn xây dựng một cộng đồng thịnh vượng được trang bị kiến ​​thức, kỷ luật và niềm tin vào thị trường."
+    },
+    "courses": {
+      "badge": "Học hỏi",
+      "start": "Của chúng tôi",
+      "highlight": "Khóa học",
+      "courseTitle": "Khóa học Forex hoàn chỉnh",
+      "courseDescription": "Có quyền truy cập vào khóa học đầy đủ của chúng tôi, bao gồm Hệ thống đột phá độc quyền, các câu đố và mô-đun tương tác.",
+      "referral": "Giới thiệu 3 người bạn và nhận 1 tháng tín hiệu miễn phí"
+    },
+    "approach": {
+      "badge": "Câu chuyện của chúng tôi",
+      "title": "Cách tiếp cận độc đáo của chúng tôi",
+      "paragraph1": "Điều khiến chúng tôi khác biệt là khả năng kết hợp truyền thống với sự đổi mới. Nội dung khóa học của chúng tôi bắt nguồn từ các chiến lược đã được chứng minh, được cải tiến từ năm 2004 và được hỗ trợ bởi các công cụ thực tế.",
+      "paragraph2": "Từ tín hiệu giao dịch đến công cụ nền tảng, tài nguyên của chúng tôi sẽ bổ sung kiến ​​thức cho bạn và giúp bạn đưa ra quyết định giao dịch rõ ràng hơn.",
+      "imageAlt": "Giấy chứng nhận học tập của học viện"
+    },
+    "offer": {
+      "title": "Tham gia",
+      "specialTitle": "Gia đình 1st Forex",
+      "description": "Tại Học viện Giao dịch 1st Forex, chúng tôi không chỉ là một nền tảng giáo dục. Chúng tôi là đối tác lâu dài trong hành trình giao dịch của bạn.",
+      "secondaryDescription": "Cho dù bạn đang thực hiện những bước đầu tiên trong giao dịch hay mài giũa các chiến lược nâng cao, chúng tôi luôn sẵn sàng hướng dẫn, hỗ trợ và tôn vinh thành tích của bạn.",
+      "subDescription": "Đăng ký ngay hôm nay và bắt đầu hành trình đi đến tự do tài chính. Cùng nhau, chúng ta sẽ biến mục tiêu giao dịch của bạn thành hiện thực."
+    },
+    "cta": {
+      "signals": "Tín hiệu giao dịch",
+      "academy": "Học viện"
+    }
+  },
+  "Signal": {
+    "badge": "Tín hiệu giao dịch 1st Forex",
+    "title": "Tín hiệu giao dịch được xây dựng dựa trên 20 năm kinh nghiệm thị trường",
+    "description": "Nhận tín hiệu ngoại hối có cấu trúc được hỗ trợ bởi hiệu suất lịch sử, thực hiện kỷ luật và lập kế hoạch giao dịch thực tế.",
+    "tradingSignals": "Tín hiệu giao dịch",
+    "academy": "Học viện",
+    "logoAlt": "Logo 1stForex",
+    "offersBadge": "Ưu đãi",
+    "overview": {
+      "paragraph1": "Tín hiệu giao dịch 1st Forex kết hợp 20 năm chuyên môn về thị trường với Hệ thống đột phá có bản quyền của chúng tôi để hỗ trợ quy trình giao dịch kỷ luật hơn.",
+      "paragraph2": "Quy trình của chúng tôi xem xét cấu trúc thị trường, mức độ rủi ro và hành vi lịch sử để đưa ra các tín hiệu rõ ràng trực tiếp đến trang tổng quan và trải nghiệm di động của bạn.",
+      "paragraph3": "Với sự hỗ trợ liên tục, khả năng tiếp cận đội ngũ giao dịch giàu kinh nghiệm và cộng đồng ngoại hối phát triển, giao dịch cấp chuyên nghiệp chưa bao giờ dễ tiếp cận hơn thế."
+    },
+    "offer": {
+      "title": "Cái gì",
+      "highlight": "Chúng tôi cung cấp",
+      "description": "Tại 1st Forex, nền tảng tín hiệu của chúng tôi kết hợp kinh nghiệm thị trường hàng thập kỷ với phân tích có cấu trúc và mức giao dịch rõ ràng.",
+      "secondaryDescription": "Với 20 năm kiểm tra ngược, mọi tín hiệu đều được xem xét theo một quy trình kỷ luật và các điều kiện thị trường xung quanh nó."
+    },
+    "banner": {
+      "quote": "Hãy tưởng tượng bạn có hai mươi năm kinh nghiệm thị trường, lập kế hoạch giao dịch có cấu trúc và các nhà giao dịch dày dạn kinh nghiệm đằng sau quy trình này. 1st Forex đưa tín hiệu, phân tích và giáo dục vào một nền tảng thực tế để các nhà giao dịch có thể hành động rõ ràng và kỷ luật hơn.",
+      "description": "Với Tín hiệu giao dịch 1st Forex, bạn không chỉ nhận được thông báo. Bạn đang bước vào một hệ sinh thái giao dịch được cung cấp thông tin dữ liệu được hỗ trợ, được thiết kế để giúp bạn tìm hiểu, đánh giá và thực hiện một cách tự tin hơn."
+    },
+    "plans": {
+      "start": "Tín hiệu",
+      "highlight": "kế hoạch",
+      "groups": {
+        "rules": {
+          "title": "Dựa trên quy tắc",
+          "highlight": "Quá trình tín hiệu",
+          "cards": {
+            "0": {
+              "title": "Quản lý tín hiệu rõ ràng",
+              "description": "Theo dõi các tín hiệu đáng tin cậy, mức độ giao dịch và bối cảnh lịch sử từ một nền tảng."
+            },
+            "1": {
+              "title": "Lập kế hoạch nhận thức rủi ro",
+              "description": "Sử dụng mục nhập, dừng lỗ và chốt lời để căn chỉnh từng tín hiệu với kế hoạch rủi ro cá nhân của bạn."
+            }
+          }
+        },
+        "mentor": {
+          "title": "Nhà giao dịch cá nhân",
+          "highlight": "cố vấn",
+          "cards": {
+            "0": {
+              "title": "Hướng dẫn của chuyên gia",
+              "description": "Làm việc với một nhà giao dịch có kinh nghiệm để giải thích các tín hiệu, tinh chỉnh chiến lược và cải thiện quy trình của bạn."
+            },
+            "1": {
+              "title": "Hỗ trợ trọn gói",
+              "description": "Kết hợp ứng dụng, tín hiệu, giáo dục và hiểu biết sâu sắc về con người trong một quy trình làm việc thực tế."
+            },
+            "2": {
+              "title": "Chiến lược tùy chỉnh",
+              "description": "Điều chỉnh phương pháp giao dịch của bạn với sự hỗ trợ chuyên nghiệp và xây dựng sự tự tin theo thời gian."
+            }
+          }
+        },
+        "app": {
+          "title": "Tín hiệu dựa trên ứng dụng với",
+          "highlight": "Hỗ trợ thương nhân",
+          "cards": {
+            "0": {
+              "title": "Cảnh báo theo thời gian thực",
+              "description": "Nhận tín hiệu trực tiếp trên ứng dụng di động của bạn bằng thông báo đẩy tức thì."
+            },
+            "1": {
+              "title": "Thông tin chi tiết thông minh",
+              "description": "Xem xét các điều kiện thị trường, mô hình lịch sử và ưu tiên rủi ro trước khi hành động theo tín hiệu."
+            },
+            "2": {
+              "title": "Hoàn toàn minh bạch",
+              "description": "Phân tích biểu đồ trực tiếp, xem xét các tín hiệu trong quá khứ và hiểu lý do căn bản đằng sau mỗi giao dịch."
+            },
+            "3": {
+              "title": "Hỗ trợ liên tục",
+              "description": "Nhận trợ giúp về các câu hỏi về nền tảng, truy cập tín hiệu và quy trình giao dịch của bạn."
+            }
+          }
+        }
+      }
+    },
+    "keyOfferings": {
+      "start": "Chìa khóa",
+      "highlight": "Ưu đãi",
+      "cards": {
+        "0": {
+          "title": "Giải pháp tín hiệu có cấu trúc",
+          "description": "Sử dụng các mức tín hiệu rõ ràng và quy trình kỷ luật để xác định các cơ hội giao dịch."
+        },
+        "1": {
+          "title": "Phân tích thích ứng",
+          "description": "Phân tích thị trường điều chỉnh theo các điều kiện thay đổi và giữ cho bối cảnh luôn rõ ràng."
+        },
+        "2": {
+          "title": "Giao diện thân thiện với người dùng",
+          "description": "Một nền tảng rõ ràng, trực quan giúp điều hướng liền mạch và đưa ra quyết định tự tin."
+        },
+        "3": {
+          "title": "Kết quả đã được chứng minh",
+          "description": "Hai thập kỷ dữ liệu được kiểm tra lại và sàng lọc liên tục hỗ trợ các tín hiệu của chúng tôi."
+        },
+        "4": {
+          "title": "Hỗ trợ & Cộng đồng",
+          "description": "Hỗ trợ liên tục, các nhà giao dịch giàu kinh nghiệm và mạng lưới đồng nghiệp toàn cầu."
+        }
+      }
+    }
+  },
+  "Community": {
+    "badge": "Cộng đồng",
+    "title": "Chào mừng đến với Cộng đồng 1st Forex",
+    "description": "Nơi mà các nhà giao dịch ngoại hối ở mọi cấp độ cùng nhau như một gia đình để học hỏi, phát triển và hỗ trợ lẫn nhau. Cho dù bạn mới bắt đầu hay là một chuyên gia dày dạn kinh nghiệm, cộng đồng của chúng tôi được thiết kế để giúp bạn tiến bộ trong hành trình giao dịch của mình.",
+    "logoAlt": "Logo 1stForex",
+    "join": {
+      "title": "Tiếng nói của bạn, Cộng đồng của bạn",
+      "description": "Cho dù bạn ở đây để tìm hiểu, chia sẻ hay phát triển, Cộng đồng 1st Forex là nơi kết nối với những người cùng chí hướng và đưa giao dịch của bạn lên một tầm cao mới.",
+      "button": "Tham gia với chúng tôi ngay"
+    },
+    "how": {
+      "badge": "Nhận 1st Forex",
+      "title": "Làm thế nào để tham gia",
+      "highlight": "Cuộc hội thoại?",
+      "point1": "Tạo tài khoản 1st Forex để truy cập blog, tín hiệu và khóa học.",
+      "point2": "Tương tác bằng cách đặt câu hỏi, chia sẻ thông tin chi tiết và đăng ký trạng thái cộng tác viên."
+    },
+    "offers": {
+      "start": "Cái gì",
+      "highlight": "Chúng tôi cung cấp?",
+      "cards": {
+        "0": {
+          "title": "Hỏi đáp tương tác",
+          "points": {
+            "0": "Bạn có câu hỏi? Hỏi trực tiếp các bài đăng từ những người đóng góp được chúng tôi phê duyệt.",
+            "1": "Những người đóng góp có thể trả lời riêng tư hoặc chia sẻ câu hỏi và câu trả lời một cách công khai để mọi người đều được hưởng lợi."
+          }
+        },
+        "1": {
+          "title": "Blog video hàng ngày và các câu hỏi được chuẩn bị sẵn",
+          "points": {
+            "0": "Truy cập nội dung video thường xuyên dành cho nhà giao dịch ở mọi cấp độ.",
+            "1": "Khám phá lời khuyên, chiến lược và mẹo thực tế để cải thiện kỹ năng giao dịch của bạn."
+          }
+        },
+        "2": {
+          "title": "Đăng ký trở thành Blogger",
+          "points": {
+            "0": "Đam mê ngoại hối? Áp dụng để đóng góp cho blog của chúng tôi.",
+            "1": "Các blogger được phê duyệt có thể chia sẻ chiến lược, kinh nghiệm và kiến ​​thức với cộng đồng."
+          }
+        },
+        "3": {
+          "title": "Thảo luận về hiệu suất hàng tuần",
+          "points": {
+            "0": "Suy ngẫm về hiệu suất trong tuần với các nhà giao dịch đồng nghiệp.",
+            "1": "Chia sẻ hiểu biết sâu sắc, thảo luận chiến lược và cùng nhau ăn mừng chiến thắng."
+          }
+        }
+      }
+    }
+  },
+  "Faq": {
+    "badge": "Phần trợ giúp",
+    "title": "Câu hỏi thường gặp & Hỗ trợ người dùng",
+    "searchPlaceholder": "Bạn cần giúp đỡ điều gì?",
+    "allFaqs": "Tất cả các câu hỏi thường gặp",
+    "noResults": "Không có Câu hỏi thường gặp nào phù hợp với truy vấn tìm kiếm của bạn.",
+    "questions": {
+      "0": {
+        "question": "Tôi phải bắt đầu từ đâu?",
+        "answer": "Bắt đầu bằng cách tạo tài khoản miễn phí của bạn. Khi tài khoản của bạn hoạt động, hãy mở phần Bắt đầu trong bảng điều khiển của bạn và chọn một trong những đối tác môi giới được đề xuất.",
+        "points": {
+          "0": "Tạo cả tài khoản demo và tài khoản giao dịch trực tiếp với nhà môi giới của bạn.",
+          "1": "Sử dụng tài khoản demo để thực hành và làm quen với nền tảng giao dịch.",
+          "2": "Chỉ sử dụng tài khoản trực tiếp khi bạn sẵn sàng giao dịch bằng tiền thật.",
+          "3": "Hoàn thành khóa học giáo dục miễn phí, sau đó bắt đầu dùng thử đăng ký tín hiệu khi bạn đã sẵn sàng."
+        }
+      },
+      "1": {
+        "question": "Sự khác biệt giữa tài khoản demo và tài khoản trực tiếp là gì?",
+        "answer": "Tài khoản demo sử dụng tiền ảo nên bạn có thể thực hành trong môi trường thị trường mô phỏng mà không gặp rủi ro với tiền thật. Tài khoản trực tiếp sử dụng tiền thật được gửi với nhà môi giới của bạn, do đó lãi và lỗ ảnh hưởng trực tiếp đến số dư tài khoản của bạn.",
+        "subDescription": "Chúng tôi thực sự khuyên bạn nên làm quen với nền tảng này và các tín hiệu trên tài khoản demo trước khi giao dịch bằng tiền thật."
+      },
+      "2": {
+        "question": "Tôi tải xuống MetaTrader 5 (MT5) ở đâu?",
+        "answer": "Bạn có thể tải xuống MT5 trực tiếp từ trang web của nhà môi giới, thường trong phần được gọi là Tải xuống, Nền tảng hoặc Nền tảng giao dịch.",
+        "points": {
+          "0": "Số tài khoản hoặc ID đăng nhập",
+          "1": "Mật khẩu",
+          "2": "Tên máy chủ"
+        },
+        "subDescription": "Sau khi MT5 được cài đặt, hãy đăng nhập bằng thông tin đăng nhập tài khoản do nhà môi giới của bạn cung cấp. Nếu bạn cần trợ giúp kết nối tài khoản của mình, nhóm hỗ trợ của chúng tôi có thể hướng dẫn bạn."
+      },
+      "3": {
+        "question": "Làm thế nào để tôi biết nhà môi giới nào là tốt nhất cho tôi?",
+        "answer": "Nhà môi giới tốt nhất phụ thuộc vào quốc gia cư trú của bạn, sở thích tài trợ và nhu cầu giao dịch. Chúng tôi liệt kê các nhà môi giới được chọn cung cấp mức chênh lệch cạnh tranh, khớp lệnh đáng tin cậy và nền tảng thân thiện với người dùng.",
+        "subDescription": "TMGM thường được khuyên dùng vì tính dễ sử dụng, các tùy chọn tài trợ và phản hồi của khách hàng. Mọi nhà môi giới được liệt kê trên nền tảng đều đã được chọn vì nó đáp ứng các tiêu chuẩn của chúng tôi về chất lượng và độ tin cậy."
+      },
+      "4": {
+        "question": "Nếu tôi ở Hoa Kỳ thì sao?",
+        "answer": "Các quy định giao dịch ngoại hối và CFD tại Hoa Kỳ khác với nhiều quốc gia khác và một số nhà môi giới quốc tế không chấp nhận cư dân Hoa Kỳ.",
+        "subDescription": "Đối với các nhà giao dịch ở Hoa Kỳ, các nhà môi giới như OANDA và Forex.com có ​​thể phù hợp hơn vì họ hoạt động theo các yêu cầu quản lý của Hoa Kỳ."
+      },
+      "5": {
+        "question": "Tôi có thể tìm thấy các liên kết môi giới ở đâu?",
+        "answer": "Các liên kết môi giới được đề xuất có sẵn trong phần Bắt đầu trên trang tổng quan của bạn.",
+        "points": {
+          "0": "Link đăng ký môi giới",
+          "1": "Thông tin tải xuống nền tảng",
+          "2": "Chi tiết thiết lập dành riêng cho nhà môi giới",
+          "3": "Các tài nguyên bổ sung để giúp bạn bắt đầu"
+        }
+      },
+      "6": {
+        "question": "Tín hiệu giao dịch là gì?",
+        "answer": "Tín hiệu giao dịch là ý tưởng giao dịch được tạo ra thông qua phân tích độc quyền và nghiên cứu thị trường.",
+        "points": {
+          "0": "Giá vào",
+          "1": "Dừng lỗ",
+          "2": "Lấy mục tiêu lợi nhuận",
+          "3": "Hướng giao dịch, chẳng hạn như mua hoặc bán"
+        },
+        "subDescription": "Các thành viên có thể chọn có nhận bất kỳ tín hiệu nào hay không. Tất cả các quyết định giao dịch vẫn là trách nhiệm của cá nhân nhà giao dịch."
+      },
+      "7": {
+        "question": "Các tín hiệu giao dịch có đảm bảo mang lại lợi nhuận không?",
+        "answer": "Không. Thị trường tài chính có rủi ro và không có chiến lược giao dịch hoặc dịch vụ tín hiệu nào có thể đảm bảo lợi nhuận.",
+        "subDescription": "Chúng tôi mong muốn cung cấp các cơ hội giao dịch và phân tích chất lượng cao, nhưng tất cả giao dịch đều có khả năng thua lỗ."
+      },
+      "8": {
+        "question": "Làm cách nào để nạp tiền vào tài khoản giao dịch của tôi?",
+        "answer": "Các lựa chọn cấp vốn khác nhau tùy thuộc vào nhà môi giới bạn chọn. Hầu hết các nhà môi giới được đề nghị đều cung cấp một số phương thức gửi tiền.",
+        "points": {
+          "0": "Chuyển khoản ngân hàng",
+          "1": "Thẻ tín dụng hoặc thẻ ghi nợ",
+          "2": "Tiền điện tử, chẳng hạn như USDT, nếu có",
+          "3": "Phương thức thanh toán địa phương, tùy thuộc vào quốc gia của bạn"
+        },
+        "subDescription": "Để xem các phương thức cấp vốn có sẵn cho bạn, hãy đăng nhập vào cổng thông tin khách hàng của nhà môi giới sau khi mở tài khoản. Các tùy chọn có sẵn khác nhau tùy theo nhà môi giới và khu vực."
+      },
+      "9": {
+        "question": "Tôi cần bao nhiêu tiền để bắt đầu?",
+        "answer": "Khoản tiền gửi tối thiểu khác nhau tùy theo nhà môi giới. Nhiều nhà môi giới được khuyến nghị cho phép mở tài khoản với số tiền gửi tương đối nhỏ.",
+        "subDescription": "Chúng tôi khuyên bạn nên bắt đầu với số tiền mà bạn cảm thấy thoải mái khi mạo hiểm và tập trung vào quản lý rủi ro thích hợp thay vì quy mô tài khoản."
+      },
+      "10": {
+        "question": "Tôi có thể sao chép giao dịch tự động không?",
+        "answer": "Không. Khi nhận được tín hiệu, bạn phải nhập thủ công thông tin giao dịch vào MT5, bao gồm giá vào lệnh, dừng lỗ và chốt lời."
+      },
+      "11": {
+        "question": "Tín hiệu của bạn bao gồm những thị trường nào?",
+        "answer": "Tín hiệu của chúng tôi chủ yếu tập trung vào các cặp ngoại hối chính. Độ bao phủ thị trường có thể mở rộng dựa trên các cơ hội sẵn có và điều kiện thị trường."
+      },
+      "12": {
+        "question": "Tín hiệu được gửi vào thời gian nào?",
+        "answer": "Tín hiệu được gửi bất cứ khi nào nhóm phân tích xác định được các cơ hội đủ điều kiện. Không có lịch trình cố định vì điều kiện thị trường quyết định thời điểm thực hiện giao dịch.",
+        "subDescription": "Tín hiệu có sẵn từ thị trường mở cửa vào Chủ Nhật lúc 5 giờ chiều EST đến thứ Sáu lúc 5 giờ chiều EST. Thông báo được gửi qua nền tảng và các kênh liên lạc được kết nối."
+      },
+      "13": {
+        "question": "Tôi có cần kinh nghiệm giao dịch trước không?",
+        "answer": "Không. Nền tảng này được thiết kế cho cả người mới bắt đầu và người giao dịch có kinh nghiệm.",
+        "subDescription": "Những nhà giao dịch mới có thể bắt đầu với các tài nguyên đào tạo và tài khoản demo, trong khi những nhà giao dịch có kinh nghiệm có thể sử dụng các tín hiệu và phân tích thị trường ngay lập tức."
+      },
+      "14": {
+        "question": "Làm cách nào để hủy đăng ký của tôi?",
+        "answer": "Bạn có thể quản lý hoặc hủy đăng ký của mình bất kỳ lúc nào thông qua trang tổng quan tài khoản của mình.",
+        "subDescription": "Quyền truy cập vào các dịch vụ cao cấp vẫn hoạt động cho đến khi kết thúc thời hạn thanh toán hiện tại của bạn."
+      },
+      "15": {
+        "question": "Tôi có thể sử dụng điện thoại của mình để giao dịch không?",
+        "answer": "Đúng. MT5 có sẵn cho cả thiết bị iOS và Android. Bạn có thể theo dõi giao dịch, nhận tín hiệu và quản lý vị thế trực tiếp từ điện thoại thông minh hoặc máy tính bảng của mình."
+      },
+      "16": {
+        "question": "Bạn có quản lý tiền của khách hàng không?",
+        "answer": "Không. 1stForex không chấp nhận tiền gửi hoặc quản lý tiền của khách hàng.",
+        "subDescription": "Tất cả tài khoản giao dịch được giữ trực tiếp với nhà môi giới mà bạn chọn. Bạn luôn có toàn quyền kiểm soát tài khoản và các quyết định giao dịch của mình."
+      }
+    },
+    "features": {
+      "0": {
+        "title": "Trò chuyện trực tiếp",
+        "description": "Nhận trợ giúp từ nhóm hỗ trợ của chúng tôi"
+      },
+      "1": {
+        "title": "Hỗ trợ qua email",
+        "description": "Nhận trợ giúp từ nhóm hỗ trợ của chúng tôi"
+      },
+      "2": {
+        "title": "Yêu cầu gọi lại",
+        "description": "Yêu cầu nhóm hỗ trợ của chúng tôi liên hệ với bạn"
+      }
+    },
+    "knowledgeBase": "Cơ sở kiến ​​thức",
+    "readMore": "Đọc thêm Câu hỏi thường gặp"
+  },
+  "NotFound": {
+    "title": "Ối!",
+    "imageAlt": "Không tìm thấy trang 404",
+    "homeIconAlt": "Trang chủ",
+    "goHome": "Về Nhà"
+  }
+}

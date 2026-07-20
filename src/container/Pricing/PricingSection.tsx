@@ -15,67 +15,52 @@ import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
 import TuneRoundedIcon from "@mui/icons-material/TuneRounded";
 import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
 import React from "react";
+import { useFormatter, useTranslations } from "next-intl";
 
 const monthlyPrice = 49.99;
 const yearlyBilling = 499.9;
 const yearlyMonthlyEquivalent = yearlyBilling / 12;
 
-const includedFeatures = [
-  "Every available primary trading pair",
-  "Trading signals",
-  "Entry, stop loss, and take profit levels",
-  "Historical performance dashboard",
-  "Daily trade-detail visibility",
-  "Academy access",
-  "Community access",
-  "Cancel anytime",
-];
+const includedFeatures = ["pairs", "signals", "levels", "history", "daily", "academy", "community", "cancel"];
 
 const freeFeatures = [
-  { label: "Community access", enabled: true },
-  { label: "Limited signal previews", enabled: true },
-  { label: "Account registration", enabled: true },
-  { label: "Academy access", enabled: true },
-  { label: "All trading pairs", enabled: false },
-  { label: "Trading signals", enabled: false },
-  { label: "Entry, SL, and TP levels", enabled: false },
-  { label: "Performance dashboard", enabled: false },
+  { key: "community", enabled: true }, { key: "previews", enabled: true },
+  { key: "registration", enabled: true }, { key: "academy", enabled: true },
+  { key: "allPairs", enabled: false }, { key: "signals", enabled: false },
+  { key: "levels", enabled: false }, { key: "dashboard", enabled: false },
 ];
 
 const processSteps = [
   {
     icon: <PsychologyAltRoundedIcon />,
-    label: "Research-led rules",
+    labelKey: "process.rules",
   },
   {
     icon: <RuleRoundedIcon />,
-    label: "Signal engine",
+    labelKey: "process.engine",
   },
   {
     icon: <SensorsRoundedIcon />,
-    label: "Real-time alerts",
+    labelKey: "process.alerts",
   },
   {
     icon: <LockOutlinedIcon />,
-    label: "Member access",
+    labelKey: "process.access",
   },
 ];
 
 const trustItems = [
   {
     icon: <ShieldOutlinedIcon />,
-    title: "Secure checkout",
-    text: "Payments are handled through the connected checkout flow.",
+    titleKey: "trust.checkout.title", textKey: "trust.checkout.text",
   },
   {
     icon: <VerifiedUserOutlinedIcon />,
-    title: "Performance visibility",
-    text: "Review yearly, monthly, and daily historical results.",
+    titleKey: "trust.performance.title", textKey: "trust.performance.text",
   },
   {
     icon: <TuneRoundedIcon />,
-    title: "Cancel anytime",
-    text: "Keep control of your billing from your member account.",
+    titleKey: "trust.cancel.title", textKey: "trust.cancel.text",
   },
 ];
 
@@ -150,12 +135,11 @@ function SideList({
 }
 
 const PricingSection = () => {
+  const t = useTranslations("Pricing");
+  const format = useFormatter();
   const [isMonthly, setIsMonthly] = React.useState(true);
   const displayPrice = isMonthly ? monthlyPrice : yearlyMonthlyEquivalent;
-  const priceLabel = displayPrice.toLocaleString("en-US", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
+  const priceLabel = format.number(displayPrice, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: "26px", md: "36px" } }}>
@@ -171,15 +155,15 @@ const PricingSection = () => {
         }}
       >
         <Typography sx={{ color: isMonthly ? "#111827" : "#667185", fontWeight: 700 }}>
-          Monthly
+          {t("monthly")}
         </Typography>
         <ToggleBtn
           checked={!isMonthly}
           onChange={() => setIsMonthly((current) => !current)}
-          inputProps={{ "aria-label": "Toggle yearly billing" }}
+          inputProps={{ "aria-label": t("toggleYearly") }}
         />
         <Typography sx={{ color: !isMonthly ? "#111827" : "#667185", fontWeight: 700 }}>
-          Yearly
+          {t("yearly")}
         </Typography>
         <Box
           sx={{
@@ -194,7 +178,7 @@ const PricingSection = () => {
           }}
         >
           <Typography sx={{ color: "#0F973D", fontSize: "13px", fontWeight: 800 }}>
-            2 months free yearly
+            {t("twoMonthsFree")}
           </Typography>
         </Box>
       </Box>
@@ -220,9 +204,9 @@ const PricingSection = () => {
             alignItems: "stretch",
           }}
         >
-          <SideList title="What’s included" order={{ xs: 2, lg: 1 }}>
+          <SideList title={t("includedTitle")} order={{ xs: 2, lg: 1 }}>
             {includedFeatures.map((feature) => (
-              <FeatureLine key={feature} label={feature} />
+              <FeatureLine key={feature} label={t(`included.${feature}`)} />
             ))}
           </SideList>
 
@@ -265,10 +249,10 @@ const PricingSection = () => {
                 mb: "22px",
               }}
             >
-              Unlimited
+              {t("unlimited")}
             </Box>
             <Typography sx={{ color: "#F30", fontSize: "16px", fontWeight: 800 }}>
-              Unlimited access
+              {t("unlimitedAccess")}
             </Typography>
             <Box
               sx={{
@@ -291,15 +275,13 @@ const PricingSection = () => {
                 ${priceLabel}
               </Typography>
               <Typography sx={{ color: "#475467", fontSize: "16px", mb: "8px", fontWeight: 700 }}>
-                /mo
+                {t("perMonth")}
               </Typography>
             </Box>
             <Typography sx={{ color: "#667185", fontSize: "14px", mt: "12px", minHeight: "21px" }}>
               {isMonthly
-                ? "Billed monthly. Cancel anytime."
-                : `$${yearlyBilling.toLocaleString("en-US", {
-                    minimumFractionDigits: 2,
-                  })} billed yearly. Two months included free.`}
+                ? t("monthlyBilling")
+                : t("yearlyBilling", { amount: format.number(yearlyBilling, { minimumFractionDigits: 2 }) })}
             </Typography>
             <Typography
               sx={{
@@ -311,8 +293,7 @@ const PricingSection = () => {
                 mt: "22px",
               }}
             >
-              Get every signal, every supported pair, the historical performance
-              dashboard, academy access, and the community workspace.
+              {t("planDescription")}
             </Typography>
             <Box sx={{ mt: "24px" }}>
               <CustomButton
@@ -321,7 +302,7 @@ const PricingSection = () => {
                 padding="17px 24px"
                 href={RedirectUrls.SUBSCRIPTION_URL}
               >
-                Start receiving signals
+                {t("startSignals")}
               </CustomButton>
             </Box>
             <Box
@@ -334,7 +315,7 @@ const PricingSection = () => {
                 mt: "22px",
               }}
             >
-              {["Cancel anytime", "Secure checkout", "Instant access"].map((item) => (
+              {[t("badges.cancel"), t("badges.checkout"), t("badges.instant")].map((item) => (
                 <Box
                   key={item}
                   sx={{
@@ -367,11 +348,11 @@ const PricingSection = () => {
             </Box>
           </Box>
 
-          <SideList title="Free account" order={{ xs: 3, lg: 3 }}>
+          <SideList title={t("freeTitle")} order={{ xs: 3, lg: 3 }}>
             {freeFeatures.map((feature) => (
               <FeatureLine
-                key={feature.label}
-                label={feature.label}
+                key={feature.key}
+                label={t(`free.${feature.key}`)}
                 enabled={feature.enabled}
               />
             ))}
@@ -397,7 +378,7 @@ const PricingSection = () => {
             mb: { xs: "22px", md: "30px" },
           }}
         >
-          Our process. Your advantage.
+          {t("process.title")}
         </Typography>
         <Box
           sx={{
@@ -408,7 +389,7 @@ const PricingSection = () => {
         >
           {processSteps.map((step, index) => (
             <Box
-              key={step.label}
+              key={step.labelKey}
               sx={{
                 position: "relative",
                 display: "flex",
@@ -437,7 +418,7 @@ const PricingSection = () => {
                 {step.icon}
               </Box>
               <Typography sx={{ color: "#111827", fontSize: "15px", fontWeight: 800 }}>
-                {step.label}
+                {t(step.labelKey)}
               </Typography>
               {index < processSteps.length - 1 && (
                 <ArrowForwardRoundedIcon
@@ -466,7 +447,7 @@ const PricingSection = () => {
       >
         {trustItems.map((item) => (
           <Box
-            key={item.title}
+            key={item.titleKey}
             sx={{
               display: "flex",
               alignItems: "flex-start",
@@ -480,10 +461,10 @@ const PricingSection = () => {
             <Box sx={{ color: "#111827", lineHeight: 0 }}>{item.icon}</Box>
             <Box>
               <Typography sx={{ color: "#111827", fontSize: "15px", fontWeight: 800 }}>
-                {item.title}
+                {t(item.titleKey)}
               </Typography>
               <Typography sx={{ color: "#667185", fontSize: "13px", lineHeight: "145%", mt: "2px" }}>
-                {item.text}
+                {t(item.textKey)}
               </Typography>
             </Box>
           </Box>

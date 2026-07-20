@@ -7,8 +7,10 @@ import HeadTypography from "@/src/styled/HeadTypography";
 import BaseTypography from "@/src/styled/BaseTypography";
 import { useRouter } from "next/navigation";
 import { RedirectUrls } from "@/src/const/Enum";
+import { useTranslations } from "next-intl";
 
 const CommunityBanner = () => {
+  const t = useTranslations("Community");
   const router = useRouter();
   return (
     <Box
@@ -39,7 +41,7 @@ const CommunityBanner = () => {
           padding: "4px 12px",
         }}
       >
-        <Image src={Logo} alt="logo" />
+        <Image src={Logo} alt={t("logoAlt")} />
       </Box>
 
       <Box
@@ -59,7 +61,7 @@ const CommunityBanner = () => {
         }}
       >
         <HeadTypography color="#000" textAlign={"center"}>
-          Your Voice, Your Community
+          {t("join.title")}
         </HeadTypography>
 
         <BaseTypography
@@ -76,13 +78,11 @@ const CommunityBanner = () => {
             },
           }}
         >
-          Whether you&apos;re here to learn, share, or grow, the 1st Forex
-          Community is the perfect place to connect with like-minded individuals
-          and take your trading to the next level.
+          {t("join.description")}
         </BaseTypography>
 
         <CustomButton onClick={() => router.push(RedirectUrls.REGISTER_URL)}>
-          Join Us Now
+          {t("join.button")}
         </CustomButton>
       </Box>
     </Box>

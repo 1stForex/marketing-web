@@ -4,15 +4,14 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Bull from "@/src/assets/images/Bull.png";
 import HeadTypography from "@/src/styled/HeadTypography";
+import { useLocale, useTranslations } from "next-intl";
+import { getLocaleDirection } from "@/src/i18n/config";
 
 const OurStory = () => {
-  const paragraphs = [
-    "Founded in 2004, 1st Forex has been a trusted name in the forex trading industry for over two decades. Based in Costa Rica, we specialize in providing top-notch forex education and reliable trading signals, empowering traders worldwide to achieve their financial goals.",
-    "Through our 1st Forex Academy, we have trained thousands of happy students and traders via online courses and in-person seminars, constantly refining our curriculum to remain one of the best in the world. Our track record speaks for itself, with countless success stories from those who have trusted us to guide their trading journey.",
-    "Our team blends experienced forex veterans, successful traders, and product specialists. Together, we focus on practical education, disciplined signals, and tools traders can actually use.",
-    "From structured signals to platform tools available on our mobile app and user-friendly website, we help clients make clearer trading decisions.",
-    "At 1st Forex, we don’t just see clients—we see family. We are passionate about what we do, and we are dedicated to building a thriving, connected community where traders of all levels can learn, grow, and succeed.",
-  ];
+  const t = useTranslations("Home.story");
+  const locale = useLocale();
+  const direction = getLocaleDirection(locale);
+  const paragraphs = ["paragraph1", "paragraph2", "paragraph3", "paragraph4", "paragraph5"];
 
   return (
     <Box
@@ -45,7 +44,7 @@ const OurStory = () => {
           },
         }}
       >
-        <Badge title="Our Story" />
+        <Badge title={t("badge")} />
       </Box>
 
       <HeadTypography
@@ -61,7 +60,13 @@ const OurStory = () => {
           },
         }}
       >
-        About <span style={{ color: "var(--primary-400-base, #F30)" }}>Us</span>
+        {t.rich("title", {
+          accent: (chunks) => (
+            <span style={{ color: "var(--primary-400-base, #F30)" }}>
+              {chunks}
+            </span>
+          ),
+        })}
       </HeadTypography>
 
       <Box
@@ -91,12 +96,12 @@ const OurStory = () => {
               height: "408px",
               overflowY: "auto",
               position: "relative",
-              paddingLeft: "48px",
+              paddingInlineStart: "48px",
               "@media (max-width: 992px)": {
-                paddingLeft: "32px",
+                paddingInlineStart: "32px",
               },
               "@media (max-width: 576px)": {
-                paddingLeft: "16px",
+                paddingInlineStart: "16px",
               },
               "&::-webkit-scrollbar": {
                 width: "8px",
@@ -112,7 +117,7 @@ const OurStory = () => {
               },
               direction: "rtl",
               "& > *": {
-                direction: "ltr",
+                direction,
               },
             }}
           >
@@ -131,7 +136,7 @@ const OurStory = () => {
                 },
               }}
             >
-              How We Started?
+              {t("heading")}
             </Typography>
             <Box
               sx={{
@@ -161,7 +166,7 @@ const OurStory = () => {
                     },
                   }}
                 >
-                  {paragraph}
+                  {t(paragraph)}
                 </Typography>
               ))}
             </Box>
@@ -171,8 +176,8 @@ const OurStory = () => {
             sx={{
               position: "absolute",
               bottom: 0,
-              left: "8px",
-              right: 0,
+              insetInlineStart: "8px",
+              insetInlineEnd: 0,
               height: "120px",
               background:
                 "linear-gradient(to top, var(--Grey-50, #F9FAFB), transparent)",

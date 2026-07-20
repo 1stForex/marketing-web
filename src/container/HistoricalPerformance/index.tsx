@@ -24,6 +24,7 @@ import {
 } from "@/src/const/historicalPerformance";
 import { RedirectUrls } from "@/src/const/Enum";
 import Hero from "@/src/components/Hero";
+import { useFormatter, useTranslations } from "next-intl";
 
 function formatPercent(value: number) {
   return `${Number(value.toFixed(2)).toLocaleString("en-US")}%`;
@@ -36,37 +37,6 @@ function formatNumber(value: number) {
 const bestYear = historicalPerformanceYears.reduce((best, year) =>
   year.netPips > best.netPips ? year : best
 );
-
-const metricCards = [
-  { label: "Entered Trades", value: formatNumber(historicalPerformanceTotals.trades) },
-  { label: "Wins", value: formatNumber(historicalPerformanceTotals.wins) },
-  { label: "Losses", value: formatNumber(historicalPerformanceTotals.losses) },
-  {
-    label: "Avg. Win Rate",
-    value: formatPercent(historicalPerformanceTotals.winRate),
-  },
-];
-
-const tableHeadings = [
-  "Year",
-  "Trades",
-  "Wins",
-  "Losses",
-  "Win Rate",
-  "Net Pips",
-  "Best Pair",
-  "",
-];
-
-const mobileTableLabels = [
-  "Year",
-  "Trades",
-  "Wins",
-  "Losses",
-  "Win Rate",
-  "Net Pips",
-  "Best Pair",
-];
 
 const allowedHistoricalPairs = new Set([
   "GBP/USD",
@@ -98,6 +68,15 @@ interface PinnedHeaderState {
 }
 
 export default function HistoricalPerformance() {
+  const t = useTranslations("HistoricalPerformance");
+  const metricCards = [
+    { label: t("metrics.trades"), value: formatNumber(historicalPerformanceTotals.trades) },
+    { label: t("metrics.wins"), value: formatNumber(historicalPerformanceTotals.wins) },
+    { label: t("metrics.losses"), value: formatNumber(historicalPerformanceTotals.losses) },
+    { label: t("metrics.winRate"), value: formatPercent(historicalPerformanceTotals.winRate) },
+  ];
+  const tableHeadings = [t("columns.year"), t("columns.trades"), t("columns.wins"), t("columns.losses"), t("columns.winRate"), t("columns.netPips"), t("columns.bestPair"), ""];
+  const mobileTableLabels = tableHeadings.slice(0, -1);
   const [expandedYear, setExpandedYear] = React.useState<number>(
     historicalPerformanceYears[0]?.year ?? 0
   );
@@ -201,9 +180,9 @@ export default function HistoricalPerformance() {
           }}
         >
           <Hero
-            badgeTitle="Performance History"
-            title="Performance History"
-            description="View yearly results broken down into monthly summaries, with complete daily trade history available in the member dashboard."
+            badgeTitle={t("badge")}
+            title={t("title")}
+            description={t("description")}
             bgImagePath="/HomeHeroBg.jpg"
           >
             <Box
@@ -269,16 +248,16 @@ export default function HistoricalPerformance() {
             }}
           >
             {[
-              ["Best Year", `${bestYear.year}`, `${formatNumber(bestYear.netPips)} net pips`],
+              [t("summary.bestYear"), `${bestYear.year}`, t("netPips", { value: formatNumber(bestYear.netPips) })],
               [
-                "Best Pair",
+                t("summary.bestPair"),
                 formatAllowedPair(bestYear.bestPair),
-                "Most productive major pair",
+                t("summary.bestPairDetail"),
               ],
               [
-                "History Range",
+                t("summary.range"),
                 historicalPerformanceRange.label,
-                `${historicalPerformanceYears.length} years of performance data`,
+                t("summary.rangeDetail", { count: historicalPerformanceYears.length }),
               ],
             ].map(([label, value, detail]) => (
               <Box
@@ -329,7 +308,7 @@ export default function HistoricalPerformance() {
                 },
               }}
             >
-              Annual <span style={{ color: "#F30" }}>Breakdown</span>
+              {t("annualStart")} <span style={{ color: "#F30" }}>{t("annualHighlight")}</span>
             </Typography>
             <Typography
               sx={{
@@ -344,8 +323,7 @@ export default function HistoricalPerformance() {
                 },
               }}
             >
-              Select any year to inspect the monthly summary. Select any month
-              to continue into the dashboard for daily trade history.
+              {t("annualDescription")}
             </Typography>
 
             <Box
@@ -608,7 +586,7 @@ export default function HistoricalPerformance() {
               <LockOutlinedIcon />
             </Box>
             <IconButton
-              aria-label="Close"
+              aria-label={t("modal.close")}
               onClick={() => setSelectedMonth(null)}
               sx={{ alignSelf: "start" }}
             >
@@ -624,12 +602,10 @@ export default function HistoricalPerformance() {
               letterSpacing: "-0.52px",
             }}
           >
-            Daily trade history is inside the dashboard.
+            {t("modal.title")}
           </Typography>
           <Typography sx={{ mt: "12px", color: "#667185", lineHeight: "150%" }}>
-            Log in or create an account to view the day-by-day trade details for{" "}
-            {selectedMonth?.month} {selectedMonth?.year}, including entries,
-            exits, outcomes, and trade notes.
+            {t("modal.description", { month: selectedMonth?.month ?? "", year: selectedMonth?.year ?? "" })}
           </Typography>
         </DialogContent>
         <DialogActions sx={{ px: "24px", pb: "24px", gap: "10px" }}>
@@ -645,7 +621,7 @@ export default function HistoricalPerformance() {
               fontWeight: 700,
             }}
           >
-            Log In
+            {t("modal.login")}
           </Button>
           <Button
             component={Link}
@@ -660,7 +636,7 @@ export default function HistoricalPerformance() {
               "&:hover": { background: "#D52B00" },
             }}
           >
-            Sign Up
+            {t("modal.signup")}
           </Button>
         </DialogActions>
       </Dialog>
@@ -739,6 +715,8 @@ function MonthlyBreakdown({
   year: HistoricalYearPerformance;
   onMonthClick: (month: string) => void;
 }) {
+  const t = useTranslations("HistoricalPerformance");
+  const format = useFormatter();
   return (
     <Box
       sx={{
@@ -775,7 +753,7 @@ function MonthlyBreakdown({
             },
           }}
         >
-          {year.year} Monthly Summary
+          {t("monthlySummary", { year: year.year })}
         </Typography>
         <Typography
           sx={{
@@ -787,7 +765,7 @@ function MonthlyBreakdown({
             },
           }}
         >
-          {year.note}
+          {t("monthlyNote")}
         </Typography>
       </Box>
       <Box
@@ -832,13 +810,13 @@ function MonthlyBreakdown({
           >
             <Box sx={{ textAlign: "left" }}>
               <Typography sx={{ fontWeight: 800, lineHeight: "145%" }}>
-                {month.month}
+                {format.dateTime(new Date(2020, Number(month.monthKey.split("-")[1]) - 1, 1), { month: "long" })}
               </Typography>
               <Typography sx={{ color: "#667185", fontSize: "13px" }}>
-                {month.trades} trades • {formatPercent(month.winRate)}
+                {t("tradeCount", { count: month.trades })} • {formatPercent(month.winRate)}
               </Typography>
               <Typography sx={{ color: "#98A2B3", fontSize: "12px", mt: "2px" }}>
-                {formatNumber(month.netPips)} net pips
+                {t("netPips", { value: formatNumber(month.netPips) })}
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", color: "#F30" }}>

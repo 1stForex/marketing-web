@@ -5,10 +5,10 @@ import {
   localeDefinitions,
   type AppLocale,
 } from "@/src/i18n/config";
-import LanguageRoundedIcon from "@mui/icons-material/LanguageRounded";
-import { FormControl, MenuItem, Select } from "@mui/material";
+import { Box, FormControl, MenuItem, Select } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
+import LocaleFlag from "./LocaleFlag";
 
 type LanguageSwitcherProps = {
   fullWidth?: boolean;
@@ -22,6 +22,9 @@ export default function LanguageSwitcher({
   const locale = useLocale() as AppLocale;
   const t = useTranslations("LocaleSwitcher");
   const [isUpdating, setIsUpdating] = useState(false);
+  const availableLocales = localeDefinitions.filter(({ code }) =>
+    enabledLocales.includes(code),
+  );
 
   const handleChange = async (nextLocale: AppLocale) => {
     if (nextLocale === locale || isUpdating) return;
@@ -47,16 +50,25 @@ export default function LanguageSwitcher({
         value={locale}
         disabled={isUpdating}
         onChange={(event) => handleChange(event.target.value as AppLocale)}
-        startAdornment={
-          <LanguageRoundedIcon
-            sx={{
-              fontSize: 18,
-              marginInlineEnd: "7px",
-              color: inverse ? "#FFF" : "#667185",
-            }}
-          />
-        }
+        renderValue={(selectedLocale) => {
+          const selected = availableLocales.find(
+            ({ code }) => code === selectedLocale,
+          );
+          if (!selected) return selectedLocale;
+
+          return (
+            <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <LocaleFlag flagCode={selected.flagCode} />
+              <Box component="span">{selected.nativeName}</Box>
+            </Box>
+          );
+        }}
         inputProps={{ "aria-label": t("label") }}
+        MenuProps={{
+          PaperProps: {
+            sx: { maxHeight: 360 },
+          },
+        }}
         sx={{
           height: 42,
           borderRadius: "24px",
@@ -75,13 +87,12 @@ export default function LanguageSwitcher({
           },
         }}
       >
-        {localeDefinitions
-          .filter(({ code }) => enabledLocales.includes(code))
-          .map(({ code, nativeName }) => (
-            <MenuItem key={code} value={code}>
-              {nativeName}
-            </MenuItem>
-          ))}
+        {availableLocales.map(({ code, nativeName, flagCode }) => (
+          <MenuItem key={code} value={code} sx={{ gap: "10px" }}>
+            <LocaleFlag flagCode={flagCode} />
+            <Box component="span">{nativeName}</Box>
+          </MenuItem>
+        ))}
       </Select>
     </FormControl>
   );

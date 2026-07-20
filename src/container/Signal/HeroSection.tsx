@@ -2,14 +2,16 @@ import { Box } from "@mui/material";
 import Hero from "@/src/components/Hero";
 import CustomButton from "@/src/components/Button";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("Signal");
   return (
     <Hero
-      badgeTitle="1st Forex Trading Signals"
+      badgeTitle={t("badge")}
       bgImagePath="HomeHeroBg.jpg"
-      title="Trading Signals Built on 20 Years of Market Experience"
-      description="Get structured forex signals backed by historical performance, disciplined execution, and practical trade planning."
+      title={t("title")}
+      description={t("description")}
     >
       <Box
         sx={{
@@ -19,10 +21,10 @@ export default function HeroSection() {
         }}
       >
         <Link href="/ai-signal" passHref>
-          <CustomButton variant="red">Trading Signals</CustomButton>
+          <CustomButton variant="red">{t("tradingSignals")}</CustomButton>
         </Link>
         <Link href="/academy" passHref>
-          <CustomButton variant="transparent">Academy</CustomButton>
+          <CustomButton variant="transparent">{t("academy")}</CustomButton>
         </Link>
       </Box>
     </Hero>

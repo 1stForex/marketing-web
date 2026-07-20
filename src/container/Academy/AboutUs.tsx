@@ -4,8 +4,10 @@ import { Box } from "@mui/material";
 import CourseLaptop from "@/src/assets/images/course.png";
 import AboutUsTypography from "@/src/styled/AboutUsTypography";
 import HeadTypography from "@/src/styled/HeadTypography";
+import { useTranslations } from "next-intl";
 
 const AboutUs = () => {
+  const t = useTranslations("Academy");
   return (
     <Box
       sx={{
@@ -45,49 +47,29 @@ const AboutUs = () => {
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Badge title="Academy" />
+          <Badge title={t("about.badge")} />
         </Box>
 
-        <HeadTypography color="#333">About Us</HeadTypography>
+        <HeadTypography color="#333">{t("about.title")}</HeadTypography>
 
         <AboutUsTypography>
-          At 1st Forex{" "}
-          <span style={{ color: "#F30", fontWeight: 700 }}>
-            Trading Academy
-          </span>
-          , we combine nearly two decades of experience with cutting-edge
-          technology to deliver a unique and effective learning experience.
+          {t("about.paragraph1")}
         </AboutUsTypography>
 
         <AboutUsTypography>
-          Based in Costa Rica, our academy is a global hub for traders who want to
-          achieve financial independence and master the forex markets.
+          {t("about.paragraph2")}
         </AboutUsTypography>
 
         <AboutUsTypography>
-          Our online course is recognized as one of the best in the world,
-          offering step-by-step guidance for traders at all levels. For
-          beginners, we start with the basics of forex trading, building a solid
-          foundation of knowledge.
+          {t("about.paragraph3")}
         </AboutUsTypography>
 
         <AboutUsTypography>
-          For advanced traders, we dive into professional strategies, including
-          our copyrighted and backtested{" "}
-          <span style={{ color: "#F30", fontWeight: 700 }}>
-            Breakout System
-          </span>
-          , proven to yield successful results.
+          {t("about.paragraph4")}
         </AboutUsTypography>
 
         <AboutUsTypography>
-          We don’t just see ourselves as an academy—we’re a{" "}
-          <span style={{ color: "#F30", fontWeight: 700 }}>community</span> and,
-          more importantly, a{" "}
-          <span style={{ color: "#F30", fontWeight: 700 }}>family</span> of
-          traders. With thousands of satisfied students, we are dedicated to
-          creating an inclusive and supportive environment where everyone can
-          thrive.
+          {t("about.paragraph5")}
         </AboutUsTypography>
       </Box>
 
@@ -101,7 +83,7 @@ const AboutUs = () => {
           },
         }}
       >
-        <Image src={CourseLaptop} alt="laptop" fill />
+        <Image src={CourseLaptop} alt={t("about.imageAlt")} fill />
       </Box>
     </Box>
   );

@@ -10,10 +10,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import HeadTypography from "@/src/styled/HeadTypography";
 import BaseTypography from "@/src/styled/BaseTypography";
 import CustomVideo from "@/src/components/CustomVideo";
+import { useTranslations } from "next-intl";
 
 const HeroSection = () => {
   const isMobile = useMediaQuery("(max-width: 576px)");
   const router = useRouter();
+  const t = useTranslations("Home.hero");
   const ws = useRef<WebSocket | null>(null);
   const [liveStats, setLiveStats] = useState<
     { symbol: string; price: number; change_percent: number }[]
@@ -138,7 +140,7 @@ const HeroSection = () => {
         </Box>
 
         <HeadTypography color="#FFF" textAlign={"center"} maxWidth={"464px"}>
-          Empowering Your Trading Journey
+          {t("title")}
         </HeadTypography>
 
         <BaseTypography
@@ -155,9 +157,7 @@ const HeroSection = () => {
             },
           }}
         >
-          At 1st Forex, we empower traders with trading signals, expert
-          education, and a supportive global community, helping you trade
-          smarter, grow faster, and build confidence in every market.
+          {t("description")}
         </BaseTypography>
 
         <Box
@@ -172,14 +172,14 @@ const HeroSection = () => {
             padding={isMobile ? "16px 24px" : "16px 48px"}
             onClick={handleAiSignalClick}
           >
-            Trading Signals
+            {t("signalsCta")}
           </CustomButton>
           <CustomButton
             variant="transparent"
             padding={isMobile ? "16px 24px" : "16px 48px"}
             onClick={handleAcademyClick}
           >
-            Academy
+            {t("academyCta")}
           </CustomButton>
         </Box>
       </Box>

@@ -1,0 +1,652 @@
+{
+  "LocaleSwitcher": {
+    "label": "Langue",
+    "updateFailed": "Nous n’avons pas pu mettre à jour votre langue. Veuillez réessayer."
+  },
+  "Media": {"unsupportedVideo": "Votre navigateur ne prend pas en charge cette vidéo."},
+  "Metadata": {
+    "title": "1stForex",
+    "applicationName": "1stForex",
+    "description": "Découvrez les signaux de trading, les ressources de l’académie, l’historique des performances et le soutien communautaire de 1stForex."
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "performanceHistory": "Historique des performances",
+    "pricing": "Tarifs",
+    "community": "Communauté",
+    "company": "Entreprise",
+    "aboutUs": "À propos",
+    "contactUs": "Nous joindre",
+    "tradingSignals": "Signaux de trading",
+    "academy": "Académie",
+    "login": "Connexion",
+    "register": "Inscription",
+    "menu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "tradeLikeAPro": "Tradez comme un pro"
+  },
+  "Footer": {
+    "product": "Produit",
+    "company": "Entreprise",
+    "other": "Autres",
+    "tradingSignals": "Signaux de trading 1st Forex",
+    "academy": "Académie 1st Forex",
+    "performanceHistory": "Historique des performances",
+    "pricing": "Tarifs",
+    "community": "Communauté",
+    "about": "À propos",
+    "contact": "Contact",
+    "terms": "Modalités et conditions",
+    "riskDisclaimer": "Avis de risque et modalités et conditions",
+    "acceptableUse": "Politique d’utilisation acceptable",
+    "refundPolicy": "Politique de remboursement",
+    "privacyPolicy": "Politique de confidentialité",
+    "faqs": "FAQ",
+    "newsletterTitle": "Abonnez-vous à notre infolettre",
+    "newsletterDescription": "Recevez les mises à jour de signaux, les notes de stratégie et les commentaires de marché directement dans votre boîte courriel.",
+    "emailAddress": "Adresse courriel",
+    "subscribing": "Abonnement en cours...",
+    "subscribe": "S’abonner",
+    "subscribed": "Vous êtes abonné.",
+    "invalidEmail": "Veuillez entrer une adresse courriel valide.",
+    "rightsReserved": "Tous droits réservés.",
+    "riskNotice": "Tout le contenu, les signaux et les outils sont fournis uniquement à des fins éducatives et informatives. Le trading comporte des risques."
+  },
+  "Contact": {
+    "heroBadge": "Section d’aide",
+    "heroTitle": "Nous joindre",
+    "heroDescription": "Communiquez avec l’équipe de 1st Forex pour obtenir de l’aide concernant votre compte, la facturation, les signaux, les cours ou les partenariats.",
+    "liveChat": "Clavardage en direct",
+    "liveChatDescription": "Obtenez rapidement l’aide de notre équipe de soutien",
+    "supportEmail": "support@1stforex.com",
+    "supportEmailDescription": "Écrivez à notre équipe de soutien",
+    "callback": "Demander un rappel",
+    "callbackDescription": "Demandez à notre équipe de soutien de communiquer avec vous",
+    "contactBadge": "Contact",
+    "sendMessagePrefix": "Envoyez-nous un",
+    "sendMessageAccent": "message",
+    "responseDescription": "Vous pouvez aussi laisser vos coordonnées ici et un représentant de 1st Forex communiquera avec vous dans un délai d’un jour ouvrable.",
+    "firstName": "Prénom*",
+    "firstNamePlaceholder": "Jean",
+    "lastName": "Nom",
+    "lastNamePlaceholder": "Tremblay",
+    "email": "Adresse courriel*",
+    "emailPlaceholder": "jean@1stforex.com",
+    "phone": "Téléphone",
+    "phonePlaceholder": "+1 234 569 7687",
+    "subject": "Sujet",
+    "subjectPlaceholder": "Soutien pour le compte",
+    "message": "Message*",
+    "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
+    "messageHelper": "Indiquez les renseignements importants afin que l’équipe puisse acheminer votre demande correctement.",
+    "success": "Merci. Nous vous répondrons sous peu.",
+    "error": "Veuillez vérifier le formulaire et réessayer.",
+    "sending": "Envoi en cours...",
+    "submit": "Envoyer"
+  },
+  "Home": {
+    "hero": {
+      "title": "Donnez de l’élan à votre parcours de trading",
+      "description": "Chez 1st Forex, nous aidons les traders grâce à des signaux de trading, une formation spécialisée et une communauté mondiale solidaire afin de trader plus intelligemment, de progresser plus rapidement et de gagner en confiance sur chaque marché.",
+      "signalsCta": "Signaux de trading",
+      "academyCta": "Académie"
+    },
+    "overview": {
+      "first": "Depuis plus de vingt ans, 1st Forex aide des traders du monde entier à élaborer des <accent>stratégies rentables</accent> et à atteindre leurs objectifs financiers.",
+      "second": "Des cours complets aux <accent>puissants signaux de trading</accent>, en passant par une communauté dynamique, nous offrons les outils, les renseignements et l’expertise nécessaires pour <accent>rehausser</accent> votre expérience de trading."
+    },
+    "offerings": {
+      "badge": "Offres",
+      "title": "Nos <accent>principales offres</accent>",
+      "trainingTitle": "Formation dirigée par des experts",
+      "trainingDescription": "Apprenez des stratégies éprouvées et les principes fondamentaux du marché auprès de professionnels chevronnés.",
+      "signalsTitle": "Signaux avancés et perspectives stratégiques",
+      "signalsDescription": "Accédez à des signaux fiables et à des conseils pratiques sur le marché pour prendre des décisions plus éclairées.",
+      "communityTitle": "Communauté solidaire",
+      "communityDescription": "Échangez avec d’autres traders, partagez vos idées et progressez grâce à des analyses exclusives, des commentaires de marché et le soutien de la communauté."
+    },
+    "vision": {
+      "badge": "Notre vision",
+      "first": "\"Donner les moyens d’agir à une communauté mondiale de traders en combinant deux décennies d’expertise à une technologie pratique, tout en offrant une formation claire sur le forex, des signaux structurés et des solutions utiles qui favorisent la croissance financière et la confiance.",
+      "second": "Chez 1st Forex, nous façonnons l’avenir du trading en bâtissant une communauté connectée, adaptable et axée sur les résultats.\""
+    },
+    "story": {
+      "badge": "Notre histoire",
+      "title": "À propos de <accent>nous</accent>",
+      "heading": "Comment avons-nous commencé?",
+      "paragraph1": "Fondée en 2004, 1st Forex est un nom de confiance dans le secteur du trading forex depuis plus de deux décennies. Établis au Costa Rica, nous nous spécialisons dans une formation forex de grande qualité et des signaux fiables qui aident les traders du monde entier à atteindre leurs objectifs financiers.",
+      "paragraph2": "Grâce à l’Académie 1st Forex, nous avons formé des milliers d’étudiants et de traders au moyen de cours en ligne et de séminaires en personne. Nous améliorons continuellement notre programme afin qu’il demeure parmi les meilleurs au monde. Les nombreuses réussites des personnes qui nous ont fait confiance témoignent de notre parcours.",
+      "paragraph3": "Notre équipe réunit des vétérans du forex, des traders accomplis et des spécialistes de produits. Ensemble, nous misons sur une formation pratique, des signaux disciplinés et des outils réellement utiles aux traders.",
+      "paragraph4": "Des signaux structurés aux outils offerts dans notre application mobile et sur notre site Web convivial, nous aidons nos clients à prendre des décisions de trading plus claires.",
+      "paragraph5": "Chez 1st Forex, nous ne voyons pas seulement des clients : nous voyons une famille. Nous sommes passionnés par notre travail et déterminés à bâtir une communauté florissante et connectée où les traders de tous les niveaux peuvent apprendre, progresser et réussir."
+    },
+    "welcome": {
+      "badge": "Bienvenue",
+      "title": "Bienvenue chez <accent>1st Forex</accent>",
+      "description": "Depuis plus de vingt ans, 1st Forex aide des traders du monde entier à élaborer des stratégies rentables et à atteindre leurs objectifs financiers.",
+      "secondaryDescription": "Des cours complets aux puissants signaux de trading, en passant par une communauté dynamique, nous offrons les outils, les renseignements et l’expertise nécessaires pour rehausser votre expérience de trading."
+    }
+  },
+  "Pricing": {
+    "badge": "Tarifs",
+    "headlineStart": "Accédez à",
+    "headlineHighlight": "chaque signal.",
+    "description": "Un plan illimité pour les signaux de trading, la visibilité historique des performances, le contenu de l'académie et les outils communautaires construits autour d'une exécution disciplinée.",
+    "signalPreviewAlt": "Aperçu du signal mobile 1stForex",
+    "signalLabel": "1STFOREXSIGNAL",
+    "signalExample": "EUR/USD · ACHETER",
+    "signalDescription": "Contexte d'entrée, de stop loss, de take profit et de performance dans un seul workflow de signaux.",
+    "proof": {
+      "trades": "Transactions historiques suivies",
+      "winRate": "Taux de victoire historique",
+      "pairs": "Paires de devises primaires couvertes",
+      "coverage": "Couverture de la semaine de marché"
+    },
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "toggleYearly": "Basculer la facturation annuelle",
+    "twoMonthsFree": "2 mois gratuits par an",
+    "includedTitle": "Ce qui est inclus",
+    "freeTitle": "Compte gratuit",
+    "unlimited": "Illimité",
+    "unlimitedAccess": "Accès illimité",
+    "perMonth": "/mois",
+    "monthlyBilling": "Facturé mensuellement. Annulez à tout moment.",
+    "yearlyBilling": "${amount} facturé annuellement. Deux mois inclus gratuits.",
+    "planDescription": "Obtenez tous les signaux, chaque paire prise en charge, le tableau de bord des performances historiques, l'accès à l'académie et l'espace de travail communautaire.",
+    "startSignals": "Commencez à recevoir des signaux",
+    "included": {
+      "pairs": "Chaque paire de trading principale disponible",
+      "signals": "Signaux de trading",
+      "levels": "Niveaux d'entrée, de stop loss et de take profit",
+      "history": "Tableau de bord des performances historiques",
+      "daily": "Visibilité quotidienne des détails des transactions",
+      "academy": "Accès à l'Académie",
+      "community": "Accès à la communauté",
+      "cancel": "Annuler à tout moment"
+    },
+    "free": {
+      "community": "Accès à la communauté",
+      "previews": "Aperçus de signaux limités",
+      "registration": "Enregistrement du compte",
+      "academy": "Accès à l'Académie",
+      "allPairs": "Toutes les paires de trading",
+      "signals": "Signaux de trading",
+      "levels": "Niveaux d'entrée, SL et TP",
+      "dashboard": "Tableau de bord des performances"
+    },
+    "badges": {
+      "cancel": "Annuler à tout moment",
+      "checkout": "Paiement sécurisé",
+      "instant": "Accès instantané"
+    },
+    "process": {
+      "title": "Notre processus. Votre avantage.",
+      "rules": "Règles basées sur la recherche",
+      "engine": "Moteur de signaux",
+      "alerts": "Alertes en temps réel",
+      "access": "Accès membre"
+    },
+    "trust": {
+      "checkout": {
+        "title": "Paiement sécurisé",
+        "text": "Les paiements sont traités via le flux de paiement connecté."
+      },
+      "performance": {
+        "title": "Visibilité des performances",
+        "text": "Consultez les résultats historiques annuels, mensuels et quotidiens."
+      },
+      "cancel": {
+        "title": "Annuler à tout moment",
+        "text": "Gardez le contrôle de votre facturation depuis votre compte membre."
+      }
+    }
+  },
+  "HistoricalPerformance": {
+    "badge": "Historique des performances",
+    "title": "Historique des performances",
+    "description": "Consultez les résultats annuels décomposés en résumés mensuels, avec un historique complet des échanges quotidiens disponible dans le tableau de bord des membres.",
+    "metrics": {
+      "trades": "Transactions saisies",
+      "wins": "Victoires",
+      "losses": "Pertes",
+      "winRate": "Moy. Taux de victoire"
+    },
+    "summary": {
+      "bestYear": "Meilleure année",
+      "bestPair": "Meilleure paire",
+      "bestPairDetail": "Paire majeure la plus productive",
+      "range": "Gamme historique",
+      "rangeDetail": "{count} années de données de performances"
+    },
+    "annualStart": "Annuel",
+    "annualHighlight": "Panne",
+    "annualDescription": "Sélectionnez n’importe quelle année pour inspecter le résumé mensuel. Sélectionnez n’importe quel mois pour continuer dans le tableau de bord pour l’historique quotidien des échanges.",
+    "columns": {
+      "year": "Année",
+      "trades": "Métiers",
+      "wins": "Victoires",
+      "losses": "Pertes",
+      "winRate": "Taux de victoire",
+      "netPips": "Pips nets",
+      "bestPair": "Meilleure paire"
+    },
+    "monthlySummary": "{year} Résumé mensuel",
+    "monthlyNote": "Résultats mensuels basés sur l'ensemble de données historiques publié.",
+    "tradeCount": "{count, plural, one {# transaction} other {# transactions}}",
+    "netPips": "{value} pips nets",
+    "modal": {
+      "close": "Fermer",
+      "title": "L’historique quotidien des échanges se trouve dans le tableau de bord.",
+      "description": "Connectez-vous ou créez un compte pour afficher les détails quotidiens des transactions pour {month} {year}, y compris les entrées, les sorties, les résultats et les notes commerciales.",
+      "login": "Se connecter",
+      "signup": "S'inscrire"
+    }
+  },
+  "About": {
+    "badge": "À propos de nous",
+    "heroStart": "Bienvenue chez 1st Forex : Où",
+    "heroHighlight": "La tradition rencontre l'innovation",
+    "teamAlt": "L'équipe 1st Forex",
+    "communityAlt": "Communauté commerciale 1st Forex",
+    "visionBadge": "Vision",
+    "storyBadge": "Notre histoire",
+    "about": {
+      "title": "À propos de nous",
+      "paragraph1": "Fondée à Montréal il y a plus de 20 ans, 1st Forex est devenue une entreprise mondiale axée sur l'éducation sur le Forex et les signaux de trading. Ce qui a commencé comme des séminaires en personne et des premiers signaux en ligne est devenu une plateforme de confiance utilisée par des milliers de traders dans le monde.",
+      "paragraph2": "Un élément clé de notre travail est notre stratégie de cassure, une méthode de trading éprouvée conçue pour détecter rapidement les mouvements forts du marché. Cette stratégie est au cœur de nos signaux et de notre éducation, aidant les traders à prendre des décisions plus cohérentes et éclairées.",
+      "paragraph3": "Désormais basés au Costa Rica, notre objectif reste le même : aider les traders à renforcer leur confiance, à améliorer leurs compétences et à œuvrer vers l'indépendance financière sur le marché des changes.",
+      "paragraph4": "À la tête de 1st Forex se trouve notre PDG, Marie Josée Bergeron, qui possède plus de 22 ans d'expérience dans le trading du forex. Sa vision de bâtir une société commerciale solide et une véritable communauté de commerçants a façonné tout ce que nous faisons.",
+      "paragraph5": "Elle est soutenue par une équipe qualifiée de traders et de spécialistes produits qui nous aident à maintenir nos stratégies, nos signaux et notre plateforme clairs, modernes et efficaces."
+    },
+    "mission": {
+      "title": "Notre mission",
+      "paragraph1": "Notre mission est simple mais puissante : dynamiser votre parcours commercial. Notre objectif est d'inspirer et de guider les traders à chaque étape, en les aidant à naviguer dans les complexités du marché des changes avec confiance et compétence.",
+      "paragraph2": "Rejoignez la famille 1st Forex et faites partie d'un héritage où la passion rencontre la précision et la tradition rencontre l'innovation. Ensemble, nous transformerons vos rêves en indépendance financière et en maîtrise du trading."
+    },
+    "community": {
+      "title": "Plus qu'une entreprise – Une communauté",
+      "description": "Chez 1st Forex, nous ne nous considérons pas seulement comme une entreprise : nous sommes une famille de commerçants. Notre mission va au-delà de l'enseignement et du commerce ; il s’agit de construire une communauté mondiale où les traders peuvent se connecter, partager et grandir ensemble.",
+      "secondaryDescription": "Du mentorat personnalisé aux forums interactifs, nous nous engageons à créer un environnement favorable dans lequel chaque trader peut s'épanouir."
+    },
+    "legacy": {
+      "title": "Un héritage d'excellence",
+      "paragraph1": "Derrière 1st Forex se trouve une équipe dynamique et diversifiée composée de vétérans du forex, de jeunes traders à succès et de spécialistes produits.",
+      "paragraph2": "Ce mélange unique d'expérience et d'innovation nous permet de garder une longueur d'avance sur les tendances du marché et d'offrir une valeur inégalée à notre communauté.",
+      "cards": {
+        "0": {
+          "title": "Vétérans du Forex",
+          "description": "Des décennies d’expertise en trading constituent la base de notre formation et de nos stratégies."
+        },
+        "1": {
+          "title": "Jeunes innovateurs",
+          "description": "De nouvelles perspectives et des techniques de trading modernes nous maintiennent à la pointe."
+        },
+        "2": {
+          "title": "Spécialistes produits",
+          "description": "Les données, la conception et l'ingénierie prennent en charge les outils que les traders utilisent pour examiner les signaux et gérer leur flux de travail."
+        },
+        "3": {
+          "title": "Équipe d'assistance de haut niveau",
+          "description": "Nos professionnels expérimentés et dévoués travaillent sans relâche pour garantir une expérience fluide à chaque commerçant de notre communauté."
+        }
+      }
+    }
+  },
+  "Academy": {
+    "badge": "Académie de commerce",
+    "title": "Votre passerelle vers le succès sur le Forex",
+    "description": "Depuis 2004, la 1st Forex Trading Academy offre aux traders du monde entier une formation forex de haut niveau. Que vous soyez un trader en herbe partant de zéro ou un professionnel chevronné cherchant à affiner vos stratégies, nos cours complets et interactifs sont conçus pour améliorer votre parcours de trading.",
+    "signup": "S'inscrire",
+    "free": "Gratuit",
+    "reviews": "(Avis sur {count})",
+    "why": {
+      "badge": "Pourquoi nous",
+      "start": "Pourquoi",
+      "highlight": "Nous choisir ?"
+    },
+    "about": {
+      "badge": "Académie",
+      "title": "À propos de nous",
+      "imageAlt": "Cours de l'académie Forex",
+      "paragraph1": "À la 1st Forex Trading Academy, nous combinons près de deux décennies d'expérience avec la technologie moderne pour offrir une expérience d'apprentissage unique et efficace.",
+      "paragraph2": "Basée au Costa Rica, notre académie est une plateforme mondiale pour les traders qui souhaitent atteindre leur indépendance financière et maîtriser les marchés des changes.",
+      "paragraph3": "Notre cours en ligne offre des conseils étape par étape aux traders de tous niveaux. Les débutants commencent par les bases et construisent une base solide de connaissances.",
+      "paragraph4": "Les traders avancés étudient les stratégies professionnelles, y compris notre système Breakout protégé par le droit d'auteur et backtesté.",
+      "paragraph5": "Nous sommes plus qu'une académie. Nous sommes une communauté et une famille de commerçants, dédiée à un environnement inclusif et solidaire où chacun peut s'épanouir."
+    },
+    "vision": {
+      "badge": "Vision",
+      "title": "Notre vision",
+      "description": "Rendre l'éducation sur le Forex abordable, efficace et accessible aux traders du monde entier. En combinant des méthodes d'enseignement éprouvées avec des outils de trading pratiques, nous visons à construire une communauté prospère dotée de connaissances, de discipline et de confiance sur le marché."
+    },
+    "courses": {
+      "badge": "Apprendre",
+      "start": "Notre",
+      "highlight": "Cours",
+      "courseTitle": "Cours Forex complet",
+      "courseDescription": "Accédez à notre cours complet, y compris le système exclusif Breakout, des quiz et des modules interactifs.",
+      "referral": "Parrainez 3 amis et recevez 1 mois de signaux gratuits"
+    },
+    "approach": {
+      "badge": "Notre histoire",
+      "title": "Notre approche unique",
+      "paragraph1": "Ce qui nous distingue est notre capacité à allier tradition et innovation. Le contenu de nos cours est ancré dans des stratégies éprouvées, affinées depuis 2004 et soutenues par des outils pratiques.",
+      "paragraph2": "Des signaux de trading aux outils de plateforme, nos ressources complètent votre formation et vous aident à prendre des décisions de trading plus claires.",
+      "imageAlt": "Certificat d'apprentissage de l'Académie"
+    },
+    "offer": {
+      "title": "Rejoignez le",
+      "specialTitle": "Famille 1st Forex",
+      "description": "Chez 1st Forex Trading Academy, nous sommes plus qu'une plateforme éducative. Nous sommes un partenaire à vie dans votre parcours commercial.",
+      "secondaryDescription": "Que vous fassiez vos premiers pas dans le trading ou que vous affiniez des stratégies avancées, nous sommes là pour guider, soutenir et célébrer vos réalisations.",
+      "subDescription": "Inscrivez-vous aujourd'hui et commencez votre voyage vers la liberté financière. Ensemble, nous ferons de vos objectifs de trading une réalité."
+    },
+    "cta": {
+      "signals": "Signaux de trading",
+      "academy": "Académie"
+    }
+  },
+  "Signal": {
+    "badge": "Signaux de trading 1st Forex",
+    "title": "Signaux de trading basés sur 20 ans d'expérience du marché",
+    "description": "Obtenez des signaux forex structurés soutenus par des performances historiques, une exécution disciplinée et une planification commerciale pratique.",
+    "tradingSignals": "Signaux de trading",
+    "academy": "Académie",
+    "logoAlt": "Logo 1stForex",
+    "offersBadge": "Offres",
+    "overview": {
+      "paragraph1": "Les signaux de trading 1st Forex combinent 20 ans d'expertise du marché avec notre système Breakout protégé par le droit d'auteur pour soutenir un processus de trading plus discipliné.",
+      "paragraph2": "Notre processus examine la structure du marché, les niveaux de risque et le comportement historique pour fournir des signaux clairs directement sur votre tableau de bord et votre expérience mobile.",
+      "paragraph3": "Avec un support continu, l'accès à une équipe de trading expérimentée et une communauté forex florissante, le trading de qualité professionnelle n'a jamais été aussi accessible."
+    },
+    "offer": {
+      "title": "Quoi",
+      "highlight": "Nous offrons",
+      "description": "Chez 1st Forex, notre plateforme de signaux allie des décennies d'expérience du marché avec une analyse structurée et des niveaux commerciaux clairs.",
+      "secondaryDescription": "Avec 20 ans de backtesting, chaque signal est examiné par rapport à un processus discipliné et aux conditions du marché qui l'entourent."
+    },
+    "banner": {
+      "quote": "Imaginez avoir vingt ans d'expérience sur le marché, une planification commerciale structurée et des traders chevronnés derrière le processus. 1st Forex rassemble les signaux, l'analyse et la formation sur une seule plateforme pratique afin que les traders puissent évoluer avec plus de clarté et de discipline.",
+      "description": "Avec les signaux de trading 1st Forex, vous ne recevez pas seulement des alertes. Vous entrez dans un écosystème commercial pris en charge et informé par les données, conçu pour vous aider à apprendre, réviser et exécuter avec plus de confiance."
+    },
+    "plans": {
+      "start": "Signal",
+      "highlight": "Forfaits",
+      "groups": {
+        "rules": {
+          "title": "Basé sur des règles",
+          "highlight": "Processus de signal",
+          "cards": {
+            "0": {
+              "title": "Gestion claire des signaux",
+              "description": "Suivez les signaux fiables, les niveaux d’échanges et le contexte historique à partir d’une seule plateforme."
+            },
+            "1": {
+              "title": "Planification consciente des risques",
+              "description": "Utilisez les niveaux d'entrée, de stop loss et de take profit pour aligner chaque signal sur votre plan de risque personnel."
+            }
+          }
+        },
+        "mentor": {
+          "title": "Trader personnel",
+          "highlight": "Mentorat",
+          "cards": {
+            "0": {
+              "title": "Conseils d'experts",
+              "description": "Travaillez avec un trader expérimenté pour interpréter les signaux, affiner les stratégies et améliorer votre processus."
+            },
+            "1": {
+              "title": "Assistance tout compris",
+              "description": "Combinez l'application, les signaux, la formation et la connaissance humaine dans un seul flux de travail pratique."
+            },
+            "2": {
+              "title": "Stratégies personnalisées",
+              "description": "Adaptez votre approche de trading avec un soutien professionnel et renforcez votre confiance au fil du temps."
+            }
+          }
+        },
+        "app": {
+          "title": "Signaux basés sur des applications avec",
+          "highlight": "Assistance aux commerçants",
+          "cards": {
+            "0": {
+              "title": "Alerte en temps réel",
+              "description": "Recevez des signaux directement sur votre application mobile avec des notifications push instantanées."
+            },
+            "1": {
+              "title": "Informations intelligentes",
+              "description": "Examinez les conditions du marché, les tendances historiques et les préférences en matière de risque avant d'agir sur un signal."
+            },
+            "2": {
+              "title": "Transparence totale",
+              "description": "Analysez les graphiques en direct, examinez les signaux passés et comprenez la justification de chaque transaction."
+            },
+            "3": {
+              "title": "Assistance continue",
+              "description": "Obtenez de l'aide pour les questions relatives à la plateforme, l'accès aux signaux et votre flux de travail de trading."
+            }
+          }
+        }
+      }
+    },
+    "keyOfferings": {
+      "start": "Clé",
+      "highlight": "Offres",
+      "cards": {
+        "0": {
+          "title": "Solutions de signaux structurés",
+          "description": "Utilisez des niveaux de signaux clairs et un processus discipliné pour identifier les opportunités de trading."
+        },
+        "1": {
+          "title": "Analyse adaptative",
+          "description": "Analyse de marché qui s’adapte aux conditions changeantes et garde le contexte visible."
+        },
+        "2": {
+          "title": "Interface conviviale",
+          "description": "Une plateforme claire et intuitive pour une navigation transparente et une prise de décision en toute confiance."
+        },
+        "3": {
+          "title": "Des résultats prouvés",
+          "description": "Deux décennies de données back-testées et d’amélioration continue soutiennent nos signaux."
+        },
+        "4": {
+          "title": "Assistance et communauté",
+          "description": "Une assistance continue, des traders expérimentés et un réseau mondial de pairs."
+        }
+      }
+    }
+  },
+  "Community": {
+    "badge": "Communauté",
+    "title": "Bienvenue dans la communauté 1st Forex",
+    "description": "Un lieu où les traders de forex de tous niveaux se réunissent en famille pour apprendre, grandir et se soutenir mutuellement. Que vous soyez débutant ou professionnel chevronné, notre communauté est conçue pour vous aider à progresser dans votre parcours commercial.",
+    "logoAlt": "Logo 1stForex",
+    "join": {
+      "title": "Votre voix, votre communauté",
+      "description": "Que vous soyez ici pour apprendre, partager ou grandir, la communauté 1st Forex est l'endroit idéal pour vous connecter avec des personnes partageant les mêmes idées et faire passer votre trading au niveau supérieur.",
+      "button": "Rejoignez-nous maintenant"
+    },
+    "how": {
+      "badge": "Obtenir 1st Forex",
+      "title": "Comment rejoindre le",
+      "highlight": "Conversation?",
+      "point1": "Créez un compte 1st Forex pour accéder au blog, aux signaux et aux cours.",
+      "point2": "Engagez-vous en posant des questions, en partageant des informations et en postulant pour le statut de contributeur."
+    },
+    "offers": {
+      "start": "Quoi",
+      "highlight": "Nous proposons ?",
+      "cards": {
+        "0": {
+          "title": "Questions et réponses interactives",
+          "points": {
+            "0": "Vous avez des questions ? Posez des questions directement sur les publications de nos contributeurs approuvés.",
+            "1": "Les contributeurs peuvent répondre en privé ou partager publiquement leurs questions et réponses afin que tout le monde en profite."
+          }
+        },
+        "1": {
+          "title": "Blogs vidéo quotidiens et questions préparées",
+          "points": {
+            "0": "Accédez à du contenu vidéo régulier pour les traders à tous les niveaux.",
+            "1": "Découvrez des conseils pratiques, des stratégies et des astuces pour améliorer vos compétences en trading."
+          }
+        },
+        "2": {
+          "title": "Postulez pour devenir blogueur",
+          "points": {
+            "0": "Passionné de Forex ? Postulez pour contribuer à notre blog.",
+            "1": "Les blogueurs approuvés peuvent partager des stratégies, des expériences et des connaissances avec la communauté."
+          }
+        },
+        "3": {
+          "title": "Discussions hebdomadaires sur les performances",
+          "points": {
+            "0": "Réfléchissez aux performances de la semaine avec d’autres traders.",
+            "1": "Partagez des idées, discutez de stratégies et célébrez les victoires ensemble."
+          }
+        }
+      }
+    }
+  },
+  "Faq": {
+    "badge": "Section d'aide",
+    "title": "FAQ et assistance utilisateur",
+    "searchPlaceholder": "Pour quoi avez-vous besoin d’aide ?",
+    "allFaqs": "Toutes les FAQ",
+    "noResults": "Aucune FAQ ne correspond à votre requête de recherche.",
+    "questions": {
+      "0": {
+        "question": "Par où dois-je commencer ?",
+        "answer": "Commencez par créer votre compte gratuit. Une fois votre compte actif, ouvrez la section Mise en route de votre tableau de bord et choisissez l'un des courtiers partenaires recommandés.",
+        "points": {
+          "0": "Créez à la fois un compte démo et un compte de trading en direct avec votre courtier.",
+          "1": "Utilisez le compte démo pour vous entraîner et vous familiariser avec la plateforme de trading.",
+          "2": "Utilisez le compte réel uniquement lorsque vous êtes prêt à négocier avec des fonds réels.",
+          "3": "Suivez le cours de formation gratuit, puis démarrez votre essai d'abonnement au signal lorsque vous êtes prêt."
+        }
+      },
+      "1": {
+        "question": "Quelle est la différence entre un compte démo et un compte réel ?",
+        "answer": "Un compte démo utilise des fonds virtuels, vous pouvez donc vous entraîner dans un environnement de marché simulé sans risquer de l'argent réel. Un compte réel utilise des fonds réels déposés auprès de votre courtier, de sorte que les profits et les pertes affectent directement le solde de votre compte.",
+        "subDescription": "Nous vous recommandons fortement de vous familiariser avec la plateforme et les signaux sur un compte démo avant de trader avec des fonds réels."
+      },
+      "2": {
+        "question": "Où puis-je télécharger MetaTrader 5 (MT5) ?",
+        "answer": "MT5 peut être téléchargé directement depuis le site Web de votre courtier, généralement dans une section intitulée Téléchargements, Plateformes ou Plateformes de trading.",
+        "points": {
+          "0": "Numéro de compte ou identifiant de connexion",
+          "1": "Mot de passe",
+          "2": "Nom du serveur"
+        },
+        "subDescription": "Une fois MT5 installé, connectez-vous avec les identifiants de compte fournis par votre courtier. Si vous avez besoin d'aide pour connecter votre compte, notre équipe d'assistance peut vous guider."
+      },
+      "3": {
+        "question": "Comment savoir quel courtier me convient le mieux ?",
+        "answer": "Le meilleur courtier dépend de votre pays de résidence, de vos préférences de financement et de vos besoins commerciaux. Nous répertorions des courtiers sélectionnés qui offrent des spreads compétitifs, une exécution fiable et des plateformes conviviales.",
+        "subDescription": "TMGM est généralement recommandé en raison de sa facilité d'utilisation, de ses options de financement et des commentaires des clients. Chaque courtier répertorié sur la plateforme a été sélectionné car il répond à nos normes de qualité et de fiabilité."
+      },
+      "4": {
+        "question": "Et si je vis aux États-Unis ?",
+        "answer": "Les réglementations sur le trading du Forex et des CFD aux États-Unis diffèrent de celles de nombreux autres pays, et plusieurs courtiers internationaux n'acceptent pas les résidents américains.",
+        "subDescription": "Pour les traders basés aux États-Unis, les courtiers tels que OANDA et Forex.com peuvent être plus adaptés car ils opèrent dans le respect des exigences réglementaires américaines."
+      },
+      "5": {
+        "question": "Où puis-je trouver les liens des courtiers ?",
+        "answer": "Les liens de courtier recommandés sont disponibles dans la section Mise en route de votre tableau de bord.",
+        "points": {
+          "0": "Liens d'inscription des courtiers",
+          "1": "Informations de téléchargement de la plateforme",
+          "2": "Détails de configuration spécifiques au courtier",
+          "3": "Ressources supplémentaires pour vous aider à démarrer"
+        }
+      },
+      "6": {
+        "question": "Que sont les signaux de trading ?",
+        "answer": "Les signaux de trading sont des idées commerciales générées par des analyses exclusives et des études de marché.",
+        "points": {
+          "0": "Prix ​​d'entrée",
+          "1": "Arrêter la perte",
+          "2": "Objectif de profit",
+          "3": "Direction commerciale, comme acheter ou vendre"
+        },
+        "subDescription": "Les membres peuvent choisir de capter ou non un signal. Toutes les décisions commerciales restent de la responsabilité de chaque trader individuel."
+      },
+      "7": {
+        "question": "Les signaux de trading sont-ils garantis d'être rentables ?",
+        "answer": "Non. Les marchés financiers comportent des risques, et aucune stratégie de trading ou service de signal ne peut garantir des profits.",
+        "subDescription": "Notre objectif est de fournir des analyses et des opportunités commerciales de haute qualité, mais toutes les transactions comportent un risque de perte."
+      },
+      "8": {
+        "question": "Comment puis-je approvisionner mon compte de trading ?",
+        "answer": "Les options de financement varient en fonction du courtier que vous choisissez. Les courtiers les plus recommandés proposent plusieurs méthodes de dépôt.",
+        "points": {
+          "0": "Virement bancaire",
+          "1": "Carte de crédit ou de débit",
+          "2": "Crypto-monnaie, telle que l'USDT, si disponible",
+          "3": "Modes de paiement locaux, selon votre pays"
+        },
+        "subDescription": "Pour consulter les méthodes de financement qui s'offrent à vous, connectez-vous au portail client de votre courtier après avoir ouvert votre compte. Les options disponibles diffèrent selon le courtier et la région."
+      },
+      "9": {
+        "question": "De combien d’argent ai-je besoin pour commencer ?",
+        "answer": "Le dépôt minimum varie selon le courtier. De nombreux courtiers recommandés permettent d’ouvrir des comptes avec des dépôts relativement modestes.",
+        "subDescription": "Nous vous recommandons de commencer avec un montant que vous êtes prêt à risquer et de vous concentrer sur une bonne gestion des risques plutôt que sur la taille du compte."
+      },
+      "10": {
+        "question": "Puis-je copier les transactions automatiquement ?",
+        "answer": "Non. Lorsque vous recevez un signal, vous devez saisir manuellement les informations commerciales dans MT5, y compris le prix d'entrée, le stop loss et le take profit."
+      },
+      "11": {
+        "question": "Quels marchés couvrent vos signaux ?",
+        "answer": "Nos signaux se concentrent principalement sur les principales paires de devises. La couverture du marché peut s'étendre en fonction des opportunités disponibles et des conditions du marché."
+      },
+      "12": {
+        "question": "À quelle heure les signaux sont-ils envoyés ?",
+        "answer": "Des signaux sont envoyés chaque fois que des opportunités de qualification sont identifiées par l’équipe d’analyse. Il n'y a pas d'horaire fixe car les conditions du marché déterminent le moment où les transactions sont effectuées.",
+        "subDescription": "Les signaux sont disponibles du marché ouvert du dimanche à 17 h 00 HNE au vendredi à 17 h 00 HNE. Les notifications sont transmises via la plateforme et les canaux de communication connectés."
+      },
+      "13": {
+        "question": "Ai-je besoin d’une expérience préalable en trading ?",
+        "answer": "Non. La plateforme est conçue pour les traders débutants et expérimentés.",
+        "subDescription": "Les nouveaux traders peuvent commencer avec les ressources éducatives et les comptes de démonstration, tandis que les traders expérimentés peuvent utiliser immédiatement les signaux et l'analyse du marché."
+      },
+      "14": {
+        "question": "Comment résilier mon abonnement ?",
+        "answer": "Vous pouvez gérer ou annuler votre abonnement à tout moment via le tableau de bord de votre compte.",
+        "subDescription": "L'accès aux services premium reste actif jusqu'à la fin de votre période de facturation en cours."
+      },
+      "15": {
+        "question": "Puis-je utiliser mon téléphone pour échanger ?",
+        "answer": "Oui. MT5 est disponible pour les appareils iOS et Android. Vous pouvez surveiller les transactions, recevoir des signaux et gérer les positions directement depuis votre smartphone ou votre tablette."
+      },
+      "16": {
+        "question": "Gérez-vous les fonds des clients ?",
+        "answer": "Non. 1stForex n’accepte pas de dépôts et ne gère pas les fonds des clients.",
+        "subDescription": "Tous les comptes de trading sont détenus directement auprès du courtier que vous choisissez. Vous gardez à tout moment le contrôle total de votre compte et de vos décisions de trading."
+      }
+    },
+    "features": {
+      "0": {
+        "title": "Chat en direct",
+        "description": "Obtenez de l'aide de notre équipe d'assistance"
+      },
+      "1": {
+        "title": "Assistance par e-mail",
+        "description": "Obtenez de l'aide de notre équipe d'assistance"
+      },
+      "2": {
+        "title": "Demander un rappel",
+        "description": "Demandez à notre équipe d'assistance de vous contacter"
+      }
+    },
+    "knowledgeBase": "Base de connaissances",
+    "readMore": "Lire plus de FAQ"
+  },
+  "NotFound": {
+    "title": "Oups !",
+    "imageAlt": "Page 404 introuvable",
+    "homeIconAlt": "Maison",
+    "goHome": "Rentrer à la maison"
+  }
+}

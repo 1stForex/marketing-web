@@ -1,6 +1,7 @@
 import { cookies, headers } from "next/headers";
 import { getRequestConfig } from "next-intl/server";
 import { LOCALE_COOKIE_NAME, resolveLocale } from "./config";
+import { loadMessages } from "./loadMessages";
 
 export default getRequestConfig(async () => {
   const cookieStore = await cookies();
@@ -12,6 +13,6 @@ export default getRequestConfig(async () => {
 
   return {
     locale,
-    messages: (await import(`../../messages/${locale}.json`)).default,
+    messages: await loadMessages(locale),
   };
 });

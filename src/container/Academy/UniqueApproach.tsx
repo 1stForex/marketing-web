@@ -4,8 +4,10 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Certificate from "@/src/assets/images/certificate.png";
 import HeadTypography from "@/src/styled/HeadTypography";
+import { useTranslations } from "next-intl";
 
 const UniqueApproach = () => {
+  const t = useTranslations("Academy");
   return (
     <Box
       sx={{
@@ -45,7 +47,7 @@ const UniqueApproach = () => {
           },
         }}
       >
-        <Badge title="Our Story" />
+        <Badge title={t("approach.badge")} />
 
         <HeadTypography
           sx={{
@@ -58,7 +60,7 @@ const UniqueApproach = () => {
             },
           }}
         >
-          Our Unique Approach
+          {t("approach.title")}
         </HeadTypography>
 
         <Box
@@ -90,10 +92,7 @@ const UniqueApproach = () => {
               },
             }}
           >
-            What sets us apart is our ability to blend tradition with
-            innovation. While our course content is rooted in tried-and-true
-            strategies we&#39;ve honed since 2004, we&#39;ve integrated practical
-            tools to enhance the learning experience.
+            {t("approach.paragraph1")}
           </Typography>
 
           <Typography
@@ -114,8 +113,7 @@ const UniqueApproach = () => {
               },
             }}
           >
-            From trading signals to platform tools, our resources complement
-            your education and help you make clearer trading decisions.
+            {t("approach.paragraph2")}
           </Typography>
         </Box>
       </Box>
@@ -133,7 +131,7 @@ const UniqueApproach = () => {
       >
         <Image
           src={Certificate}
-          alt="Certification"
+          alt={t("approach.imageAlt")}
           fill
           style={{
             objectFit: "cover",

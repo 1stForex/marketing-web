@@ -7,10 +7,31 @@ import FAQSection from "../../components/FAQSection";
 import Banner from "@/src/components/Banner";
 import OurStory from "./OurStory";
 import Carousel from "@/src/components/Carousel";
-import { homeKeyOfferingsCardData } from "@/src/const/homeKeyOfferingsCardData";
 import HeadTypography from "@/src/styled/HeadTypography";
+import { getTranslations } from "next-intl/server";
+import Leader from "@/src/assets/icons/Leader.svg";
+import Care from "@/src/assets/icons/Care.svg";
+import UpDownArrows from "@/src/assets/icons/UpDownArrows.svg";
 
-const Home = () => {
+const Home = async () => {
+  const t = await getTranslations("Home");
+  const offeringCards = [
+    {
+      title: t("offerings.trainingTitle"),
+      image: Leader,
+      description: t("offerings.trainingDescription"),
+    },
+    {
+      title: t("offerings.signalsTitle"),
+      image: Care,
+      description: t("offerings.signalsDescription"),
+    },
+    {
+      title: t("offerings.communityTitle"),
+      image: UpDownArrows,
+      description: t("offerings.communityDescription"),
+    },
+  ];
   return (
     <Box
       sx={{
@@ -46,15 +67,18 @@ const Home = () => {
           <Overview />
           <Stocks />
           <Carousel
-            badgeTitle="Offers"
-            cards={homeKeyOfferingsCardData}
+            badgeTitle={t("offerings.badge")}
+            cards={offeringCards}
             isCarousel={false}
           >
             <HeadTypography color="#333" textAlign={"center"}>
-              Key{" "}
-              <span style={{ color: "var(--primary-400-base, #F30)" }}>
-                Offerings
-              </span>
+              {t.rich("offerings.title", {
+                accent: (chunks) => (
+                  <span style={{ color: "var(--primary-400-base, #F30)" }}>
+                    {chunks}
+                  </span>
+                ),
+              })}
             </HeadTypography>
           </Carousel>
         </Box>
@@ -100,15 +124,18 @@ const Home = () => {
         }}
       >
         <Banner
-          badgeTitle="Welcome"
-          description="For over twenty years, 1st Forex has helped traders worldwide develop profitable strategies and achieve their financial goals."
-          secondaryDescription="From comprehensive courses to powerful trading signals and a vibrant community, we offer the tools, insights, and expertise to elevate your trading experience."
+          badgeTitle={t("welcome.badge")}
+          description={t("welcome.description")}
+          secondaryDescription={t("welcome.secondaryDescription")}
         >
           <HeadTypography color="#FFF" textAlign={"center"}>
-            Welcome to{" "}
-            <span style={{ color: "var(--primary-400-base, #F30)" }}>
-              1st Forex
-            </span>
+            {t.rich("welcome.title", {
+              accent: (chunks) => (
+                <span style={{ color: "var(--primary-400-base, #F30)" }}>
+                  {chunks}
+                </span>
+              ),
+            })}
           </HeadTypography>
         </Banner>
       </Box>

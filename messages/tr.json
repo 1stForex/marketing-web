@@ -1,0 +1,652 @@
+{
+  "LocaleSwitcher": {
+    "label": "Dil",
+    "updateFailed": "Diliniz güncellenemedi. Lütfen tekrar deneyin."
+  },
+  "Media": {"unsupportedVideo": "Tarayıcınız bu videoyu desteklemiyor."},
+  "Metadata": {
+    "title": "1stForex",
+    "applicationName": "1stForex",
+    "description": "1stForex işlem sinyallerini, akademi kaynaklarını, performans geçmişini ve topluluk desteğini keşfedin."
+  },
+  "Navigation": {
+    "home": "Ana sayfa",
+    "performanceHistory": "Performans geçmişi",
+    "pricing": "Fiyatlandırma",
+    "community": "Topluluk",
+    "company": "Şirket",
+    "aboutUs": "Hakkımızda",
+    "contactUs": "İletişim",
+    "tradingSignals": "İşlem sinyalleri",
+    "academy": "Akademi",
+    "login": "Giriş yap",
+    "register": "Kayıt ol",
+    "menu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "tradeLikeAPro": "Profesyonel gibi işlem yap"
+  },
+  "Footer": {
+    "product": "Ürün",
+    "company": "Şirket",
+    "other": "Diğer",
+    "tradingSignals": "1st Forex İşlem Sinyalleri",
+    "academy": "1st Forex Akademi",
+    "performanceHistory": "Performans geçmişi",
+    "pricing": "Fiyatlandırma",
+    "community": "Topluluk",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "terms": "Şartlar ve Koşullar",
+    "riskDisclaimer": "Risk Bildirimi ve Şartlar ve Koşullar",
+    "acceptableUse": "Kabul Edilebilir Kullanım Politikası",
+    "refundPolicy": "İade Politikası",
+    "privacyPolicy": "Gizlilik Politikası",
+    "faqs": "Sık Sorulan Sorular",
+    "newsletterTitle": "Bültenimize katılın",
+    "newsletterDescription": "Sinyal güncellemelerini, strateji notlarını ve piyasa yorumlarını doğrudan e-postanıza alın.",
+    "emailAddress": "E-posta adresi",
+    "subscribing": "Abone olunuyor...",
+    "subscribe": "Abone ol",
+    "subscribed": "Abone oldunuz.",
+    "invalidEmail": "Geçerli bir e-posta adresi girin.",
+    "rightsReserved": "Tüm hakları saklıdır.",
+    "riskNotice": "Tüm içerik, sinyaller ve araçlar yalnızca eğitim ve bilgilendirme amaçlıdır. İşlem yapmak risk içerir."
+  },
+  "Contact": {
+    "heroBadge": "Yardım bölümü",
+    "heroTitle": "Bize ulaşın",
+    "heroDescription": "Hesap, faturalandırma, sinyaller, kurslar veya iş ortaklıkları konusunda destek için 1st Forex ekibine ulaşın.",
+    "liveChat": "Canlı destek",
+    "liveChatDescription": "Destek ekibimizden anında yardım alın",
+    "supportEmail": "support@1stforex.com",
+    "supportEmailDescription": "Destek ekibimize e-posta gönderin",
+    "callback": "Geri arama isteyin",
+    "callbackDescription": "Destek ekibimizin sizi aramasını isteyin",
+    "contactBadge": "İletişim",
+    "sendMessagePrefix": "Bize bir",
+    "sendMessageAccent": "mesaj gönderin",
+    "responseDescription": "İletişim bilgilerinizi buraya bırakabilirsiniz. Bir 1st Forex temsilcisi bir iş günü içinde sizinle iletişime geçecektir.",
+    "firstName": "Ad*",
+    "firstNamePlaceholder": "Ahmet",
+    "lastName": "Soyad",
+    "lastNamePlaceholder": "Yılmaz",
+    "email": "E-posta*",
+    "emailPlaceholder": "ahmet@1stforex.com",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 555 555 55 55",
+    "subject": "Konu",
+    "subjectPlaceholder": "Hesap desteği",
+    "message": "Mesaj*",
+    "messagePlaceholder": "Size nasıl yardımcı olabileceğimizi anlatın...",
+    "messageHelper": "Ekibin talebinizi doğru şekilde yönlendirebilmesi için önemli ayrıntıları paylaşın.",
+    "success": "Teşekkürler. Kısa süre içinde size dönüş yapacağız.",
+    "error": "Formu kontrol edip tekrar deneyin.",
+    "sending": "Gönderiliyor...",
+    "submit": "Gönder"
+  },
+  "Home": {
+    "hero": {
+      "title": "İşlem yolculuğunuzu güçlendirin",
+      "description": "1st Forex olarak işlem sinyalleri, uzman eğitimi ve destekleyici küresel topluluğumuzla daha akıllı işlem yapmanıza, daha hızlı gelişmenize ve her piyasada güven kazanmanıza yardımcı oluyoruz.",
+      "signalsCta": "İşlem sinyalleri",
+      "academyCta": "Akademi"
+    },
+    "overview": {
+      "first": "1st Forex yirmi yılı aşkın süredir dünyanın dört bir yanındaki yatırımcıların <accent>kârlı stratejiler</accent> geliştirmesine ve finansal hedeflerine ulaşmasına yardımcı oluyor.",
+      "second": "Kapsamlı kurslardan <accent>güçlü işlem sinyallerine</accent> ve canlı bir topluluğa kadar işlem deneyiminizi <accent>geliştirmek</accent> için gereken araçları, içgörüleri ve uzmanlığı sunuyoruz."
+    },
+    "offerings": {
+      "badge": "Teklifler",
+      "title": "Temel <accent>hizmetlerimiz</accent>",
+      "trainingTitle": "Uzman liderliğinde eğitim",
+      "trainingDescription": "Deneyimli profesyonellerden zamana dayanmış stratejileri ve piyasa temellerini öğrenin.",
+      "signalsTitle": "Gelişmiş sinyaller ve stratejik içgörüler",
+      "signalsDescription": "Daha net kararlar için güvenilir işlem sinyallerine ve pratik piyasa rehberliğine erişin.",
+      "communityTitle": "Destekleyici topluluk",
+      "communityDescription": "Yatırımcılarla bağlantı kurun, fikir paylaşın ve özel içgörüler, piyasa yorumları ve topluluk desteğiyle gelişin."
+    },
+    "vision": {
+      "badge": "Vizyonumuz",
+      "first": "\"Yirmi yıllık uzmanlığı pratik teknolojiyle birleştirerek küresel bir yatırımcı topluluğunu güçlendirmek; finansal büyüme ve güven sağlayan açık forex eğitimi, yapılandırılmış sinyaller ve kullanışlı çözümler sunmak.",
+      "second": "1st Forex olarak bağlantılı, uyarlanabilir ve sonuç odaklı bir topluluk oluşturarak işlemin geleceğini şekillendiriyoruz.\""
+    },
+    "story": {
+      "badge": "Hikâyemiz",
+      "title": "<accent>Hakkımızda</accent>",
+      "heading": "Nasıl başladık?",
+      "paragraph1": "2004 yılında kurulan 1st Forex, yirmi yılı aşkın süredir forex işlem sektöründe güvenilir bir isimdir. Kosta Rika merkezli şirketimiz, dünyanın dört bir yanındaki yatırımcıların finansal hedeflerine ulaşmasını sağlayan kaliteli forex eğitimi ve güvenilir sinyaller sunar.",
+      "paragraph2": "1st Forex Akademi aracılığıyla çevrim içi kurslar ve yüz yüze seminerlerle binlerce öğrenci ve yatırımcı yetiştirdik. Programımızı dünyanın en iyileri arasında tutmak için sürekli geliştiriyoruz. Bize güvenenlerin sayısız başarı hikâyesi geçmişimizi ortaya koyuyor.",
+      "paragraph3": "Ekibimiz deneyimli forex uzmanlarını, başarılı yatırımcıları ve ürün uzmanlarını bir araya getiriyor. Uygulamalı eğitime, disiplinli sinyallere ve gerçekten kullanılabilen araçlara odaklanıyoruz.",
+      "paragraph4": "Yapılandırılmış sinyallerden mobil uygulamamızdaki ve kullanımı kolay web sitemizdeki platform araçlarına kadar müşterilerin daha net işlem kararları almasına yardımcı oluyoruz.",
+      "paragraph5": "1st Forex'te müşterileri yalnızca müşteri değil, aile olarak görüyoruz. Her seviyeden yatırımcının öğrenebileceği, gelişebileceği ve başarılı olabileceği canlı ve bağlantılı bir topluluk kurmaya kararlıyız."
+    },
+    "welcome": {
+      "badge": "Hoş geldiniz",
+      "title": "<accent>1st Forex</accent>'e hoş geldiniz",
+      "description": "1st Forex yirmi yılı aşkın süredir dünyanın dört bir yanındaki yatırımcıların kârlı stratejiler geliştirmesine ve finansal hedeflerine ulaşmasına yardımcı oluyor.",
+      "secondaryDescription": "Kapsamlı kurslardan güçlü işlem sinyallerine ve canlı bir topluluğa kadar işlem deneyiminizi geliştirmek için gereken araçları, içgörüleri ve uzmanlığı sunuyoruz."
+    }
+  },
+  "Pricing": {
+    "badge": "Fiyatlandırma",
+    "headlineStart": "Erişim elde edin",
+    "headlineHighlight": "her sinyal.",
+    "description": "Sinyal alım satımı, geçmiş performans görünürlüğü, akademi içeriği ve disiplinli uygulama etrafında oluşturulmuş topluluk araçları için sınırsız bir plan.",
+    "signalPreviewAlt": "1stForex mobil sinyal önizlemesi",
+    "signalLabel": "1STFOREX SİNYAL",
+    "signalExample": "EUR/USD · SATIN AL",
+    "signalDescription": "Tek bir sinyal iş akışında giriş, zararı durdurma, kar alma ve performans bağlamı.",
+    "proof": {
+      "trades": "Takip edilen tarihi işlemler",
+      "winRate": "Tarihsel kazanma oranı",
+      "pairs": "Kapsanan birincil döviz çiftleri",
+      "coverage": "Piyasa haftası kapsamı"
+    },
+    "monthly": "Aylık",
+    "yearly": "Yıllık",
+    "toggleYearly": "Yıllık faturalamayı değiştir",
+    "twoMonthsFree": "Yıllık 2 ay ücretsiz",
+    "includedTitle": "Neler dahil?",
+    "freeTitle": "Ücretsiz hesap",
+    "unlimited": "Sınırsız",
+    "unlimitedAccess": "Sınırsız erişim",
+    "perMonth": "/ay",
+    "monthlyBilling": "Aylık olarak faturalandırılır. İstediğiniz zaman iptal edin.",
+    "yearlyBilling": "${amount} yıllık olarak faturalandırılır. İki ay ücretsiz dahildir.",
+    "planDescription": "Her sinyali, desteklenen her çifti, geçmiş performans kontrol panelini, akademi erişimini ve topluluk çalışma alanını alın.",
+    "startSignals": "Sinyal almaya başlayın",
+    "included": {
+      "pairs": "Mevcut her birincil işlem çifti",
+      "signals": "Ticaret sinyalleri",
+      "levels": "Giriş, zararı durdurma ve kar alma seviyeleri",
+      "history": "Geçmiş performans kontrol paneli",
+      "daily": "Günlük ticaret detay görünürlüğü",
+      "academy": "Akademi erişimi",
+      "community": "Topluluk erişimi",
+      "cancel": "İstediğiniz zaman iptal edin"
+    },
+    "free": {
+      "community": "Topluluk erişimi",
+      "previews": "Sınırlı sinyal önizlemeleri",
+      "registration": "Hesap kaydı",
+      "academy": "Akademi erişimi",
+      "allPairs": "Tüm işlem çiftleri",
+      "signals": "Ticaret sinyalleri",
+      "levels": "Giriş, SL ve TP seviyeleri",
+      "dashboard": "Performans kontrol paneli"
+    },
+    "badges": {
+      "cancel": "İstediğiniz zaman iptal edin",
+      "checkout": "Güvenli ödeme",
+      "instant": "Anında erişim"
+    },
+    "process": {
+      "title": "Bizim sürecimiz. Avantajınız.",
+      "rules": "Araştırmaya dayalı kurallar",
+      "engine": "Sinyal motoru",
+      "alerts": "Gerçek zamanlı uyarılar",
+      "access": "Üye erişimi"
+    },
+    "trust": {
+      "checkout": {
+        "title": "Güvenli ödeme",
+        "text": "Ödemeler, bağlı ödeme akışı aracılığıyla gerçekleştirilir."
+      },
+      "performance": {
+        "title": "Performans görünürlüğü",
+        "text": "Yıllık, aylık ve günlük geçmiş sonuçları inceleyin."
+      },
+      "cancel": {
+        "title": "İstediğiniz zaman iptal edin",
+        "text": "Faturalandırmanızın kontrolünü üye hesabınızdan elinizde tutun."
+      }
+    }
+  },
+  "HistoricalPerformance": {
+    "badge": "Performans Geçmişi",
+    "title": "Performans Geçmişi",
+    "description": "Üye kontrol panelinde günlük ticaret geçmişinin tamamıyla birlikte yıllık sonuçları aylık özetlere ayrılmış olarak görüntüleyin.",
+    "metrics": {
+      "trades": "Girilen İşlemler",
+      "wins": "galibiyet",
+      "losses": "kayıplar",
+      "winRate": "Ortalama Kazanma Oranı"
+    },
+    "summary": {
+      "bestYear": "En İyi Yıl",
+      "bestPair": "En İyi Çift",
+      "bestPairDetail": "En üretken majör çift",
+      "range": "Geçmiş Aralığı",
+      "rangeDetail": "{count} yıllık performans verileri"
+    },
+    "annualStart": "Yıllık",
+    "annualHighlight": "Bozulma",
+    "annualDescription": "Aylık özeti incelemek için herhangi bir yılı seçin. Günlük işlem geçmişine ilişkin kontrol paneline devam etmek için herhangi bir ayı seçin.",
+    "columns": {
+      "year": "Yıl",
+      "trades": "İşlemler",
+      "wins": "galibiyet",
+      "losses": "kayıplar",
+      "winRate": "Kazanma Oranı",
+      "netPips": "Net Pipler",
+      "bestPair": "En İyi Çift"
+    },
+    "monthlySummary": "{year} Aylık Özet",
+    "monthlyNote": "Yayınlanan geçmiş veri kümesine dayalı aylık sonuçlar.",
+    "tradeCount": "{count, plural, one {# işlem} other {# işlem}}",
+    "netPips": "{value} net pipler",
+    "modal": {
+      "close": "Kapalı",
+      "title": "Günlük ticaret geçmişi gösterge tablosunun içindedir.",
+      "description": "Girişler, çıkışlar, sonuçlar ve işlem notları da dahil olmak üzere {month} {year}'nin günlük işlem ayrıntılarını görüntülemek için giriş yapın veya bir hesap oluşturun.",
+      "login": "Giriş yapmak",
+      "signup": "Üye olmak"
+    }
+  },
+  "About": {
+    "badge": "Hakkımızda",
+    "heroStart": "1st Forex'ye hoş geldiniz: Nerede",
+    "heroHighlight": "Gelenek Yenilikle Buluşuyor",
+    "teamAlt": "1st Forex ekibi",
+    "communityAlt": "1st Forex ticaret topluluğu",
+    "visionBadge": "Görüş",
+    "storyBadge": "Hikayemiz",
+    "about": {
+      "title": "Hakkımızda",
+      "paragraph1": "20 yılı aşkın bir süre önce Montreal'de kurulan 1st Forex, forex eğitimi ve ticaret sinyallerine odaklanan küresel bir şirkete dönüştü. Şahsen seminerler ve erken çevrimiçi sinyaller olarak başlayan şey, dünya çapında binlerce yatırımcı tarafından kullanılan güvenilir bir platform haline geldi.",
+      "paragraph2": "Çalışmamızın önemli bir parçası, güçlü piyasa hareketlerini erken tespit etmek için tasarlanmış, kanıtlanmış bir ticaret yöntemi olan Çıkış Stratejimizdir. Bu strateji, sinyallerimizin ve eğitimimizin merkezinde yer alır ve yatırımcıların daha tutarlı ve bilinçli kararlar almasına yardımcı olur.",
+      "paragraph3": "Şu anda Kosta Rika'da bulunan hedefimiz aynı: yatırımcıların güven oluşturmasına, becerilerini geliştirmesine ve forex piyasasında finansal bağımsızlığa yönelik çalışmalarına yardımcı olmak.",
+      "paragraph4": "1st Forex'nin başında forex ticaretinde 22 yıldan fazla deneyime sahip olan CEO'muz Marie Josée Bergeron bulunmaktadır. Onun güçlü bir ticaret şirketi ve gerçek bir tüccar topluluğu kurma vizyonu yaptığımız her şeyi şekillendirdi.",
+      "paragraph5": "Stratejilerimizi, sinyallerimizi ve platformumuzu net, modern ve etkili tutmaya yardımcı olan yetenekli tüccarlar ve ürün uzmanlarından oluşan bir ekip tarafından desteklenmektedir."
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "paragraph1": "Misyonumuz basit ama güçlü: Ticaret Yolculuğunuzu Güçlendirmek. Yatırımcılara her aşamada ilham vermeyi ve rehberlik etmeyi, forex piyasasının karmaşıklıklarında güven ve beceriyle gezinmelerine yardımcı olmayı hedefliyoruz.",
+      "paragraph2": "1st Forex ailesine katılın ve tutkunun hassasiyetle, geleneğin yenilikle buluştuğu bir mirasın parçası olun. Birlikte hayalleri finansal bağımsızlığa ve ticaret ustalığına dönüştüreceğiz."
+    },
+    "community": {
+      "title": "Bir İşletmeden Daha Fazlası — Bir Topluluk",
+      "description": "1st Forex'de kendimizi yalnızca bir şirket olarak görmüyoruz; biz bir tüccar ailesiyiz. Misyonumuz öğretme ve ticaretin ötesine geçiyor; yatırımcıların bağlantı kurabileceği, paylaşabileceği ve birlikte büyüyebileceği küresel bir topluluk oluşturmakla ilgilidir.",
+      "secondaryDescription": "Kişiselleştirilmiş mentorluktan etkileşimli forumlara kadar her yatırımcının gelişebileceği destekleyici bir ortam yaratmaya kendimizi adadık."
+    },
+    "legacy": {
+      "title": "Mükemmeliyet Mirası",
+      "paragraph1": "1st Forex'nin arkasında forex gazileri, başarılı genç yatırımcılar ve ürün uzmanlarından oluşan dinamik ve çeşitlilik içeren bir ekip bulunmaktadır.",
+      "paragraph2": "Deneyim ve yeniliğin bu benzersiz karışımı, pazar trendlerinin ilerisinde kalmamıza ve topluluğumuza eşsiz bir değer sunmamıza olanak tanıyor.",
+      "cards": {
+        "0": {
+          "title": "Forex Gazileri",
+          "description": "Onlarca yıllık ticaret uzmanlığı, eğitimimizin ve stratejilerimizin temelini oluşturur."
+        },
+        "1": {
+          "title": "Genç Yenilikçiler",
+          "description": "Yeni bakış açıları ve modern ticaret teknikleri bizi en ileri seviyede tutuyor."
+        },
+        "2": {
+          "title": "Ürün Uzmanları",
+          "description": "Veri, tasarım ve mühendislik, yatırımcıların sinyalleri incelemek ve iş akışlarını yönetmek için kullandıkları araçları destekler."
+        },
+        "3": {
+          "title": "Üst Düzey Destek Ekibi",
+          "description": "Deneyimli ve kendini adamış profesyonellerimiz, topluluğumuzdaki her yatırımcıya kusursuz bir deneyim sağlamak için yorulmadan çalışıyor."
+        }
+      }
+    }
+  },
+  "Academy": {
+    "badge": "Ticaret Akademisi",
+    "title": "Forex Başarısına Açılan Kapınız",
+    "description": "1st Forex Ticaret Akademisi, 2004 yılından bu yana dünya çapındaki yatırımcılara üst düzey forex eğitimi ile güç veriyor. İster sıfırdan başlayan hevesli bir yatırımcı olun, ister stratejilerinizi geliştirmek isteyen deneyimli bir profesyonel olun, kapsamlı, etkileşimli kurslarımız ticaret yolculuğunuzu geliştirmek için tasarlanmıştır.",
+    "signup": "Üye olmak",
+    "free": "Özgür",
+    "reviews": "({count} İncelemeleri)",
+    "why": {
+      "badge": "Neden biz",
+      "start": "Neden",
+      "highlight": "Bizi Seçer misiniz?"
+    },
+    "about": {
+      "badge": "Akademi",
+      "title": "Hakkımızda",
+      "imageAlt": "Forex akademisi kursu",
+      "paragraph1": "1st Forex Trading Academy'de benzersiz ve etkili bir öğrenme deneyimi sunmak için yaklaşık yirmi yıllık deneyimi modern teknolojiyle birleştiriyoruz.",
+      "paragraph2": "Kosta Rika merkezli akademimiz, finansal bağımsızlığa ulaşmak ve forex piyasalarında uzmanlaşmak isteyen yatırımcılar için küresel bir merkezdir.",
+      "paragraph3": "Çevrimiçi kursumuz her seviyedeki yatırımcılar için adım adım rehberlik sunar. Yeni başlayanlar temel bilgilerle başlar ve sağlam bir bilgi temeli oluşturur.",
+      "paragraph4": "İleri düzey yatırımcılar, telif hakkıyla korunan ve tekrar test edilen Breakout Sistemimiz de dahil olmak üzere profesyonel stratejiler üzerinde çalışırlar.",
+      "paragraph5": "Biz bir akademiden daha fazlasıyız. Biz, herkesin gelişebileceği kapsayıcı ve destekleyici bir ortama kendini adamış bir topluluk ve tüccarlar ailesiyiz."
+    },
+    "vision": {
+      "badge": "Görüş",
+      "title": "Vizyonumuz",
+      "description": "Forex eğitimini dünya çapındaki yatırımcılar için uygun fiyatlı, etkili ve erişilebilir kılmak. Kanıtlanmış öğretim yöntemlerini pratik ticaret araçlarıyla birleştirerek bilgi, disiplin ve pazar güveniyle donatılmış, gelişen bir topluluk oluşturmayı hedefliyoruz."
+    },
+    "courses": {
+      "badge": "Öğrenmek",
+      "start": "Bizim",
+      "highlight": "Kurslar",
+      "courseTitle": "Forex Kursunu Tamamla",
+      "courseDescription": "Özel Ara Sistemi, testler ve etkileşimli modüller de dahil olmak üzere kursumuzun tamamına erişin.",
+      "referral": "3 arkadaşınıza önerin ve 1 aylık ücretsiz sinyal alın"
+    },
+    "approach": {
+      "badge": "Hikayemiz",
+      "title": "Benzersiz Yaklaşımımız",
+      "paragraph1": "Bizi farklı kılan şey, geleneği yenilikle harmanlama yeteneğimizdir. Kurs içeriğimiz, 2004'ten bu yana geliştirilen ve pratik araçlarla desteklenen kanıtlanmış stratejilere dayanmaktadır.",
+      "paragraph2": "Ticaret sinyallerinden platform araçlarına kadar kaynaklarımız eğitiminizi tamamlar ve daha net ticaret kararları vermenize yardımcı olur.",
+      "imageAlt": "Akademi öğrenme sertifikası"
+    },
+    "offer": {
+      "title": "Katılın",
+      "specialTitle": "1st Forex Ailesi",
+      "description": "1st Forex Trading Academy'de biz bir eğitim platformundan daha fazlasıyız. Ticaret yolculuğunuzda ömür boyu ortağız.",
+      "secondaryDescription": "İster ticarette ilk adımlarınızı atıyor ister gelişmiş stratejiler geliştiriyor olun, başarılarınızı yönlendirmek, desteklemek ve kutlamak için buradayız.",
+      "subDescription": "Bugün kaydolun ve finansal özgürlüğe giden yolculuğunuza başlayın. Birlikte ticaret hedeflerinizi gerçeğe dönüştüreceğiz."
+    },
+    "cta": {
+      "signals": "Ticaret Sinyalleri",
+      "academy": "Akademi"
+    }
+  },
+  "Signal": {
+    "badge": "1st Forex Ticaret Sinyalleri",
+    "title": "20 Yıllık Piyasa Deneyimine Dayanan Ticaret Sinyalleri",
+    "description": "Geçmiş performans, disiplinli uygulama ve pratik ticaret planlamasıyla desteklenen yapılandırılmış forex sinyallerini alın.",
+    "tradingSignals": "Ticaret Sinyalleri",
+    "academy": "Akademi",
+    "logoAlt": "1stForex logosu",
+    "offersBadge": "Teklifler",
+    "overview": {
+      "paragraph1": "1st Forex Ticaret Sinyalleri, daha disiplinli bir ticaret sürecini desteklemek için 20 yıllık piyasa uzmanlığını telif hakkıyla korunan Breakout Sistemimizle birleştirir.",
+      "paragraph2": "Sürecimiz, doğrudan kontrol panelinize ve mobil deneyiminize net sinyaller iletmek için pazar yapısını, risk seviyelerini ve geçmiş davranışları inceler.",
+      "paragraph3": "Devam eden destek, deneyimli bir ticaret ekibine erişim ve gelişen bir forex topluluğu ile profesyonel seviyede ticaret hiç bu kadar erişilebilir olmamıştı."
+    },
+    "offer": {
+      "title": "Ne",
+      "highlight": "Sunuyoruz",
+      "description": "1st Forex'de sinyal platformumuz onlarca yıllık piyasa deneyimini yapılandırılmış analiz ve net ticaret seviyeleriyle harmanlıyor.",
+      "secondaryDescription": "20 yıllık geriye dönük testlerle her sinyal, disiplinli bir süreç ve etrafındaki piyasa koşullarına göre incelenir."
+    },
+    "banner": {
+      "quote": "Yirmi yıllık piyasa deneyimine, yapılandırılmış ticaret planlamasına ve sürecin arkasında deneyimli yatırımcılara sahip olduğunuzu hayal edin. 1st Forex, yatırımcıların daha net ve disiplinli bir şekilde hareket edebilmeleri için sinyalleri, analizleri ve eğitimi tek bir pratik platformda bir araya getiriyor.",
+      "description": "1st Forex Ticaret Sinyalleri ile yalnızca uyarı almıyorsunuz. Daha güvenli bir şekilde öğrenmenize, incelemenize ve yürütmenize yardımcı olmak için tasarlanmış, desteklenen, veriye dayalı bir ticaret ekosistemine adım atıyorsunuz."
+    },
+    "plans": {
+      "start": "Sinyal",
+      "highlight": "Planlar",
+      "groups": {
+        "rules": {
+          "title": "Kural Tabanlı",
+          "highlight": "Sinyal Süreci",
+          "cards": {
+            "0": {
+              "title": "Temiz Sinyal Yönetimi",
+              "description": "Güvenilir sinyalleri, işlem seviyelerini ve geçmiş bağlamı tek bir platformdan takip edin."
+            },
+            "1": {
+              "title": "Risk Farkında Planlama",
+              "description": "Her sinyali kişisel risk planınız ile uyumlu hale getirmek için giriş, zararı durdurma ve kar alma düzeylerini kullanın."
+            }
+          }
+        },
+        "mentor": {
+          "title": "Kişisel Yatırımcı",
+          "highlight": "Mentorluk",
+          "cards": {
+            "0": {
+              "title": "Uzman Rehberliği",
+              "description": "Sinyalleri yorumlamak, stratejileri hassaslaştırmak ve sürecinizi geliştirmek için deneyimli bir yatırımcıyla çalışın."
+            },
+            "1": {
+              "title": "Her Şey Dahil Destek",
+              "description": "Uygulamayı, sinyalleri, eğitimi ve insan içgörüsünü tek bir pratik iş akışında birleştirin."
+            },
+            "2": {
+              "title": "Özelleştirilmiş Stratejiler",
+              "description": "Ticaret yaklaşımınızı profesyonel destekle özelleştirin ve zaman içinde güven oluşturun."
+            }
+          }
+        },
+        "app": {
+          "title": "Uygulama Tabanlı Sinyaller",
+          "highlight": "Yatırımcı Desteği",
+          "cards": {
+            "0": {
+              "title": "Gerçek Zamanlı Uyarı",
+              "description": "Anlık anlık bildirimlerle sinyalleri doğrudan mobil uygulamanızdan alın."
+            },
+            "1": {
+              "title": "Akıllı İçgörüler",
+              "description": "Bir sinyale göre hareket etmeden önce piyasa koşullarını, geçmiş kalıpları ve risk tercihlerini gözden geçirin."
+            },
+            "2": {
+              "title": "Tam Şeffaflık",
+              "description": "Canlı grafikleri analiz edin, geçmiş sinyalleri inceleyin ve her bir işlemin arkasındaki mantığı anlayın."
+            },
+            "3": {
+              "title": "Devam Eden Destek",
+              "description": "Platform soruları, sinyal erişimi ve alım satım iş akışınız konusunda yardım alın."
+            }
+          }
+        }
+      }
+    },
+    "keyOfferings": {
+      "start": "Anahtar",
+      "highlight": "Teklifler",
+      "cards": {
+        "0": {
+          "title": "Yapılandırılmış Sinyal Çözümleri",
+          "description": "Ticaret fırsatlarını belirlemek için net sinyal seviyelerini ve disiplinli bir süreci kullanın."
+        },
+        "1": {
+          "title": "Uyarlanabilir Analiz",
+          "description": "Değişen koşullara uyum sağlayan ve bağlamı görünür tutan pazar analizi."
+        },
+        "2": {
+          "title": "Kullanıcı Dostu Arayüz",
+          "description": "Sorunsuz gezinme ve güvenli karar verme için temiz, sezgisel bir platform."
+        },
+        "3": {
+          "title": "Kanıtlanmış Sonuçlar",
+          "description": "Yirmi yıllık geriye dönük test edilmiş veriler ve sürekli iyileştirme, sinyallerimizi desteklemektedir."
+        },
+        "4": {
+          "title": "Destek ve Topluluk",
+          "description": "Sürekli yardım, deneyimli yatırımcılar ve küresel bir meslektaş ağı."
+        }
+      }
+    }
+  },
+  "Community": {
+    "badge": "Toplum",
+    "title": "1st Forex Topluluğuna Hoş Geldiniz",
+    "description": "Her seviyeden forex yatırımcısının bir aile olarak bir araya gelerek öğrendiği, büyüdüğü ve birbirini desteklediği bir yer. İster yeni başlıyor olun ister deneyimli bir profesyonel olun, topluluğumuz ticaret yolculuğunuzda ilerlemenize yardımcı olmak için tasarlanmıştır.",
+    "logoAlt": "1stForex logosu",
+    "join": {
+      "title": "Sizin Sesiniz, Sizin Topluluğunuz",
+      "description": "İster öğrenmek, paylaşmak veya büyümek için burada olun, 1st Forex Topluluğu, benzer düşüncelere sahip insanlarla bağlantı kuracağınız ve ticaretinizi bir sonraki seviyeye taşıyacağınız yerdir.",
+      "button": "Şimdi Bize Katılın"
+    },
+    "how": {
+      "badge": "1st Forex'yi edinin",
+      "title": "Nasıl Katılabilirim?",
+      "highlight": "Konuşma?",
+      "point1": "Bloga, sinyallere ve kurslara erişmek için bir 1st Forex hesabı oluşturun.",
+      "point2": "Sorular sorarak, içgörüleri paylaşarak ve katılımcı statüsüne başvurarak etkileşime geçin."
+    },
+    "offers": {
+      "start": "Ne",
+      "highlight": "Teklif Ediyoruz?",
+      "cards": {
+        "0": {
+          "title": "İnteraktif Soru-Cevap",
+          "points": {
+            "0": "Sorularınız mı var? Onaylanmış katkıda bulunanlarımızın gönderilerine doğrudan sorun.",
+            "1": "Katkıda bulunanlar özel olarak yanıt verebilir veya soruları ve yanıtları herkese açık olarak paylaşabilir, böylece herkes faydalanabilir."
+          }
+        },
+        "1": {
+          "title": "Günlük Video Blogları ve Hazır Sorular",
+          "points": {
+            "0": "Her düzeydeki yatırımcılar için düzenli video içeriğine erişin.",
+            "1": "Ticaret becerilerinizi geliştirmek için pratik tavsiyeleri, stratejileri ve ipuçlarını keşfedin."
+          }
+        },
+        "2": {
+          "title": "Blogger Olmak İçin Başvurun",
+          "points": {
+            "0": "Forex konusunda tutkulu musunuz? Blogumuza katkıda bulunmak için başvurun.",
+            "1": "Onaylı blog yazarları stratejileri, deneyimleri ve bilgileri toplulukla paylaşabilir."
+          }
+        },
+        "3": {
+          "title": "Haftalık Performans Tartışmaları",
+          "points": {
+            "0": "Yatırımcı arkadaşlarınızla haftanın performansını değerlendirin.",
+            "1": "İçgörüleri paylaşın, stratejileri tartışın ve zaferleri birlikte kutlayın."
+          }
+        }
+      }
+    }
+  },
+  "Faq": {
+    "badge": "Yardım Bölümü",
+    "title": "SSS ve Kullanıcı Desteği",
+    "searchPlaceholder": "Hangi konuda yardıma ihtiyacınız var?",
+    "allFaqs": "Tüm SSS",
+    "noResults": "Arama sorgunuzla eşleşen SSS yok.",
+    "questions": {
+      "0": {
+        "question": "Nereden başlayacağım?",
+        "answer": "Ücretsiz hesabınızı oluşturarak başlayın. Hesabınız aktif hale geldiğinde kontrol panelinizdeki Başlarken bölümünü açın ve önerilen komisyoncu ortaklarından birini seçin.",
+        "points": {
+          "0": "Brokerınızla hem demo hesap hem de canlı ticaret hesabı oluşturun.",
+          "1": "Ticaret platformunda pratik yapmak ve alışmak için demo hesabını kullanın.",
+          "2": "Canlı hesabı yalnızca gerçek fonlarla işlem yapmaya hazır olduğunuzda kullanın.",
+          "3": "Ücretsiz eğitim kursunu tamamlayın ve hazır olduğunuzda sinyal aboneliği deneme sürenizi başlatın."
+        }
+      },
+      "1": {
+        "question": "Demo hesap ile canlı hesap arasındaki fark nedir?",
+        "answer": "Bir demo hesabı sanal fonları kullanır, böylece simüle edilmiş bir piyasa ortamında gerçek parayı riske atmadan pratik yapabilirsiniz. Canlı hesap, komisyoncunuza yatırılan gerçek fonları kullanır, dolayısıyla kar ve zararlar hesap bakiyenizi doğrudan etkiler.",
+        "subDescription": "Gerçek fonlarla işlem yapmadan önce platform ve demo hesaptaki sinyaller hakkında bilgi sahibi olmanızı şiddetle tavsiye ederiz."
+      },
+      "2": {
+        "question": "MetaTrader 5'i (MT5) nereden indirebilirim?",
+        "answer": "MT5, aracınızın web sitesinden, genellikle İndirmeler, Platformlar veya İşlem Platformları adı verilen bir bölümden doğrudan indirilebilir.",
+        "points": {
+          "0": "Hesap numarası veya giriş kimliği",
+          "1": "Şifre",
+          "2": "Sunucu adı"
+        },
+        "subDescription": "MT5 yüklendikten sonra komisyoncunuzun sağladığı hesap bilgileriyle oturum açın. Hesabınızı bağlama konusunda yardıma ihtiyacınız varsa destek ekibimiz size yol gösterebilir."
+      },
+      "3": {
+        "question": "Hangi komisyoncunun benim için en iyi olduğunu nasıl bilebilirim?",
+        "answer": "En iyi komisyoncu, ikamet ettiğiniz ülkeye, fon tercihlerine ve ticaret ihtiyaçlarına bağlıdır. Rekabetçi spreadler, güvenilir uygulama ve kullanıcı dostu platformlar sunan seçilmiş brokerları listeliyoruz.",
+        "subDescription": "TMGM, kullanım kolaylığı, finansman seçenekleri ve müşteri geri bildirimleri nedeniyle sıklıkla tavsiye edilmektedir. Platformda listelenen her komisyoncu kalite ve güvenilirlik standartlarımızı karşıladığı için seçilmiştir."
+      },
+      "4": {
+        "question": "Amerika Birleşik Devletleri'nde bulunuyorsam ne olur?",
+        "answer": "Amerika Birleşik Devletleri'ndeki forex ve CFD ticareti düzenlemeleri diğer birçok ülkeden farklıdır ve birçok uluslararası broker ABD'de ikamet edenleri kabul etmemektedir.",
+        "subDescription": "ABD merkezli yatırımcılar için OANDA ve Forex.com gibi brokerlar daha uygun olabilir çünkü bunlar ABD düzenleme gereklilikleri dahilinde faaliyet göstermektedir."
+      },
+      "5": {
+        "question": "Broker bağlantılarını nerede bulabilirim?",
+        "answer": "Önerilen komisyoncu bağlantılarını kontrol panelinizin Başlarken bölümünde bulabilirsiniz.",
+        "points": {
+          "0": "Broker kayıt bağlantıları",
+          "1": "Platform indirme bilgileri",
+          "2": "Broker'a özel kurulum ayrıntıları",
+          "3": "Başlamanıza yardımcı olacak ek kaynaklar"
+        }
+      },
+      "6": {
+        "question": "Ticaret sinyalleri nelerdir?",
+        "answer": "Ticaret sinyalleri, özel analiz ve pazar araştırması yoluyla oluşturulan ticari fikirlerdir.",
+        "points": {
+          "0": "Giriş fiyatı",
+          "1": "Kaybı durdur",
+          "2": "Kâr hedefi al",
+          "3": "Alım veya satım gibi ticaret yönü"
+        },
+        "subDescription": "Üyeler herhangi bir sinyal alıp almamayı seçebilirler. Tüm alım satım kararları bireysel yatırımcının sorumluluğunda kalır."
+      },
+      "7": {
+        "question": "Ticaret sinyallerinin karlı olması garanti ediliyor mu?",
+        "answer": "Hayır. Finansal piyasalar risk içerir ve hiçbir ticaret stratejisi veya sinyal hizmeti kârı garanti edemez.",
+        "subDescription": "Yüksek kaliteli analiz ve ticaret fırsatları sunmayı hedefliyoruz ancak her ticaret, zarar etme olasılığını taşır."
+      },
+      "8": {
+        "question": "Ticaret hesabımı nasıl finanse edebilirim?",
+        "answer": "Finansman seçenekleri seçtiğiniz komisyoncuya göre değişir. En çok tavsiye edilen brokerlar çeşitli para yatırma yöntemleri sunar.",
+        "points": {
+          "0": "Banka havalesi",
+          "1": "Kredi veya banka kartı",
+          "2": "Mevcut olduğu durumlarda USDT gibi kripto para birimi",
+          "3": "Ülkenize bağlı olarak yerel ödeme yöntemleri"
+        },
+        "subDescription": "Kullanabileceğiniz fonlama yöntemlerini görüntülemek için hesabınızı açtıktan sonra komisyoncunuzun müşteri portalında oturum açın. Mevcut seçenekler komisyoncuya ve bölgeye göre farklılık gösterir."
+      },
+      "9": {
+        "question": "Başlamak için ne kadar paraya ihtiyacım var?",
+        "answer": "Minimum depozito komisyoncuya göre değişir. Önerilen birçok broker, nispeten küçük mevduatlarla hesap açılmasına izin verir.",
+        "subDescription": "Riske atabileceğiniz bir tutarla başlamanızı ve hesap boyutundan ziyade uygun risk yönetimine odaklanmanızı öneririz."
+      },
+      "10": {
+        "question": "İşlemleri otomatik olarak kopyalayabilir miyim?",
+        "answer": "Hayır. Bir sinyal aldığınızda, giriş fiyatı, zararı durdurma ve kar alma dahil olmak üzere işlem bilgilerini MT5'e manuel olarak girmelisiniz."
+      },
+      "11": {
+        "question": "Sinyalleriniz hangi pazarları kapsıyor?",
+        "answer": "Sinyallerimiz öncelikle büyük forex çiftlerine odaklanıyor. Pazar kapsamı, mevcut fırsatlara ve pazar koşullarına bağlı olarak genişleyebilir."
+      },
+      "12": {
+        "question": "Sinyaller ne zaman gönderilir?",
+        "answer": "Analiz ekibi tarafından uygun fırsatlar belirlendiğinde sinyaller gönderilir. Sabit bir program yoktur çünkü işlemlerin ne zaman yapılacağını piyasa koşulları belirler.",
+        "subDescription": "Sinyaller Pazar günü saat 17.00 EST'den Cuma günü saat 17.00 EST'ye kadar piyasada mevcuttur. Bildirimler platform ve bağlı iletişim kanalları aracılığıyla iletilir."
+      },
+      "13": {
+        "question": "Daha önce ticaret deneyimine ihtiyacım var mı?",
+        "answer": "Hayır. Platform hem yeni başlayanlar hem de deneyimli yatırımcılar için tasarlanmıştır.",
+        "subDescription": "Yeni yatırımcılar eğitim kaynakları ve demo hesaplarla başlayabilir, deneyimli yatırımcılar ise sinyalleri ve piyasa analizini hemen kullanabilir."
+      },
+      "14": {
+        "question": "Aboneliğimi nasıl iptal edebilirim?",
+        "answer": "Aboneliğinizi istediğiniz zaman hesap kontrol panelinizden yönetebilir veya iptal edebilirsiniz.",
+        "subDescription": "Premium hizmetlere erişim, mevcut fatura döneminizin sonuna kadar etkin kalır."
+      },
+      "15": {
+        "question": "Telefonumu ticaret için kullanabilir miyim?",
+        "answer": "Evet. MT5 hem iOS hem de Android cihazlarda kullanılabilir. Doğrudan akıllı telefonunuzdan veya tabletinizden işlemleri izleyebilir, sinyal alabilir ve pozisyonları yönetebilirsiniz."
+      },
+      "16": {
+        "question": "Müşteri fonlarını yönetiyor musunuz?",
+        "answer": "Hayır. 1stForex mevduat kabul etmez veya müşteri fonlarını yönetmez.",
+        "subDescription": "Tüm ticari hesaplar doğrudan seçtiğiniz komisyoncuda tutulur. Hesabınızın ve işlem kararlarınızın tam kontrolü her zaman sizde kalır."
+      }
+    },
+    "features": {
+      "0": {
+        "title": "Canlı Sohbet",
+        "description": "Destek ekibimizden yardım alın"
+      },
+      "1": {
+        "title": "E-posta Desteği",
+        "description": "Destek ekibimizden yardım alın"
+      },
+      "2": {
+        "title": "Geri arama isteğinde bulunun",
+        "description": "Destek ekibimizin sizinle iletişime geçmesini isteyin"
+      }
+    },
+    "knowledgeBase": "Bilgi Bankası",
+    "readMore": "Daha fazla SSS okuyun"
+  },
+  "NotFound": {
+    "title": "Hata!",
+    "imageAlt": "404 sayfa bulunamadı",
+    "homeIconAlt": "Ev",
+    "goHome": "Eve Git"
+  }
+}

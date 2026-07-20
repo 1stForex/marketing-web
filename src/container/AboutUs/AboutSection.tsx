@@ -5,14 +5,13 @@ import About from "@/src/assets/images/about-us.jpg";
 import Logo from "@/src/assets/icons/logo.svg";
 import AboutUsTypography from "@/src/styled/AboutUsTypography";
 import HeadTypography from "@/src/styled/HeadTypography";
+import { useTranslations } from "next-intl";
 
 export default function AboutSection() {
+  const t = useTranslations("About");
   const paragraphs = [
-    "Founded in Montreal over 20 years ago, 1st Forex has grown into a global company focused on forex education and trading signals. What started as in-person seminars and early online signals has developed into a trusted platform used by thousands of traders worldwide.",
-    "A key part of our work is our Breakout Strategy, a proven trading method designed to spot strong market moves early. This strategy is at the core of our signals and education, helping traders make more consistent and informed decisions.",
-    "Now based in Costa Rica, our goal remains the same: to help traders build confidence, improve their skills, and work toward financial independence in the forex market.",
-    "Leading 1st Forex is our CEO, Marie Josée Bergeron, who has over 22 years of experience in forex trading. Her vision of building a strong trading company and real trader community has shaped everything we do.",
-    "She is supported by a skilled team of traders and product specialists who help keep our strategies, signals, and platform clear, modern, and effective.",
+    t("about.paragraph1"), t("about.paragraph2"), t("about.paragraph3"),
+    t("about.paragraph4"), t("about.paragraph5"),
   ];
 
   return (
@@ -47,7 +46,7 @@ export default function AboutSection() {
             },
           }}
         >
-          About Us
+          {t("about.title")}
         </HeadTypography>
       </Box>
       <Box
@@ -89,7 +88,7 @@ export default function AboutSection() {
         >
           <Image
             src={About}
-            alt="1st Forex team"
+            alt={t("teamAlt")}
             fill
             sizes="(max-width: 992px) 100vw, 416px"
             style={{ objectFit: "cover", objectPosition: "center" }}

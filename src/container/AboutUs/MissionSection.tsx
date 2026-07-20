@@ -4,8 +4,10 @@ import Badge from "@/src/components/Badge";
 import { Box, Container } from "@mui/material";
 import HeadTypography from "@/src/styled/HeadTypography";
 import BaseTypography from "@/src/styled/BaseTypography";
+import { useTranslations } from "next-intl";
 
 export default function MissionSection() {
+  const t = useTranslations("About");
   return (
     <Box
       sx={{
@@ -48,19 +50,14 @@ export default function MissionSection() {
                 gap: "21px",
               }}
             >
-              <Badge title="Vision" />
-              <HeadTypography color="#FFF">Our Mission</HeadTypography>
+              <Badge title={t("visionBadge")} />
+              <HeadTypography color="#FFF">{t("mission.title")}</HeadTypography>
             </Box>
             <BaseTypography color="#FFF" fontWeight={400}>
-              Our mission is simple yet powerful: Empowering Your Trading
-              Journey. We aim to inspire and guide traders at every stage,
-              helping them navigate the complexities of the forex market with
-              confidence and skill.
+              {t("mission.paragraph1")}
             </BaseTypography>
             <BaseTypography color="#FFF" fontWeight={400}>
-              Join the 1st Forex family and be part of a legacy where passion
-              meets precision, and tradition meets innovation. Together, we’ll
-              turn dreams into financial independence and trading mastery.
+              {t("mission.paragraph2")}
             </BaseTypography>
           </Box>
           <Box
@@ -73,7 +70,7 @@ export default function MissionSection() {
           >
             <Image
               src={Community}
-              alt="Laptop Image"
+              alt={t("communityAlt")}
               fill
               style={{
                 objectFit: "cover",

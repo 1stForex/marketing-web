@@ -2,8 +2,10 @@ import Image from "next/image";
 import Logo from "@/src/assets/icons/logo.svg";
 import { Box } from "@mui/material";
 import OverviewBaseTypography from "./OverviewBaseTypography";
+import { useTranslations } from "next-intl";
 
 export default function Overview() {
+  const t = useTranslations("Signal");
   return (
     <Box
       sx={{
@@ -27,26 +29,17 @@ export default function Overview() {
           padding: "4px 12px",
         }}
       >
-        <Image src={Logo} alt="logo" />
+        <Image src={Logo} alt={t("logoAlt")} />
       </Box>
       <Box>
         <OverviewBaseTypography mb={"12px"}>
-          1st Forex Trading Signals merge
-          <span style={{ color: "#F30" }}> 20 years </span> of market expertise
-          with our copyrighted{" "}
-          <span style={{ color: "#F30" }}>Break Out System</span> to support a
-          more disciplined trading process.
+          {t("overview.paragraph1")}
         </OverviewBaseTypography>
         <OverviewBaseTypography mb={"12px"}>
-          Our process reviews market structure, risk levels, and historical
-          behavior to deliver clear signals directly to your dashboard and
-          mobile experience.
+          {t("overview.paragraph2")}
         </OverviewBaseTypography>
         <OverviewBaseTypography>
-          With <span style={{ color: "#F30" }}>24/7 support</span>, direct
-          access to an experienced trading team, and a thriving forex community
-          by your side, professional-grade trading has never been more
-          accessible.
+          {t("overview.paragraph3")}
         </OverviewBaseTypography>
       </Box>
     </Box>

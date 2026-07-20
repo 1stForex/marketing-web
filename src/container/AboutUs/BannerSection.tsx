@@ -1,8 +1,10 @@
 import Banner from "@/src/components/Banner";
 import HeadTypography from "@/src/styled/HeadTypography";
 import { Box } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 export default function BannerSection() {
+  const t = useTranslations("About");
   return (
     <Box
       sx={{
@@ -13,12 +15,12 @@ export default function BannerSection() {
       }}
     >
       <Banner
-        badgeTitle="Vision"
-        description="At 1st Forex, we don’t just see ourselves as a company—we are a family of traders. Our mission goes beyond teaching and trading; it’s about building a global community where traders can connect, share, and grow together."
-        secondaryDescription="From personalized mentorship to interactive forums, we are committed to creating a supportive environment where every trader can thrive."
+        badgeTitle={t("visionBadge")}
+        description={t("community.description")}
+        secondaryDescription={t("community.secondaryDescription")}
       >
         <HeadTypography color="#FFF" textAlign={"center"} maxWidth={"535px"}>
-          More Than a Business —A Community
+          {t("community.title")}
         </HeadTypography>
       </Banner>
     </Box>

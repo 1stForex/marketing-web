@@ -3,8 +3,10 @@ import Badge from "@/src/components/Badge";
 import OptionCard from "@/src/components/OptionCard";
 import { communityOffer } from "@/src/const/communityOffer";
 import HeadTypography from "@/src/styled/HeadTypography";
+import { useTranslations } from "next-intl";
 
 export default function OfferSection() {
+  const t = useTranslations("Community");
   return (
     <Box
       sx={{
@@ -42,9 +44,9 @@ export default function OfferSection() {
           },
         }}
       >
-        <Badge title="Community" />
+        <Badge title={t("badge")} />
         <HeadTypography textAlign={"center"} maxWidth={"734px"}>
-          What <span style={{ color: "#F30" }}>We Offer?</span>
+          {t("offers.start")} <span style={{ color: "#F30" }}>{t("offers.highlight")}</span>
         </HeadTypography>
       </Box>
       <Box
@@ -64,8 +66,8 @@ export default function OfferSection() {
           <OptionCard
             key={index}
             icon={item.icon}
-            title={item.title}
-            points={item.points}
+            title={t(`offers.cards.${index}.title`)}
+            points={item.points.map((_, pointIndex) => t(`offers.cards.${index}.points.${pointIndex}`))}
           />
         ))}
       </Box>

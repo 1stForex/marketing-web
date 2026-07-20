@@ -6,8 +6,10 @@ import AdvanceCourse from "@/src/assets/images/advance.png";
 import HeadTypography from "@/src/styled/HeadTypography";
 import Link from "next/link";
 import { RedirectUrls } from "@/src/const/Enum";
+import { useTranslations } from "next-intl";
 
 const Courses = () => {
+  const t = useTranslations("Academy");
   return (
     <Box
       sx={{
@@ -17,7 +19,7 @@ const Courses = () => {
         justifyContent: "center",
       }}
     >
-      <Badge title="Learn" />
+      <Badge title={t("courses.badge")} />
 
       <HeadTypography
         sx={{
@@ -32,15 +34,15 @@ const Courses = () => {
           },
         }}
       >
-        Our{" "}
-        <span style={{ color: "var(--primary-400-base, #F30)" }}>Courses</span>
+        {t("courses.start")}{" "}
+        <span style={{ color: "var(--primary-400-base, #F30)" }}>{t("courses.highlight")}</span>
       </HeadTypography>
 
       <CourseCard
-        title="Complete Forex Course"
+        title={t("courses.courseTitle")}
         price={0}
         oldPrice={3000}
-        description="Gain access to our full course, including the exclusive Breakout System, quizzes, and interactive modules."
+        description={t("courses.courseDescription")}
         rating={5}
         reviews={91}
         image={AdvanceCourse}
@@ -82,7 +84,7 @@ const Courses = () => {
             },
           }}
         >
-          🎁 Refer 3 friends and receive 1 month free signals
+          {t("courses.referral")}
         </Typography>
 
         <Box
@@ -91,7 +93,7 @@ const Courses = () => {
           href={RedirectUrls.REGISTER_URL}
           passHref
         >
-          <CustomButton variant="black">Sign Up</CustomButton>
+          <CustomButton variant="black">{t("signup")}</CustomButton>
         </Box>
       </Box>
     </Box>

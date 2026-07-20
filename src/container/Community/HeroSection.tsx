@@ -3,8 +3,10 @@ import CustomVideo from "@/src/components/CustomVideo";
 import BaseTypography from "@/src/styled/BaseTypography";
 import HeadTypography from "@/src/styled/HeadTypography";
 import { Box } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("Community");
   return (
     <Box
       sx={{
@@ -46,17 +48,14 @@ export default function HeroSection() {
           },
         }}
       >
-        <Badge title="Community" />
+        <Badge title={t("badge")} />
 
         <HeadTypography color="#FFF" textAlign={"center"} maxWidth={"734px"}>
-          Welcome to the 1st Forex Community
+          {t("title")}
         </HeadTypography>
 
         <BaseTypography color="#FFF" fontWeight={400} maxWidth={"842px"}>
-          A place where forex traders of all levels come together as a “family”
-          to learn, grow, and support one another. Whether you’re just starting
-          out or a seasoned professional, our community is designed to help you
-          achieve success in your trading journey.
+          {t("description")}
         </BaseTypography>
       </Box>
     </Box>

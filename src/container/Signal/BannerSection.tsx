@@ -1,8 +1,10 @@
 import { Box } from "@mui/material";
 import Banner from "@/src/components/Banner";
 import BaseTypography from "@/src/styled/BaseTypography";
+import { useTranslations } from "next-intl";
 
 export default function BannerSection() {
+  const t = useTranslations("Signal");
   return (
     <Box
       sx={{
@@ -36,11 +38,9 @@ export default function BannerSection() {
         },
       }}
     >
-      <Banner description='"Imagine having twenty years of market experience, structured trade planning, and seasoned traders behind the process. 1st Forex brings signals, analysis, and education into one practical platform so traders can move with more clarity and discipline."'>
+      <Banner description={t("banner.quote")}>
         <BaseTypography color="#FFF" fontWeight={600}>
-          With 1st Forex Trading Signals, you’re not just receiving alerts.
-          You’re stepping into a supported, data-informed trading ecosystem
-          designed to help you learn, review, and execute with more confidence.
+          {t("banner.description")}
         </BaseTypography>
       </Banner>
     </Box>

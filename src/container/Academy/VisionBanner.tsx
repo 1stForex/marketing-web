@@ -1,8 +1,10 @@
 import { Box } from "@mui/material";
 import Banner from "@/src/components/Banner";
 import HeadTypography from "@/src/styled/HeadTypography";
+import { useTranslations } from "next-intl";
 
 const VisionBanner = () => {
+  const t = useTranslations("Academy");
   return (
     <Box
       sx={{
@@ -13,11 +15,11 @@ const VisionBanner = () => {
       }}
     >
       <Banner
-        badgeTitle="Vision"
-        description="To make forex education affordable, effective, and accessible to traders worldwide. By combining proven teaching methods with practical trading tools, we aim to build a thriving community equipped with knowledge, discipline, and market confidence."
+        badgeTitle={t("vision.badge")}
+        description={t("vision.description")}
       >
         <HeadTypography color="#FFF" textAlign={"center"}>
-          Our Vision
+          {t("vision.title")}
         </HeadTypography>
       </Banner>
     </Box>

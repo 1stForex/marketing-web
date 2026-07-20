@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import RatingStars from "@/src/components/RatingStars";
 import { CourseCardProps } from "@/src/types/CourseCard.interface";
+import { useTranslations } from "next-intl";
 
 const CourseCard: React.FC<CourseCardProps> = ({
   title,
@@ -13,6 +14,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
   image,
   oldPrice,
 }) => {
+  const t = useTranslations("Academy");
   return (
     <Box
       sx={{
@@ -88,7 +90,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
             }}
           >
             {price === 0 ? (
-              "Free"
+              t("free")
             ) : (
               <>
                 <span style={{ fontSize: "18px", fontWeight: 700 }}>$</span>
@@ -170,7 +172,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
               lineHeight: "20px",
             }}
           >
-            ({reviews} Reviews)
+            {t("reviews", { count: reviews })}
           </Typography>
         </Box>
       </Box>

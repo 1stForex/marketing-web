@@ -9,8 +9,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import Badge from "@/src/components/Badge";
 import HeadTypography from "@/src/styled/HeadTypography";
+import { useTranslations } from "next-intl";
 
 export default function OptionSection() {
+  const t = useTranslations("Signal");
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const stageRef = useRef<HTMLDivElement | null>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -83,21 +85,28 @@ export default function OptionSection() {
     return () => context.revert();
   }, []);
 
+  const translateCards = (cards: typeof allAIAssistance, group: string) =>
+    cards.map((card, index) => ({
+      ...card,
+      title: t(`plans.groups.${group}.cards.${index}.title`),
+      description: t(`plans.groups.${group}.cards.${index}.description`),
+    }));
+
   const cardData = [
     {
-      title: "Rules-Based",
-      specialText: "Signal Process",
-      cardInfo: allTradingBot,
+      title: t("plans.groups.rules.title"),
+      specialText: t("plans.groups.rules.highlight"),
+      cardInfo: translateCards(allTradingBot, "rules"),
     },
     {
-      title: "Personal Trader",
-      specialText: "Mentorship",
-      cardInfo: allMentorship,
+      title: t("plans.groups.mentor.title"),
+      specialText: t("plans.groups.mentor.highlight"),
+      cardInfo: translateCards(allMentorship, "mentor"),
     },
     {
-      title: "App-Based Signals with",
-      specialText: "Trader Support",
-      cardInfo: allAIAssistance,
+      title: t("plans.groups.app.title"),
+      specialText: t("plans.groups.app.highlight"),
+      cardInfo: translateCards(allAIAssistance, "app"),
     },
   ];
 
@@ -118,11 +127,11 @@ export default function OptionSection() {
           mb: "64px",
         }}
       >
-        <Badge title="Offers" />
+        <Badge title={t("offersBadge")} />
         <HeadTypography color="#333" textAlign={"center"}>
-          Signal{" "}
+          {t("plans.start")}{" "}
           <span style={{ color: " var(--primary-400-base, #F30)" }}>
-            Plans
+            {t("plans.highlight")}
           </span>
         </HeadTypography>
       </Box>

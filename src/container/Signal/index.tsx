@@ -5,8 +5,10 @@ import BannerSection from "./BannerSection";
 import OptionSection from "./OptionSection";
 import Offer from "@/src/components/Offer";
 import KeyOfferings from "./KeyOfferings";
+import { useTranslations } from "next-intl";
 
 export default function Signal() {
+  const t = useTranslations("Signal");
   return (
     <Box
       sx={{
@@ -44,11 +46,11 @@ export default function Signal() {
         </Box>
       </Container>
       <Offer
-        badgeTitle="Offers"
-        title="What"
-        specialTitle="We Offer"
-        description="At 1st Forex, our signal platform blends decades of market experience with structured analysis and clear trade levels."
-        secondaryDescription="With 20 years of backtesting, every signal is reviewed against a disciplined process and the market conditions around it."
+        badgeTitle={t("offersBadge")}
+        title={t("offer.title")}
+        specialTitle={t("offer.highlight")}
+        description={t("offer.description")}
+        secondaryDescription={t("offer.secondaryDescription")}
       />
       <Container maxWidth="xl">
         <Box

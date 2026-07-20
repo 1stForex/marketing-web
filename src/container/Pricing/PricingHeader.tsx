@@ -8,31 +8,33 @@ import PublicRoundedIcon from "@mui/icons-material/PublicRounded";
 import RuleRoundedIcon from "@mui/icons-material/RuleRounded";
 import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const proofPoints = [
   {
     icon: <AutoGraphRoundedIcon />,
     value: "1,348",
-    label: "Historical trades tracked",
+    labelKey: "proof.trades",
   },
   {
     icon: <RuleRoundedIcon />,
     value: "91.7%",
-    label: "Historical win rate",
+    labelKey: "proof.winRate",
   },
   {
     icon: <PublicRoundedIcon />,
     value: "5",
-    label: "Primary FX pairs covered",
+    labelKey: "proof.pairs",
   },
   {
     icon: <ShieldOutlinedIcon />,
     value: "24/5",
-    label: "Market-week coverage",
+    labelKey: "proof.coverage",
   },
 ];
 
 const PricingHeader = () => {
+  const t = useTranslations("Pricing");
   return (
     <Box
       sx={{
@@ -85,7 +87,7 @@ const PricingHeader = () => {
           >
             <Image
               src={SignalMobile}
-              alt="1stForex mobile signal preview"
+              alt={t("signalPreviewAlt")}
               style={{ width: "100%", height: "auto" }}
               priority
             />
@@ -106,14 +108,13 @@ const PricingHeader = () => {
             }}
           >
             <Typography sx={{ color: "#F30", fontSize: "12px", fontWeight: 800 }}>
-              1STFOREX SIGNAL
+              {t("signalLabel")}
             </Typography>
             <Typography sx={{ color: "#1D2739", fontSize: "18px", fontWeight: 800, mt: "6px" }}>
-              EUR/USD · BUY
+              {t("signalExample")}
             </Typography>
             <Typography sx={{ color: "#667185", fontSize: "13px", mt: "8px" }}>
-              Entry, stop loss, take profit, and performance context in one
-              signal workflow.
+              {t("signalDescription")}
             </Typography>
           </Box>
         </Box>
@@ -127,7 +128,7 @@ const PricingHeader = () => {
             gap: "18px",
           }}
         >
-          <Badge title="Pricing" />
+          <Badge title={t("badge")} />
           <Typography
             component="h1"
             sx={{
@@ -139,9 +140,9 @@ const PricingHeader = () => {
               maxWidth: "760px",
             }}
           >
-            Get access to{" "}
+            {t("headlineStart")}{" "}
             <Box component="span" sx={{ color: "#F30" }}>
-              every signal.
+              {t("headlineHighlight")}
             </Box>
           </Typography>
           <Typography
@@ -152,9 +153,7 @@ const PricingHeader = () => {
               maxWidth: "680px",
             }}
           >
-            One unlimited plan for trading signals, historical performance
-            visibility, academy content, and the community tools
-            built around disciplined execution.
+            {t("description")}
           </Typography>
         </Box>
       </Box>
@@ -179,7 +178,7 @@ const PricingHeader = () => {
       >
         {proofPoints.map((point, index) => (
           <Box
-            key={point.label}
+            key={point.labelKey}
             sx={{
               p: { xs: "18px 14px", md: "26px 22px" },
               textAlign: "center",
@@ -197,7 +196,7 @@ const PricingHeader = () => {
               {point.value}
             </Typography>
             <Typography sx={{ color: "#475467", fontSize: { xs: "12px", md: "14px" }, lineHeight: "145%", mt: "4px" }}>
-              {point.label}
+              {t(point.labelKey)}
             </Typography>
           </Box>
         ))}

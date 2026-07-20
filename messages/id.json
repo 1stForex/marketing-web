@@ -1,0 +1,652 @@
+{
+  "LocaleSwitcher": {
+    "label": "Bahasa",
+    "updateFailed": "Kami tidak dapat memperbarui bahasa Anda. Silakan coba lagi."
+  },
+  "Media": {"unsupportedVideo": "Browser Anda tidak mendukung video ini."},
+  "Metadata": {
+    "title": "1stForex",
+    "applicationName": "1stForex",
+    "description": "Jelajahi sinyal trading, materi akademi, riwayat performa, dan dukungan komunitas 1stForex."
+  },
+  "Navigation": {
+    "home": "Beranda",
+    "performanceHistory": "Riwayat performa",
+    "pricing": "Harga",
+    "community": "Komunitas",
+    "company": "Perusahaan",
+    "aboutUs": "Tentang kami",
+    "contactUs": "Hubungi kami",
+    "tradingSignals": "Sinyal trading",
+    "academy": "Akademi",
+    "login": "Masuk",
+    "register": "Daftar",
+    "menu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "tradeLikeAPro": "Trading seperti profesional"
+  },
+  "Footer": {
+    "product": "Produk",
+    "company": "Perusahaan",
+    "other": "Lainnya",
+    "tradingSignals": "Sinyal Trading 1st Forex",
+    "academy": "Akademi 1st Forex",
+    "performanceHistory": "Riwayat performa",
+    "pricing": "Harga",
+    "community": "Komunitas",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "terms": "Syarat dan Ketentuan",
+    "riskDisclaimer": "Pernyataan Risiko dan Syarat dan Ketentuan",
+    "acceptableUse": "Kebijakan Penggunaan yang Dapat Diterima",
+    "refundPolicy": "Kebijakan Pengembalian Dana",
+    "privacyPolicy": "Kebijakan Privasi",
+    "faqs": "Pertanyaan Umum",
+    "newsletterTitle": "Berlangganan buletin kami",
+    "newsletterDescription": "Dapatkan pembaruan sinyal, catatan strategi, dan komentar pasar langsung di kotak masuk Anda.",
+    "emailAddress": "Alamat email",
+    "subscribing": "Sedang berlangganan...",
+    "subscribe": "Berlangganan",
+    "subscribed": "Anda sudah berlangganan.",
+    "invalidEmail": "Masukkan alamat email yang valid.",
+    "rightsReserved": "Hak cipta dilindungi.",
+    "riskNotice": "Semua konten, sinyal, dan alat hanya untuk tujuan pendidikan dan informasi. Trading mengandung risiko."
+  },
+  "Contact": {
+    "heroBadge": "Bagian bantuan",
+    "heroTitle": "Hubungi kami",
+    "heroDescription": "Hubungi tim 1st Forex untuk bantuan terkait akun, penagihan, sinyal, kursus, atau kemitraan.",
+    "liveChat": "Obrolan langsung",
+    "liveChatDescription": "Dapatkan bantuan langsung dari tim dukungan kami",
+    "supportEmail": "support@1stforex.com",
+    "supportEmailDescription": "Kirim email kepada tim dukungan kami",
+    "callback": "Minta dihubungi",
+    "callbackDescription": "Minta tim dukungan kami menghubungi Anda",
+    "contactBadge": "Kontak",
+    "sendMessagePrefix": "Kirim",
+    "sendMessageAccent": "pesan kepada kami",
+    "responseDescription": "Anda juga dapat meninggalkan informasi kontak di sini. Perwakilan 1st Forex akan menghubungi Anda dalam satu hari kerja.",
+    "firstName": "Nama depan*",
+    "firstNamePlaceholder": "Budi",
+    "lastName": "Nama belakang",
+    "lastNamePlaceholder": "Santoso",
+    "email": "Email*",
+    "emailPlaceholder": "budi@1stforex.com",
+    "phone": "Telepon",
+    "phonePlaceholder": "+62 812 3456 7890",
+    "subject": "Subjek",
+    "subjectPlaceholder": "Bantuan akun",
+    "message": "Pesan*",
+    "messagePlaceholder": "Beri tahu kami cara membantu Anda...",
+    "messageHelper": "Bagikan detail penting agar tim dapat meneruskan permintaan Anda dengan tepat.",
+    "success": "Terima kasih. Kami akan segera menghubungi Anda.",
+    "error": "Periksa formulir dan coba lagi.",
+    "sending": "Mengirim...",
+    "submit": "Kirim"
+  },
+  "Home": {
+    "hero": {
+      "title": "Perkuat perjalanan trading Anda",
+      "description": "Di 1st Forex, kami mendukung trader dengan sinyal trading, pendidikan ahli, dan komunitas global yang suportif agar Anda dapat trading lebih cerdas, berkembang lebih cepat, dan lebih percaya diri di setiap pasar.",
+      "signalsCta": "Sinyal trading",
+      "academyCta": "Akademi"
+    },
+    "overview": {
+      "first": "Selama lebih dari dua puluh tahun, 1st Forex telah membantu trader di seluruh dunia mengembangkan <accent>strategi yang menguntungkan</accent> dan mencapai tujuan finansial mereka.",
+      "second": "Dari kursus lengkap hingga <accent>sinyal trading yang kuat</accent> dan komunitas yang aktif, kami menyediakan alat, wawasan, dan keahlian untuk <accent>meningkatkan</accent> pengalaman trading Anda."
+    },
+    "offerings": {
+      "badge": "Penawaran",
+      "title": "<accent>Penawaran</accent> utama",
+      "trainingTitle": "Pelatihan oleh pakar",
+      "trainingDescription": "Pelajari strategi teruji dan dasar-dasar pasar dari profesional berpengalaman.",
+      "signalsTitle": "Sinyal lanjutan dan wawasan strategis",
+      "signalsDescription": "Akses sinyal trading yang andal dan panduan pasar praktis untuk proses pengambilan keputusan yang lebih jelas.",
+      "communityTitle": "Komunitas yang suportif",
+      "communityDescription": "Terhubung dengan trader, berbagi ide, dan berkembang dengan wawasan eksklusif, komentar pasar, dan dukungan komunitas."
+    },
+    "vision": {
+      "badge": "Visi kami",
+      "first": "\"Memberdayakan komunitas trader global dengan memadukan dua dekade keahlian dan teknologi praktis, menghadirkan pendidikan forex yang jelas, sinyal terstruktur, dan solusi trading yang berguna untuk mendorong pertumbuhan finansial dan kepercayaan diri.",
+      "second": "Di 1st Forex, kami membentuk masa depan trading dengan membangun komunitas yang terhubung, adaptif, dan berorientasi pada hasil.\""
+    },
+    "story": {
+      "badge": "Kisah kami",
+      "title": "Tentang <accent>kami</accent>",
+      "heading": "Bagaimana kami memulai?",
+      "paragraph1": "Didirikan pada 2004, 1st Forex telah menjadi nama tepercaya dalam industri trading forex selama lebih dari dua dekade. Berbasis di Kosta Rika, kami menyediakan pendidikan forex berkualitas dan sinyal andal yang membantu trader di seluruh dunia mencapai tujuan finansial mereka.",
+      "paragraph2": "Melalui Akademi 1st Forex, kami telah melatih ribuan siswa dan trader melalui kursus daring dan seminar tatap muka. Kurikulum terus kami sempurnakan agar tetap menjadi salah satu yang terbaik di dunia. Banyak kisah sukses dari mereka yang memercayai kami menjadi bukti perjalanan kami.",
+      "paragraph3": "Tim kami memadukan veteran forex berpengalaman, trader sukses, dan spesialis produk. Bersama-sama kami berfokus pada pendidikan praktis, sinyal yang disiplin, dan alat yang benar-benar dapat digunakan trader.",
+      "paragraph4": "Dari sinyal terstruktur hingga alat platform di aplikasi seluler dan situs web yang mudah digunakan, kami membantu klien membuat keputusan trading yang lebih jelas.",
+      "paragraph5": "Di 1st Forex, kami tidak hanya melihat klien, tetapi juga keluarga. Kami berkomitmen membangun komunitas yang berkembang dan terhubung, tempat trader dari semua tingkat dapat belajar, bertumbuh, dan berhasil."
+    },
+    "welcome": {
+      "badge": "Selamat datang",
+      "title": "Selamat datang di <accent>1st Forex</accent>",
+      "description": "Selama lebih dari dua puluh tahun, 1st Forex telah membantu trader di seluruh dunia mengembangkan strategi yang menguntungkan dan mencapai tujuan finansial mereka.",
+      "secondaryDescription": "Dari kursus lengkap hingga sinyal trading yang kuat dan komunitas yang aktif, kami menyediakan alat, wawasan, dan keahlian untuk meningkatkan pengalaman trading Anda."
+    }
+  },
+  "Pricing": {
+    "badge": "Harga",
+    "headlineStart": "Dapatkan akses ke",
+    "headlineHighlight": "setiap sinyal.",
+    "description": "Satu rencana tak terbatas untuk sinyal perdagangan, visibilitas kinerja historis, konten akademi, dan alat komunitas yang dibangun berdasarkan eksekusi yang disiplin.",
+    "signalPreviewAlt": "Pratinjau sinyal seluler 1stForex",
+    "signalLabel": "SINYAL 1STForex",
+    "signalExample": "EUR/USD · BELI",
+    "signalDescription": "Entry, stop loss, take profit, dan konteks kinerja dalam satu alur kerja sinyal.",
+    "proof": {
+      "trades": "Perdagangan bersejarah dilacak",
+      "winRate": "Tingkat kemenangan historis",
+      "pairs": "Pasangan FX primer tercakup",
+      "coverage": "Liputan minggu pasar"
+    },
+    "monthly": "Bulanan",
+    "yearly": "Tahunan",
+    "toggleYearly": "Alihkan penagihan tahunan",
+    "twoMonthsFree": "2 bulan gratis setiap tahun",
+    "includedTitle": "Apa yang termasuk",
+    "freeTitle": "Akun gratis",
+    "unlimited": "Tak terbatas",
+    "unlimitedAccess": "Akses tidak terbatas",
+    "perMonth": "/bln",
+    "monthlyBilling": "Ditagih setiap bulan. Batalkan kapan saja.",
+    "yearlyBilling": "${amount} ditagih setiap tahun. Dua bulan termasuk gratis.",
+    "planDescription": "Dapatkan setiap sinyal, setiap pasangan yang didukung, dasbor historis kinerja, akses akademi, dan ruang kerja komunitas.",
+    "startSignals": "Mulai menerima sinyal",
+    "included": {
+      "pairs": "Setiap pasangan perdagangan utama yang tersedia",
+      "signals": "Sinyal perdagangan",
+      "levels": "Level masuk, hentikan kerugian, dan ambil untung",
+      "history": "Dasbor kinerja historis",
+      "daily": "Visibilitas detail perdagangan harian",
+      "academy": "Akses akademi",
+      "community": "Akses komunitas",
+      "cancel": "Batalkan kapan saja"
+    },
+    "free": {
+      "community": "Akses komunitas",
+      "previews": "Pratinjau sinyal terbatas",
+      "registration": "Pendaftaran akun",
+      "academy": "Akses akademi",
+      "allPairs": "Semua pasangan perdagangan",
+      "signals": "Sinyal perdagangan",
+      "levels": "Level masuk, SL, dan TP",
+      "dashboard": "Dasbor kinerja"
+    },
+    "badges": {
+      "cancel": "Batalkan kapan saja",
+      "checkout": "Pembayaran aman",
+      "instant": "Akses instan"
+    },
+    "process": {
+      "title": "Proses kami. Keuntungan Anda.",
+      "rules": "Aturan yang didorong oleh penelitian",
+      "engine": "Mesin sinyal",
+      "alerts": "Peringatan waktu nyata",
+      "access": "Akses anggota"
+    },
+    "trust": {
+      "checkout": {
+        "title": "Pembayaran aman",
+        "text": "Pembayaran ditangani melalui alur checkout yang terhubung."
+      },
+      "performance": {
+        "title": "Visibilitas kinerja",
+        "text": "Tinjau hasil historis tahunan, bulanan, dan harian."
+      },
+      "cancel": {
+        "title": "Batalkan kapan saja",
+        "text": "Tetap kendalikan penagihan Anda dari akun anggota Anda."
+      }
+    }
+  },
+  "HistoricalPerformance": {
+    "badge": "Sejarah Kinerja",
+    "title": "Sejarah Kinerja",
+    "description": "Lihat hasil tahunan yang dipecah menjadi ringkasan bulanan, dengan riwayat perdagangan harian lengkap tersedia di dasbor anggota.",
+    "metrics": {
+      "trades": "Memasuki Perdagangan",
+      "wins": "Menang",
+      "losses": "Kerugian",
+      "winRate": "Rata-rata Tingkat Kemenangan"
+    },
+    "summary": {
+      "bestYear": "Tahun Terbaik",
+      "bestPair": "Pasangan Terbaik",
+      "bestPairDetail": "Pasangan mayor paling produktif",
+      "range": "Rentang Sejarah",
+      "rangeDetail": "Data kinerja {count} tahun"
+    },
+    "annualStart": "Tahunan",
+    "annualHighlight": "Perincian",
+    "annualDescription": "Pilih tahun mana saja untuk memeriksa ringkasan bulanan. Pilih bulan mana saja untuk melanjutkan ke dasbor riwayat perdagangan harian.",
+    "columns": {
+      "year": "Tahun",
+      "trades": "Perdagangan",
+      "wins": "Menang",
+      "losses": "Kerugian",
+      "winRate": "Tingkat Kemenangan",
+      "netPips": "Pip Bersih",
+      "bestPair": "Pasangan Terbaik"
+    },
+    "monthlySummary": "Ringkasan Bulanan {year}",
+    "monthlyNote": "Hasil bulanan berdasarkan kumpulan data historis yang dipublikasikan.",
+    "tradeCount": "{count, plural, one {# transaksi} other {# transaksi}}",
+    "netPips": "{value} pip bersih",
+    "modal": {
+      "close": "Menutup",
+      "title": "Riwayat perdagangan harian ada di dalam dasbor.",
+      "description": "Masuk atau buat akun untuk melihat detail perdagangan harian untuk {month} {year}, termasuk entri, keluar, hasil, dan catatan perdagangan.",
+      "login": "Masuk",
+      "signup": "Mendaftar"
+    }
+  },
+  "About": {
+    "badge": "Tentang Kami",
+    "heroStart": "Selamat datang di 1st Forex: Dimana",
+    "heroHighlight": "Tradisi Bertemu Inovasi",
+    "teamAlt": "Tim 1st Forex",
+    "communityAlt": "Komunitas perdagangan 1st Forex",
+    "visionBadge": "Penglihatan",
+    "storyBadge": "Kisah kami",
+    "about": {
+      "title": "Tentang Kami",
+      "paragraph1": "Didirikan di Montreal lebih dari 20 tahun yang lalu, 1st Forex telah berkembang menjadi perusahaan global yang berfokus pada pendidikan forex dan sinyal perdagangan. Apa yang dimulai sebagai seminar tatap muka dan sinyal online awal telah berkembang menjadi platform tepercaya yang digunakan oleh ribuan trader di seluruh dunia.",
+      "paragraph2": "Bagian penting dari pekerjaan kami adalah Strategi Breakout kami, sebuah metode perdagangan terbukti yang dirancang untuk mengenali pergerakan pasar yang kuat sejak dini. Strategi ini merupakan inti dari sinyal dan edukasi kami, membantu trader membuat keputusan yang lebih konsisten dan tepat.",
+      "paragraph3": "Kini berbasis di Kosta Rika, tujuan kami tetap sama: membantu para trader membangun kepercayaan diri, meningkatkan keterampilan mereka, dan berupaya menuju kemandirian finansial di pasar forex.",
+      "paragraph4": "1st Forex yang terkemuka adalah CEO kami, Marie Josée Bergeron, yang memiliki pengalaman lebih dari 22 tahun dalam perdagangan valas. Visinya untuk membangun perusahaan perdagangan yang kuat dan komunitas pedagang nyata telah membentuk semua yang kami lakukan.",
+      "paragraph5": "Dia didukung oleh tim pedagang dan spesialis produk terampil yang membantu menjaga strategi, sinyal, dan platform kami tetap jelas, modern, dan efektif."
+    },
+    "mission": {
+      "title": "Misi kami",
+      "paragraph1": "Misi kami sederhana namun kuat: Memberdayakan Perjalanan Trading Anda. Kami bertujuan untuk menginspirasi dan membimbing para trader di setiap tahap, membantu mereka menavigasi kompleksitas pasar forex dengan percaya diri dan keterampilan.",
+      "paragraph2": "Bergabunglah dengan keluarga 1st Forex dan jadilah bagian dari warisan di mana semangat bertemu dengan presisi, dan tradisi bertemu dengan inovasi. Bersama-sama, kita akan mewujudkan impian menjadi kemandirian finansial dan penguasaan perdagangan."
+    },
+    "community": {
+      "title": "Lebih Dari Sekadar Bisnis — Sebuah Komunitas",
+      "description": "Di 1st Forex, kami tidak hanya melihat diri kami sebagai sebuah perusahaan—kami adalah keluarga pedagang. Misi kami lebih dari sekedar mengajar dan berdagang; ini tentang membangun komunitas global di mana para pedagang dapat terhubung, berbagi, dan tumbuh bersama.",
+      "secondaryDescription": "Dari bimbingan yang dipersonalisasi hingga forum interaktif, kami berkomitmen untuk menciptakan lingkungan yang mendukung di mana setiap trader dapat berkembang."
+    },
+    "legacy": {
+      "title": "Warisan Keunggulan",
+      "paragraph1": "Di belakang 1st Forex terdapat tim veteran forex yang dinamis dan beragam, trader muda yang sukses, dan spesialis produk.",
+      "paragraph2": "Perpaduan unik antara pengalaman dan inovasi memungkinkan kami untuk tetap menjadi yang terdepan dalam tren pasar dan memberikan nilai yang tak tertandingi kepada komunitas kami.",
+      "cards": {
+        "0": {
+          "title": "Veteran Valas",
+          "description": "Keahlian perdagangan selama puluhan tahun memberikan landasan bagi pendidikan dan strategi kami."
+        },
+        "1": {
+          "title": "Inovator Muda",
+          "description": "Perspektif segar dan teknik perdagangan modern menjadikan kami terdepan."
+        },
+        "2": {
+          "title": "Spesialis Produk",
+          "description": "Data, desain, dan teknik mendukung alat yang digunakan pedagang untuk meninjau sinyal dan mengelola alur kerja mereka."
+        },
+        "3": {
+          "title": "Tim Dukungan Tingkat Atas",
+          "description": "Para profesional kami yang berpengalaman dan berdedikasi bekerja tanpa kenal lelah untuk memastikan pengalaman yang lancar bagi setiap trader di komunitas kami."
+        }
+      }
+    }
+  },
+  "Academy": {
+    "badge": "Akademi Perdagangan",
+    "title": "Gerbang Anda Menuju Kesuksesan Forex",
+    "description": "Sejak tahun 2004, 1st Forex Trading Academy telah memberdayakan para trader di seluruh dunia dengan pendidikan forex tingkat atas. Baik Anda seorang calon trader yang memulai dari awal atau profesional berpengalaman yang ingin menyempurnakan strategi Anda, kursus komprehensif dan interaktif kami dirancang untuk meningkatkan perjalanan trading Anda.",
+    "signup": "Mendaftar",
+    "free": "Bebas",
+    "reviews": "(Ulasan {count})",
+    "why": {
+      "badge": "Mengapa kita",
+      "start": "Mengapa",
+      "highlight": "Pilih Kami?"
+    },
+    "about": {
+      "badge": "Akademi",
+      "title": "Tentang Kami",
+      "imageAlt": "Kursus akademi forex",
+      "paragraph1": "Di Akademi Perdagangan 1st Forex, kami menggabungkan pengalaman hampir dua dekade dengan teknologi modern untuk memberikan pengalaman belajar yang unik dan efektif.",
+      "paragraph2": "Berbasis di Kosta Rika, akademi kami adalah pusat global bagi para pedagang yang ingin mencapai kemandirian finansial dan menguasai pasar valas.",
+      "paragraph3": "Kursus online kami menawarkan panduan langkah demi langkah untuk trader di semua tingkatan. Pemula memulai dengan dasar-dasar dan membangun landasan pengetahuan yang kuat.",
+      "paragraph4": "Trader tingkat lanjut mempelajari strategi profesional, termasuk Sistem Breakout kami yang dilindungi hak cipta dan teruji ulang.",
+      "paragraph5": "Kami lebih dari sekedar akademi. Kami adalah komunitas dan keluarga pedagang, yang berdedikasi pada lingkungan yang inklusif dan mendukung di mana setiap orang dapat berkembang."
+    },
+    "vision": {
+      "badge": "Penglihatan",
+      "title": "Visi kami",
+      "description": "Untuk menjadikan pendidikan forex terjangkau, efektif, dan dapat diakses oleh trader di seluruh dunia. Dengan menggabungkan metode pengajaran yang telah terbukti dengan alat perdagangan praktis, kami bertujuan untuk membangun komunitas berkembang yang dilengkapi dengan pengetahuan, disiplin, dan kepercayaan pasar."
+    },
+    "courses": {
+      "badge": "Mempelajari",
+      "start": "Kita",
+      "highlight": "Kursus",
+      "courseTitle": "Kursus Forex Lengkap",
+      "courseDescription": "Dapatkan akses ke kursus lengkap kami, termasuk Sistem Breakout eksklusif, kuis, dan modul interaktif.",
+      "referral": "Referensikan 3 teman dan terima sinyal gratis selama 1 bulan"
+    },
+    "approach": {
+      "badge": "Kisah kami",
+      "title": "Pendekatan Unik Kami",
+      "paragraph1": "Yang membedakan kami adalah kemampuan kami memadukan tradisi dengan inovasi. Isi kursus kami berakar pada strategi yang telah terbukti dan disempurnakan sejak tahun 2004 dan didukung oleh alat-alat praktis.",
+      "paragraph2": "Dari sinyal perdagangan hingga alat platform, sumber daya kami melengkapi pendidikan Anda dan membantu Anda membuat keputusan perdagangan yang lebih jelas.",
+      "imageAlt": "Sertifikat pembelajaran akademi"
+    },
+    "offer": {
+      "title": "Bergabunglah dengan",
+      "specialTitle": "Keluarga 1st Forex",
+      "description": "Di Akademi Perdagangan 1st Forex, kami lebih dari sekadar platform pendidikan. Kami adalah mitra seumur hidup dalam perjalanan perdagangan Anda.",
+      "secondaryDescription": "Baik Anda mengambil langkah pertama dalam trading atau mempertajam strategi tingkat lanjut, kami siap memandu, mendukung, dan merayakan pencapaian Anda.",
+      "subDescription": "Daftar hari ini dan mulailah perjalanan Anda menuju kebebasan finansial. Bersama-sama, kita akan mewujudkan tujuan trading Anda."
+    },
+    "cta": {
+      "signals": "Sinyal Perdagangan",
+      "academy": "Akademi"
+    }
+  },
+  "Signal": {
+    "badge": "Sinyal Perdagangan 1st Forex",
+    "title": "Sinyal Perdagangan Dibangun berdasarkan Pengalaman Pasar selama 20 Tahun",
+    "description": "Dapatkan sinyal forex terstruktur yang didukung oleh kinerja historis, eksekusi disiplin, dan perencanaan perdagangan praktis.",
+    "tradingSignals": "Sinyal Perdagangan",
+    "academy": "Akademi",
+    "logoAlt": "Logo 1stForex",
+    "offersBadge": "Penawaran",
+    "overview": {
+      "paragraph1": "Sinyal Perdagangan 1st Forex menggabungkan 20 tahun keahlian pasar dengan Sistem Breakout berhak cipta kami untuk mendukung proses perdagangan yang lebih disiplin.",
+      "paragraph2": "Proses kami meninjau struktur pasar, tingkat risiko, dan perilaku historis untuk memberikan sinyal yang jelas langsung ke dasbor dan pengalaman seluler Anda.",
+      "paragraph3": "Dengan dukungan berkelanjutan, akses ke tim trading yang berpengalaman, dan komunitas forex yang berkembang, trading tingkat profesional kini semakin mudah diakses."
+    },
+    "offer": {
+      "title": "Apa",
+      "highlight": "Kami Menawarkan",
+      "description": "Di 1st Forex, platform sinyal kami memadukan pengalaman pasar selama puluhan tahun dengan analisis terstruktur dan tingkat perdagangan yang jelas.",
+      "secondaryDescription": "Dengan pengujian ulang selama 20 tahun, setiap sinyal ditinjau berdasarkan proses yang disiplin dan kondisi pasar di sekitarnya."
+    },
+    "banner": {
+      "quote": "Bayangkan memiliki pengalaman pasar selama dua puluh tahun, perencanaan perdagangan terstruktur, dan pedagang berpengalaman di balik proses tersebut. 1st Forex menghadirkan sinyal, analisis, dan edukasi ke dalam satu platform praktis sehingga trader dapat bergerak dengan lebih jelas dan disiplin.",
+      "description": "Dengan Sinyal Perdagangan 1st Forex, Anda tidak hanya menerima peringatan. Anda memasuki ekosistem perdagangan yang didukung dan berdasarkan data yang dirancang untuk membantu Anda mempelajari, meninjau, dan mengeksekusi dengan lebih percaya diri."
+    },
+    "plans": {
+      "start": "Sinyal",
+      "highlight": "Rencana",
+      "groups": {
+        "rules": {
+          "title": "Berbasis Aturan",
+          "highlight": "Proses Sinyal",
+          "cards": {
+            "0": {
+              "title": "Hapus Manajemen Sinyal",
+              "description": "Lacak sinyal yang andal, level perdagangan, dan konteks historis dari satu platform."
+            },
+            "1": {
+              "title": "Perencanaan Sadar Risiko",
+              "description": "Gunakan tingkat entri, hentikan kerugian, dan ambil untung untuk menyelaraskan setiap sinyal dengan rencana risiko pribadi Anda."
+            }
+          }
+        },
+        "mentor": {
+          "title": "Pedagang Pribadi",
+          "highlight": "Bimbingan",
+          "cards": {
+            "0": {
+              "title": "Bimbingan Ahli",
+              "description": "Bekerja samalah dengan trader berpengalaman untuk menafsirkan sinyal, menyempurnakan strategi, dan meningkatkan proses Anda."
+            },
+            "1": {
+              "title": "Dukungan Lengkap",
+              "description": "Gabungkan aplikasi, sinyal, pendidikan, dan wawasan manusia dalam satu alur kerja praktis."
+            },
+            "2": {
+              "title": "Strategi yang Disesuaikan",
+              "description": "Sesuaikan pendekatan perdagangan Anda dengan dukungan profesional dan bangun kepercayaan diri seiring berjalannya waktu."
+            }
+          }
+        },
+        "app": {
+          "title": "Sinyal Berbasis Aplikasi dengan",
+          "highlight": "Dukungan Pedagang",
+          "cards": {
+            "0": {
+              "title": "Peringatan Waktu Nyata",
+              "description": "Terima sinyal langsung di aplikasi seluler Anda dengan pemberitahuan push instan."
+            },
+            "1": {
+              "title": "Wawasan Cerdas",
+              "description": "Tinjau kondisi pasar, pola historis, dan preferensi risiko sebelum bertindak berdasarkan sinyal."
+            },
+            "2": {
+              "title": "Transparansi Penuh",
+              "description": "Analisis grafik langsung, tinjau sinyal masa lalu, dan pahami alasan di balik setiap perdagangan."
+            },
+            "3": {
+              "title": "Dukungan Berkelanjutan",
+              "description": "Dapatkan bantuan dengan pertanyaan platform, akses sinyal, dan alur kerja perdagangan Anda."
+            }
+          }
+        }
+      }
+    },
+    "keyOfferings": {
+      "start": "Kunci",
+      "highlight": "Penawaran",
+      "cards": {
+        "0": {
+          "title": "Solusi Sinyal Terstruktur",
+          "description": "Gunakan level sinyal yang jelas dan proses yang disiplin untuk mengidentifikasi peluang perdagangan."
+        },
+        "1": {
+          "title": "Analisis Adaptif",
+          "description": "Analisis pasar yang menyesuaikan dengan perubahan kondisi dan menjaga konteks tetap terlihat."
+        },
+        "2": {
+          "title": "Antarmuka yang Ramah Pengguna",
+          "description": "Platform yang bersih dan intuitif untuk navigasi yang lancar dan pengambilan keputusan yang percaya diri."
+        },
+        "3": {
+          "title": "Hasil Terbukti",
+          "description": "Data yang telah diuji ulang selama dua dekade dan penyempurnaan terus-menerus mendukung sinyal kami."
+        },
+        "4": {
+          "title": "Dukungan & Komunitas",
+          "description": "Bantuan berkelanjutan, trader berpengalaman, dan jaringan rekanan global."
+        }
+      }
+    }
+  },
+  "Community": {
+    "badge": "Masyarakat",
+    "title": "Selamat datang di Komunitas 1st Forex",
+    "description": "Tempat di mana para trader forex dari semua tingkatan berkumpul sebagai sebuah keluarga untuk belajar, tumbuh, dan mendukung satu sama lain. Baik Anda baru memulai atau profesional berpengalaman, komunitas kami dirancang untuk membantu Anda maju dalam perjalanan trading Anda.",
+    "logoAlt": "Logo 1stForex",
+    "join": {
+      "title": "Suara Anda, Komunitas Anda",
+      "description": "Baik Anda di sini untuk belajar, berbagi, atau berkembang, Komunitas 1st Forex adalah tempat untuk terhubung dengan orang-orang yang berpikiran sama dan membawa perdagangan Anda ke tingkat berikutnya.",
+      "button": "Bergabunglah dengan Kami Sekarang"
+    },
+    "how": {
+      "badge": "Dapatkan 1st Forex",
+      "title": "Cara Bergabung dengan",
+      "highlight": "Percakapan?",
+      "point1": "Buat akun 1st Forex untuk mengakses blog, sinyal, dan kursus.",
+      "point2": "Terlibat dengan mengajukan pertanyaan, berbagi wawasan, dan mengajukan status kontributor."
+    },
+    "offers": {
+      "start": "Apa",
+      "highlight": "Kami Menawarkan?",
+      "cards": {
+        "0": {
+          "title": "Tanya Jawab Interaktif",
+          "points": {
+            "0": "Ada pertanyaan? Tanyakan langsung pada postingan dari kontributor kami yang disetujui.",
+            "1": "Kontributor dapat merespons secara pribadi atau berbagi pertanyaan dan jawaban secara publik sehingga semua orang mendapat manfaat."
+          }
+        },
+        "1": {
+          "title": "Blog Video Harian dan Pertanyaan yang Disiapkan",
+          "points": {
+            "0": "Akses konten video reguler untuk trader di setiap level.",
+            "1": "Jelajahi saran praktis, strategi, dan tips untuk meningkatkan keterampilan trading Anda."
+          }
+        },
+        "2": {
+          "title": "Lamar Menjadi Blogger",
+          "points": {
+            "0": "Bergairah tentang forex? Ajukan permohonan untuk berkontribusi pada blog kami.",
+            "1": "Blogger yang disetujui dapat berbagi strategi, pengalaman, dan pengetahuan dengan komunitas."
+          }
+        },
+        "3": {
+          "title": "Diskusi Kinerja Mingguan",
+          "points": {
+            "0": "Renungkan kinerja minggu ini dengan sesama trader.",
+            "1": "Bagikan wawasan, diskusikan strategi, dan rayakan kemenangan bersama."
+          }
+        }
+      }
+    }
+  },
+  "Faq": {
+    "badge": "Bagian Bantuan",
+    "title": "FAQ & Dukungan Pengguna",
+    "searchPlaceholder": "Bantuan apa yang Anda perlukan?",
+    "allFaqs": "Semua FAQ",
+    "noResults": "Tidak ada FAQ yang cocok dengan permintaan pencarian Anda.",
+    "questions": {
+      "0": {
+        "question": "Di mana saya memulai?",
+        "answer": "Mulailah dengan membuat akun gratis Anda. Setelah akun Anda aktif, buka bagian Memulai di dasbor Anda dan pilih salah satu mitra broker yang direkomendasikan.",
+        "points": {
+          "0": "Buat akun demo dan akun perdagangan live dengan broker Anda.",
+          "1": "Gunakan akun demo untuk berlatih dan merasa nyaman dengan platform trading.",
+          "2": "Gunakan akun live hanya ketika Anda siap berdagang dengan dana sungguhan.",
+          "3": "Selesaikan kursus pendidikan gratis, lalu mulai uji coba berlangganan sinyal Anda saat Anda siap."
+        }
+      },
+      "1": {
+        "question": "Apa perbedaan antara akun demo dan akun live?",
+        "answer": "Akun demo menggunakan dana virtual, sehingga Anda dapat berlatih di lingkungan simulasi pasar tanpa mempertaruhkan uang sungguhan. Akun live menggunakan dana nyata yang disimpan di broker Anda, sehingga keuntungan dan kerugian secara langsung memengaruhi saldo akun Anda.",
+        "subDescription": "Kami sangat menyarankan agar Anda terbiasa dengan platform dan sinyal di akun demo sebelum berdagang dengan dana sungguhan."
+      },
+      "2": {
+        "question": "Di mana saya mengunduh MetaTrader 5 (MT5)?",
+        "answer": "MT5 dapat diunduh langsung dari situs broker Anda, biasanya di bagian yang disebut Unduhan, Platform, atau Platform Perdagangan.",
+        "points": {
+          "0": "Nomor akun atau ID login",
+          "1": "Kata sandi",
+          "2": "Nama server"
+        },
+        "subDescription": "Setelah MT5 terinstal, masuklah dengan kredensial akun yang disediakan oleh broker Anda. Jika Anda memerlukan bantuan untuk menghubungkan akun Anda, tim dukungan kami dapat memandu Anda."
+      },
+      "3": {
+        "question": "Bagaimana saya tahu broker mana yang terbaik untuk saya?",
+        "answer": "Broker terbaik bergantung pada negara tempat tinggal Anda, preferensi pendanaan, dan kebutuhan perdagangan. Kami mencantumkan broker terpilih yang menawarkan spread kompetitif, eksekusi andal, dan platform ramah pengguna.",
+        "subDescription": "TMGM umumnya direkomendasikan karena kemudahan penggunaannya, pilihan pendanaan, dan umpan balik klien. Setiap broker yang terdaftar di platform telah dipilih karena memenuhi standar kualitas dan keandalan kami."
+      },
+      "4": {
+        "question": "Bagaimana jika saya berlokasi di Amerika Serikat?",
+        "answer": "Peraturan perdagangan valas dan CFD di Amerika Serikat berbeda dengan banyak negara lain, dan beberapa broker internasional tidak menerima penduduk AS.",
+        "subDescription": "Untuk pedagang yang berbasis di AS, broker seperti OANDA dan Forex.com mungkin lebih cocok karena mereka beroperasi sesuai dengan persyaratan peraturan AS."
+      },
+      "5": {
+        "question": "Dimana saya bisa menemukan link brokernya?",
+        "answer": "Tautan broker yang direkomendasikan tersedia di bagian Memulai di dasbor Anda.",
+        "points": {
+          "0": "Tautan pendaftaran broker",
+          "1": "Informasi pengunduhan platform",
+          "2": "Detail pengaturan khusus broker",
+          "3": "Sumber daya tambahan untuk membantu Anda memulai"
+        }
+      },
+      "6": {
+        "question": "Apa itu sinyal perdagangan?",
+        "answer": "Sinyal perdagangan adalah ide perdagangan yang dihasilkan melalui analisis kepemilikan dan riset pasar.",
+        "points": {
+          "0": "Harga masuk",
+          "1": "Hentikan kerugian",
+          "2": "Ambil target keuntungan",
+          "3": "Arah perdagangan, seperti beli atau jual"
+        },
+        "subDescription": "Anggota dapat memilih untuk menerima sinyal apa pun atau tidak. Semua keputusan perdagangan tetap menjadi tanggung jawab masing-masing pedagang."
+      },
+      "7": {
+        "question": "Apakah sinyal trading dijamin menguntungkan?",
+        "answer": "Tidak. Pasar keuangan mengandung risiko, dan tidak ada strategi perdagangan atau layanan sinyal yang dapat menjamin keuntungan.",
+        "subDescription": "Kami bertujuan untuk memberikan analisis dan peluang perdagangan berkualitas tinggi, namun semua perdagangan memiliki kemungkinan kerugian."
+      },
+      "8": {
+        "question": "Bagaimana cara mendanai akun perdagangan saya?",
+        "answer": "Opsi pendanaan bervariasi tergantung pada broker yang Anda pilih. Broker yang paling direkomendasikan menawarkan beberapa metode deposit.",
+        "points": {
+          "0": "Transfer bank",
+          "1": "Kartu kredit atau debit",
+          "2": "Mata uang kripto, seperti USDT, jika tersedia",
+          "3": "Metode pembayaran lokal, bergantung pada negara Anda"
+        },
+        "subDescription": "Untuk melihat metode pendanaan yang tersedia bagi Anda, masuk ke portal klien broker Anda setelah membuka akun Anda. Opsi yang tersedia berbeda-beda menurut broker dan wilayah."
+      },
+      "9": {
+        "question": "Berapa banyak uang yang saya perlukan untuk memulai?",
+        "answer": "Setoran minimum bervariasi menurut broker. Banyak broker yang direkomendasikan mengizinkan pembukaan akun dengan deposit yang relatif kecil.",
+        "subDescription": "Kami merekomendasikan untuk memulai dengan jumlah yang Anda rasa nyaman untuk dipertaruhkan dan fokus pada manajemen risiko yang tepat daripada ukuran akun."
+      },
+      "10": {
+        "question": "Bisakah saya menyalin perdagangan secara otomatis?",
+        "answer": "Tidak. Saat Anda menerima sinyal, Anda harus memasukkan informasi perdagangan secara manual ke MT5, termasuk harga masuk, stop loss, dan take profit."
+      },
+      "11": {
+        "question": "Pasar apa yang dicakup oleh sinyal Anda?",
+        "answer": "Sinyal kami terutama berfokus pada pasangan mata uang utama. Cakupan pasar dapat diperluas berdasarkan peluang yang tersedia dan kondisi pasar."
+      },
+      "12": {
+        "question": "Jam berapa sinyal dikirim?",
+        "answer": "Sinyal dikirim setiap kali peluang kualifikasi diidentifikasi oleh tim analisis. Tidak ada jadwal tetap karena kondisi pasar menentukan kapan perdagangan dilakukan.",
+        "subDescription": "Sinyal tersedia dari pembukaan pasar pada hari Minggu pukul 17.00 EST hingga Jumat pukul 17.00 EST. Pemberitahuan dikirimkan melalui platform dan saluran komunikasi yang terhubung."
+      },
+      "13": {
+        "question": "Apakah saya memerlukan pengalaman perdagangan sebelumnya?",
+        "answer": "Tidak. Platform ini dirancang untuk pemula dan trader berpengalaman.",
+        "subDescription": "Trader baru dapat memulai dengan sumber daya pendidikan dan akun demo, sementara trader berpengalaman dapat langsung menggunakan sinyal dan analisis pasar."
+      },
+      "14": {
+        "question": "Bagaimana cara membatalkan langganan saya?",
+        "answer": "Anda dapat mengelola atau membatalkan langganan Anda kapan saja melalui dasbor akun Anda.",
+        "subDescription": "Akses ke layanan premium tetap aktif hingga akhir periode penagihan Anda saat ini."
+      },
+      "15": {
+        "question": "Bisakah saya menggunakan ponsel saya untuk berdagang?",
+        "answer": "Ya. MT5 tersedia untuk perangkat iOS dan Android. Anda dapat memantau perdagangan, menerima sinyal, dan mengelola posisi langsung dari ponsel cerdas atau tablet Anda."
+      },
+      "16": {
+        "question": "Apakah Anda mengelola dana klien?",
+        "answer": "Tidak. 1stForex tidak menerima deposit atau mengelola dana klien.",
+        "subDescription": "Semua akun perdagangan dipegang langsung pada broker yang Anda pilih. Anda tetap memegang kendali penuh atas akun dan keputusan perdagangan Anda setiap saat."
+      }
+    },
+    "features": {
+      "0": {
+        "title": "Obrolan Langsung",
+        "description": "Dapatkan bantuan dari tim dukungan kami"
+      },
+      "1": {
+        "title": "Dukungan Email",
+        "description": "Dapatkan bantuan dari tim dukungan kami"
+      },
+      "2": {
+        "title": "Minta panggilan balik",
+        "description": "Minta tim dukungan kami untuk menghubungi Anda"
+      }
+    },
+    "knowledgeBase": "Basis Pengetahuan",
+    "readMore": "Baca FAQ selengkapnya"
+  },
+  "NotFound": {
+    "title": "Ups!",
+    "imageAlt": "404 halaman tidak ditemukan",
+    "homeIconAlt": "Rumah",
+    "goHome": "Pulang"
+  }
+}

@@ -9,8 +9,10 @@ import Courses from "./Cousrses";
 import UniqueApproach from "./UniqueApproach";
 import HeadTypography from "@/src/styled/HeadTypography";
 import OfferSection from "./OfferSection";
+import { useTranslations } from "next-intl";
 
 const Academy = () => {
+  const t = useTranslations("Academy");
   return (
     <Box
       sx={{
@@ -31,10 +33,10 @@ const Academy = () => {
           }}
         >
           <Hero
-            badgeTitle="Trading Academy"
+            badgeTitle={t("badge")}
             bgImagePath="/HomeHeroBg.jpg"
-            title="Your Gateway to Forex Success"
-            description="Since 2004, 1st Forex Trading Academy has been empowering traders worldwide with top-tier forex education. Whether you're an aspiring trader starting from scratch or a seasoned professional seeking to refine your strategies, our comprehensive, interactive courses are designed to elevate your trading journey."
+            title={t("title")}
+            description={t("description")}
           >
             <CtaSection />
           </Hero>
@@ -57,15 +59,15 @@ const Academy = () => {
           }}
         >
           <Carousel
-            badgeTitle="Why us"
+            badgeTitle={t("why.badge")}
             headerLeft
             cards={whyUsCardsData}
             isCarousel
           >
             <HeadTypography color="#333">
-              Why{" "}
+              {t("why.start")}{" "}
               <span style={{ color: "var(--primary-400-base, #F30)" }}>
-                Choose Us?
+                {t("why.highlight")}
               </span>
             </HeadTypography>
           </Carousel>

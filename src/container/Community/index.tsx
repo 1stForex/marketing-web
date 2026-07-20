@@ -4,8 +4,10 @@ import OfferSection from "./OfferSection";
 import Offer from "@/src/components/Offer";
 import JoinSection from "./JoinSection";
 import communityMobile from "@/src/assets/images/mobile-community.png";
+import { useTranslations } from "next-intl";
 
 export default function Community() {
+  const t = useTranslations("Community");
   return (
     <Box
       sx={{
@@ -44,12 +46,12 @@ export default function Community() {
         </Box>
       </Container>
       <Offer
-        badgeTitle="Get 1st Forex"
-        title="How to Join the"
-        specialTitle="Conversation?"
+        badgeTitle={t("how.badge")}
+        title={t("how.title")}
+        specialTitle={t("how.highlight")}
         points={[
-          "Create an account on 1st Forex to access the blog, signals, and courses.",
-          "Engage with content by asking questions, sharing insights, and applying for contributor status. ",
+          t("how.point1"),
+          t("how.point2"),
         ]}
         imageUrl={communityMobile.src}
       />

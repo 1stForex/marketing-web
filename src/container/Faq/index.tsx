@@ -3,8 +3,15 @@ import { Box, Container } from "@mui/material";
 import FeaturesSection from "../../components/FeaturesSection";
 import AllFAQs from "./AllFAQs";
 import { faqFeaturesData } from "@/src/const/faqFeaturesData";
+import { useTranslations } from "next-intl";
 
 const Faq = () => {
+  const t = useTranslations("Faq");
+  const features = faqFeaturesData.map((feature, index) => ({
+    ...feature,
+    title: index === 1 ? feature.title : t(`features.${index}.title`),
+    description: t(`features.${index}.description`),
+  }));
   return (
     <Container maxWidth="xl">
       <Box
@@ -27,11 +34,11 @@ const Faq = () => {
         }}
       >
         <Hero
-          badgeTitle="Help Section"
+          badgeTitle={t("badge")}
           bgImagePath="/FaqSupportBg.jpg"
-          title="FAQ & User Support"
+          title={t("title")}
         >
-          <FeaturesSection features={faqFeaturesData} />
+          <FeaturesSection features={features} />
         </Hero>
 
         <AllFAQs />

@@ -4,8 +4,10 @@ import Link from "next/link";
 import NotFoundImage from "@/src/assets/images/404.png";
 import CustomButton from "@/src/components/Button";
 import Home from "@/src/assets/icons/home.svg";
+import { getTranslations } from "next-intl/server";
 
-export default function NotFound() {
+export default async function NotFound() {
+  const t = await getTranslations("NotFound");
   return (
     <Container maxWidth="xl">
       <Box
@@ -49,7 +51,7 @@ export default function NotFound() {
             },
           }}
         >
-          Oops!
+          {t("title")}
         </Typography>
         <Box
           sx={{
@@ -61,7 +63,7 @@ export default function NotFound() {
         >
           <Image
             src={NotFoundImage}
-            alt="404 Not Found"
+            alt={t("imageAlt")}
             fill
             priority
             style={{
@@ -75,7 +77,7 @@ export default function NotFound() {
             icon={
               <Image
                 src={Home}
-                alt="Home Icon"
+                alt={t("homeIconAlt")}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -83,7 +85,7 @@ export default function NotFound() {
               />
             }
           >
-            Go Home
+            {t("goHome")}
           </CustomButton>
         </Box>
       </Box>

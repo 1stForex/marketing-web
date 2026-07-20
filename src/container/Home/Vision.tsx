@@ -2,14 +2,12 @@
 import { Box, Container, useMediaQuery } from "@mui/material";
 import Badge from "@/src/components/Badge";
 import BaseTypography from "@/src/styled/BaseTypography";
+import { useTranslations } from "next-intl";
 
 const Vision = () => {
-  const firstHalfText = `"To empower a global community of traders by blending two decades
-          of expertise with practical technology, delivering clear
-          forex education, structured signals, and useful trading
-          solutions that inspire financial growth and confidence.`;
-  const secondHalfText = `At 1st Forex, we are shaping the future of trading by building a
-          connected, adaptive, and results-driven community."`;
+  const t = useTranslations("Home.vision");
+  const firstHalfText = t("first");
+  const secondHalfText = t("second");
 
   const isTabView = useMediaQuery("(min-width: 768px)");
   const textToDisplay = isTabView
@@ -49,7 +47,7 @@ const Vision = () => {
             },
           }}
         >
-          <Badge title="Vision Statement" />
+          <Badge title={t("badge")} />
         </Box>
 
         <BaseTypography
@@ -58,7 +56,7 @@ const Vision = () => {
             fontWeight: 600,
             lineHeight: "144%",
             maxWidth: "802px",
-            textAlign: "left",
+            textAlign: "start",
             "@media (max-width: 992px)": {
               fontSize: "20px",
               textAlign: "center",
@@ -74,7 +72,7 @@ const Vision = () => {
             fontWeight: 600,
             lineHeight: "144%",
             maxWidth: "802px",
-            textAlign: "left",
+            textAlign: "start",
             "@media (max-width: 992px)": {
               fontSize: "20px",
               textAlign: "center",

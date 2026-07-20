@@ -3,12 +3,25 @@
 import { Box, Typography } from "@mui/material";
 import CustomInputField from "@/src/components/CustomInputField";
 import SearchGrey from "@/src/assets/icons/search-grey.svg";
-import { allQuestions } from "../../const/allQuestions";
 import { useState } from "react";
 import CustomAccordian from "@/src/components/CustomAccordian";
 import HeadTypography from "@/src/styled/HeadTypography";
+import { useTranslations } from "next-intl";
+import { FAQQuestionProps } from "@/src/types/FAQQuestion.interface";
 
 const AllFAQs = () => {
+  const t = useTranslations("Faq");
+  const allQuestions = Object.values(
+    t.raw("questions") as Record<
+      string,
+      Omit<FAQQuestionProps, "points"> & {
+        points?: Record<string, string>;
+      }
+    >
+  ).map((question) => ({
+    ...question,
+    points: question.points ? Object.values(question.points) : undefined,
+  }));
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredQuestions = allQuestions.filter((question) =>
@@ -30,7 +43,7 @@ const AllFAQs = () => {
       }}
     >
       <CustomInputField
-        placeholder="What do you need help with?"
+        placeholder={t("searchPlaceholder")}
         icon={SearchGrey}
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
@@ -51,7 +64,7 @@ const AllFAQs = () => {
             },
           }}
         >
-          All FAQs
+          {t("allFaqs")}
         </HeadTypography>
 
         <Box
@@ -89,7 +102,7 @@ const AllFAQs = () => {
                 },
               }}
             >
-              No FAQs match your search query.
+              {t("noResults")}
             </Typography>
           )}
         </Box>
