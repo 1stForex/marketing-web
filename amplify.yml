@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - npm run build
+        - NEXT_PUBLIC_ENABLED_LOCALES=en,fr-CA,es-419,pt-BR,de,id,tr,vi,hi npm run build
   artifacts:
     baseDirectory: .next
     files:

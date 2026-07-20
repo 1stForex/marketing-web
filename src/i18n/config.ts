@@ -81,6 +81,9 @@ export type AppLocale = (typeof localeDefinitions)[number]["code"];
 export type TextDirection = "ltr" | "rtl";
 
 const localeCodes = new Set<string>(localeDefinitions.map(({ code }) => code));
+const DEFAULT_ENABLED_LOCALES = localeDefinitions
+  .map(({ code }) => code)
+  .join(",");
 
 export const matchLocale = (value?: string | null): AppLocale | null => {
   const candidate = value?.trim().replaceAll("_", "-");
@@ -113,7 +116,7 @@ export const normalizeLocale = (
 ): AppLocale => matchLocale(value) ?? fallback;
 
 const configuredLocales = (
-  process.env.NEXT_PUBLIC_ENABLED_LOCALES ?? DEFAULT_LOCALE
+  process.env.NEXT_PUBLIC_ENABLED_LOCALES ?? DEFAULT_ENABLED_LOCALES
 )
   .split(",")
   .map((locale) => matchLocale(locale))

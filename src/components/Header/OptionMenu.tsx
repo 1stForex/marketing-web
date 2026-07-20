@@ -21,6 +21,8 @@ export default function OptionMenu({ currentPath }: NavProps) {
     <Box
       sx={{
         display: "flex",
+        alignItems: "center",
+        gap: "7px",
       }}
     >
       <Box
@@ -89,22 +91,34 @@ export default function OptionMenu({ currentPath }: NavProps) {
               {t("login")}
             </CustomButton>
           </Box>
-          <CustomButton
-            variant="red"
-            icon={
-              <Image
-                src={userSvg}
-                alt="User Icon"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                }}
-              />
-            }
-            onClick={() => openExternalUrl(RedirectUrls.REGISTER_URL)}
+          <Box
+            sx={{
+              "@media (max-width: 360px)": {
+                "& .register-label": { display: "none" },
+              },
+            }}
           >
-            {t("register")}
-          </CustomButton>
+            <CustomButton
+              ariaLabel={t("register")}
+              variant="red"
+              icon={
+                <Image
+                  src={userSvg}
+                  alt=""
+                  aria-hidden="true"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                  }}
+                />
+              }
+              onClick={() => openExternalUrl(RedirectUrls.REGISTER_URL)}
+            >
+              <Box component="span" className="register-label">
+                {t("register")}
+              </Box>
+            </CustomButton>
+          </Box>
         </Box>
       </Box>
       {isSmallScreen && (
@@ -113,6 +127,16 @@ export default function OptionMenu({ currentPath }: NavProps) {
             display: "flex",
             alignItems: "center",
             marginInlineStart: "auto",
+          }}
+        >
+          <LanguageSwitcher compact />
+        </Box>
+      )}
+      {isSmallScreen && (
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
           }}
         >
           <TemporaryDrawer currentPath={currentPath} />

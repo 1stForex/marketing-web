@@ -4,6 +4,7 @@ import React from "react";
 import { Button, styled, Box } from "@mui/material";
 
 export interface ButtonProps {
+  ariaLabel?: string;
   variant?: "red" | "white" | "transparent" | "topic" | "black";
   fontWeight?: string;
   gap?: string;
@@ -119,6 +120,7 @@ const StyledButton = styled(Button)<{
 }));
 
 const CustomButton: React.FC<ButtonProps> = ({
+  ariaLabel,
   variant = "red",
   onClick,
   gap = "8px",
@@ -134,6 +136,7 @@ const CustomButton: React.FC<ButtonProps> = ({
   href,
 }) => (
   <StyledButton
+    aria-label={ariaLabel}
     style={{ width, height, borderRadius, padding }}
     href={href}
     onClick={onClick}

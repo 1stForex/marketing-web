@@ -11,11 +11,13 @@ import { useState } from "react";
 import LocaleFlag from "./LocaleFlag";
 
 type LanguageSwitcherProps = {
+  compact?: boolean;
   fullWidth?: boolean;
   inverse?: boolean;
 };
 
 export default function LanguageSwitcher({
+  compact = false,
   fullWidth = false,
   inverse = false,
 }: LanguageSwitcherProps) {
@@ -45,7 +47,15 @@ export default function LanguageSwitcher({
   };
 
   return (
-    <FormControl size="small" fullWidth={fullWidth} sx={{ minWidth: 138 }}>
+    <FormControl
+      size="small"
+      fullWidth={fullWidth && !compact}
+      sx={{
+        minWidth: compact ? 54 : 138,
+        width: compact ? 54 : undefined,
+        flexShrink: 0,
+      }}
+    >
       <Select
         value={locale}
         disabled={isUpdating}
@@ -57,9 +67,17 @@ export default function LanguageSwitcher({
           if (!selected) return selectedLocale;
 
           return (
-            <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <Box
+              title={selected.nativeName}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: compact ? "center" : "flex-start",
+                gap: compact ? 0 : "8px",
+              }}
+            >
               <LocaleFlag flagCode={selected.flagCode} />
-              <Box component="span">{selected.nativeName}</Box>
+              {!compact && <Box component="span">{selected.nativeName}</Box>}
             </Box>
           );
         }}
@@ -85,6 +103,15 @@ export default function LanguageSwitcher({
           "& .MuiSvgIcon-root": {
             color: inverse ? "#FFF" : "#667185",
           },
+          ...(compact && {
+            "& .MuiSelect-select": {
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              paddingInlineStart: "7px",
+              paddingInlineEnd: "25px !important",
+            },
+          }),
         }}
       >
         {availableLocales.map(({ code, nativeName, flagCode }) => (
