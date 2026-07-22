@@ -8,19 +8,16 @@ import GroupButton from "./GroupButton";
 import OptionMenu from "./OptionMenu";
 import { usePathname } from "next/navigation";
 import { RoutesUrls } from "@/src/const/Enum";
-import { useLocale } from "next-intl";
 
-const DEFAULT_COMPACT_BREAKPOINT = 1599;
-const FRENCH_COMPACT_BREAKPOINT = 1799;
+const MOBILE_NAV_BREAKPOINT = 1299;
+const DENSE_DESKTOP_BREAKPOINT = 1799;
 
 export default function Header() {
   const currentPath = usePathname() as RoutesUrls;
-  const locale = useLocale();
-  const compactBreakpoint =
-    locale === "fr-CA"
-      ? FRENCH_COMPACT_BREAKPOINT
-      : DEFAULT_COMPACT_BREAKPOINT;
-  const isCompact = useMediaQuery(`(max-width: ${compactBreakpoint}px)`);
+  const isMobileNav = useMediaQuery(`(max-width: ${MOBILE_NAV_BREAKPOINT}px)`);
+  const isDenseDesktop = useMediaQuery(
+    `(min-width: ${MOBILE_NAV_BREAKPOINT + 1}px) and (max-width: ${DENSE_DESKTOP_BREAKPOINT}px)`,
+  );
 
   return (
     <Box
@@ -33,8 +30,12 @@ export default function Header() {
         padding: "0 40px",
         marginBottom: "30px",
 
-        "@media (max-width: 1400px)": {
-          padding: "0 20px",
+        "@media (max-width: 1599px)": {
+          padding: "0 24px",
+        },
+
+        "@media (max-width: 1399px)": {
+          padding: "0 16px",
         },
 
         "@media (max-width: 768px)": {
@@ -62,12 +63,13 @@ export default function Header() {
         }}
       >
         <Box
+          data-testid="marketing-header-row"
           sx={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             alignSelf: "stretch",
-            gap: "12px",
+            gap: isDenseDesktop ? "8px" : "12px",
           }}
         >
           <Box
@@ -79,21 +81,29 @@ export default function Header() {
               src={forexLogo}
               alt="Forex Logo"
               loading="lazy"
-              width={122}
+              width={isDenseDesktop ? 108 : 122}
               height={24}
+              style={{ height: "auto" }}
             />
           </Box>
-          {!isCompact && (
+          {!isMobileNav && (
             <Box sx={{ flexShrink: 0 }}>
-              <GroupButton currentPath={currentPath} />
+              <GroupButton
+                currentPath={currentPath}
+                dense={isDenseDesktop}
+              />
             </Box>
           )}
-          {!isCompact && (
-            <Box sx={{ flexShrink: 0 }}>
-              <NavLinks currentPath={currentPath} />
+          {!isMobileNav && (
+            <Box sx={{ flexShrink: 1, minWidth: 0 }}>
+              <NavLinks currentPath={currentPath} dense={isDenseDesktop} />
             </Box>
           )}
-          <OptionMenu currentPath={currentPath} compact={isCompact} />
+          <OptionMenu
+            currentPath={currentPath}
+            compact={isMobileNav}
+            dense={isDenseDesktop}
+          />
         </Box>
       </Box>
     </Box>

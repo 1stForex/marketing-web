@@ -3,7 +3,15 @@ import { NavProps } from "@/src/types/Nav.interface";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-export default function GroupButton({ currentPath, nav }: NavProps) {
+type GroupButtonProps = NavProps & {
+  dense?: boolean;
+};
+
+export default function GroupButton({
+  currentPath,
+  nav,
+  dense = false,
+}: GroupButtonProps) {
   const t = useTranslations("Navigation");
   const color = nav ? "#FFF" : "#333";
   const isActive = (href: string) => currentPath === href;
@@ -11,12 +19,12 @@ export default function GroupButton({ currentPath, nav }: NavProps) {
   const btnStyles = (isActive: boolean) => ({
     border: "1px solid #D0D5DD",
     display: "flex",
-    padding: "12px 16px",
+    padding: dense ? "10px 12px" : "12px 16px",
     alignItems: "center",
-    fontSize: "14px",
+    fontSize: dense ? "13px" : "14px",
     fontStyle: "normal",
     fontWeight: 600,
-    lineHeight: "20.3px",
+    lineHeight: dense ? "18px" : "20.3px",
     whiteSpace: "nowrap",
     textTransform: "none",
     color: isActive ? "#FFF" : color,

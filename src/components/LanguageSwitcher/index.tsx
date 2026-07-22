@@ -12,12 +12,14 @@ import LocaleFlag from "./LocaleFlag";
 
 type LanguageSwitcherProps = {
   compact?: boolean;
+  dense?: boolean;
   fullWidth?: boolean;
   inverse?: boolean;
 };
 
 export default function LanguageSwitcher({
   compact = false,
+  dense = false,
   fullWidth = false,
   inverse = false,
 }: LanguageSwitcherProps) {
@@ -51,8 +53,8 @@ export default function LanguageSwitcher({
       size="small"
       fullWidth={fullWidth && !compact}
       sx={{
-        minWidth: compact ? 54 : 138,
-        width: compact ? 54 : undefined,
+        minWidth: compact ? 54 : dense ? 104 : 138,
+        width: compact ? 54 : dense ? 104 : undefined,
         flexShrink: 0,
       }}
     >
@@ -77,7 +79,13 @@ export default function LanguageSwitcher({
               }}
             >
               <LocaleFlag flagCode={selected.flagCode} />
-              {!compact && <Box component="span">{selected.nativeName}</Box>}
+              {!compact && (
+                <Box component="span">
+                  {dense
+                    ? selected.nativeName.replace(/\s*\([^)]*\)$/, "")
+                    : selected.nativeName}
+                </Box>
+              )}
             </Box>
           );
         }}
@@ -88,11 +96,11 @@ export default function LanguageSwitcher({
           },
         }}
         sx={{
-          height: 42,
+          height: dense ? 40 : 42,
           borderRadius: "24px",
           background: inverse ? "rgba(255,255,255,0.08)" : "#FFF",
           color: inverse ? "#FFF" : "#333",
-          fontSize: 13,
+          fontSize: dense ? 12 : 13,
           fontWeight: 600,
           "& .MuiOutlinedInput-notchedOutline": {
             borderColor: inverse ? "rgba(255,255,255,0.32)" : "#D0D5DD",
@@ -110,6 +118,14 @@ export default function LanguageSwitcher({
               justifyContent: "center",
               paddingInlineStart: "7px",
               paddingInlineEnd: "25px !important",
+            },
+          }),
+          ...(dense && {
+            "& .MuiSelect-select": {
+              display: "flex",
+              alignItems: "center",
+              paddingInlineStart: "10px",
+              paddingInlineEnd: "28px !important",
             },
           }),
         }}

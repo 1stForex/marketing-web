@@ -16,9 +16,14 @@ import { useTranslations } from "next-intl";
 
 type OptionMenuProps = NavProps & {
   compact: boolean;
+  dense: boolean;
 };
 
-export default function OptionMenu({ currentPath, compact }: OptionMenuProps) {
+export default function OptionMenu({
+  currentPath,
+  compact,
+  dense,
+}: OptionMenuProps) {
   const t = useTranslations("Navigation");
 
   return (
@@ -26,7 +31,7 @@ export default function OptionMenu({ currentPath, compact }: OptionMenuProps) {
       sx={{
         display: "flex",
         alignItems: "center",
-        gap: "7px",
+        gap: dense ? "5px" : "7px",
       }}
     >
       <Box
@@ -36,7 +41,7 @@ export default function OptionMenu({ currentPath, compact }: OptionMenuProps) {
           height: "56px",
           alignItems: "center",
           justifyContent: "flex-end",
-          gap: "9px",
+          gap: dense ? "6px" : "9px",
           flexShrink: 0,
           flexDirection: compact ? "row-reverse" : "row",
         }}
@@ -45,20 +50,27 @@ export default function OptionMenu({ currentPath, compact }: OptionMenuProps) {
           sx={{
             display: "flex",
             alignItems: "center",
-            gap: "12px",
+            gap: dense ? "6px" : "12px",
             alignSelf: "stretch",
             ...(compact && { gap: "7px" }),
+            ...(dense && {
+              "& .MuiButton-root": {
+                padding: "11px 14px",
+                fontSize: "13px",
+                gap: "7px",
+              },
+            }),
           }}
         >
           {!compact && (
             <Box
               sx={{
                 display: "flex",
-                gap: ".5rem",
+                gap: dense ? "6px" : ".5rem",
               }}
             >
               <Box sx={{ display: "flex", alignItems: "center" }}>
-                <LanguageSwitcher />
+                <LanguageSwitcher dense={dense} />
               </Box>
               <CustomButton
                 variant="white"

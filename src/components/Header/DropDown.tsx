@@ -11,7 +11,14 @@ import ChevronDown from "@/src/assets/icons/chevron-down.svg";
 import { RoutesUrls } from "@/src/const/Enum";
 import { useTranslations } from "next-intl";
 
-export default function DropDown({ currentPath }: DropDownProps) {
+type ResponsiveDropDownProps = DropDownProps & {
+  dense?: boolean;
+};
+
+export default function DropDown({
+  currentPath,
+  dense = false,
+}: ResponsiveDropDownProps) {
   const t = useTranslations("Navigation");
   const isHighlighted = [RoutesUrls.ABOUT_US, RoutesUrls.CONTACT_US].includes(
     currentPath
@@ -58,7 +65,7 @@ export default function DropDown({ currentPath }: DropDownProps) {
           textTransform: "none",
           textAlign: "center",
           display: "flex",
-          gap: "8px",
+          gap: dense ? "5px" : "8px",
 
           "&:hover": {
             backgroundColor: "transparent",
@@ -68,10 +75,10 @@ export default function DropDown({ currentPath }: DropDownProps) {
       >
         <Typography
           sx={{
-            fontSize: "16px",
+            fontSize: dense ? "13px" : "16px",
             fontStyle: "normal",
             fontWeight: "600",
-            lineHeight: "23.2px",
+            lineHeight: dense ? "19px" : "23.2px",
             color: isHighlighted ? "#F30" : "#333",
             textDecoration: isHighlighted ? "underline" : "none",
           }}
