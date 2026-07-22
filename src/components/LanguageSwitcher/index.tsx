@@ -53,8 +53,8 @@ export default function LanguageSwitcher({
       size="small"
       fullWidth={fullWidth && !compact}
       sx={{
-        minWidth: compact ? 54 : dense ? 104 : 138,
-        width: compact ? 54 : dense ? 104 : undefined,
+        minWidth: compact ? 54 : dense ? 116 : 138,
+        width: compact ? 54 : dense ? 116 : undefined,
         flexShrink: 0,
       }}
     >
@@ -75,15 +75,21 @@ export default function LanguageSwitcher({
                 display: "flex",
                 alignItems: "center",
                 justifyContent: compact ? "center" : "flex-start",
-                gap: compact ? 0 : "8px",
+                gap: compact ? 0 : dense ? "6px" : "8px",
+                minWidth: 0,
               }}
             >
               <LocaleFlag flagCode={selected.flagCode} />
               {!compact && (
-                <Box component="span">
-                  {dense
-                    ? selected.nativeName.replace(/\s*\([^)]*\)$/, "")
-                    : selected.nativeName}
+                <Box
+                  component="span"
+                  sx={{
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {selected.shortName}
                 </Box>
               )}
             </Box>
@@ -110,6 +116,9 @@ export default function LanguageSwitcher({
           },
           "& .MuiSvgIcon-root": {
             color: inverse ? "#FFF" : "#667185",
+            right: dense ? 8 : 10,
+            width: 18,
+            height: 18,
           },
           ...(compact && {
             "& .MuiSelect-select": {
@@ -124,16 +133,19 @@ export default function LanguageSwitcher({
             "& .MuiSelect-select": {
               display: "flex",
               alignItems: "center",
-              paddingInlineStart: "10px",
-              paddingInlineEnd: "28px !important",
+              minWidth: 0,
+              paddingInlineStart: "9px",
+              paddingInlineEnd: "34px !important",
             },
           }),
         }}
       >
-        {availableLocales.map(({ code, nativeName, flagCode }) => (
+        {availableLocales.map(({ code, nativeName, shortName, flagCode }) => (
           <MenuItem key={code} value={code} sx={{ gap: "10px" }}>
             <LocaleFlag flagCode={flagCode} />
-            <Box component="span">{nativeName}</Box>
+            <Box component="span" title={nativeName}>
+              {shortName}
+            </Box>
           </MenuItem>
         ))}
       </Select>
