@@ -79,6 +79,7 @@
     "message": "Mensagem*",
     "messagePlaceholder": "Conte como podemos ajudar...",
     "messageHelper": "Compartilhe os principais detalhes para que a equipe encaminhe sua solicitação corretamente.",
+    "messageTooShort": "Digite pelo menos 20 caracteres.",
     "success": "Obrigado. Entraremos em contato em breve.",
     "error": "Revise o formulário e tente novamente.",
     "sending": "Enviando...",

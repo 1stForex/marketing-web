@@ -79,6 +79,7 @@
     "message": "Nachricht*",
     "messagePlaceholder": "Wie können wir Ihnen helfen?",
     "messageHelper": "Teilen Sie die wichtigsten Details mit, damit das Team Ihre Anfrage richtig zuordnen kann.",
+    "messageTooShort": "Bitte geben Sie mindestens 20 Zeichen ein.",
     "success": "Vielen Dank. Wir melden uns in Kürze.",
     "error": "Bitte prüfen Sie das Formular und versuchen Sie es erneut.",
     "sending": "Wird gesendet...",

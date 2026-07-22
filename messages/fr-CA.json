@@ -79,6 +79,7 @@
     "message": "Message*",
     "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
     "messageHelper": "Indiquez les renseignements importants afin que l’équipe puisse acheminer votre demande correctement.",
+    "messageTooShort": "Veuillez saisir au moins 20 caractères.",
     "success": "Merci. Nous vous répondrons sous peu.",
     "error": "Veuillez vérifier le formulaire et réessayer.",
     "sending": "Envoi en cours...",

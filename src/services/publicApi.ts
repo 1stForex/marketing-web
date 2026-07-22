@@ -4,6 +4,36 @@ const API_BASE_URL =
 
 type PublicPayload = Record<string, string>;
 
+function getApiErrorMessage(data: unknown) {
+  const fallback = "Something went wrong. Please try again.";
+
+  if (!data || typeof data !== "object") {
+    return fallback;
+  }
+
+  const responseData = data as Record<string, unknown>;
+  for (const key of ["detail", "error", "message"]) {
+    const value = responseData[key];
+    if (typeof value === "string" && value.trim()) {
+      return value;
+    }
+    if (Array.isArray(value) && typeof value[0] === "string") {
+      return value[0];
+    }
+  }
+
+  for (const value of Object.values(responseData)) {
+    if (typeof value === "string" && value.trim()) {
+      return value;
+    }
+    if (Array.isArray(value) && typeof value[0] === "string") {
+      return value[0];
+    }
+  }
+
+  return fallback;
+}
+
 export async function postPublicForm(path: string, payload: PublicPayload) {
   const response = await fetch(`${API_BASE_URL}${path}`, {
     method: "POST",
@@ -16,11 +46,7 @@ export async function postPublicForm(path: string, payload: PublicPayload) {
   const data = await response.json().catch(() => ({}));
 
   if (!response.ok) {
-    const detail =
-      typeof data.detail === "string"
-        ? data.detail
-        : "Something went wrong. Please try again.";
-    throw new Error(detail);
+    throw new Error(getApiErrorMessage(data));
   }
 
   return data as { detail?: string };

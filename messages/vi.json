@@ -79,6 +79,7 @@
     "message": "Tin nhắn*",
     "messagePlaceholder": "Hãy cho chúng tôi biết cách hỗ trợ bạn...",
     "messageHelper": "Chia sẻ các thông tin chính để đội ngũ chuyển yêu cầu của bạn đến đúng bộ phận.",
+    "messageTooShort": "Vui lòng nhập ít nhất 20 ký tự.",
     "success": "Cảm ơn bạn. Chúng tôi sẽ sớm phản hồi.",
     "error": "Vui lòng kiểm tra biểu mẫu và thử lại.",
     "sending": "Đang gửi...",

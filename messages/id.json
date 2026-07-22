@@ -79,6 +79,7 @@
     "message": "Pesan*",
     "messagePlaceholder": "Beri tahu kami cara membantu Anda...",
     "messageHelper": "Bagikan detail penting agar tim dapat meneruskan permintaan Anda dengan tepat.",
+    "messageTooShort": "Masukkan setidaknya 20 karakter.",
     "success": "Terima kasih. Kami akan segera menghubungi Anda.",
     "error": "Periksa formulir dan coba lagi.",
     "sending": "Mengirim...",

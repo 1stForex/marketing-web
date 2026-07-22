@@ -79,6 +79,7 @@
     "message": "Mesaj*",
     "messagePlaceholder": "Size nasıl yardımcı olabileceğimizi anlatın...",
     "messageHelper": "Ekibin talebinizi doğru şekilde yönlendirebilmesi için önemli ayrıntıları paylaşın.",
+    "messageTooShort": "Lütfen en az 20 karakter girin.",
     "success": "Teşekkürler. Kısa süre içinde size dönüş yapacağız.",
     "error": "Formu kontrol edip tekrar deneyin.",
     "sending": "Gönderiliyor...",

@@ -18,12 +18,14 @@ const initialForm = {
 };
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const minimumMessageLength = 20;
 
 const ContactForm = () => {
   const t = useTranslations("Contact");
   const footerT = useTranslations("Footer");
   const [form, setForm] = useState(initialForm);
   const [emailTouched, setEmailTouched] = useState(false);
+  const [messageTouched, setMessageTouched] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle"
   );
@@ -49,14 +51,21 @@ const ContactForm = () => {
   };
   const isEmailValid = emailPattern.test(normalizedForm.email);
   const isFormValid = Boolean(
-    normalizedForm.first_name && isEmailValid && normalizedForm.message
+    normalizedForm.first_name &&
+      isEmailValid &&
+      normalizedForm.message.length >= minimumMessageLength
   );
   const showEmailError =
     emailTouched && normalizedForm.email.length > 0 && !isEmailValid;
+  const showMessageError =
+    messageTouched &&
+    normalizedForm.message.length > 0 &&
+    normalizedForm.message.length < minimumMessageLength;
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setEmailTouched(true);
+    setMessageTouched(true);
 
     if (!isFormValid || status === "loading") {
       return;
@@ -74,6 +83,7 @@ const ContactForm = () => {
       setMessage(response.detail || t("success"));
       setForm(initialForm);
       setEmailTouched(false);
+      setMessageTouched(false);
     } catch (error) {
       setStatus("error");
       setMessage(
@@ -151,11 +161,13 @@ const ContactForm = () => {
         <CustomInputField
           placeholder={t("messagePlaceholder")}
           label={t("message")}
-          helperText={t("messageHelper")}
+          helperText={showMessageError ? t("messageTooShort") : t("messageHelper")}
           padding="22px 16px"
           multiline
           value={form.message}
           onChange={updateField("message")}
+          onBlur={() => setMessageTouched(true)}
+          error={showMessageError}
           required
         />
 
