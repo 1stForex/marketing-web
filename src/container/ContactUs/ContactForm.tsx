@@ -17,9 +17,13 @@ const initialForm = {
   message: "",
 };
 
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const ContactForm = () => {
   const t = useTranslations("Contact");
+  const footerT = useTranslations("Footer");
   const [form, setForm] = useState(initialForm);
+  const [emailTouched, setEmailTouched] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle"
   );
@@ -29,21 +33,47 @@ const ContactForm = () => {
     (field: keyof typeof initialForm) =>
     (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setForm((current) => ({ ...current, [field]: event.target.value }));
+      if (status === "error") {
+        setStatus("idle");
+        setMessage("");
+      }
     };
+
+  const normalizedForm = {
+    first_name: form.first_name.trim(),
+    last_name: form.last_name.trim(),
+    email: form.email.trim().toLowerCase(),
+    phone: form.phone.trim(),
+    subject: form.subject.trim(),
+    message: form.message.trim(),
+  };
+  const isEmailValid = emailPattern.test(normalizedForm.email);
+  const isFormValid = Boolean(
+    normalizedForm.first_name && isEmailValid && normalizedForm.message
+  );
+  const showEmailError =
+    emailTouched && normalizedForm.email.length > 0 && !isEmailValid;
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setEmailTouched(true);
+
+    if (!isFormValid || status === "loading") {
+      return;
+    }
+
     setStatus("loading");
     setMessage("");
 
     try {
       const response = await postPublicForm("/core/contact-message/", {
-        ...form,
+        ...normalizedForm,
         source: "contact-page",
       });
       setStatus("success");
       setMessage(response.detail || t("success"));
       setForm(initialForm);
+      setEmailTouched(false);
     } catch (error) {
       setStatus("error");
       setMessage(
@@ -55,7 +85,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form style={{ width: "100%" }} onSubmit={handleSubmit}>
+    <form style={{ width: "100%" }} onSubmit={handleSubmit} noValidate>
       <Box
         sx={{
           display: "flex",
@@ -86,6 +116,7 @@ const ContactForm = () => {
             label={t("firstName")}
             value={form.first_name}
             onChange={updateField("first_name")}
+            required
           />
           <CustomInputField
             placeholder={t("lastNamePlaceholder")}
@@ -100,6 +131,10 @@ const ContactForm = () => {
           type="email"
           value={form.email}
           onChange={updateField("email")}
+          onBlur={() => setEmailTouched(true)}
+          helperText={showEmailError ? footerT("invalidEmail") : undefined}
+          error={showEmailError}
+          required
         />
         <CustomInputField
           placeholder={t("phonePlaceholder")}
@@ -121,6 +156,7 @@ const ContactForm = () => {
           multiline
           value={form.message}
           onChange={updateField("message")}
+          required
         />
 
         {message && (
@@ -139,7 +175,7 @@ const ContactForm = () => {
           borderRadius="8px"
           width="100%"
           type="submit"
-          disabled={status === "loading"}
+          disabled={!isFormValid || status === "loading"}
         >
           {status === "loading" ? t("sending") : t("submit")}
         </CustomButton>

@@ -16,7 +16,10 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
   borderRadius = "6",
   value = "",
   background = "inherit",
+  required = false,
+  error = false,
   onChange,
+  onBlur,
 }) => {
   return (
     <Box sx={{ width: width }}>
@@ -45,6 +48,9 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
         rows={multiline ? rows : undefined}
         value={value ?? ""}
         onChange={onChange}
+        onBlur={onBlur}
+        required={required}
+        error={error}
         InputProps={{
           endAdornment: icon && (
             <InputAdornment position="end">
@@ -91,7 +97,7 @@ const CustomInputField: React.FC<CustomInputFieldProps> = ({
       {helperText && (
         <Typography
           sx={{
-            color: "var(--Grey-500, #667185)",
+            color: error ? "#D92D20" : "var(--Grey-500, #667185)",
             fontSize: "14px",
             fontWeight: 400,
             lineHeight: "145%",
