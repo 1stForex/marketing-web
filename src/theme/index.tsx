@@ -5,7 +5,10 @@ import type { TextDirection } from "@/src/i18n/config";
 const createAppTheme = (direction: TextDirection = "ltr") => createTheme({
   direction,
   typography: {
-    fontFamily: "Montserrat",
+    fontFamily:
+      direction === "rtl"
+        ? "var(--font-noto-arabic), Arial, sans-serif"
+        : "var(--font-montserrat), Montserrat, Arial, sans-serif",
   },
 });
 

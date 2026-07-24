@@ -357,6 +357,8 @@ export default function HistoricalPerformance() {
               >
                 <Box
                   component="table"
+                  dir="ltr"
+                  data-direction="ltr"
                   sx={{
                     width: "100%",
                     borderCollapse: "collapse",
@@ -509,11 +511,15 @@ export default function HistoricalPerformance() {
       {pinnedHeader.visible && (
         <Box
           aria-hidden
+          dir="ltr"
+          data-direction="ltr"
+          style={{
+            left: `${pinnedHeader.left}px`,
+            width: `${pinnedHeader.width}px`,
+          }}
           sx={{
             position: "fixed",
             top: 0,
-            left: `${pinnedHeader.left}px`,
-            width: `${pinnedHeader.width}px`,
             zIndex: 1200,
             overflow: "hidden",
             border: "1px solid #EAECF0",
@@ -529,10 +535,12 @@ export default function HistoricalPerformance() {
         >
           <Box
             component="table"
+            style={{
+              transform: `translateX(-${pinnedHeader.scrollLeft}px)`,
+            }}
             sx={{
               width: `${pinnedHeader.tableWidth}px`,
               borderCollapse: "collapse",
-              transform: `translateX(-${pinnedHeader.scrollLeft}px)`,
             }}
           >
             <Box component="thead">
@@ -808,7 +816,11 @@ function MonthlyBreakdown({
               },
             }}
           >
-            <Box sx={{ textAlign: "left" }}>
+            <Box
+              dir="ltr"
+              data-direction="ltr"
+              sx={{ textAlign: "left" }}
+            >
               <Typography sx={{ fontWeight: 800, lineHeight: "145%" }}>
                 {format.dateTime(new Date(2020, Number(month.monthKey.split("-")[1]) - 1, 1), { month: "long" })}
               </Typography>

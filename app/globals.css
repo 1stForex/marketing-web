@@ -24,9 +24,48 @@ body {
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: var(--font-montserrat), Montserrat, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font-noto-arabic), Arial, sans-serif;
+  line-height: 1.55;
+}
+
+html[dir="rtl"] * {
+  letter-spacing: 0 !important;
+}
+
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="tel"],
+[dir="rtl"] input[type="url"],
+[dir="rtl"] input[type="password"],
+[dir="rtl"] input[inputmode="decimal"],
+[dir="rtl"] input[inputmode="numeric"],
+[dir="rtl"] code,
+[dir="rtl"] pre,
+[dir="rtl"] time,
+[dir="rtl"] bdi,
+[dir="rtl"] [data-direction="ltr"],
+[dir="rtl"] .direction-ltr,
+[dir="rtl"] .MuiTable-root {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="tel"],
+[dir="rtl"] input[type="url"],
+[dir="rtl"] input[type="password"],
+[dir="rtl"] input[inputmode="decimal"],
+[dir="rtl"] input[inputmode="numeric"] {
+  text-align: left;
+}
+
+[dir="rtl"] [dir="auto"] {
+  unicode-bidi: plaintext;
 }
 
 * {

@@ -1,6 +1,5 @@
 export const LOCALE_COOKIE_NAME = "1fx_locale";
 export const DEFAULT_LOCALE = "en";
-export const PHASE_ONE_DIRECTION = "ltr" as const;
 
 export const localeDefinitions = [
   {
@@ -84,6 +83,15 @@ export const localeDefinitions = [
     direction: "ltr",
     phase: 1,
   },
+  {
+    code: "ar",
+    name: "Arabic",
+    nativeName: "العربية",
+    shortName: "العربية",
+    flagCode: "sa",
+    direction: "rtl",
+    phase: 2,
+  },
 ] as const;
 
 export type AppLocale = (typeof localeDefinitions)[number]["code"];
@@ -114,6 +122,7 @@ export const matchLocale = (value?: string | null): AppLocale | null => {
     tr: "tr",
     vi: "vi",
     hi: "hi",
+    ar: "ar",
   };
 
   return aliases[candidate.split("-", 1)[0].toLowerCase()] ?? null;
@@ -143,8 +152,11 @@ export const isEnabledLocale = (locale: string): locale is AppLocale =>
   enabledLocales.includes(locale as AppLocale);
 
 export const getLocaleDirection = (locale: string): TextDirection => {
-  void locale;
-  return PHASE_ONE_DIRECTION;
+  const normalized = matchLocale(locale);
+  return (
+    localeDefinitions.find(({ code }) => code === normalized)?.direction ??
+    "ltr"
+  );
 };
 
 export const resolveLocale = (

@@ -30,22 +30,14 @@ export default function LanguageSwitcher({
     enabledLocales.includes(code),
   );
 
-  const handleChange = async (nextLocale: AppLocale) => {
+  const handleChange = (nextLocale: AppLocale) => {
     if (nextLocale === locale || isUpdating) return;
     setIsUpdating(true);
 
-    try {
-      const response = await fetch("/api/locale", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ locale: nextLocale }),
-      });
-      if (!response.ok) throw new Error("Locale cookie update failed");
-      window.location.reload();
-    } catch (error) {
-      console.error(t("updateFailed"), error);
-      setIsUpdating(false);
-    }
+    const returnTo = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    window.location.assign(
+      `/api/locale?locale=${encodeURIComponent(nextLocale)}&returnTo=${encodeURIComponent(returnTo)}`,
+    );
   };
 
   return (
