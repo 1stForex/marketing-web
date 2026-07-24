@@ -8,6 +8,8 @@ import { CarouselProp } from "@/src/types/Carousel.interface";
 import { useEffect, useRef, useState } from "react";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { useLocale } from "next-intl";
+import { getLocaleDirection } from "@/src/i18n/config";
 import "./Carousel.css";
 
 const Carousel: React.FC<CarouselProp> = ({
@@ -18,6 +20,8 @@ const Carousel: React.FC<CarouselProp> = ({
   children,
 }) => {
   const sliderRef = useRef<Slider | null>(null);
+  const locale = useLocale();
+  const direction = getLocaleDirection(locale);
   const isMobile = useMediaQuery("(max-width: 576px)");
   const [autoplay, setAutoplay] = useState(isMobile);
 
@@ -150,7 +154,12 @@ const Carousel: React.FC<CarouselProp> = ({
               position: "relative",
             }}
           >
-            <Slider ref={sliderRef} {...settings} className="custom-carousel">
+            <Slider
+              key={direction}
+              ref={sliderRef}
+              {...settings}
+              className="custom-carousel"
+            >
               {cards.map((card, index) => (
                 <Card
                   key={index}
@@ -180,7 +189,11 @@ const Carousel: React.FC<CarouselProp> = ({
                   "&:hover": { backgroundColor: "#F30", color: "#FFF" },
                 }}
               >
-                <ChevronLeftIcon />
+                {direction === "rtl" ? (
+                  <ChevronRightIcon />
+                ) : (
+                  <ChevronLeftIcon />
+                )}
               </IconButton>
               <IconButton
                 onClick={() => {
@@ -192,7 +205,11 @@ const Carousel: React.FC<CarouselProp> = ({
                   "&:hover": { backgroundColor: "#F30", color: "#FFF" },
                 }}
               >
-                <ChevronRightIcon />
+                {direction === "rtl" ? (
+                  <ChevronLeftIcon />
+                ) : (
+                  <ChevronRightIcon />
+                )}
               </IconButton>
             </Box>
           </Box>

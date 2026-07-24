@@ -1,3 +1,8 @@
 .custom-carousel .slick-list {
   padding: 0 60px !important;
 }
+
+/* Slick's variable-width positioning is LTR even when page content is RTL. */
+[dir="rtl"] .custom-carousel .slick-slide {
+  float: left;
+}

@@ -12,6 +12,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <Box
+      dir="auto"
       sx={{
         ...(isCarousel && {
           maxWidth: "363px",
