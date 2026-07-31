@@ -92,6 +92,33 @@ export const localeDefinitions = [
     direction: "rtl",
     phase: 2,
   },
+  {
+    code: "ja",
+    name: "Japanese",
+    nativeName: "日本語",
+    shortName: "日本語",
+    flagCode: "jp",
+    direction: "ltr",
+    phase: 2,
+  },
+  {
+    code: "zh-CN",
+    name: "Simplified Chinese",
+    nativeName: "简体中文",
+    shortName: "简体中文",
+    flagCode: "cn",
+    direction: "ltr",
+    phase: 2,
+  },
+  {
+    code: "ru",
+    name: "Russian",
+    nativeName: "Русский",
+    shortName: "Русский",
+    flagCode: "ru",
+    direction: "ltr",
+    phase: 2,
+  },
 ] as const;
 
 export type AppLocale = (typeof localeDefinitions)[number]["code"];
@@ -123,6 +150,9 @@ export const matchLocale = (value?: string | null): AppLocale | null => {
     vi: "vi",
     hi: "hi",
     ar: "ar",
+    ja: "ja",
+    zh: "zh-CN",
+    ru: "ru",
   };
 
   return aliases[candidate.split("-", 1)[0].toLowerCase()] ?? null;
