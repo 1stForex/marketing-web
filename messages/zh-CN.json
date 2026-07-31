@@ -31,7 +31,7 @@
     "product": "产品",
     "company": "公司",
     "other": "其他",
-    "tradingSignals": "第一个外汇交易信号",
+    "tradingSignals": "1stForex 交易信号",
     "academy": "1stForex 学院",
     "performanceHistory": "表现历史",
     "pricing": "定价",
@@ -136,7 +136,7 @@
     "headlineHighlight": "每个信号。",
     "description": "一项针对交易信号、历史表现可视性、学术内容以及围绕严格执行而构建的社区工具的无限计划。",
     "signalPreviewAlt": "1stForex移动信号预览",
-    "signalLabel": "第一个外汇信号",
+    "signalLabel": "1stForex 信号",
     "signalExample": "EUR/USD · 购买",
     "signalDescription": "进场、止损、止盈和绩效背景在一个信号工作流程中。",
     "proof": {
@@ -251,7 +251,7 @@
     "heroStart": "欢迎来到 1stForex：",
     "heroHighlight": "传统遇上创新",
     "teamAlt": "1stForex 团队",
-    "communityAlt": "第一个外汇交易社区",
+    "communityAlt": "1stForex 交易社区",
     "visionBadge": "想象",
     "storyBadge": "我们的故事",
     "about": {
@@ -265,7 +265,7 @@
     "mission": {
       "title": "我们的使命",
       "paragraph1": "我们的使命简单而强大：增强您的交易之旅。我们的目标是在每个阶段激励和指导交易者，帮助他们充满信心和技巧地应对外汇市场的复杂性。",
-      "paragraph2": "加入第一个外汇大家庭，成为激情与精确、传统与创新结合的传承的一部分。我们将共同将梦想变成财务独立和交易精通。"
+      "paragraph2": "加入 1stForex 大家庭，成为热情与严谨、传统与创新相结合的社区一员。我们将共同把目标转化为更扎实的交易能力与财务自主。"
     },
     "community": {
       "title": "不仅仅是一个企业——一个社区",
@@ -362,7 +362,7 @@
     },
     "offer": {
       "title": "加入",
-      "specialTitle": "第一个外汇家族",
+      "specialTitle": "1stForex 大家庭",
       "description": "在 1stForex 交易学院，我们不仅仅是一个教育平台，更是您交易旅程中的长期伙伴。",
       "secondaryDescription": "无论您是迈出交易的第一步还是磨练高级策略，我们都会为您提供指导、支持和庆祝您的成就。",
       "subDescription": "立即注册，开始您的财务自由之旅。我们将共同使您的交易目标成为现实。"
@@ -373,7 +373,7 @@
     }
   },
   "Signal": {
-    "badge": "第一个外汇交易信号",
+    "badge": "1stForex 交易信号",
     "title": "基于 20 年市场经验的交易信号",
     "description": "获取由历史表现、严格执行和实用交易规划支持的结构化外汇信号。",
     "tradingSignals": "交易信号",
@@ -393,7 +393,7 @@
     },
     "banner": {
       "quote": "想象一下，拥有二十年的市场经验、结构化的贸易规划以及流程背后经验丰富的交易员。 1st Forex 将信号、分析和教育整合到一个实用平台中，以便交易者能够更加清晰和自律地进行交易。",
-      "description": "通过第一个外汇交易信号，您不仅仅收到警报。您正在步入一个受支持、以数据为依据的交易生态系统，该生态系统旨在帮助您更有信心地学习、审查和执行。"
+      "description": "通过 1stForex 交易信号，您获得的不只是提醒，而是一个以数据和支持为基础的交易环境，帮助您更有信心地学习、复盘和执行。"
     },
     "plans": {
       "start": "信号",
@@ -484,7 +484,7 @@
   },
   "Community": {
     "badge": "社区",
-    "title": "欢迎来到第一期外汇社区",
+    "title": "欢迎来到 1stForex 社区",
     "description": "各个级别的外汇交易者像一家人一样聚集在一起学习、成长和互相支持的地方。无论您是新手还是经验丰富的专业人士，我们的社区都旨在帮助您在交易之旅中取得进步。",
     "logoAlt": "1stForex标志",
     "join": {
@@ -493,10 +493,10 @@
       "button": "立即加入我们"
     },
     "how": {
-      "badge": "获得第一个外汇",
+      "badge": "开始使用 1stForex",
       "title": "如何加入",
       "highlight": "对话？",
-      "point1": "创建第一个外汇账户以访问博客、信号和课程。",
+      "point1": "创建 1stForex 账户以访问博客、信号和课程。",
       "point2": "通过提出问题、分享见解和申请贡献者身份来参与。"
     },
     "offers": {
