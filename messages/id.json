@@ -229,13 +229,13 @@
       "wins": "Menang",
       "losses": "Kerugian",
       "winRate": "Tingkat Kemenangan",
-      "netPips": "Pip Bersih",
+      "netPips": "Poin Bersih",
       "bestPair": "Pasangan Terbaik"
     },
     "monthlySummary": "Ringkasan Bulanan {year}",
     "monthlyNote": "Hasil bulanan berdasarkan kumpulan data historis yang dipublikasikan.",
     "tradeCount": "{count, plural, one {# transaksi} other {# transaksi}}",
-    "netPips": "{value} pip bersih",
+    "netPips": "{value} poin bersih",
     "modal": {
       "close": "Menutup",
       "title": "Riwayat perdagangan harian ada di dalam dasbor.",

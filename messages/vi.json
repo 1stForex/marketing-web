@@ -229,13 +229,13 @@
       "wins": "Thắng",
       "losses": "Tổn thất",
       "winRate": "Tỷ lệ thắng",
-      "netPips": "Pip ròng",
+      "netPips": "Điểm ròng",
       "bestPair": "Cặp đôi xuất sắc nhất"
     },
     "monthlySummary": "{year} Tóm tắt hàng tháng",
     "monthlyNote": "Kết quả hàng tháng dựa trên tập dữ liệu lịch sử được công bố.",
     "tradeCount": "{count, plural, one {# giao dịch} other {# giao dịch}}",
-    "netPips": "{value} số pip ròng",
+    "netPips": "{value} điểm ròng",
     "modal": {
       "close": "Đóng",
       "title": "Lịch sử giao dịch hàng ngày nằm trong bảng điều khiển.",

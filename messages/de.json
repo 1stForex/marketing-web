@@ -229,13 +229,13 @@
       "wins": "Siege",
       "losses": "Verluste",
       "winRate": "Gewinnrate",
-      "netPips": "Netto-Pips",
+      "netPips": "Nettopunkte",
       "bestPair": "Bestes Paar"
     },
     "monthlySummary": "{year} Monatsübersicht",
     "monthlyNote": "Monatliche Ergebnisse basierend auf dem veröffentlichten historischen Datensatz.",
     "tradeCount": "{count, plural, one {# Trade} other {# Trades}}",
-    "netPips": "{value} Netto-Pips",
+    "netPips": "{value} Nettopunkte",
     "modal": {
       "close": "Schließen",
       "title": "Der tägliche Handelsverlauf befindet sich im Dashboard.",

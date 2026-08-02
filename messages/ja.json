@@ -231,13 +231,13 @@
       "wins": "勝利",
       "losses": "損失",
       "winRate": "勝率",
-      "netPips": "ネットピップス",
+      "netPips": "純ポイント",
       "bestPair": "ベストペア"
     },
     "monthlySummary": "{year} 月次サマリー",
     "monthlyNote": "公開されている過去のデータセットに基づく月次結果。",
     "tradeCount": "{count, plural, one {# 取引} other {# 件の取引}}",
-    "netPips": "{value} 純ピップス",
+    "netPips": "{value} 純ポイント",
     "modal": {
       "close": "近い",
       "title": "毎日の取引履歴はダッシュボード内にあります。",

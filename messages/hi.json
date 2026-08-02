@@ -229,13 +229,13 @@
       "wins": "जीत",
       "losses": "हानि",
       "winRate": "जीत दर",
-      "netPips": "नेट पिप्स",
+      "netPips": "शुद्ध अंक",
       "bestPair": "सबसे अच्छी जोड़ी"
     },
     "monthlySummary": "{year} मासिक सारांश",
     "monthlyNote": "प्रकाशित ऐतिहासिक डेटासेट पर आधारित मासिक परिणाम।",
     "tradeCount": "{count, plural, one {# ट्रेड} other {# ट्रेड}}",
-    "netPips": "{value} नेट पिप्स",
+    "netPips": "{value} शुद्ध अंक",
     "modal": {
       "close": "बंद करना",
       "title": "दैनिक व्यापार इतिहास डैशबोर्ड के अंदर है।",

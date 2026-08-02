@@ -229,13 +229,13 @@
       "wins": "galibiyet",
       "losses": "kayıplar",
       "winRate": "Kazanma Oranı",
-      "netPips": "Net Pipler",
+      "netPips": "Net Puan",
       "bestPair": "En İyi Çift"
     },
     "monthlySummary": "{year} Aylık Özet",
     "monthlyNote": "Yayınlanan geçmiş veri kümesine dayalı aylık sonuçlar.",
     "tradeCount": "{count, plural, one {# işlem} other {# işlem}}",
-    "netPips": "{value} net pipler",
+    "netPips": "{value} net puan",
     "modal": {
       "close": "Kapalı",
       "title": "Günlük ticaret geçmişi gösterge tablosunun içindedir.",

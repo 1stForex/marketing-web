@@ -229,13 +229,13 @@
       "wins": "gana",
       "losses": "Pérdidas",
       "winRate": "Tasa de victorias",
-      "netPips": "Pips netos",
+      "netPips": "Puntos netos",
       "bestPair": "Mejor pareja"
     },
     "monthlySummary": "Resumen mensual {year}",
     "monthlyNote": "Resultados mensuales basados ​​en el conjunto de datos históricos publicados.",
     "tradeCount": "{count, plural, one {# operación} other {# operaciones}}",
-    "netPips": "Pips netos {value}",
+    "netPips": "{value} puntos netos",
     "modal": {
       "close": "Cerca",
       "title": "El historial comercial diario se encuentra dentro del tablero.",

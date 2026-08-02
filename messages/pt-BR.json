@@ -229,13 +229,13 @@
       "wins": "Vitórias",
       "losses": "Perdas",
       "winRate": "Taxa de vitórias",
-      "netPips": "Pips líquidos",
+      "netPips": "Pontos líquidos",
       "bestPair": "Melhor par"
     },
     "monthlySummary": "Resumo Mensal {year}",
     "monthlyNote": "Resultados mensais com base no conjunto de dados históricos publicados.",
     "tradeCount": "{count, plural, one {# negociação} other {# negociações}}",
-    "netPips": "{value} pips líquidos",
+    "netPips": "{value} pontos líquidos",
     "modal": {
       "close": "Fechar",
       "title": "O histórico diário de negociações está dentro do painel.",

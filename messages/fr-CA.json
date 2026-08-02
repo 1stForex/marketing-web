@@ -229,13 +229,13 @@
       "wins": "Victoires",
       "losses": "Pertes",
       "winRate": "Taux de victoire",
-      "netPips": "Pips nets",
+      "netPips": "Points nets",
       "bestPair": "Meilleure paire"
     },
     "monthlySummary": "{year} Résumé mensuel",
     "monthlyNote": "Résultats mensuels basés sur l'ensemble de données historiques publié.",
     "tradeCount": "{count, plural, one {# transaction} other {# transactions}}",
-    "netPips": "{value} pips nets",
+    "netPips": "{value} points nets",
     "modal": {
       "close": "Fermer",
       "title": "L’historique quotidien des échanges se trouve dans le tableau de bord.",

@@ -229,13 +229,13 @@
       "wins": "Wins",
       "losses": "Losses",
       "winRate": "Win Rate",
-      "netPips": "Net Pips",
+      "netPips": "Net Points",
       "bestPair": "Best Pair"
     },
     "monthlySummary": "{year} Monthly Summary",
     "monthlyNote": "Monthly results based on the published historical dataset.",
     "tradeCount": "{count, plural, one {# trade} other {# trades}}",
-    "netPips": "{value} net pips",
+    "netPips": "{value} net points",
     "modal": {
       "close": "Close",
       "title": "Daily trade history is inside the dashboard.",
