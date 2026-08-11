@@ -31,36 +31,36 @@ export interface HistoricalYearPerformance {
 
 export const historicalPerformanceRange = {
   "startMonth": "2016-01",
-  "endMonth": "2026-06",
-  "label": "2016-June 2026"
+  "endMonth": "2026-07",
+  "label": "2016-July 2026"
 };
 
 export const historicalPerformanceTotals = {
-  "signals": 1777,
-  "trades": 1348,
-  "wins": 1236,
-  "losses": 112,
+  "signals": 1794,
+  "trades": 1361,
+  "wins": 1248,
+  "losses": 113,
   "breakeven": 0,
-  "notEntered": 431,
-  "netPips": 282671.0,
+  "notEntered": 435,
+  "netPips": 283352.0,
   "profitUsd": 4887458.9,
-  "winRate": 91.69
+  "winRate": 91.7
 };
 
 export const historicalPerformanceYears: HistoricalYearPerformance[] = [
   {
     "year": 2026,
-    "signals": 100,
-    "trades": 70,
-    "wins": 63,
-    "losses": 7,
+    "signals": 117,
+    "trades": 83,
+    "wins": 75,
+    "losses": 8,
     "breakeven": 0,
-    "notEntered": 32,
-    "netPips": 12757.0,
+    "notEntered": 36,
+    "netPips": 13438.0,
     "profitUsd": 176171.9,
-    "winRate": 90.0,
+    "winRate": 90.36,
     "bestPair": "USD/CAD",
-    "note": "Current 2026 staging dashboard results preserved during the marketing alignment update.",
+    "note": "Verified performance through July 2026, including completed and cancelled live signal records.",
     "months": [
       {
         "month": "January",
@@ -145,6 +145,20 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
         "profitUsd": 0.0,
         "winRate": 85.71,
         "dataQuality": "current_staging_2026"
+      },
+      {
+        "month": "July",
+        "monthKey": "2026-07",
+        "signals": 17,
+        "trades": 13,
+        "wins": 12,
+        "losses": 1,
+        "breakeven": 0,
+        "notEntered": 4,
+        "netPips": 681.0,
+        "profitUsd": 0.0,
+        "winRate": 92.31,
+        "dataQuality": "verified_signal_lifecycle"
       }
     ]
   },
