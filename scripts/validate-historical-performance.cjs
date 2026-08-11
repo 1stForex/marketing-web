@@ -49,6 +49,20 @@ const assertClose = (actual, expected, label) => {
 };
 
 for (const year of historicalPerformanceYears) {
+  for (const month of year.months) {
+    const monthIndex = Number(month.monthKey.split("-")[1]) - 1;
+    const expectedMonthName = new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      timeZone: "UTC",
+    }).format(new Date(Date.UTC(2020, monthIndex, 15, 12)));
+
+    if (month.month !== expectedMonthName) {
+      throw new Error(
+        `${month.monthKey}: expected ${expectedMonthName}, received ${month.month}`
+      );
+    }
+  }
+
   for (const field of aggregateFields) {
     const monthTotal = year.months.reduce(
       (sum, month) => sum + Number(month[field] || 0),

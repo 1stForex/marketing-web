@@ -34,6 +34,13 @@ function formatNumber(value: number) {
   return new Intl.NumberFormat("en-US").format(value);
 }
 
+function getMonthDisplayDate(monthKey: string) {
+  const monthIndex = Number(monthKey.split("-")[1]) - 1;
+
+  // Mid-month UTC prevents locale formatters from crossing a month boundary.
+  return new Date(Date.UTC(2020, monthIndex, 15, 12));
+}
+
 const bestYear = historicalPerformanceYears.reduce((best, year) =>
   year.netPips > best.netPips ? year : best
 );
@@ -822,7 +829,9 @@ function MonthlyBreakdown({
               sx={{ textAlign: "left" }}
             >
               <Typography sx={{ fontWeight: 800, lineHeight: "145%" }}>
-                {format.dateTime(new Date(2020, Number(month.monthKey.split("-")[1]) - 1, 1), { month: "long" })}
+                {format.dateTime(getMonthDisplayDate(month.monthKey), {
+                  month: "long",
+                })}
               </Typography>
               <Typography sx={{ color: "#667185", fontSize: "13px" }}>
                 {t("tradeCount", { count: month.trades })} • {formatPercent(month.winRate)}
