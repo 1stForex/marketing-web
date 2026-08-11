@@ -118,7 +118,6 @@ const TestimonialCard = ({
       sx={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
         gap: "16px",
         pt: "20px",
         borderTop: featured
@@ -158,19 +157,6 @@ const TestimonialCard = ({
           {testimonial.name}
         </Typography>
       </Box>
-      <Typography
-        component="span"
-        sx={{
-          flexShrink: 0,
-          color: featured ? "#FED7CC" : "#B42300",
-          fontSize: "12px",
-          fontWeight: 700,
-          lineHeight: 1,
-          textTransform: "uppercase",
-        }}
-      >
-        {testimonial.language}
-      </Typography>
     </Box>
   </Box>
 );
