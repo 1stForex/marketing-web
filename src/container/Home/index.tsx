@@ -12,6 +12,7 @@ import { getTranslations } from "next-intl/server";
 import Leader from "@/src/assets/icons/Leader.svg";
 import Care from "@/src/assets/icons/Care.svg";
 import UpDownArrows from "@/src/assets/icons/UpDownArrows.svg";
+import Testimonials from "./Testimonials";
 
 const Home = async () => {
   const t = await getTranslations("Home");
@@ -112,6 +113,7 @@ const Home = async () => {
         >
           <OurStory />
           <FAQSection />
+          <Testimonials />
         </Box>
       </Container>
 
