@@ -31,18 +31,18 @@ export interface HistoricalYearPerformance {
 
 export const historicalPerformanceRange = {
   "startMonth": "2016-01",
-  "endMonth": "2026-07",
-  "label": "2016-July 2026"
+  "endMonth": "2026-09",
+  "label": "2016-September 2026"
 };
 
 export const historicalPerformanceTotals = {
-  "signals": 1794,
-  "trades": 1361,
-  "wins": 1248,
-  "losses": 113,
+  "signals": 1824,
+  "trades": 1374,
+  "wins": 1260,
+  "losses": 114,
   "breakeven": 0,
-  "notEntered": 435,
-  "netPips": 283352.0,
+  "notEntered": 452,
+  "netPips": 284389.0,
   "profitUsd": 4887458.9,
   "winRate": 91.7
 };
@@ -50,17 +50,17 @@ export const historicalPerformanceTotals = {
 export const historicalPerformanceYears: HistoricalYearPerformance[] = [
   {
     "year": 2026,
-    "signals": 117,
-    "trades": 83,
-    "wins": 75,
-    "losses": 8,
+    "signals": 147,
+    "trades": 96,
+    "wins": 87,
+    "losses": 9,
     "breakeven": 0,
-    "notEntered": 36,
-    "netPips": 13438.0,
+    "notEntered": 53,
+    "netPips": 14475.0,
     "profitUsd": 176171.9,
-    "winRate": 90.36,
+    "winRate": 90.63,
     "bestPair": "USD/CAD",
-    "note": "Verified performance through July 2026, including completed and cancelled live signal records.",
+    "note": "Verified performance through September 2026, including completed and cancelled live signal records.",
     "months": [
       {
         "month": "January",
@@ -158,6 +158,34 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
         "netPips": 681.0,
         "profitUsd": 0.0,
         "winRate": 92.31,
+        "dataQuality": "verified_signal_lifecycle"
+      },
+      {
+        "month": "August",
+        "monthKey": "2026-08",
+        "signals": 18,
+        "trades": 8,
+        "wins": 7,
+        "losses": 1,
+        "breakeven": 0,
+        "notEntered": 10,
+        "netPips": 615.0,
+        "profitUsd": 0.0,
+        "winRate": 87.5,
+        "dataQuality": "verified_signal_lifecycle"
+      },
+      {
+        "month": "September",
+        "monthKey": "2026-09",
+        "signals": 12,
+        "trades": 5,
+        "wins": 5,
+        "losses": 0,
+        "breakeven": 0,
+        "notEntered": 7,
+        "netPips": 422.0,
+        "profitUsd": 0.0,
+        "winRate": 100.0,
         "dataQuality": "verified_signal_lifecycle"
       }
     ]

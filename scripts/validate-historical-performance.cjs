@@ -100,8 +100,8 @@ assertClose(
   "totals.winRate"
 );
 
-if (historicalPerformanceRange.endMonth !== "2026-07") {
-  throw new Error("Historical range must end at 2026-07.");
+if (historicalPerformanceRange.endMonth !== "2026-09") {
+  throw new Error("Historical range must end at 2026-09.");
 }
 
 const july = historicalPerformanceYears
@@ -112,4 +112,15 @@ if (!july || july.trades !== 13 || july.netPips !== 681) {
   throw new Error("Verified July 2026 performance is missing or incorrect.");
 }
 
-console.log("Historical performance aggregates are valid through July 2026.");
+const months = historicalPerformanceYears.find((year) => year.year === 2026).months;
+const august = months.find((month) => month.monthKey === "2026-08");
+const september = months.find((month) => month.monthKey === "2026-09");
+if (!august || august.trades !== 8 || august.netPips !== 615) {
+  throw new Error("Verified August 2026 performance is missing or incorrect.");
+}
+if (!september || september.signals !== 12 || september.trades !== 5 ||
+    september.wins !== 5 || september.losses !== 0 || september.notEntered !== 7 ||
+    september.netPips !== 422 || september.winRate !== 100) {
+  throw new Error("Verified September 2026 performance is missing or incorrect.");
+}
+console.log("Historical performance aggregates are valid through September 2026.");
