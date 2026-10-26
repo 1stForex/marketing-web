@@ -31,36 +31,36 @@ export interface HistoricalYearPerformance {
 
 export const historicalPerformanceRange = {
   "startMonth": "2016-01",
-  "endMonth": "2026-09",
-  "label": "2016-September 2026"
+  "endMonth": "2026-10",
+  "label": "2016-October 2026"
 };
 
 export const historicalPerformanceTotals = {
-  "signals": 1824,
-  "trades": 1374,
-  "wins": 1260,
-  "losses": 114,
+  "signals": 1835,
+  "trades": 1383,
+  "wins": 1267,
+  "losses": 116,
   "breakeven": 0,
-  "notEntered": 452,
-  "netPips": 284389.0,
+  "notEntered": 454,
+  "netPips": 285103.0,
   "profitUsd": 4887458.9,
-  "winRate": 91.7
+  "winRate": 91.61
 };
 
 export const historicalPerformanceYears: HistoricalYearPerformance[] = [
   {
     "year": 2026,
-    "signals": 147,
-    "trades": 96,
-    "wins": 87,
-    "losses": 9,
+    "signals": 158,
+    "trades": 105,
+    "wins": 94,
+    "losses": 11,
     "breakeven": 0,
-    "notEntered": 53,
-    "netPips": 14475.0,
+    "notEntered": 55,
+    "netPips": 15189.0,
     "profitUsd": 176171.9,
-    "winRate": 90.63,
+    "winRate": 89.52,
     "bestPair": "USD/CAD",
-    "note": "Verified performance through September 2026, including completed and cancelled live signal records.",
+    "note": "Verified performance through October 26, 2026. October is month-to-date; cancelled setups are excluded from completed trades and win rate.",
     "months": [
       {
         "month": "January",
@@ -187,6 +187,20 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
         "profitUsd": 0.0,
         "winRate": 100.0,
         "dataQuality": "verified_signal_lifecycle"
+      },
+      {
+        "month": "October",
+        "monthKey": "2026-10",
+        "signals": 11,
+        "trades": 9,
+        "wins": 7,
+        "losses": 2,
+        "breakeven": 0,
+        "notEntered": 2,
+        "netPips": 714.0,
+        "profitUsd": 0.0,
+        "winRate": 77.78,
+        "dataQuality": "verified_signal_lifecycle_month_to_date"
       }
     ]
   },
