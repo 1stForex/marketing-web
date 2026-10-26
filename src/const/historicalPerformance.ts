@@ -36,31 +36,31 @@ export const historicalPerformanceRange = {
 };
 
 export const historicalPerformanceTotals = {
-  "signals": 1835,
-  "trades": 1383,
+  "signals": 1834,
+  "trades": 1382,
   "wins": 1267,
-  "losses": 116,
+  "losses": 115,
   "breakeven": 0,
   "notEntered": 454,
-  "netPips": 285103.0,
+  "netPips": 285526.0,
   "profitUsd": 4887458.9,
-  "winRate": 91.61
+  "winRate": 91.68
 };
 
 export const historicalPerformanceYears: HistoricalYearPerformance[] = [
   {
     "year": 2026,
-    "signals": 158,
-    "trades": 105,
+    "signals": 157,
+    "trades": 104,
     "wins": 94,
-    "losses": 11,
+    "losses": 10,
     "breakeven": 0,
     "notEntered": 55,
-    "netPips": 15189.0,
+    "netPips": 15612.0,
     "profitUsd": 176171.9,
-    "winRate": 89.52,
+    "winRate": 90.38,
     "bestPair": "EUR/USD",
-    "note": "Verified performance through October 26, 2026. October is month-to-date; cancelled setups are excluded from completed trades and win rate.",
+    "note": "Published performance through October 26, 2026. October is month-to-date and excludes the October 14 USD/CHF trade withdrawn at client request. Cancelled setups are excluded from completed trades and win rate.",
     "months": [
       {
         "month": "January",
@@ -191,15 +191,15 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
       {
         "month": "October",
         "monthKey": "2026-10",
-        "signals": 11,
-        "trades": 9,
+        "signals": 10,
+        "trades": 8,
         "wins": 7,
-        "losses": 2,
+        "losses": 1,
         "breakeven": 0,
         "notEntered": 2,
-        "netPips": 714.0,
+        "netPips": 1137.0,
         "profitUsd": 0.0,
-        "winRate": 77.78,
+        "winRate": 87.5,
         "dataQuality": "verified_signal_lifecycle_month_to_date"
       }
     ]

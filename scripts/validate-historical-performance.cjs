@@ -124,9 +124,9 @@ if (!september || september.signals !== 12 || september.trades !== 5 ||
   throw new Error("Verified September 2026 performance is missing or incorrect.");
 }
 const october = months.find((month) => month.monthKey === "2026-10");
-if (!october || october.signals !== 11 || october.trades !== 9 ||
-    october.wins !== 7 || october.losses !== 2 || october.notEntered !== 2 ||
-    october.netPips !== 714 || october.winRate !== 77.78) {
+if (!october || october.signals !== 10 || october.trades !== 8 ||
+    october.wins !== 7 || october.losses !== 1 || october.notEntered !== 2 ||
+    october.netPips !== 1137 || october.winRate !== 87.5) {
   throw new Error("Verified October 2026 month-to-date performance is missing or incorrect.");
 }
 console.log("Historical performance aggregates are valid through October 26, 2026.");
