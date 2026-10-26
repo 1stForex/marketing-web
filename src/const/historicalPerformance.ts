@@ -59,7 +59,7 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
     "netPips": 15189.0,
     "profitUsd": 176171.9,
     "winRate": 89.52,
-    "bestPair": "USD/CAD",
+    "bestPair": "EUR/USD",
     "note": "Verified performance through October 26, 2026. October is month-to-date; cancelled setups are excluded from completed trades and win rate.",
     "months": [
       {
