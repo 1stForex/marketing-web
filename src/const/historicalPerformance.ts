@@ -31,36 +31,36 @@ export interface HistoricalYearPerformance {
 
 export const historicalPerformanceRange = {
   "startMonth": "2016-01",
-  "endMonth": "2026-10",
-  "label": "2016-October 2026"
+  "endMonth": "2026-11",
+  "label": "2016-November 2026"
 };
 
 export const historicalPerformanceTotals = {
-  "signals": 1834,
-  "trades": 1382,
-  "wins": 1267,
-  "losses": 115,
+  "signals": 1839,
+  "trades": 1386,
+  "wins": 1270,
+  "losses": 116,
   "breakeven": 0,
-  "notEntered": 454,
-  "netPips": 285526.0,
+  "notEntered": 455,
+  "netPips": 285692.0,
   "profitUsd": 4887458.9,
-  "winRate": 91.68
+  "winRate": 91.63
 };
 
 export const historicalPerformanceYears: HistoricalYearPerformance[] = [
   {
     "year": 2026,
-    "signals": 157,
-    "trades": 104,
-    "wins": 94,
-    "losses": 10,
+    "signals": 162,
+    "trades": 108,
+    "wins": 97,
+    "losses": 11,
     "breakeven": 0,
-    "notEntered": 55,
-    "netPips": 15612.0,
+    "notEntered": 56,
+    "netPips": 15778.0,
     "profitUsd": 176171.9,
-    "winRate": 90.38,
+    "winRate": 89.81,
     "bestPair": "EUR/USD",
-    "note": "Published performance through October 26, 2026. October is month-to-date and excludes the October 14 USD/CHF trade withdrawn at client request. Cancelled setups are excluded from completed trades and win rate.",
+    "note": "Published performance through November 5, 2026. November includes the October 30 GBP/USD setup closed November 2. October excludes the October 14 USD/CHF trade withdrawn at client request. Cancelled setups are excluded from completed trades and win rate.",
     "months": [
       {
         "month": "January",
@@ -200,6 +200,20 @@ export const historicalPerformanceYears: HistoricalYearPerformance[] = [
         "netPips": 1137.0,
         "profitUsd": 0.0,
         "winRate": 87.5,
+        "dataQuality": "verified_signal_lifecycle_month_to_date"
+      },
+      {
+        "month": "November",
+        "monthKey": "2026-11",
+        "signals": 5,
+        "trades": 4,
+        "wins": 3,
+        "losses": 1,
+        "breakeven": 0,
+        "notEntered": 1,
+        "netPips": 166.0,
+        "profitUsd": 0.0,
+        "winRate": 75.0,
         "dataQuality": "verified_signal_lifecycle_month_to_date"
       }
     ]
